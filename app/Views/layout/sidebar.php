@@ -8,7 +8,7 @@
             <p>Hi ! Admin 112 - 01</p>
           </div>
         </div>
-        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
         <ul class="list-unstyled">
                 <li class="active"><a href="/admin"> <i class="icon-dashboard"></i>Dashboard </a></li>
                 <li><a href="/admin/news"> <i class="fa fa-newspaper-o"></i>News </a></li>

@@ -21,12 +21,12 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Image</th>
-                          <th>Status</th>
+                          <th>ID</th>
+                          <th>Tagline</th>
+                          <th>Isi</th>
+                          <th>Link</th>
                           <th>Date</th>
+                          <th>Dokumentasi</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -36,7 +36,7 @@
                           <td>Mark</td>
                           <td>Otto</td>
                           <td>lore</td>
-                          <td>@mdo</td>
+                          <td>lore</td>
                           <td>@mdo</td>
                             <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
@@ -60,7 +60,7 @@
                           <td>Larry</td>
                           <td>the Bird</td>
                           <td>@twitter</td>
-                          <td>@mdo</td>
+                          <td>@twitter</td>
                           <td>@mdo</td>
                             <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
@@ -77,19 +77,26 @@
                     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                       <div role="document" class="modal-dialog">
                         <div class="modal-content">
-                          <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Signin Modal</strong>
+                          <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Berita</strong>
                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                           </div>
                           <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet consectetur.</p>
                             <form>
                               <div class="form-group">
-                                <label>Email</label>
+                                <label>Tagline</label>
                                 <input type="email" placeholder="Email Address" class="form-control">
                               </div>
                               <div class="form-group">       
-                                <label>Password</label>
+                                <label>Isi</label>
                                 <input type="password" placeholder="Password" class="form-control">
+                              </div>
+                              <div class="form-group">       
+                                <label>Link</label>
+                                <input type="password" placeholder="Password" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label>Dokumentasi</label>
+                                <input type="file" class="form-control-sm" id="foto">
                               </div>
                               <div class="form-group">       
                                 <input type="submit" value="Signin" class="btn btn-primary">

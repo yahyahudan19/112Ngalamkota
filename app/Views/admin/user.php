@@ -73,36 +73,18 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <?php foreach ($auth as $r ) :?>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>Admin</td>
+                          <th scope="row"><?= $r['id_user'];?></th>
+                          <td><?= $r['email'];?></td>
+                          <td><?= $r['username'];?></td>
+                          <td><?= $r['role_id'];?></td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
                             </td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>                
-                          <td>Admin</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>@twitter</td>
-                          <td>Admin</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
                       </tbody>
                     </table>
                   </div>

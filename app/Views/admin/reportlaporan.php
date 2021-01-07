@@ -28,78 +28,20 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <?php foreach ($reportL as $r ) :?>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>lore</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>                      
+                          <th scope="row"><?= $r['id_pelapor'];?></th>
+                          <td><?= $r['kejadian'];?></td>
+                          <td><?= $r['tanggal'];?></td>
+                          <td><?= $r['nama_pelapor'];?></td>
+                          <td><?= $r['tindak_lanjut'];?></td>
+                          <td><?= $r['dokumentasi'];?></td>                      
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
                             </td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                          <td>@fat</td>
-                          <td>@fat</td>                          
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>                          
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">6</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
                       </tbody>
                     </table>
                   </div>

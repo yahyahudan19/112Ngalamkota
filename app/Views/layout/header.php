@@ -44,7 +44,7 @@
             <!-- Navbar Header-->
                 <a href="/admin" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">LAYANAN112</strong><strong>Admin</strong></div>
-              <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
+              <div class="brand-text brand-sm"><strong class="text-primary">11</strong><strong>2</strong></div></a>
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>

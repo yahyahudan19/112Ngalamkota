@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Models\authModel;
+
 class Auth extends BaseController
 {
 	public function index()
