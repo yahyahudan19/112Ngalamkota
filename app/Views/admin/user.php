@@ -19,7 +19,7 @@
                 <div class="statistic-block block">
                   <div class="progress-details d-flex align-items-end justify-content-between">
                     <div class="title">
-                      <div class="icon"><i class="icon-user-1"></i></div><strong>New Clients</strong>
+                      <div class="icon"><i class="icon-user-1"></i></div><strong>Jumlah Admin</strong>
                     </div>
                     <div class="number dashtext-1">27</div>
                   </div>
@@ -32,7 +32,7 @@
                 <div class="statistic-block block">
                   <div class="progress-details d-flex align-items-end justify-content-between">
                     <div class="title">
-                      <div class="icon"><i class="icon-contract"></i></div><strong>New Projects</strong>
+                      <div class="icon"><i class="icon-contract"></i></div><strong>Jumlah Laporan</strong>
                     </div>
                     <div class="number dashtext-2">375</div>
                   </div>
@@ -45,7 +45,7 @@
                 <div class="statistic-block block">
                   <div class="progress-details d-flex align-items-end justify-content-between">
                     <div class="title">
-                      <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>New Invoices</strong>
+                      <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>Jumlah Berita</strong>
                     </div>
                     <div class="number dashtext-3">140</div>
                   </div>
@@ -66,9 +66,9 @@
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
+                          <th>Email</th>
                           <th>Username</th>
+                          <th>Level</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -77,7 +77,7 @@
                           <th scope="row">1</th>
                           <td>Mark</td>
                           <td>Otto</td>
-                          <td>@mdo</td>
+                          <td>Admin</td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
@@ -86,8 +86,8 @@
                         <tr>
                           <th scope="row">2</th>
                           <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <td>Thornton</td>                
+                          <td>Admin</td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
@@ -96,8 +96,8 @@
                         <tr>
                           <th scope="row">3</th>
                           <td>Larry</td>
-                          <td>the Bird</td>
                           <td>@twitter</td>
+                          <td>Admin</td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
@@ -107,44 +107,48 @@
                     </table>
                   </div>
                 </div>                
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah User</button>
               </div>
-              <div class="col-lg-5">
-                <div class="block">
-                  <div class="title"><strong>Tambah User</strong></div>
-                  <div class="block-body text-center">
-                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah</button>
                     <!-- Modal-->
                     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                       <div role="document" class="modal-dialog">
                         <div class="modal-content">
-                          <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Signin Modal</strong>
+                          <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah User</strong>
                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                           </div>
                           <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet consectetur.</p>
                             <form>
                               <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" placeholder="Email Address" class="form-control">
                               </div>
                               <div class="form-group">       
-                                <label>Password</label>
+                                <label>username</label>
+                                <input type="password" placeholder="Username" class="form-control">
+                              </div>
+                              <div class="form-group">       
+                                <label>password</label>
                                 <input type="password" placeholder="Password" class="form-control">
                               </div>
                               <div class="form-group">       
-                                <input type="submit" value="Signin" class="btn btn-primary">
+                                <label>Level</label>
+                                <div class="col-sm">
+                                  <select name="level" class="form-control">
+                                    <option>Admin</option>
+                                    <option>Super Admin</option>
+                                  </select>
                               </div>
+                              </div>
+                              
                             </form>
                           </div>
                           <div class="modal-footer">
                             <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary">Tambah</button>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

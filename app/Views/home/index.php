@@ -46,7 +46,7 @@
           <li class="active"><a href="/home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Berita</a></li>
-          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="/home/feedback">Feedback</a></li>
           <!-- <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -361,6 +361,10 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />

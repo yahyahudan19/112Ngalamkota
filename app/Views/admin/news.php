@@ -71,12 +71,8 @@
                     </table>
                   </div>
                 </div>
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah Berita</button>
               </div>
-              <div class="col-lg-3">
-                <div class="block">
-                  <div class="title"><strong>Tambah Berita</strong></div>
-                  <div class="block-body text-center">
-                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah</button>
                     <!-- Modal-->
                     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                       <div role="document" class="modal-dialog">
@@ -107,9 +103,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
           </div>

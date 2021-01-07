@@ -12,9 +12,9 @@ class Home extends BaseController
 		return view('auth/login');
 	}
 
-	public function register()
+	public function feedback()
 	{
-		return view('auth/register');
+		return view('home/feedback');
 	}
 	//--------------------------------------------------------------------
 

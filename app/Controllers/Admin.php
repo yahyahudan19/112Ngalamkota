@@ -21,10 +21,16 @@ class Admin extends BaseController
 		echo view('admin/news');
 		echo view('layout/footer');
 	}
-	public function report(){
+	public function reportlaporan(){
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/report');
+		echo view('admin/reportlaporan');
+		echo view('layout/footer');
+	}
+	public function reportfeedback(){
+		echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/reportfeedback');
 		echo view('layout/footer');
 	}
 
