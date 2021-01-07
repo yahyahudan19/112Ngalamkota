@@ -27,46 +27,26 @@
                           <th>Link</th>
                           <th>Date</th>
                           <th>Dokumentasi</th>
+                          <th>Dibuat Tanggal</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
+                      <?php foreach ($news as $r ) :?>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>lore</td>
-                          <td>lore</td>
-                          <td>@mdo</td>
+                          <th scope="row"><?= $r['id_news'];?></th>
+                          <td><?= $r['tagline_news'];?></td>
+                          <td><?= $r['isi_news'];?></td>
+                          <td><?= $r['link_news'];?></td>
+                          <td><?= $r['date_news'];?></td>
+                          <td><?= $r['dokumentasi_news'];?></td>
+                          <td><?= $r['created_at'];?></td>
                             <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
                             </td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                            <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@mdo</td>
-                            <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>                        
                       </tbody>
                     </table>
                   </div>
@@ -81,31 +61,33 @@
                             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                           </div>
                           <div class="modal-body">
-                            <form>
+                            <form action="/news/addNews" method="post">
+                            <?= csrf_field(); ?>
                               <div class="form-group">
                                 <label>Tagline</label>
-                                <input type="email" placeholder="Email Address" class="form-control">
+                                <input type="text" placeholder="Tagline" class="form-control" id="tagline_news" name="tagline_news">
                               </div>
                               <div class="form-group">       
                                 <label>Isi</label>
-                                <input type="password" placeholder="Password" class="form-control">
+                                <input type="text" placeholder="Isi" class="form-control" id="isi_news" name="isi_news">
                               </div>
                               <div class="form-group">       
                                 <label>Link</label>
-                                <input type="password" placeholder="Password" class="form-control">
+                                <input type="text" placeholder="Link" class="form-control" id="link_news" name="link_news">
+                              </div>
+                              <div class="form-group">       
+                                <label>Date</label>
+                                <input type="text" placeholder="Link" class="form-control" id="date_news" name="date_news">
                               </div>
                               <div class="form-group">
                                 <label>Dokumentasi</label>
-                                <input type="file" class="form-control-sm" id="foto">
+                                <input type="file" class="form-control-sm" id="dokumentasi_news" name="dokumentasi_news">
                               </div>
-                              <div class="form-group">       
-                                <input type="submit" value="Signin" class="btn btn-primary">
-                              </div>
+                              <button type="submit" class="btn btn-primary">Tambah </button>
+                              <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
                             </form>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                           </div>
                         </div>
                       </div>

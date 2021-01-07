@@ -112,63 +112,62 @@
             </div>
         </div>          
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <form action="<?= base_url()?>/template/forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
-            <div class="row">
+          <form action="/feedback/addFeedback" method="post" data-aos="fade-up">
+          <?= csrf_field(); ?>  
+          <div class="row">
               <div class="col-md-6 form-group">
                   <p>Nama</p>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nama" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="nama_feedback" class="form-control" id="nama_feedback" placeholder="Nama"/>
                 <div class="validate"></div>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                   <p>Alamat</p>
-                <input type="text" class="form-control" name="email" id="email" placeholder="Alamat" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="text" class="form-control" name="alamat_feedback" id="alamat_feedback" placeholder="Alamat"/>
                 <div class="validate"></div>
               </div>
             </div>
             <div class="form-group mt-3">
                 <p>No.HP</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="noHp_feedback" id="noHp_feedback" placeholder="" />
               <div class="validate"></div>
             </div>
-            <div class="form-group mt-3">
+            <!-- <div class="form-group mt-3">
                 <p>Tanggal</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="penyebab_feedback" id="penyebab_feedback" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validate"></div>
-            </div>
+            </div> -->
             <div class="form-group mt-3">
                 <p>Penyebab</p>
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Penyebab"></textarea>
+                <textarea class="form-control" name="penyebab_feedback" id="penyebab_feedback" rows="5"   placeholder="Penyebab"></textarea>
                 <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="q1_feedback" id="q1_feedback" placeholder=""  />
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="q2_feedback" id="q2_feedback" placeholder=""  />
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="q3_feedback" id="q3_feedback" placeholder="" />
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</p>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="q4_feedback" id="q4_feedback" placeholder="" />
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Apakah ada saran untuk layanan 112 ?</p>
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Saran"></textarea>
+                <textarea class="form-control" name="q5_feedback" id="q5_feedback" rows="5" placeholder="Saran"></textarea>
                 <div class="validate"></div>
             </div>
             <div class="mb-3">
               <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>

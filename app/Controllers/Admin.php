@@ -2,6 +2,7 @@
 
 use App\Models\reportlaporanModel;
 use App\Models\authModel;
+use App\Models\newsModel;
 
 class Admin extends BaseController
 {
@@ -11,6 +12,7 @@ class Admin extends BaseController
 	public function __construct(){
 		$this->reportlaporanModel = new reportlaporanModel();
 		$this->authModel = new authModel();
+		$this->newsModel = new newsModel();
 	}
 	public function index()
 	{
@@ -30,9 +32,13 @@ class Admin extends BaseController
 		echo view('layout/footer');
 	}
 	public function news(){
+		$news = $this->newsModel->findAll();
+		$data = [
+			'news' => $news 
+		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/news');
+		echo view('admin/news',$data);
 		echo view('layout/footer');
 	}
 	public function reportlaporan(){

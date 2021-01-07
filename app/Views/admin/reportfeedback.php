@@ -22,7 +22,7 @@
                           <th>Nama</th>
                           <th>Alamat</th>
                           <th>No. HP</th>
-                          <th>Tanggal</th>
+                          <!-- <th>Tanggal</th> -->
                           <th>Penyebab</th>
                           <th>Q1</th>
                           <th>Q2</th>
@@ -33,108 +33,24 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <?php foreach ($feedback as $r ) :?>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>lore</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
+                          <th scope="row"><?= $r['id_feedback'];?></th>
+                          <td><?= $r['nama_feedback'];?></td>
+                          <td><?= $r['alamat_feedback'];?></td>
+                          <td><?= $r['noHp_feedback'];?></td>
+                          <td><?= $r['penyebab_feedback'];?></td>
+                          <td><?= $r['q1_feedback'];?></td>
+                          <td><?= $r['q2_feedback'];?></td>
+                          <td><?= $r['q3_feedback'];?></td>
+                          <td><?= $r['q4_feedback'];?></td>
+                          <td><?= $r['q5_feedback'];?></td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
                             </td>
                         </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                          <td>@fat</td>
-                          <td>@fat</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">6</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@twitter</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>                         
                       </tbody>
                     </table>
                   </div>
