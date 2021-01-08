@@ -1,0 +1,21 @@
+{
+    "CI.other": [
+
+        "system/core/Common.php"
+    ],
+    "terminal.integrated.shell.windows": "",
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "[git-commit]": {
+    
+        "editor.rulers": [
+            72
+        ],
+        "workbench.editor.restoreViewState": false
+    }
+}
