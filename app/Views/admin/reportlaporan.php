@@ -39,7 +39,7 @@
                           <td><?= $r['tindak_lanjut'];?></td>
                           <td><?= $r['dokumentasi'];?></td>                      
                           <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                                 <button type="button" class="btn btn-primary btn-sm">Hapus</button>
                             </td>
                         </tr>
