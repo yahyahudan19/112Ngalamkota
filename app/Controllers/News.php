@@ -33,5 +33,11 @@ class News extends BaseController
         return redirect()->to('/admin/news');
         
     }
+    public function detailNews(){
+        echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/news/detail');
+		echo view('layout/footer');
+    }
 
 }

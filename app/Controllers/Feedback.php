@@ -37,5 +37,11 @@ class Feedback extends BaseController
 
         
         return redirect()->to('/home');
-	}
+    }
+    public function detailFeedback(){
+        echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/feedback/detail');
+		echo view('layout/footer');
+    }
 }

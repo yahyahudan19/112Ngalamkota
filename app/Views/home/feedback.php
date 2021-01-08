@@ -166,9 +166,7 @@
                 <textarea class="form-control" name="q5_feedback" id="q5_feedback" rows="5" placeholder="Saran"></textarea>
                 <div class="validate"></div>
             </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-            </div>
+            <br>
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>

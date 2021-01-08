@@ -15,11 +15,22 @@ class Auth extends BaseController
 		
 	}
 	
-	public function register()
+	public function addUser()
 	{
-		return view('auth/register');
+		// $this->userModel->save([
+        //     'email' => $this->request->getVar('tagline_news'),
+        //     'username' => $this->request->getVar('isi_news'),
+        //     'password' => $this->request->getVar('link_news'),
+        //     'image' => $this->request->getVar('date_news'),
+        //     'role_id' => $this->request->getVar('dokumentasi_news'),
+        //     'is_active' => $this->request->getVar('dokumentasi_news')
+        // ]);
+
+        
+        // return redirect()->to('/admin/user');
+
 	}
-	//--------------------------------------------------------------------
+
 	public function cekLogin(){
 		
 		$username = $this->request->getPost('username');

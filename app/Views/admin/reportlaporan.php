@@ -10,8 +10,8 @@
         </div>
         <section class="no-padding-top">
           <div class="container-fluid">
-              <div class="row">
-              <div class="col-lg-10">
+            <div class="row">
+              <div class="col-lg-15">
                 <div class="block">
                   <div class="title"><strong>Tabel Laporan</strong></div>
                   <div class="table-responsive"> 
@@ -22,6 +22,7 @@
                           <th>Nama Pelapor</th>
                           <th>Lokasi Kejadian</th>
                           <th>Tanggal Kejadian</th>
+                          <th>Nama Pelapor</th>
                           <th>Tindak Lanjut</th>
                           <th>Dokumentasi</th>
                           <th>Action</th>
@@ -32,8 +33,9 @@
                         <tr>
                           <th scope="row"><?= $r['id_pelapor'];?></th>
                           <td><?= $r['kejadian'];?></td>
-                          <td><?= $r['tanggal'];?></td>
+                          <td><?= $r['lokasi_kejadian'];?></td>
                           <td><?= $r['nama_pelapor'];?></td>
+                          <td><?= $r['tanggal'];?></td>
                           <td><?= $r['tindak_lanjut'];?></td>
                           <td><?= $r['dokumentasi'];?></td>                      
                           <td>
@@ -50,7 +52,9 @@
                   </div>
                 </div>
               </div>
-              <div class="container-fluid">
+             </div>
+            </div>
+            <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-5">
                     <div class="bar-chart block chart">
@@ -70,10 +74,8 @@
                   </div>                
                 </div>
               </div>
-            </div>
-              </div>
-            </div>
           </div>
+          
                     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                       <div role="document" class="modal-dialog">
                         <div class="modal-content">

@@ -43,7 +43,9 @@
                           <td><?= $r['created_at'];?></td>
                             <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
+                                <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
+                                <a href="/news/delete/<?= $r['id_news']; ?>" class="btn btn-primary btn-sm">Delete</a>
+                                <a href="/news/detailNews/<?= $r['id_news']; ?>" class="btn btn-info btn-sm">Detail</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>                        
