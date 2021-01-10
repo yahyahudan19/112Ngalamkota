@@ -22,36 +22,39 @@
                       <div class="form-group row">
                         <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
                         <div class="col-sm-3">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="<?= $reportL['kejadian'] ?>">
                         </div>
                         <label class="col-sm-1 form-control-label"><strong>Lokasi Kejadian</strong></label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="<?= $reportL['lokasi_kejadian'] ?>">
                         </div>              
                         </div>
                       <div class="form-group row">
                         <label class="col-sm-1 form-control-label"><strong>Nama Pelapor</strong></label>
                         <div class="col-sm-3">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>">
                         </div>
                         <label class="col-sm-1 form-control-label"><strong>Tindak Lanjut</strong></label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>">
                         </div>
                       </div>
                         <div class="line"></div>
                         <div class="form-group row">
                             <label class="col-sm-1 form-control-label">Dokumentasi</label>
-                            <div class="col-sm-9">
-                                <input type="file" class="form-control-sm" id="dokumentasi_news" name="dokumentasi_news">
-                            </div>
-                        </div>           
-                        <div class="line"></div>
-                        <div class="form-group row">
-                            <div class="col-sm-11 ml-auto">
-                          <button type="submit" class="btn btn-secondary">Update</button>
-                          <button type="submit" class="btn btn-primary">Delete</button>
+                            
                         </div>
+                        <?php
+                            foreach ($detail as $row)
+                            {
+                              ?>
+                                <img src="<?= base_url()?>/uploads/<?= $row['gambar'] ?>" width="400" class="m-2" />                          
+                              <?php
+                            }
+                            ?>           
+                        <div class="line"></div>
+                        <a href="<?= base_url('report') ?>" class="btn btn-danger">Back</a>
+                        
                       </div>
                     </form>
                   </div>

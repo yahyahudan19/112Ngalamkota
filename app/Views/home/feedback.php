@@ -142,23 +142,56 @@
                 <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
-                <p>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="q1_feedback" id="q1_feedback" placeholder=""  />
+              <p>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</p>
+              <div class="form-group">
+                <input type="radio" name="q1_feedback" id="q1_feedback" value="iya"> Iya
+                <!-- <input type="text" class="form-control" name="q1_feedback" id="q1_feedback" placeholder=""  /> -->
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q1_feedback" id="q1_feedback" value="tidak"> Tidak
+              </div>
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="q2_feedback" id="q2_feedback" placeholder=""  />
-              <div class="validate"></div>
-            </div>
-            <div class="form-group mt-3">
-                <p>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ?</p>
-              <input type="text" class="form-control" name="q3_feedback" id="q3_feedback" placeholder="" />
+              <div class="form-group">
+                <input type="radio" name="q2_feedback" id="q2_feedback" value="iya"> Iya
+              <!-- <input type="text" class="form-control" name="q2_feedback" id="q2_feedback" placeholder=""  /> -->
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q2_feedback" id="q2_feedback" value="tidak"> Tidak
+              </div>
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
                 <p>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</p>
-              <input type="text" class="form-control" name="q4_feedback" id="q4_feedback" placeholder="" />
+            <div class="form-group">
+              <input type="radio" name="q3_feedback" id="q3_feedback" value="dibutuhkan"> Dibutuhkan
+              <!-- <input type="text" class="form-control" name="q3_feedback" id="q3_feedback" placeholder="" /> -->
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q3_feedback" id="q3_feedback" value="tidak"> Tidak
+              </div>
+              <div class="validate"></div>
+            </div>
+            <div class="form-group mt-3">
+                <p>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ?   Berikan Penilaian !</p>
+              <!-- <input type="text" class="form-control" name="q4_feedback" id="q4_feedback" placeholder="" /> -->
+              <div class="form-group">
+                <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Bagus"> Sangat Bagus
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q4_feedback" id="q4_feedback" value="Bagus"> Bagus
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q4_feedback" id="q4_feedback" value="Cukup"> Cukup
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q4_feedback" id="q4_feedback" value="Kurang"> Kurang
+              </div>
+              <div class="form-group">
+                <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Kurang"> Sangat Kurang
+              </div>
               <div class="validate"></div>
             </div>
             <div class="form-group mt-3">
@@ -167,7 +200,7 @@
                 <div class="validate"></div>
             </div>
             <br>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
           </form>
         </div>
         </div>

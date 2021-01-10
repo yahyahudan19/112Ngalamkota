@@ -9,16 +9,31 @@
           </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
-        <ul class="list-unstyled">
-                <li class="active"><a href="/admin"> <i class="icon-dashboard"></i>Dashboard </a></li>
-                <li><a href="/admin/news"> <i class="fa fa-newspaper-o"></i>News </a></li>
+        <?php
+          if(session()->get('role') == "1"){
+            ?>
+            <ul class="list-unstyled">
+                <li><a href="/superadmin"> <i class="icon-dashboard"></i>Dashboard </a></li>
+                <li><a href="/superadmin/news"> <i class="fa fa-newspaper-o"></i>News </a></li>
                 <!-- <li><a href="/admin/report"> <i class="icon-form-1"></i>Report </a></li> -->
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-form-1"></i>Report </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="/admin/reportfeedback">Feedback</a></li>
-                    <li><a href="/admin/reportlaporan">Laporan</a></li>
+                    <li><a href="/superadmin/reportfeedback">Feedback</a></li>
+                    <li><a href="/superadmin/reportlaporan">Laporan</a></li>
                   </ul>
                 </li>
-                <li><a href="/admin/user"> <i class="icon-user"></i>Users </a></li>
+                <li><a href="/superadmin/user"> <i class="icon-user"></i>Users </a></li>
+            </ul>    
+            <?php
+          }else if(session()->get('role') == "2"){
+            ?>
+            <ul class="list-unstyled">
+                <li><a href="/admin"> <i class="icon-dashboard"></i>Dashboard </a></li>
+                <li><a href="/admin/reportlaporan"> <i class="fa fa-newspaper-o"></i>Report Laporan </a></li>
+            </ul>
+            <?php
+          }
+        ?>
+        
       </nav>
       <!-- Sidebar Navigation end-->
