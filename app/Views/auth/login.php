@@ -45,7 +45,7 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form method="get" class="form-validate">
+                  <form method="post" class="form-validate" action="<?= site_url('/auth/ceklogin') ?>">
                     <div class="form-group">
                       <input id="username" type="text" name="username" required data-msg="Please enter your username" class="input-material">
                       <label for="login-username" class="label-material">User Name</label>
@@ -53,7 +53,7 @@
                     <div class="form-group">
                       <input id="password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
                       <label for="login-password" class="label-material">Password</label>
-                    </div><a id="login" href="/auth/ceklogin" class="btn btn-primary">Login</a>
+                    </div><input type="submit" id="login" class="btn btn-primary" value="Login">
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                   </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="/auth/register" class="signup">Signup</a>
                 </div>

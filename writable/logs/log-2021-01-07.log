@@ -1487,3 +1487,179 @@ CRITICAL - 2021-01-07 21:00:24 --> Invalid file: admin/report/detail.php
 #6 C:\Users\KOMINFO\Documents\112site\project\112site\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 C:\Users\KOMINFO\Documents\112site\project\112site\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\KOMINF...')
 #8 {main}
+CRITICAL - 2021-01-07 21:45:54 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(39): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->news()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:45:55 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:45:59 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(39): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->news()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:45:59 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:03 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(39): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->news()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:03 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:07 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(39): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->news()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:08 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:12 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(28): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->user()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:12 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:16 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(61): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->reportfeedback()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:16 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:20 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(50): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->reportlaporan()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:20 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-07 21:46:31 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\112Ngalamkota\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\112Ngalamkota\app\Controllers\Admin.php(50): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(918): App\Controllers\Admin->reportlaporan()
+#5 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\112Ngalamkota\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\112Ngalamkota\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\112Ngalamkota\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-01-07 21:46:31 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\112Ngalamkota\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Admin), true)
+#2 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(308): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\112Ngalamkota\system\Debug\Exceptions.php(174): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

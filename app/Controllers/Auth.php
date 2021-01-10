@@ -33,16 +33,22 @@ class Auth extends BaseController
 
 	public function cekLogin(){
 		
-		$username = $this->request->getPost('username');
-		$password = $this->request->getPost('password');
+		$username = $this->request->getVar('username');
+		$password = $this->request->getVar('password');
 
 		$auth = $this->authModel->cekLogin($username,$password);
+		// dd($username);
 
-		if (($auth['username']==$username) && ($auth['password']==$password)) {
+		if (($auth['username'] == $username) && ($auth['password'] == $password)) {
 			session()->set('username',$auth['username']);
-			
-			redirect()->to(base_url('/admin'));
-			
+			session()->set('role', $auth['role_id']);
+			if($auth["role_id"] == "1"){
+				return redirect()->to(base_url('/superadmin'));
+			}else if($auth["role_id"] == "2"){
+				return redirect()->to(base_url('/admin'));
+			}else{
+				return view('auth/login');
+			}
 		}else{
 			return view('auth/login');
 		}

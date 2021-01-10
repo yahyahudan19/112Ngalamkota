@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 
+use App\Models\detailLaporanModel;
 use App\Models\reportlaporanModel;
 
 class Report extends BaseController
@@ -8,6 +9,7 @@ class Report extends BaseController
 
     public function __construct(){
         $this->reportlaporanModel = new reportlaporanModel();
+        $this->detailLaporanModel = new detailLaporanModel();
     }
     public function index()
 	{
@@ -22,26 +24,56 @@ class Report extends BaseController
     }
     public function addReportL()
 	{
-		$this->feedbackModel->save([
-            'id_feedback' => $this->request->getVar('id_feedback'),
-            'nama_feedback' => $this->request->getVar('nama_feedback'),
-            'alamat_feedback' => $this->request->getVar('alamat_feedback'),
-            'noHp_feedback' => $this->request->getVar('noHp_feedback'),
-            'penyebab_feedback' => $this->request->getVar('penyebab_feedback'),
-            'q1_feedback' => $this->request->getVar('q1_feedback'),
-            'q2_feedback' => $this->request->getVar('q2_feedback'),
-            'q3_feedback' => $this->request->getVar('q3_feedback'),
-            'q4_feedback' => $this->request->getVar('q4_feedback'),
-            'q5_feedback' => $this->request->getVar('q5_feedback'),
-        ]);
+        // dapatkan input file berupa array
+        $files = $this->request->getFiles();
+ 
+        if($files){
+             
+            // buat value id random di table uploads
+            $data_uploads = [
+                'kejadian' => $this->request->getVar('kejadian'),
+                'tanggal' => $this->request->getVar('tanggal'),
+                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+                'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
+                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+            ];
+            $this->reportlaporanModel->insertLaporan($data_uploads);
+ 
+            // ulangi insert gambar ke table galery menggunakan foreach
+            
+            $db      = \Config\Database::connect();
+            $builder = $db->insertID();
+            // dd($builder);
 
-        
-        return redirect()->to('/home');
+            
+            foreach($files['dokumentasi'] as $img){
+                
+                $imagename = $img->getRandomName();
+                $data_galery = [
+                    'report_id' => $builder,
+                    'gambar' => $imagename
+                ];
+ 
+                $this->detailLaporanModel->insertDetail($data_galery);
+                // upload dengan random name
+                $img->move(ROOTPATH . 'public/uploads', $imagename);
+             
+            }
+            return redirect()->to(base_url('/admin/reportLaporan')); 
+        }   
+        // return redirect()->to(base_url('/admin/reportLaporan')); 
     }
-    public function detailReport(){
+    public function detailReport($id){
+        $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
+        $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
+        $data = [
+            'reportL' => $reportL[0],
+            'detail' => $detail
+        ];
+        
         echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/laporan/detail');
+		echo view('admin/laporan/detail', $data);
 		echo view('layout/footer');
     }
 }
