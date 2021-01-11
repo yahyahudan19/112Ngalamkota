@@ -27,6 +27,11 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url()?>/template/assets/css/style.css" rel="stylesheet">
 
+  <!-- Buat Toast -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -43,10 +48,10 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/home">Home</a></li>
+          <li><a href="/home">Home</a></li>
           <li><a href="/home">About Us</a></li>
           <li><a href="/home">Berita</a></li>
-          <li><a href="/home/feedback">Feedback</a></li>
+          <li class="active"><a href="/home/feedback">Feedback</a></li>
           </li>
           <li><a href="/home">Contact Us</a></li>
         </ul>
@@ -56,8 +61,8 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
 
+  <section id="hero">
     <div class="container">
       <div class="row d-flex align-items-center">
       <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
@@ -70,48 +75,30 @@
       </div>
     </div>
     </div>
-
   </section><!-- End Hero -->
 
   <main id="main">
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2 data-aos="fade-in">FEEDBACK</h2>
           <p data-aos="fade-in">Feedback yang anda berikan akan sangat berguna bagi kami, guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112 dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</p>
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box" data-aos="fade-up">
-                  <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p>112<br>112</p>
-                </div>
-              </div>
-            </div>
-        </div>          
-        <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="..." class="rounded mr-2" alt="...">
+            <strong class="mr-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div>
+        <div class="row">       
           <form action="/feedback/addFeedback" method="post" data-aos="fade-up">
           <?= csrf_field(); ?>  
           <div class="row">
@@ -136,11 +123,11 @@
               <input type="text" class="form-control" name="penyebab_feedback" id="penyebab_feedback" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
               <div class="validate"></div>
             </div> -->
-            <div class="form-group mt-3">
+            <!-- <div class="form-group mt-3">
                 <p>Penyebab</p>
                 <textarea class="form-control" name="penyebab_feedback" id="penyebab_feedback" rows="5"   placeholder="Penyebab"></textarea>
                 <div class="validate"></div>
-            </div>
+            </div> -->
             <div class="form-group mt-3">
               <p>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</p>
               <div class="form-group">
@@ -256,7 +243,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="<?= base_url()?>/template/assets/vendor/jquery/jquery.min.js"></script>

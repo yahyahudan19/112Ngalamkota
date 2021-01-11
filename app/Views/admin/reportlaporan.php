@@ -37,8 +37,8 @@
                     <th>ID</th>
                     <th>Nama Pelapor</th>
                     <th>Lokasi Kejadian</th>
-                    <th>Tanggal Kejadian</th>
                     <th>Nama Pelapor</th>
+                    <th>Tanggal Kejadian</th>
                     <th>Tindak Lanjut</th>
                     <th>Action</th>
                   </tr>
