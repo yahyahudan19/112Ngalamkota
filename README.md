@@ -1,4 +1,4 @@
-Anggota Tim :
+Anggota Tim Pembuat :
 1. Hendra Danang Pamungkas	NIM. 1831710034
 2. Irfak Wahyudi	        NIM. 1831710077
 3. Muhammad Andy H.	        NIM. 1831710078
