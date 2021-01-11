@@ -30,7 +30,7 @@ class News extends BaseController
         ]);
 
         
-        return redirect()->to('/admin/news');
+        return redirect()->to(base_url('superadmin/news'));
         
     }
     public function detailNews(){
@@ -52,7 +52,7 @@ class News extends BaseController
          'dokumentasi_news' => $dokumentasi_news
         ];
 
-        return redirect()->to('/admin/news');
+        return redirect()->to(base_url('superadmin/news'));
     }
     public function editNews(){
         echo view('layout/header');
@@ -71,12 +71,12 @@ class News extends BaseController
         ]);
       
       $this->newsModel->update_data($data, $id_news);
-      return redirect()->to('superadmin/news');
+      return redirect()->to(base_url('superadmin/news'));
     }
    public function updateNews(){
     echo view('layout/header');
     echo view('layout/sidebar');
-    echo view('admin/news/update');
+    echo view('superadmin/news/update');
     echo view('layout/footer');
     }
 

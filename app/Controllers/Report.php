@@ -11,7 +11,6 @@ class Report extends BaseController
     public function __construct(){
         $this->reportlaporanModel = new reportlaporanModel();
         $this->detailLaporanModel = new detailLaporanModel();
-        $this->editLaporanModel = new editLaporanModel();
     }
     public function index()
 	{
