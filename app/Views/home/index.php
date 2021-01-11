@@ -390,8 +390,12 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><img src="<?= base_url()?>/template/assets/img/favicon.png" alt=""></a>
-  <!-- <a href="#" class="back-to-top"><i class="icofont-chat"></i></a> -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- <a href="#" class=""><img src="<?= base_url()?>/template/assets/img/feedback.png" alt="" width="200px" height="200px" > </a> -->
+  <div class="fixed-bottom">
+    <a href="/home/feedback"><img src="<?= base_url()?>/template/assets/img/feedback.png" alt="" data-aos="flip-right" width="200px" height="200px" text-align="right"></a>
+  </div>
+
 
   <!-- Vendor JS Files -->
   <script src="<?= base_url()?>/template/assets/vendor/jquery/jquery.min.js"></script>
