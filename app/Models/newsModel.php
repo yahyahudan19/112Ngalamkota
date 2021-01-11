@@ -10,4 +10,21 @@ class newsModel extends Model{
     protected $id = 'id_news';
     protected $useTimestamps = true;
     protected $allowedFields = ['tagline_news','isi_news','link_news','date_news','dokumentasi_news'];
+
+    public function data_news ($id_news)
+    {
+        return $this->find($id_news);
+    }
+
+    public function update_data($data, $id_news)
+    {
+        $query = $this->db->table("news")->update(array('id_news' => $id_news));
+        return $query;
+    }
+
+    public function delete_data($id_news)
+    {
+        $query= $this->db->table("news")->delete(array('id_news' => $id_news));
+        return $query;
+    }
 }
