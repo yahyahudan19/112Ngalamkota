@@ -44,4 +44,9 @@ class Feedback extends BaseController
 		echo view('admin/feedback/detail');
 		echo view('layout/footer');
     }
+    public function delete($id_feedback)
+   {
+      $this->feedbackModel->delete_data($id_feedback);
+      return redirect()->to(base_url('superadmin/reportfeedback'));
+   }
 }
