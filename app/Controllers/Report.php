@@ -77,24 +77,9 @@ class Report extends BaseController
 		echo view('admin/laporan/detail', $data);
 		echo view('layout/footer');
     }
-    public function editReport($id){
-        $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
-        $edit = $this->editLaporanModel->where('id_pelapor', $id)->findAll();
-        $data = [
-            'reportL' => $reportL[0],
-            'edit' => $edit
-        ];
-
-    
-        // $data['kejadian'] = $getKejadian;
-        // $data['lokasi_kejadian'] = $getLokasi_Kejadian;
-        // $data['tanggal'] = $getTanggal;
-        // $data['nama_pelapor'] = $getNama_Pelapor;
-        // $data['tindak_lanjut'] = $getTindak_Lanjut;
-
-        echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/laporan/edit', $data);
-		echo view('layout/footer');
+    public function delete($id_pelapor)
+   {
+      $this->reportlaporanModel->delete_data($id_pelapor);
+      return redirect()->to(base_url('admin/reportlaporan'));
     }
 }
