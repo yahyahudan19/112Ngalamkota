@@ -2,261 +2,277 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8" />
+    <title>Layanan Ngalam 112 - Kota Malang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
+    <meta content="Themesbrand" name="author" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="<?= base_url()?>/templatepage/images/ngalam.png" />
 
-  <title>Feedback Layanan 112 - Kota Malang</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="<?= base_url()?>/template/assets/img/ngalam.png" rel="icon">
-  <link href="<?= base_url()?>/template/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="<?= base_url()?>/template/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?= base_url()?>/template/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="<?= base_url()?>/template/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?= base_url()?>/template/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="<?= base_url()?>/template/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?= base_url()?>/template/assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="<?= base_url()?>/template/assets/css/style.css" rel="stylesheet">
-
-  <!-- Buat Toast -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
+    <!-- css -->
+    <link href="<?= base_url()?>/templatepage/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url()?>/templatepage/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url()?>/templatepage/css/style.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <!-- <h1 class="text-light"><a href="index.html">LAYANAN 112<span>.</span></a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="/home"><img src="<?= base_url()?>/template/assets/img/diskominfo.png" alt="" class="img-fluid"></a>
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/home">About Us</a></li>
-          <li><a href="/home">Berita</a></li>
-          <li class="active"><a href="/home/feedback">Feedback</a></li>
-          </li>
-          <li><a href="/home">Contact Us</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-
-  <section id="hero">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-      <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
-        <h1>Feedback Layanan Panggilan Darurat 112</h1>
-        <h2>Feedback yang anda berikan akan sangat berguna bagi kami, guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112 dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</h2>
-        <a href="#contact" class="btn-get-started scrollto">Berikan Feedback</a>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-        <img src="<?= base_url()?>/template/assets/img/phone.png" class="img-fluid" alt="">
-      </div>
-    </div>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2 data-aos="fade-in">FEEDBACK</h2>
-          <p data-aos="fade-in">Feedback yang anda berikan akan sangat berguna bagi kami, guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112 dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</p>
+<body data-spy="scroll" data-target="#navbar" data-offset="20">
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
         </div>
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <img src="..." class="rounded mr-2" alt="...">
-            <strong class="mr-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+    </div>
+
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="<?= base_url()?>/home">
+                <img src="<?= base_url()?>/templatepage/images/diskominfo.png" alt="" class="logo-dark" height="28" />
+                <img src="<?= base_url()?>/templatepage/images/logo-light.png" alt="" class="logo-light" height="28" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="" data-feather="menu"></i>
             </button>
-          </div>
-          <div class="toast-body">
-            Hello, world! This is a toast message.
-          </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link">Home</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a href="/home/feedback" class="nav-link active">Feedback</a>
+                    </li>  
+                </ul>                
+            </div>
         </div>
-        <div class="row">       
-          <form action="/feedback/addFeedback" method="post" data-aos="fade-up">
-          <?= csrf_field(); ?>  
-          <div class="row">
-              <div class="col-md-6 form-group">
-                  <p>Nama</p>
-                <input type="text" name="nama_feedback" class="form-control" id="nama_feedback" placeholder="Nama"/>
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <p>Alamat</p>
-                <input type="text" class="form-control" name="alamat_feedback" id="alamat_feedback" placeholder="Alamat"/>
-                <div class="validate"></div>
-              </div>
+        <!-- end container -->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="hero-6 bg-center position-relative overflow-hidden"
+        style="background-image: url(<?= base_url()?>/templatepage/images/hero-6-bg.png);" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <i class="mb-4 icon-lg sw-1_5 text-primary" data-feather="sunrise"></i>
+                    <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat 
+                        <b>Ngalam 112 - Kota Malang</b>
+                    </h1>
+                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
+                      Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
+                    <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1"
+                            data-feather="arrow-right"></i></a>
+                </div>
+                <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
+                    <div class="mt-lg-0 mt-5">
+                        <img src="<?= base_url()?>/templatepage/images/phone.png" alt="" class="img-xl-responsive" height="600px" width="670px" />
+                    </div>
+                </div>
             </div>
-            <div class="form-group mt-3">
-                <p>No.HP</p>
-              <input type="text" class="form-control" name="noHp_feedback" id="noHp_feedback" placeholder="" />
-              <div class="validate"></div>
-            </div>
-            <!-- <div class="form-group mt-3">
-                <p>Tanggal</p>
-              <input type="text" class="form-control" name="penyebab_feedback" id="penyebab_feedback" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validate"></div>
-            </div> -->
-            <!-- <div class="form-group mt-3">
-                <p>Penyebab</p>
-                <textarea class="form-control" name="penyebab_feedback" id="penyebab_feedback" rows="5"   placeholder="Penyebab"></textarea>
-                <div class="validate"></div>
-            </div> -->
-            <div class="form-group mt-3">
-              <p>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</p>
-              <div class="form-group">
-                <input type="radio" name="q1_feedback" id="q1_feedback" value="iya"> Iya
-                <!-- <input type="text" class="form-control" name="q1_feedback" id="q1_feedback" placeholder=""  /> -->
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q1_feedback" id="q1_feedback" value="tidak"> Tidak
-              </div>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group mt-3">
-                <p>Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</p>
-              <div class="form-group">
-                <input type="radio" name="q2_feedback" id="q2_feedback" value="iya"> Iya
-              <!-- <input type="text" class="form-control" name="q2_feedback" id="q2_feedback" placeholder=""  /> -->
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q2_feedback" id="q2_feedback" value="tidak"> Tidak
-              </div>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group mt-3">
-                <p>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</p>
-            <div class="form-group">
-              <input type="radio" name="q3_feedback" id="q3_feedback" value="dibutuhkan"> Dibutuhkan
-              <!-- <input type="text" class="form-control" name="q3_feedback" id="q3_feedback" placeholder="" /> -->
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q3_feedback" id="q3_feedback" value="tidak"> Tidak
-              </div>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group mt-3">
-                <p>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ?   Berikan Penilaian !</p>
-              <!-- <input type="text" class="form-control" name="q4_feedback" id="q4_feedback" placeholder="" /> -->
-              <div class="form-group">
-                <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Bagus"> Sangat Bagus
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q4_feedback" id="q4_feedback" value="Bagus"> Bagus
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q4_feedback" id="q4_feedback" value="Cukup"> Cukup
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q4_feedback" id="q4_feedback" value="Kurang"> Kurang
-              </div>
-              <div class="form-group">
-                <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Kurang"> Sangat Kurang
-              </div>
-              <div class="validate"></div>
-            </div>
-            <div class="form-group mt-3">
-                <p>Apakah ada saran untuk layanan 112 ?</p>
-                <textarea class="form-control" name="q5_feedback" id="q5_feedback" rows="5" placeholder="Saran"></textarea>
-                <div class="validate"></div>
-            </div>
-            <br>
-            <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
-          </form>
         </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Contact us start -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-4">Feedback</h2>
+                    <p class="text-muted mb-5">Feedback yang anda berikan akan sangat berguna bagi kami, 
+                      guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112 
+                      dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</p>
+                    <div>
+                        <form method="post" name="myForm" onsubmit="return validateForm()">
+                            <p id="error-msg"></p>
+                            <div id="simple-msg"></div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="nama_feedback" class="text-muted form-label">Nama</label>
+                                        <input name="nama_feedback" id="nama_feedback" type="text" class="form-control"
+                                            placeholder="Enter name*">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="mb-4">
+                                        <label for="noHp_feedback" class="text-muted form-label">No.Telp</label>
+                                        <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control"
+                                            placeholder="Enter No.Telp*">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-4">
+                                        <label for="alamat_feedback" class="text-muted form-label">Alamat</label>
+                                        <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback"
+                                            placeholder="Alamat.." />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject" class="text-muted form-label">Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</label>
+                                        <div class="form-group">
+                                          <input type="radio" name="q1_feedback" id="q1_feedback" value="iya"> Iya
+                                        </div>
+                                        <div class="form-group">
+                                              <input type="radio" name="q1_feedback" id="q1_feedback" value="tidak"> Tidak
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject" class="text-muted form-label">Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</label>
+                                        <div class="form-group">
+                                          <input type="radio" name="q2_feedback" id="q2_feedback" value="iya"> Iya
+                                        </div>
+                                        <div class="form-group">
+                                              <input type="radio" name="q2_feedback" id="q2_feedback" value="tidak"> Tidak
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject" class="text-muted form-label">Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</label>
+                                        <div class="form-group">
+                                          <input type="radio" name="q3_feedback" id="q3_feedback" value="iya"> Dibutuhkan
+                                        </div>
+                                        <div class="form-group">
+                                              <input type="radio" name="q3_feedback" id="q3_feedback" value="tidak"> Tidak
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="subject" class="text-muted form-label">Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ? Berikan Penilaian !</label>
+                                            <div class="form-group">
+                                              <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Bagus"> Sangat Bagus
+                                            </div>
+                                            <div class="form-group">
+                                              <input type="radio" name="q4_feedback" id="q4_feedback" value="Bagus"> Bagus
+                                            </div>
+                                            <div class="form-group">
+                                              <input type="radio" name="q4_feedback" id="q4_feedback" value="Cukup"> Cukup
+                                            </div>
+                                            <div class="form-group">
+                                              <input type="radio" name="q4_feedback" id="q4_feedback" value="Kurang"> Kurang
+                                            </div>
+                                            <div class="form-group">
+                                              <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Kurang"> Sangat Kurang
+                                            </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="q5_feedback" class="text-muted form-label">Apakah ada saran untuk layanan 112 ?</label>
+                                        <textarea name="q5_feedback" id="q5_feedback" rows="4" class="form-control"
+                                            placeholder="Saran layanan 112"></textarea>
+                                    </div>
+                                    <button type="submit" id="submit" name="send" class="btn btn-primary">Send
+                                        Feedback</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end col -->
+
+                <!-- end col -->
+            </div>
+            <!-- end row -->
         </div>
-      </div>
-    </section><!-- End Contact Section -->
+        <!-- end container -->
+    </section>
+    <!-- Contact us end -->
 
-  </main><!-- End #main -->
+    <!-- Footer Start -->
+    <footer class="footer" style="background-image: url(<?= base_url()?>/templatepage/images/footer-bg.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mb-4">
+                        <a href="index-1.html"><img src="<?= base_url()?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
+                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
+                          Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
+                    </div>
+                </div>
+                <!-- end col -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+                <div class="col-lg-7 ms-lg-auto">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Social Media</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li><a href="javascript: void(0);" class="footer-link">Instagram</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Facebook</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Berita 112</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li><a href="javascript: void(0);" class="footer-link">Trending</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Popular</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Customers</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Features</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Information</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li><a href="javascript: void(0);" class="footer-link">Developers</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Support</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Customer Service</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Get Started</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Guide</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Support</h4>
+                                <ul class="list-unstyled footer-sub-menu">
+                                    <li><a href="javascript: void(0);" class="footer-link">FAQ</a></li>
+                                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                                    <li><a href="javascript: void(0);" class="footer-link">Disscusion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
 
-    <div class="footer-top">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row  justify-content-center">
-          <div class="col-lg-6">
-            <h3>Layanan 112 - Kota Malang</h3>
-            <p>Ngalam Command Center.</p>
-          </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mt-5">
+                        <p class="text-white-50 f-15 mb-0">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Copyright. DINAS KOMUNIKASI DAN INFORMATIKA KOTA MALANG - Design By Themesbrand
+                        </p>
+                    </div>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
         </div>
+        <!-- end container -->
+    </footer>
+    <!-- Footer End -->
 
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
+    <!-- javascript -->
+    <script src="<?= base_url()?>/templatepage/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url()?>/templatepage/js/smooth-scroll.polyfills.min.js"></script>
 
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+    <script src="https://unpkg.com/feather-icons"></script>
 
-      </div>
-    </div>
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Layanan 112 - Kota Malang</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-
-
-  <!-- Vendor JS Files -->
-  <script src="<?= base_url()?>/template/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/php-email-form/validate.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="<?= base_url()?>/template/assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="<?= base_url()?>/template/assets/js/main.js"></script>
+    <!-- App Js -->
+    <script src="<?= base_url()?>/templatepage/js/app.js"></script>
 
 </body>
 

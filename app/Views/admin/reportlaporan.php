@@ -9,6 +9,7 @@
     </ul>
   </div>
   <section class="no-padding-top">
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-15">
@@ -30,6 +31,7 @@
                 <input type="submit" name="cari" class="btn btn-info" value="Cari">
               </div>
             </div>
+            <br>
             <div class="table-responsive">
               <table class="table table-striped table-hover" id="report-list">
                 <thead>

@@ -106,7 +106,7 @@
                               </div>
                               <div class="form-group">       
                                 <label>username</label>
-                                <input type="password" placeholder="Username" class="form-control">
+                                <input type="username" placeholder="Username" class="form-control">
                               </div>
                               <div class="form-group">       
                                 <label>password</label>
