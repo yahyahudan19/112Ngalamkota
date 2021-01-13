@@ -9,6 +9,7 @@ class Home extends BaseController
     }
 	public function index()
 	{
+		
 		$news = $this->newsModel->findAll();
 		$data = [
 			'news' => $news 

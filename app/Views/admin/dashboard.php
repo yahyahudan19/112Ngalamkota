@@ -1,131 +1,73 @@
-
-      <div class="page-content">
-        <div class="page-header">
-          <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">Dashboard</h2>
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>Dashboard</h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i> Dashboard</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-12">
+          <div class="info-box">
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-face-smile f-20 text-blue"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">1,150</h1>
+                    <span class="progress-description">New Orders</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:40%; height:6px;"> <span class="sr-only">40% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-bar-chart f-20 text-danger"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">2,030</h1>
+                    <span class="progress-description">New Orders</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-panel f-20 text-info"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">4,250</h1>
+                    <span class="progress-description">Online Revenue</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:65%; height:6px;"> <span class="sr-only">65% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-wallet f-20 text-green"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">8,350</h1>
+                    <span class="progress-description">Total Profit</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:85%; height:6px;"> <span class="sr-only">85% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+            </div>
           </div>
         </div>
-        <section class="no-padding-top no-padding-bottom">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-user-1"></i></div><strong>New Clients</strong>
-                    </div>
-                    <div class="number dashtext-1">20</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-contract"></i></div><strong>New Projects</strong>
-                    </div>
-                    <div class="number dashtext-2">375</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>New Invoices</strong>
-                    </div>
-                    <div class="number dashtext-3">140</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-writing-whiteboard"></i></div><strong>All Projects</strong>
-                    </div>
-                    <div class="number dashtext-4">41</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="no-padding-bottom">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="bar-chart block no-margin-bottom">
-                  <canvas id="barChartExample1"></canvas>
-                </div>
-                <div class="bar-chart block">
-                  <canvas id="barChartExample2"></canvas>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="line-cahrt block">
-                  <canvas id="lineCahrt"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="no-padding-bottom">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="stats-2-block block d-flex">
-                  <div class="stats-2 d-flex">
-                    <div class="stats-2-arrow low"><i class="fa fa-caret-down"></i></div>
-                    <div class="stats-2-content"><strong class="d-block">5.657</strong><span class="d-block">Standard Scans</span>
-                      <div class="progress progress-template progress-small">
-                        <div role="progressbar" style="width: 60%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stats-2 d-flex">
-                    <div class="stats-2-arrow height"><i class="fa fa-caret-up"></i></div>
-                    <div class="stats-2-content"><strong class="d-block">3.1459</strong><span class="d-block">Team Scans</span>
-                      <div class="progress progress-template progress-small">
-                        <div role="progressbar" style="width: 35%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="stats-3-block block d-flex">
-                  <div class="stats-3"><strong class="d-block">745</strong><span class="d-block">Total requests</span>
-                    <div class="progress progress-template progress-small">
-                      <div role="progressbar" style="width: 35%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template progress-bar-small dashbg-1"></div>
-                    </div>
-                  </div>
-                  <div class="stats-3 d-flex justify-content-between text-center">
-                    <div class="item"><strong class="d-block strong-sm">4.124</strong><span class="d-block span-sm">Threats</span>
-                      <div class="line"></div><small>+246</small>
-                    </div>
-                    <div class="item"><strong class="d-block strong-sm">2.147</strong><span class="d-block span-sm">Neutral</span>
-                      <div class="line"></div><small>+416</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="drills-chart block">
-                  <canvas id="lineChart1"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
+      </div>
+      <!-- /.row --> 
+      <!-- Main row -->
+    </div>
+    <!-- /.content --> 
+  </div>
+ 

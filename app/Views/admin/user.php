@@ -1,62 +1,21 @@
-<div class="page-content">
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>User Management</h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i>User Management</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="page-content">
+      <!-- Page Header-->
+      <div class="page-content">
         <!-- Page Header-->
-        <div class="page-header no-margin-bottom">
-          <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">Tables</h2>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Users</li>
-          </ul>
-        </div>
-        <section class="no-padding-top">
-        <section class="no-padding-top no-padding-bottom">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-user-1"></i></div><strong>Jumlah Admin</strong>
-                    </div>
-                    <div class="number dashtext-1">27</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-contract"></i></div><strong>Jumlah Laporan</strong>
-                    </div>
-                    <div class="number dashtext-2">375</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="statistic-block block">
-                  <div class="progress-details d-flex align-items-end justify-content-between">
-                    <div class="title">
-                      <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>Jumlah Berita</strong>
-                    </div>
-                    <div class="number dashtext-3">140</div>
-                  </div>
-                  <div class="progress progress-template">
-                    <div role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
           <div class="container-fluid">
               <div class="col-lg-9">
                 <div class="block">
@@ -134,4 +93,11 @@
               </div>
             </div>
           </div>
-        </section>
+          </section>
+        </div>
+        <!-- /.content --> 
+      </div>
+ 
+
+
+        

@@ -1,36 +1,57 @@
-<div class="page-content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>Laporan 112 </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i> Laporan 112</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="page-content">
   <!-- Page Header-->
-
-  <div class="container-fluid">
-    <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-      <li class="breadcrumb-item active">Report</li>
-      <li class="breadcrumb-item active">Laporan</li>
-    </ul>
-  </div>
+  <div class="row">
+        <div class="col-12">
+          <div class="info-box">
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-stats-up f-20 text-danger"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">9</h1>
+                    <span class="progress-description">Total Laporan</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%; height:6px;"> <span class="sr-only">40% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <div> <i class="ti-check-box f-20 text-success"></i>
+                  <div class="info-box-content">
+                    <h1 class="f-25 text-black">7</h1>
+                    <span class="progress-description">Tindak Lanjut</span> </div>
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                  </div>
+                </div>
+                <!-- /.info-box --> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   <section class="no-padding-top">
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-15">
-          <div class="block">
-            <div class="title"><strong>Tabel Laporan Kejadian</strong></div>
-            <div>
+          <div class="block">             
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center">Tambah Data</button>
-            </div>
-            <div class="row mt-4">
-              <div class="col-lg-4 col-sm-12 form-group">
-                <label class="form-control-label"><strong>Dari</strong></label>
-                <input type="date" name="tanggal_dari" class="form-control">
-              </div>
-              <div class="col-lg-4 col-sm-12 form-group">
-                <label class="form-control-label"><strong>Sampai</strong></label>
-                <input type="date" name="tanggal_sampai" class="form-control">
-              </div>
-              <div class="col-lg-4 col-sm-12 form-group">
-                <input type="submit" name="cari" class="btn btn-info" value="Cari">
-              </div>
-            </div>
+              <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
+            <br>
             <br>
             <div class="table-responsive">
               <table class="table table-striped table-hover" id="report-list">
@@ -57,40 +78,12 @@
                       <td>
                         <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                         <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                        <button type="button" class="btn btn-primary btn-sm">Hapus</button>
+                        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
                       </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="bar-chart block chart">
-            <div class="title"><strong> Total Laporan </strong></div>
-            <div class="bar-chart chart">
-              <canvas id="barChartCustom3"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="pie-chart chart block">
-            <div class="title"><strong>Jenis Laporan</strong></div>
-            <div class="pie-chart chart margin-bottom-sm">
-              <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                  <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                </div>
-                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                  <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                </div>
-              </div>
-              <canvas id="pieChartCustom1" width="448" height="224" class="chartjs-render-monitor" style="display: block; width: 448px; height: 224px;"></canvas>
             </div>
           </div>
         </div>
@@ -153,3 +146,10 @@
   </div>
 </div>
 </section>
+    </div>
+    <!-- /.content --> 
+  </div>
+ 
+
+
+        

@@ -1,39 +1,31 @@
-      <!-- Sidebar Navigation-->
-      <nav id="sidebar">
-        <!-- Sidebar Header-->
-        <div class="sidebar-header d-flex align-items-center">
-          <div class="avatar"><img src="<?= base_url()?>/template/assets/img/ngalam.png" alt="..." class="img-fluid rounded-circle"></div>
-          <div class="title">
-            <h1 class="h5">Yahya Hudan </h1>
-            <p>Hi ! Admin 112 - 01</p>
-          </div>
-        </div>
-        <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
-        <?php
-          if(session()->get('role') == "1"){
-            ?>
-            <ul class="list-unstyled">
-                <li><a href="/superadmin"> <i class="icon-dashboard"></i>Dashboard </a></li>
-                <li><a href="/superadmin/news"> <i class="fa fa-newspaper-o"></i>News </a></li>
-                <!-- <li><a href="/admin/report"> <i class="icon-form-1"></i>Report </a></li> -->
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-form-1"></i>Report </a>
-                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="/superadmin/reportfeedback">Feedback</a></li>
-                    <li><a href="/superadmin/reportlaporan">Laporan</a></li>
-                  </ul>
-                </li>
-                <li><a href="/superadmin/user"> <i class="icon-user"></i>Users </a></li>
-            </ul>    
-            <?php
-          }else if(session()->get('role') == "2"){
-            ?>
-            <ul class="list-unstyled">
-                <li><a href="/admin"> <i class="icon-dashboard"></i>Dashboard </a></li>
-                <li><a href="/admin/reportlaporan"> <i class="fa fa-newspaper-o"></i>Report Laporan </a></li>
-            </ul>
-            <?php
-          }
-        ?>
-        
-      </nav>
-      <!-- Sidebar Navigation end-->
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar"> 
+    <!-- sidebar: style can be found in sidebar.less -->
+    <div class="sidebar"> 
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="image text-center"><img src="<?= base_url()?>/templatepage/images/ngalam.png" class="img-circle" alt="User Image"> </div>
+        <div class="info">
+          <p>Yahya Hudan</p>
+          <a href="#"><i class="fa fa-cog"></i></a> <a href="#"><i class="fa fa-envelope-o"></i></a> <a href="/auth"><i class="fa fa-power-off"></i></a> </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN MENU</li>
+        <li class=""> <a href="/admin"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> <span class="pull-right-container"></span> </a></li>
+        <li class=""> <a href="/news"> <i class="fa fa-newspaper-o"></i> <span>News Management</span> <span class="pull-right-container"></span> </a>
+        </li>          
+        <li class="active treeview menu-open"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li><a href="/report">Laporan 112</a></li>
+            <li><a href="/superAdmin/reportFeedback">Laporan Feedback</a></li>
+          </ul>
+        </li>
+        <li class="header">Pengaturan</li>
+        <li class=""> <a href="/superAdmin/user"> <i class="fa fa-user"></i> <span>User Management</span> <span class="pull-right-container"></i> </span> </a>
+        </li>        
+      </ul>
+    </div>
+    <!-- /.sidebar --> 
+  </aside>

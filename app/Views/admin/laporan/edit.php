@@ -1,4 +1,20 @@
-<div class="page-content">
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>Laporan 112 </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i> Laporan 112</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="page-content">
+  <!-- Page Header-->
+  <div class="page-content">
         <!-- Page Header-->
         <div class="page-header no-margin-bottom">
           <div class="container-fluid">
@@ -61,3 +77,11 @@
                 </div>
               </div>
 </div>
+</section>
+    </div>
+    <!-- /.content --> 
+  </div>
+ 
+
+
+        

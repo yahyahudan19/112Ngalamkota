@@ -1,13 +1,19 @@
-        <div class="page-content">
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>Laporan Feedback </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i> Laporan Feedback</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="page-content">
         <!-- Page Header-->
-
-        <div class="container-fluid">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Report</li>
-            <li class="breadcrumb-item active">Feedback</li>
-          </ul>
-        </div>
         <section class="no-padding-top">
           <div class="container-fluid">
               <div class="row">
@@ -59,28 +65,8 @@
                   </div>
                 </div>
               </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-5">
-                    <div class="bar-chart block chart">
-                      <div class="title"><strong> Total Feedback </strong></div>
-                      <div class="bar-chart chart">
-                        <canvas id="barChartCustom3"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="pie-chart chart block">
-                      <div class="title"><strong>Jenis Feedback</strong></div>
-                      <div class="pie-chart chart margin-bottom-sm"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-                        <canvas id="pieChartCustom1" width="448" height="224" class="chartjs-render-monitor" style="display: block; width: 448px; height: 224px;"></canvas>
-                      </div>
-                    </div>
-                  </div>                
-                </div>
-              </div>
             </div>
-              </div>
+            </div>
             </div>
           </div>
            <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
@@ -121,3 +107,11 @@
                       </div>
                     </div>
         </section>
+</section>
+    </div>
+    <!-- /.content --> 
+  </div>
+ 
+
+
+        

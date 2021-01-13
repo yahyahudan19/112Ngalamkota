@@ -1,16 +1,19 @@
-<div class="page-content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"> 
+    <!-- Content Header (Page header) -->
+    <div class="content-header sty-one">
+      <h1>News Management</h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><i class="fa fa-angle-right"></i> News Management</li>
+      </ol>
+    </div>
+    
+    <!-- Main content -->
+    <div class="content"> 
+      <!-- Small boxes (Stat box) -->
+      <div class="page-content">
         <!-- Page Header-->
-        <div class="page-header no-margin-bottom">
-          <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">News</h2>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">News</li>
-          </ul>
-        </div>
         <section class="no-padding-top">
           <div class="container-fluid">
               <div class="row">
@@ -98,3 +101,12 @@
             </div>
           </div>
         </section>
+      <!-- /.row --> 
+      <!-- Main row -->
+    </div>
+    <!-- /.content --> 
+  </div>
+ 
+
+
+        
