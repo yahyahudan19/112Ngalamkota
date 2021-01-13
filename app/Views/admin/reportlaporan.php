@@ -78,7 +78,8 @@
                       <td>
                         <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                         <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+
+                        <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                       </td>
                     </tr>
                   <?php endforeach; ?>

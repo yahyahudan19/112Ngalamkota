@@ -13,4 +13,9 @@ class reportlaporanModel extends Model{
     {
         return $this->db->table($this->table)->insert($data);
     }
+    public function delete_data($id_pelapor)
+    {
+        $query= $this->db->table("report")->delete(array('id_pelapor' => $id_pelapor));
+        return $query;
+    }
 }

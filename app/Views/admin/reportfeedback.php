@@ -53,7 +53,7 @@
                           <td><?= $r['q5_feedback'];?></td>
                           <td>
                                 <a href="/feedback/detailFeedback/<?= $r['id_feedback']; ?>" class="btn btn-info btn-sm">Detail</a>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
+                                <a href="/feedback/delete/<?= $r['id_feedback']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>                         

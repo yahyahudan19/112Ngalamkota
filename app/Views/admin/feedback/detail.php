@@ -22,7 +22,7 @@
                       <div class="form-group row">
                         <label class="col-sm-1 form-control-label"><strong>Nama</strong></label>
                         <div class="col-sm-3">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control">Nama</label>
                         </div>
                         <label class="col-sm-1 form-control-label">Alamat</label>
                         <div class="col-sm-4">

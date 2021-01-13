@@ -40,7 +40,7 @@
                           <td><?= $r['role_id'];?></td>
                           <td>
                                 <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <button type="button" class="btn btn-primary btn-sm">Hapus</button>
+                                <a href="/auth/delete/<?= $r['id_user']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
