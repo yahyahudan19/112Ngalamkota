@@ -10,6 +10,9 @@
 <!-- v4.0.0-alpha.6 -->
 <link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/bootstrap/css/bootstrap.min.css">
 
+<!-- favicon -->
+<link rel="shortcut icon" href="<?= base_url()?>/templatepage/images/ngalam.png" />
+
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
