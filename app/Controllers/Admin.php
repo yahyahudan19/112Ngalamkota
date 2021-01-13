@@ -34,5 +34,11 @@ class Admin extends BaseController
 		echo view('admin/reportlaporan', $data);
 		echo view('layout/footer');
 	}
+	public function editProfile(){
+		echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/profile/editProfile');
+		echo view('layout/footer');
+	}
 
 }

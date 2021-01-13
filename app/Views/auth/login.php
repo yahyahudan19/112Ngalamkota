@@ -33,8 +33,6 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
 <div class="login-box">
   <div class="login-box-body">
     <h3 class="login-box-msg">Log In</h3>

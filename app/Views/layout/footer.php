@@ -1,7 +1,7 @@
  <!-- /.content-wrapper -->
  <footer class="main-footer">
     <div class="pull-right hidden-xs">Version 1.0 Beta</div>
-    Copyright © 2021 Dinas Komunikasi dan Informasi Kota Malang. All rights reserved.</footer>
+    Copyright © 2021 Dinas Komunikasi dan Informatika Kota Malang. All rights reserved.</footer>
 </div>
 <!-- ./wrapper --> 
 

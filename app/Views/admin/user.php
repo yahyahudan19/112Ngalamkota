@@ -39,8 +39,8 @@
                           <td><?= $r['username'];?></td>
                           <td><?= $r['role_id'];?></td>
                           <td>
-                                <button type="button" class="btn btn-secondary btn-sm">Edit</button>
-                                <a href="/auth/delete/<?= $r['id_user']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
+                                <a href="/admin/editProfile" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="/auth/delete/<?= $r['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -48,7 +48,7 @@
                     </table>
                   </div>
                 </div>                
-                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Tambah User</button>
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah User</button>
               </div>
                     <!-- Modal-->
                     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">

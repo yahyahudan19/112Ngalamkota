@@ -70,5 +70,12 @@ class SuperAdmin extends BaseController
 	public function editData(){
 		
 	}
+	public function profile(){
+		echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/profile/index');
+		echo view('layout/footer');
+	}
+	
 
 }
