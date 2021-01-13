@@ -15,4 +15,10 @@ class authModel extends Model{
         ->where(array('username' => $username, 'password' => $password))
         ->get()->getRowArray();
     }
+
+    public function delete_data($id_user)
+    {
+        $query= $this->db->table("user")->delete(array('id_user' => $id_user));
+        return $query; 
+    }
 }

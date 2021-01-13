@@ -97,7 +97,7 @@
             <!-- Tasks end-->
             <!-- Log out -->
             <div class="list-inline-item logout">                   
-                <a id="logout" href="/auth" class="nav-link">Logout <i class="icon-logout"></i></a></div>
+                <a id="logout" href="/auth" class="nav-link" onclick="return confirm('Yakin anda ingin keluar');">Logout <i class="icon-logout"></i></a></div>
           </div>
         </div>
       </nav>
