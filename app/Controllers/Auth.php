@@ -52,6 +52,11 @@ class Auth extends BaseController
 		}else{
 			return view('auth/login');
 		}
-		
+	
+	}
+	public function delete($id_user)
+		{
+			$this->authModel->delete_data($id_user);
+		   return redirect()->to(base_url('superadmin/user'));
 	}
 }
