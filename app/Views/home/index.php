@@ -57,10 +57,10 @@
                     </li>
                      <!--<li class="nav-item">
                         <a href="#team" class="nav-link">Team</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="#blog" class="nav-link">Blog</a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact Us</a>
                     </li>
@@ -215,18 +215,53 @@
         <!-- end container -->
     </section>
     <!-- Features end -->
-
-    <section class="section bg-gradient-primary">
-        <div class="bg-overlay-img" style="background-image: url(<?= base_url()?>/templatepage/images/demos.png);"></div>
+    <!-- Cta end -->
+     <!-- Blog start -->
+    <section class="section" id="blog">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <h1 class="text-white mb-4">Build your dream website today</h1>
-                        <p class="text-white mb-5 font-size-16">Sed perspiciatis unde omnis iste natus error sit
-                            voluptatem accusantium doloremque laudantium totamrem aperiam eaque inventore veritatis
-                            quasi.</p>
-                        <a href="#" class="btn btn-lg btn-light">Ask for Demonstration</a>
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-7 text-center">
+                    <h2 class="fw-bold">Pengumuman</h2>
+                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium totam rem ab illo inventore.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mt-4 border-0 shadow">
+                        <div class="card-body p-4">
+                            <span class="badge badge-soft-primary">UI & UX Design</span>
+                            <h4 class="font-size-22 my-4"><a href="javascript: void(0);">Step bt step to conduct
+                                    usability testing</a></h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+
+                <div class="col-lg-4">
+                    <div class="card mt-4 border-0 shadow">
+                        <div class="card-body p-4">
+                            <span class="badge badge-soft-primary">CEO</span>
+                            <h4 class="font-size-22 my-4"><a href="javascript: void(0);">Increase conversion rate from
+                                    ad to landing page</a></h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+
+                <div class="col-lg-4">
+                    <div class="card mt-4 border-0 shadow">
+                        <div class="card-body p-4">
+                            <span class="badge badge-soft-primary">Developer</span>
+                            <h4 class="font-size-22 my-4"><a href="javascript: void(0);">Why small business should start
+                                    marketing</a></h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- end col -->
@@ -235,7 +270,7 @@
         </div>
         <!-- end container -->
     </section>
-    <!-- Cta end -->
+    <!-- Blog end -->
 
     <!-- Contact us start -->
     <section class="section" id="contact">
