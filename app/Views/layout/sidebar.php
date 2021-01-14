@@ -15,18 +15,21 @@
         <li class="header">MAIN MENU</li>
         <li class=""> <a href="/admin"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> <span class="pull-right-container"></span> </a></li>
         <li class=""> <a href="/news"> <i class="fa fa-newspaper-o"></i> <span>News Management</span> <span class="pull-right-container"></span> </a>
+        <li class=""> <a href="/superAdmin/pengumuman"> <i class="fa fa-podcast"></i> <span>Pengumuman</span> <span class="pull-right-container"></span> </a>
         </li>          
-        <li class="active treeview menu-open"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li><a href="/report">Laporan 112</a></li>
             <li><a href="/superAdmin/reportFeedback">Laporan Feedback</a></li>
           </ul>
         </li>
+        </li>        
+        <li class=""> <a href="/admin/contact"> <i class="fa fa-address-card"></i> <span>Contact</span> <span class="pull-right-container"></i> </span> </a>
+        </li>    
         <li class="header">Pengaturan</li>
         <li class=""> <a href="/superAdmin/user"> <i class="fa fa-user"></i> <span>User Management</span> <span class="pull-right-container"></i> </span> </a>
         </li>        
-        <li class=""> <a href="/superAdmin/profile"> <i class="fa fa-user"></i> <span>Profile</span> <span class="pull-right-container"></i> </span> </a>
-        </li>        
+        <li class=""> <a href="/superAdmin/profile"> <i class="fa fa-user"></i> <span>Profile</span> <span class="pull-right-container"></i> </span> </a>    
       </ul>
     </div>
     <!-- /.sidebar --> 

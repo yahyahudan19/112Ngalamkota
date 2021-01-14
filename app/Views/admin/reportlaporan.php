@@ -38,7 +38,6 @@
                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:100%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
                   </div>
                 </div>
-                <!-- /.info-box --> 
               </div>
             </div>
           </div>
@@ -47,7 +46,7 @@
   <section class="no-padding-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-15">
+        <div class="col-lg-10">
           <div class="block">             
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center">Tambah Data</button>
               <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->

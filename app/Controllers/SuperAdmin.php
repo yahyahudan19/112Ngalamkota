@@ -76,6 +76,18 @@ class SuperAdmin extends BaseController
 		echo view('admin/profile/index');
 		echo view('layout/footer');
 	}
+	public function contact(){
+		echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/contact');
+		echo view('layout/footer');
+	}
+	public function pengumuman(){
+		echo view('layout/header');
+		echo view('layout/sidebar');
+		echo view('admin/pengumuman/index');
+		echo view('layout/footer');
+	}
 	
 
 }
