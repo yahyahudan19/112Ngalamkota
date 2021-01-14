@@ -27,9 +27,15 @@
         <!-- Page Content -->
         <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Detail Laporan</strong></div>
+                  <!-- <div class="title"><strong>Detail Laporan</strong></div> -->
                   <div class="block-body">
                     <form class="form-horizontal">
+                      <div class="form-group row">
+                        <label class="col-sm-1 form-control-label"><strong>Tanggal Kejadian</strong></label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>">
+                        </div>
+                      </div>
                       <div class="form-group row">
                         <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
                         <div class="col-sm-3">
@@ -52,7 +58,7 @@
                       </div>
                         <div class="line"></div>
                         <div class="form-group row">
-                            <label class="col-sm-1 form-control-label">Dokumentasi</label>
+                            <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
                             
                         </div>
                         <?php
