@@ -46,11 +46,5 @@ class Admin extends BaseController
 		echo view('admin/contact');
 		echo view('layout/footer');
 	}
-	public function pengumuman(){
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/contact');
-		echo view('layout/footer');
-	}
 
 }
