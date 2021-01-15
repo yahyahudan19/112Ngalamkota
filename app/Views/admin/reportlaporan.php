@@ -2,10 +2,10 @@
   <div class="content-wrapper"> 
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-      <h1>Laporan 112 </h1>
+      <h1>Laporan Kejadian</h1>
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li><i class="fa fa-angle-right"></i> Laporan 112</li>
+        <li><i class="fa fa-angle-right"></i>Laporan Kejadian</li>
       </ol>
     </div>
     
@@ -52,6 +52,7 @@
               <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
             <br>
             <br>
+            <div class="title"><strong>Tabel Feedback</strong></div>
             <div class="table-responsive">
               <table class="table table-striped table-hover" id="report-list">
                 <thead>
@@ -78,7 +79,7 @@
                         <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                         <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
 
-                        <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
+                        <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
