@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\detailLaporanModel;
 use App\Models\reportlaporanModel;
@@ -8,28 +10,29 @@ class Report extends BaseController
 {
     protected $reportlaporanModel;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->reportlaporanModel = new reportlaporanModel();
         $this->detailLaporanModel = new detailLaporanModel();
     }
     public function index()
-	{
-		$reportL = $this->reportlaporanModel->findAll();
-		$data = [
-			'reportL' => $reportL 
-		];
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/reportlaporan',$data);
-		echo view('layout/footer');
+    {
+        $reportL = $this->reportlaporanModel->findAll();
+        $data = [
+            'reportL' => $reportL
+        ];
+        echo view('layout/header');
+        echo view('layout/sidebar');
+        echo view('admin/reportlaporan', $data);
+        echo view('layout/footer');
     }
     public function addReportL()
-	{
+    {
         // dapatkan input file berupa array
         $files = $this->request->getFiles();
- 
-        if($files){
-             
+
+        if ($files) {
+
             // buat value id random di table uploads
             $data_uploads = [
                 'kejadian' => $this->request->getVar('kejadian'),
@@ -39,47 +42,66 @@ class Report extends BaseController
                 'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
             ];
             $this->reportlaporanModel->insertLaporan($data_uploads);
- 
+
             // ulangi insert gambar ke table galery menggunakan foreach
-            
+
             $db      = \Config\Database::connect();
             $builder = $db->insertID();
             // dd($builder);
 
-            
-            foreach($files['dokumentasi'] as $img){
-                
+
+            foreach ($files['dokumentasi'] as $img) {
+
                 $imagename = $img->getRandomName();
                 $data_galery = [
                     'report_id' => $builder,
                     'gambar' => $imagename
                 ];
- 
+
                 $this->detailLaporanModel->insertDetail($data_galery);
                 // upload dengan random name
                 $img->move(ROOTPATH . 'public/uploads', $imagename);
-             
             }
-            return redirect()->to(base_url('/admin/reportLaporan')); 
-        }   
+            return redirect()->to(base_url('/admin/reportLaporan'));
+        }
         // return redirect()->to(base_url('/admin/reportLaporan')); 
     }
-    public function detailReport($id){
+    public function detailReport($id)
+    {
         $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [
             'reportL' => $reportL[0],
             'detail' => $detail
         ];
-        
+
         echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/laporan/detail', $data);
-		echo view('layout/footer');
+        echo view('layout/sidebar');
+        echo view('admin/laporan/detail', $data);
+        echo view('layout/footer');
     }
+
+    public function update()
+    {
+        $model = new reportlaporanModel();
+        $id = $this->request->getPost('id_pelapor');
+        $data = [
+
+            'kejadian'          => $this->request->getPost('kejadian'),
+            'lokasi_kejadian'   => $this->request->getPost('lokasi_kejadian'),
+            'tanggal'           => $this->request->getPost('tanggal'),
+            'nama_pelapor'       => $this->request->getPost('nama_pelapor'),
+            'tindak_lanjut'     => $this->request->getPost('tindak_lanjut')
+        ];
+
+        $model->updateReport($data, $id);
+        return redirect()->to('/report');
+    }
+
+
     public function delete($id_pelapor)
-   {
-      $this->reportlaporanModel->delete_data($id_pelapor);
-      return redirect()->to(base_url('admin/reportlaporan'));
+    {
+        $this->reportlaporanModel->delete_data($id_pelapor);
+        return redirect()->to(base_url('admin/reportlaporan'));
     }
 }
