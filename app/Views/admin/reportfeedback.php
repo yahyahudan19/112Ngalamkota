@@ -17,11 +17,11 @@
         <section class="no-padding-top">
           <div class="container-fluid">
               <div class="row">
-              <div class="col-lg-10">
+              <div class="col-lg-12">
                 <div class="block">
                   <div class="title"><strong>Tabel Feedback</strong></div>
                   <div class="table-responsive"> 
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover" id="tables"> 
                       <thead>
                         <tr>
                           <th>ID</th>
@@ -106,12 +106,11 @@
                         </div>
                       </div>
                     </div>
-        </section>
-</section>
-    </div>
+        </section> 
+    </section>
+    </div>        
     <!-- /.content --> 
   </div>
- 
 
 
         

@@ -20,9 +20,9 @@
 <script src="<?= base_url()?>/adminpages/dist/plugins/functions/morris-init.js"></script>
 
 <!-- template --> 
-<script src="dist/js/niche.js"></script> 
+<script src="<?= base_url()?>/adminpages/dist/js/niche.js"></script> 
 
 <!-- dropify --> 
-<script src="dist/plugins/dropify/dropify.min.js"></script> 
+<script src="<?= base_url()?>/adminpages/dist/plugins/dropify/dropify.min.js"></script> 
 </body>
 </html>

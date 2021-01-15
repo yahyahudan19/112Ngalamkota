@@ -46,7 +46,7 @@
   <section class="no-padding-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
           <div class="block">             
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center">Tambah Data</button>
               <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->

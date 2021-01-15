@@ -99,14 +99,14 @@
                                     <div class="mb-4">
                                         <label for="nama_feedback" class="text-muted form-label">Nama</label>
                                         <input name="nama_feedback" id="nama_feedback" type="text" class="form-control"
-                                            placeholder="Enter name*">
+                                            placeholder="Nama*">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="mb-4">
                                         <label for="noHp_feedback" class="text-muted form-label">No.Telp</label>
                                         <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control"
-                                            placeholder="Enter No.Telp*">
+                                            placeholder="No.Telp*">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -114,6 +114,11 @@
                                         <label for="alamat_feedback" class="text-muted form-label">Alamat</label>
                                         <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback"
                                             placeholder="Alamat.." />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="penyebab_feedback" class="text-muted form-label">Penyebab</label>
+                                        <input type="text" class="form-control" id="penyebab_feedback" name="penyebab_feedback"
+                                            placeholder="Penyebab" />
                                     </div>
                                     <div class="mb-4">
                                         <label for="subject" class="text-muted form-label">Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</label>
