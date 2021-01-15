@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- <title>Dashboard - Layanan Ngalam 112 </title> -->
-<!-- Tell the browser to be responsive to screen width -->
-<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <title>Dashboard - Layanan Ngalam 112 </title> -->
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
-<!-- v4.0.0-alpha.6 -->
-<link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/bootstrap/css/bootstrap.min.css">
+  <!-- v4.0.0-alpha.6 -->
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/bootstrap/css/bootstrap.min.css">
 
-<!-- favicon -->
-<link rel="shortcut icon" href="<?= base_url()?>/templatepage/images/ngalam.png" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="<?= base_url() ?>/templatepage/images/ngalam.png" />
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
-<!-- Theme style -->
-<link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/css/style.css">
-<link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/css/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/css/et-line-font/et-line-font.css">
-<link rel="stylesheet" href="<?= base_url()?>/adminpages/dist/css/themify-icons/themify-icons.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/style.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/et-line-font/et-line-font.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/themify-icons/themify-icons.css">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 </head>
+
 <body class="skin-blue sidebar-mini">
-<div class="wrapper boxed-wrapper">
-  <header class="main-header"> 
-    <!-- Logo --> 
-    <a href="index.html" class="logo blue-bg"> 
-    <!-- mini logo for sidebar mini 50x50 pixels --> 
-    <span class="logo-mini"><img src="<?= base_url()?>/templatepage/images/ngalam.png" alt=""></span> 
-    <!-- logo for regular state and mobile devices --> 
-    <span class="logo-lg"><img src="<?= base_url()?>/templatepage/images/diskominfo.png" alt="" width="185px" height="40px"></span> </a> 
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar blue-bg navbar-static-top"> 
-      <!-- Sidebar toggle button-->
-      <ul class="nav navbar-nav pull-left">
-        <li><a class="sidebar-toggle" data-toggle="push-menu" href=""></a> </li>
-      </ul>
-      <div class="pull-left search-box">
-        <form action="#" method="get" class="search-form">
-          <div class="input-group">
-            <input name="search" class="form-control" placeholder="Search..." type="text">
-            <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
-            </span></div>
-        </form>
-        <!-- search form --> </div>
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?= base_url()?>/templatepage/images/ngalam.png" class="user-image" alt="User Image"> <span class="hidden-xs">Yahya Hudan</span> </a>
-            <ul class="dropdown-menu">
-              <li class="user-header">
-                <div class="pull-left user-img"><img src="<?= base_url()?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
-                <p class="text-left">Yahya Hudan <small>yahyahudan19@gmail.com</small> </p>
-                <div class="view-link text-left"><a href="#">View Profile</a> </div>
-              </li>
-              <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="/auth"><i class="fa fa-power-off"></i> Logout</a></li>
-            </ul>
-          </li>
+  <div class="wrapper boxed-wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="index.html" class="logo blue-bg">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" alt=""></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" width="185px" height="40px"></span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar blue-bg navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <ul class="nav navbar-nav pull-left">
+          <li><a class="sidebar-toggle" data-toggle="push-menu" href=""></a> </li>
         </ul>
-      </div>
-    </nav>
-  </header>
+        <div class="pull-left search-box">
+          <form action="#" method="get" class="search-form">
+            <div class="input-group">
+              <input name="search" class="form-control" placeholder="Search..." type="text">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
+              </span>
+            </div>
+          </form>
+          <!-- search form -->
+        </div>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="user-image" alt="User Image"> <span class="hidden-xs">Yahya Hudan</span> </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
+                  <p class="text-left">Yahya Hudan <small>yahyahudan19@gmail.com</small> </p>
+                  <div class="view-link text-left"><a href="#">View Profile</a> </div>
+                </li>
+                <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/auth" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
