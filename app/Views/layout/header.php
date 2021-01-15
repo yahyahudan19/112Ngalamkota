@@ -4,11 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< HEAD
-  <!-- <title>Dashboard - Layanan Ngalam 112 </title> -->
-=======
   <title>Dashboard - Layanan Ngalam 112 </title>
->>>>>>> 29f169c852b4ec71755ad4d17f274ad91e79837d
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
 
@@ -26,21 +22,17 @@
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/et-line-font/et-line-font.css">
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/themify-icons/themify-icons.css">
+  <!-- datatables Script -->
+  <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
-<<<<<<< HEAD
-<!-- datatables Script  -->
-<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]> -->
-=======
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> -->
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
->>>>>>> 0930564bf202587a5cec0f61af435648be2dca1a
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <!-- [endif]-->
