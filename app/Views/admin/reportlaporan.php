@@ -55,7 +55,7 @@
                 <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
                 <br>
                 <br>
-                <div class="title"><strong>Tabel Feedback</strong></div>
+                <div class="title"><strong>Tabel Kejadian</strong></div>
                 <div class="table-responsive">
                   <table class="table table-striped table-hover" id="report-list">
                     <thead>
@@ -81,58 +81,13 @@
                           <td>
                             <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                             <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-
-                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
+                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
                           </td>
                         </tr>
                       <?php endforeach; ?>
                     </tbody>
                   </table>
                   <section class="no-padding-top">
-                    <div class="container-fluid">
-                      <div class="row">
-                        <div class="col-lg-10">
-                          <div class="block">
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center">Tambah Data</button>
-                            <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
-                            <br>
-                            <br>
-                            <div class="table-responsive">
-                              <table class="table table-striped table-hover" id="report-list">
-                                <thead>
-                                  <tr>
-                                    <th>ID</th>
-                                    <th>Nama Pelapor</th>
-                                    <th>Lokasi Kejadian</th>
-                                    <th>Nama Pelapor</th>
-                                    <th>Tanggal Kejadian</th>
-                                    <th>Tindak Lanjut</th>
-                                    <th>Action</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <?php foreach ($reportL as $r) : ?>
-                                    <tr>
-                                      <th scope="row"><?= $r['id_pelapor']; ?></th>
-                                      <td><?= $r['kejadian']; ?></td>
-                                      <td><?= $r['lokasi_kejadian']; ?></td>
-                                      <td><?= $r['nama_pelapor']; ?></td>
-                                      <td><?= $r['tanggal']; ?></td>
-                                      <td><?= $r['tindak_lanjut']; ?></td>
-                                      <td>
-                                        <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
-                                        <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-primary btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
-                                      </td>
-                                    </tr>
-                                  <?php endforeach; ?>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                 </div>
 
                 <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
@@ -182,8 +137,8 @@
                           </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
-                        <button type="submit" class="btn btn-success">Save changes</button>
+                        <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button> -->
+                        <button type="submit" class="btn btn-success">Simpan</button>
                       </div>
                       </form>
                     </div>
