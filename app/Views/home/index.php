@@ -9,12 +9,12 @@
     <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
     <meta content="Themesbrand" name="author" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="<?= base_url()?>/templatepage/images/ngalam.png" />
+    <link rel="shortcut icon" href="<?= base_url() ?>/templatepage/images/ngalam.png" />
 
     <!-- css -->
-    <link href="<?= base_url()?>/templatepage/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url()?>/templatepage/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url()?>/templatepage/css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url() ?>/templatepage/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url() ?>/templatepage/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url() ?>/templatepage/css/style.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="20">
@@ -33,12 +33,11 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
         <div class="container">
             <!-- LOGO -->
-            <a class="navbar-brand logo" href="<?= base_url()?>/home">
-                <img src="<?= base_url()?>/templatepage/images/diskominfo.png" alt="" class="logo-dark" height="28" />
-                <img src="<?= base_url()?>/templatepage/images/logo-light.png" alt="" class="logo-light" height="28" />
+            <a class="navbar-brand logo" href="<?= base_url() ?>/home">
+                <img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" class="logo-dark" height="28" />
+                <img src="<?= base_url() ?>/templatepage/images/logo-light.png" alt="" class="logo-light" height="28" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="" data-feather="menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -55,7 +54,7 @@
                     <li class="nav-item">
                         <a href="/home/feedback" class="nav-link">Feedback</a>
                     </li>
-                     <!--<li class="nav-item">
+                    <!--<li class="nav-item">
                         <a href="#team" class="nav-link">Team</a>
                     </li> -->
                     <li class="nav-item">
@@ -73,23 +72,21 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="hero-6 bg-center position-relative overflow-hidden"
-        style="background-image: url(<?= base_url()?>/templatepage/images/hero-6-bg.png);" id="home">
+    <section class="hero-6 bg-center position-relative overflow-hidden" style="background-image: url(<?= base_url() ?>/templatepage/images/hero-6-bg.png);" id="home">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <i class="mb-4 icon-lg sw-1_5 text-primary" data-feather="sunrise"></i>
-                    <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat 
+                    <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
-                      Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
-                    <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1"
-                            data-feather="arrow-right"></i></a>
+                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112.
+                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
+                    <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
-                        <img src="<?= base_url()?>/templatepage/images/phone.png" alt="" class="img-xl-responsive" height="600px" width="670px" />
+                        <img src="<?= base_url() ?>/templatepage/images/phone.png" alt="" class="img-xl-responsive" height="600px" width="670px" />
                     </div>
                 </div>
             </div>
@@ -168,55 +165,53 @@
                         doloremque laudantium totam rem ab illo inventore.</p>
                 </div>
             </div>
-            <?php foreach ($news as $r ) :?>
-            <div class="row align-items-center mb-5">
-                <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
-                    <h2 class="mb-4"><?= $r['tagline_news'];?></h2>
-                    <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
-                        veritatis..</p>
-                    <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2"
-                            data-feather="arrow-right"></i></a>
-                </div>
-                <div class="col-md-6 ms-md-auto order-1 order-md-2">
-                    <div class="position-relative">
-                        <div class="ms-5 features-img">
-                            <img src="<?= base_url()?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+            <?php foreach ($news as $r) : ?>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                        <h2 class="mb-4"><?= $r['tagline_news']; ?></h2>
+                        <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
+                            veritatis..</p>
+                        <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                    </div>
+                    <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                        <div class="position-relative">
+                            <div class="ms-5 features-img">
+                                <img src="<?= base_url() ?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+                            </div>
+                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                         </div>
-                        <img src="<?= base_url()?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                     </div>
                 </div>
-            </div>
             <?php endforeach; ?>
             <!-- end row -->
-            <?php foreach ($news as $r ) :?>
-            <div class="row align-items-center section pb-0">
-                <div class="col-md-6">
-                    <div class="position-relative mb-md-0 mb-5">
-                        <div class="me-5 features-img">
-                            <img src="<?= base_url()?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+            <?php foreach ($news as $r) : ?>
+                <div class="row align-items-center section pb-0">
+                    <div class="col-md-6">
+                        <div class="position-relative mb-md-0 mb-5">
+                            <div class="me-5 features-img">
+                                <img src="<?= base_url() ?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+                            </div>
+                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                         </div>
-                        <img src="<?= base_url()?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
+                    </div>
+                    <div class="col-md-5 ms-md-auto">
+                        <h2 class="mb-4"><?= $r['tagline_news']; ?></h2>
+                        <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
+                            veritatis..</p>
+                        <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-5 ms-md-auto">
-                    <h2 class="mb-4"><?= $r['tagline_news'];?></h2>
-                    <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
-                        veritatis..</p>
-                    <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2"
-                            data-feather="arrow-right"></i></a>
-                </div>
-            </div>
-          <?php endforeach; ?>
-           
+            <?php endforeach; ?>
+
             <!-- end row -->
         </div>
         <!-- end container -->
     </section>
     <!-- Features end -->
     <!-- Cta end -->
-     <!-- Blog start -->
+    <!-- Blog start -->
     <section class="section" id="pengumuman">
         <div class="container">
             <div class="row justify-content-center mb-4">
@@ -279,31 +274,30 @@
                 <div class="col-lg-6">
                     <h2 class="fw-bold mb-3">Contact Us</h2>
                     <p class="text-muted mb-5">Ada masalah dengan Layanan Ngalam 112 ? langsung saja hubungi kami :).</p>
-                        <p class="text-muted mt-5 mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="mail"></i>
-                            nccngalam112@gmail.com</p>
-                        <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i>
-                            0341-3013186</p>
-                        <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
-                            Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
-                        <ul class="list-inline pt-4">
-                            <li class="list-inline-item me-3">
+                    <p class="text-muted mt-5 mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="mail"></i>
+                        nccngalam112@gmail.com</p>
+                    <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i>
+                        0341-3013186</p>
+                    <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
+                        Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                    <ul class="list-inline pt-4">
+                        <!-- <li class="list-inline-item me-3">
                                 <a href="javascript: void(0);" class="social-icon icon-mono avatar-xs rounded-circle"><i
                                         class="icon-xs" data-feather="facebook"></i></a>
                             </li>
                             <li class="list-inline-item me-3">
                                 <a href="javascript: void(0);" class="social-icon icon-mono avatar-xs rounded-circle"><i
                                         class="icon-xs" data-feather="twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="javascript: void(0);" class="social-icon icon-mono avatar-xs rounded-circle"><i
-                                        class="icon-xs" data-feather="instagram"></i></a>
-                            </li>
-                        </ul>
+                            </li> -->
+                        <li class="list-inline-item">
+                            <a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="social-icon icon-mono avatar-xs rounded-circle"><i class="icon-xs" data-feather="instagram"></i></a>
+                        </li>
+                    </ul>
                 </div>
                 <!-- end col -->
                 <div class="col-lg-5 ms-lg-auto">
-                <div class="mt-5 mt-lg-0">
-                        <img src="<?= base_url()?>/templatepage/images/contact.png" alt="" class="img-fluid d-block" />                        
+                    <div class="mt-5 mt-lg-0">
+                        <img src="<?= base_url() ?>/templatepage/images/contact.png" alt="" class="img-fluid d-block" />
                     </div>
                 </div>
                 <!-- end col -->
@@ -315,14 +309,14 @@
     <!-- Contact us end -->
 
     <!-- Footer Start -->
-    <footer class="footer" style="background-image: url(<?= base_url()?>/templatepage/images/footer-bg.png);">
+    <footer class="footer" style="background-image: url(<?= base_url() ?>/templatepage/images/footer-bg.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mb-4">
-                        <a href="index-1.html"><img src="<?= base_url()?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
-                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
-                          Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
+                        <a href="index-1.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
+                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kota yang telah memiliki layanan panggilan darurat 112.
+                            Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
                     </div>
                 </div>
                 <!-- end col -->
@@ -333,15 +327,13 @@
                             <div class="mt-4 mt-lg-0">
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Instagram</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Facebook</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Twitter</a></li>
+                                    <li><a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="footer-link">Instagram</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-3 col-6">
                             <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Berita 112</h4>
+                                <h4 class="text-white font-size-18 mb-3">Berita Ngalam 112</h4>
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="javascript: void(0);" class="footer-link">Trending</a></li>
                                     <li><a href="javascript: void(0);" class="footer-link">Popular</a></li>
@@ -397,13 +389,13 @@
     <!-- Footer End -->
 
     <!-- javascript -->
-    <script src="<?= base_url()?>/templatepage/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url()?>/templatepage/js/smooth-scroll.polyfills.min.js"></script>
+    <script src="<?= base_url() ?>/templatepage/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>/templatepage/js/smooth-scroll.polyfills.min.js"></script>
 
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- App Js -->
-    <script src="<?= base_url()?>/templatepage/js/app.js"></script>
+    <script src="<?= base_url() ?>/templatepage/js/app.js"></script>
 </body>
 
 </html>

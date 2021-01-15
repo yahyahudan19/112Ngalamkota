@@ -62,7 +62,7 @@
                             <label class="col-sm-1 form-control-label"><strong>Q3</strong></label>
                             <div class="col-sm-11">
                                 <div class="form-group">
-                                    <label class="form-control-label"><strong>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ?</strong></label>
+                                    <label class="form-control-label"><strong>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</strong></label>
                                     <input type="text" placeholder="" class="form-control">
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             <label class="col-sm-1 form-control-label"><strong>Q4</strong></label>
                             <div class="col-sm-11">
                                 <div class="form-group">
-                                    <label class="form-control-label"><strong>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</strong></label>
+                                    <label class="form-control-label"><strong>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ? Berikan Penilaian !</strong></label>
                                     <input type="text" placeholder="" class="form-control">
                                 </div>
                             </div>
@@ -88,8 +88,6 @@
                         <div class="line"></div>
                         <div class="form-group row">
                             <div class="col-sm-11 ml-auto">
-                          <button type="submit" class="btn btn-secondary">Update</button>
-                          <button type="submit" class="btn btn-danger">Delete</button>
                           <button type="submit" class="btn btn-primary">Back</button>
                         </div>
                       </div>
