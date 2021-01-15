@@ -280,9 +280,9 @@
                     <h2 class="fw-bold mb-3">Contact Us</h2>
                     <p class="text-muted mb-5">Ada masalah dengan Layanan Ngalam 112 ? langsung saja hubungi kami :).</p>
                         <p class="text-muted mt-5 mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="mail"></i>
-                            Support@malangkota.go.id</p>
-                        <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i> +62
-                            341 112</p>
+                            nccngalam112@gmail.com</p>
+                        <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i>
+                            0341-3013186</p>
                         <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
                             Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
                         <ul class="list-inline pt-4">
