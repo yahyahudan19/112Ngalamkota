@@ -29,6 +29,8 @@
           </li>
           </li>
           <li class="header">Pengaturan</li>
+          <li class=""> <a href="/superAdmin/user"> <i class="fa fa-user"></i> <span>User Management</span> <span class="pull-right-container"></i> </span> </a>
+          </li>
           <li class=""> <a href="/superAdmin/profile"> <i class="fa fa-user"></i> <span>Profile</span> <span class="pull-right-container"></i> </span> </a>
         </ul>
       <?php
