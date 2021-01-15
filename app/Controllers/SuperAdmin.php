@@ -38,6 +38,8 @@ class SuperAdmin extends BaseController
 	public function news(){
 		$news = $this->newsModel->findAll();
 		$data = [
+			// "title" => "LAYANAN NGALAM 112 | Berita",
+			// "contentTitle" => "SuperAdmin",
 			'news' => $news 
 		];
 		echo view('layout/header');
@@ -56,10 +58,12 @@ class SuperAdmin extends BaseController
 		echo view('admin/reportlaporan',$data);
 		echo view('layout/footer');
 	}
-	public function reportfeedback(){
+	public function reportFeedback(){
 
 		$feedback = $this->feedbackModel->findAll();
 		$data = [
+			// "title" => "LAYANAN NGALAM 112 | Report Feedback",
+			// "contentTitle" => "SuperAdmin",
 			'feedback' => $feedback 
 		];
 		echo view('layout/header');

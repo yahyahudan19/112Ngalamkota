@@ -27,6 +27,8 @@ class Admin extends BaseController
 	public function reportlaporan(){
 		$reportL = $this->reportlaporanModel->findAll();
 		$data = [
+			// "title" => "LAYANAN NGALAM 112 | Admin",
+			// "contentTitle" => "Admin",
 			'reportL' => $reportL 
 		];
 		echo view('layout/header');
