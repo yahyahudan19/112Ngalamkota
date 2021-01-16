@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\feedbackModel;
 
@@ -6,23 +8,24 @@ class Feedback extends BaseController
 {
     protected $feedbackModel;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->feedbackModel = new feedbackModel();
     }
     public function index()
-	{
-		$feedback = $this->feedbackModel->findAll();
-		$data = [
-			'feedback' => $feedback 
-		];
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/feedback',$data);
-		echo view('layout/footer');
+    {
+        $feedback = $this->feedbackModel->findAll();
+        $data = [
+            'feedback' => $feedback
+        ];
+        echo view('layout/header');
+        echo view('layout/sidebar');
+        echo view('admin/feedback', $data);
+        echo view('layout/footer');
     }
     public function addFeedback()
-	{
-		$this->feedbackModel->save([
+    {
+        $this->feedbackModel->save([
             'id_feedback' => $this->request->getVar('id_feedback'),
             'nama_feedback' => $this->request->getVar('nama_feedback'),
             'alamat_feedback' => $this->request->getVar('alamat_feedback'),
@@ -35,18 +38,25 @@ class Feedback extends BaseController
             'q5_feedback' => $this->request->getVar('q5_feedback'),
         ]);
 
-        
+
         return redirect()->to('/home');
     }
-    public function detailFeedback(){
+    public function detailFeedback($id)
+    {
+        $feedback = $this->feedbackModel->where('id_feedback', $id)->first();
+        // $data = [
+        //     'feedback ' => $feedback[0]
+        // ];
         echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/feedback/detail');
-		echo view('layout/footer');
+        echo view('layout/sidebar');
+        echo view('admin/feedback/detail', ['feedback' => $feedback]);
+        echo view('layout/footer');
+
+        // return redirect()->to(base_url('superadmin/reportfeedback'));
     }
     public function delete($id_feedback)
-   {
-      $this->feedbackModel->delete_data($id_feedback);
-      return redirect()->to(base_url('superadmin/reportfeedback'));
-   }
+    {
+        $this->feedbackModel->delete_data($id_feedback);
+        return redirect()->to(base_url('superadmin/reportfeedback'));
+    }
 }
