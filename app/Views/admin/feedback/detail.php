@@ -107,7 +107,7 @@
                <div class="form-group row">
                  <div class="col-sm-11 ml-auto">
                    <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
-                   <a href="<?= base_url('feedback') ?>" class="btn btn-primary">Kembali</a>
+                   <a href="<?= base_url('superAdmin/reportFeedback') ?>" class="btn btn-primary">Kembali</a>
                  </div>
                </div>
              </form>
