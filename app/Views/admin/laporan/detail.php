@@ -37,27 +37,27 @@
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Tanggal Kejadian</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>">
+                      <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['kejadian'] ?>">
+                      <input type="text" class="form-control" value="<?= $reportL['kejadian'] ?>" disabled>
                     </div>
                     <label class="col-sm-1 form-control-label"><strong>Lokasi Kejadian</strong></label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" value="<?= $reportL['lokasi_kejadian'] ?>">
+                      <input type="text" class="form-control" value="<?= $reportL['lokasi_kejadian'] ?>" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Nama Pelapor</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>">
+                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>" disabled>
                     </div>
                     <label class="col-sm-1 form-control-label"><strong>Tindak Lanjut</strong></label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>">
+                      <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>" disabled>
                     </div>
                   </div>
                   <div class="line"></div>
