@@ -26,34 +26,35 @@
        
          <div class="block">
            <div class="block-body">
-             <form class="form-horizontal row">
+             <form class="form-horizontal row" action="/news/edit/<?= $newsdata[0]['id_news']; ?>">
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tagline</strong></label>
-                   <input type="text" class="form-control" value="<?= $newsdata[0]['tagline_news'] ?>" required>
+                   <input type="text" class="form-control" value="<?= $newsdata[0]['tagline_news'] ?>" name="tagline_news" id="tagline_news" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Judul</strong></label>
-                   <input type="text" class="form-control" value="<?= $newsdata[0]['judul_news'] ?>" name="" id="" required>
+                   <input type="text" class="form-control" value="<?= $newsdata[0]['judul_news'] ?>" name="judul_news" id="judul_news" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Isi</strong></label>
-                   <textarea class="form-control" name="" id="" required><?= $newsdata[0]['isi_news'] ?></textarea>
+                   <textarea class="form-control" name="isi_news" id="isi_news" required><?= $newsdata[0]['isi_news'] ?></textarea>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tanggal</strong></label>
-                   <input type="text" class="form-control" value="<?= $newsdata[0]['date_news'] ?>" name="" id="" required>
+                   <input type="text" class="form-control" value="<?= $newsdata[0]['date_news'] ?>" name="date_news" id="date_news" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Link</strong></label>
-                   <input type="text" class="form-control" value="<?= $newsdata[0]['link_news'] ?>" name="" id="" required>
+                   <input type="text" class="form-control" value="<?= $newsdata[0]['link_news'] ?>" name="link_news" id="link_news" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
-                   <input type="file" class="form-control" value="" name="" id="" required>
+                 <p>Abaikan jika tidak ingin mengubah dokumen</p>
+                   <input type="file" class="form-control" value="" name="dokumentasi_news" id="dokumentasi_news">
                </div>
                
                <div class="line"></div>
-               
+               <button type="submit" class="btn btn-warning">Update</a>
              </form>
            </div>
          </div>

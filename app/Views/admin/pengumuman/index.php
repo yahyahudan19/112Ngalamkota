@@ -21,7 +21,7 @@
                 <div class="block">
                   <div class="title"><strong>Tabel Pengumuman</strong></div>
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover" id="pengumumanTable">
                       <thead>
                         <tr>
                           <!-- <th>ID</th> -->
@@ -33,18 +33,26 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row"></th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <a href="/news/detailNews/" class="btn btn-info btn-sm">Detail</a>
-                            <button type="button" class="btn btn-warning btn-sm">Edit</button>
-                            <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
-                            <a href="/news/delete/" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
-                          </td>
-                        </tr>
+                      <?php
+                          $no = 1; 
+                          foreach ($pengumuman as $r) : ?>
+                          <tr>
+                            <th scope="row"><?= $no; ?></th>
+                            <td><?= $r['date_pengumuman']; ?></td>
+                            <td><?= $r['tagline_pengumuman']; ?></td>
+                            <td><?= $r['judul_pengumuman']; ?></td>
+                            <td>
+                              <a href="/pengumuman/detailPengumuman/<?= $r['id_pengumuman']; ?>" class="btn btn-info btn-sm">Detail</a>
+                              <a class="btn btn-warning btn-sm" href="/pengumuman/editPengumuman/<?= $r['id_pengumuman']; ?>">Edit</a>
+                              <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
+                              <a href="/pengumuman/delete/<?= $r['id_pengumuman']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
+
+                            </td>
+                          </tr>
+                        <?php
+                          $no++; 
+                          endforeach; 
+                        ?>
                       </tbody>
                     </table>
                   </div>
@@ -59,35 +67,35 @@
                       <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
-                      <form action="/news/addNews" method="post">
+                      <form action="/pengumuman/addPengumuman" method="post">
                         <?= csrf_field(); ?>
                         <div class="form-group">
                           <label>Tagline</label>
-                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_pengumuman" name="tagline_pengumuman">
+                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_pengumuman" name="tagline_pengumuman" required>
+                        </div>
+                        <div class="form-group">
+                          <label>Tanggal Dibuat</label>
+                          <input type="date" class="form-control" id="date_pengumuman" name="date_pengumuman" required>
                         </div>
                         <div class="form-group">
                           <label>Judul</label>
-                          <input type="text" placeholder="Judul" class="form-control" id="judul_pengumuman" name="judul_pengumuman">
+                          <input type="text" placeholder="Judul" class="form-control" id="judul_pengumuman" name="judul_pengumuman" required>
                         </div>
                         <div class="form-group">
                           <label>Isi</label>
-                          <textarea class="form-control" placeholder="Isi" id="isi_pengumuman" name="isi_pengumuman"></textarea>
+                          <textarea class="form-control" placeholder="Isi" id="isi_pengumuman" name="isi_pengumuman" required></textarea>
                         </div>
                         <div class="form-group">
                           <label>Link</label>
-                          <input type="text" placeholder="Link" class="form-control" id="link_pengumuman" name="link_pengumuman">
+                          <input type="text" placeholder="Link" class="form-control" id="link_pengumuman" name="link_pengumuman" required>
                         </div>
-                        <div class="form-group">
-                          <label>Date</label>
-                          <input type="date" class="form-control" id="date_pengumuman" name="date_pengumuman">
-                        </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                         <label>Dokumentasi</label>
-                        <input type="file" name="dokumentasi[]" class="form-control-sm" id="dokumentasi_pengumuman" multiple>
-                        </div>
+                        <input type="file" name="dokumentasiPengumuman" class="form-control-sm" id="dokumentasiPengumuman" multiple>
+                        </div> -->
                         <div class="line"></div>
-                        <button type="submit" class="btn btn-success">Save</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
                       </form>
                     </div>
                     <div class="modal-footer">

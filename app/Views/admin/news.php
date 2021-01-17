@@ -21,14 +21,14 @@
                 <div class="block">
                   <div class="title"><strong>Tabel Berita</strong></div>
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover" id="newsTable">
                       <thead>
                         <tr>
                           <th>No</th>
                           <th>Tagline</th>
-                          <th>Link</th>
-                          <th>Date</th>
-                          <th>Dibuat Tanggal</th>
+                          <th>Tanggal Dibuat</th>
+                          <th>Judul</th>
+                          <th>Link</th>                        
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -39,10 +39,10 @@
                           <tr>
                             <th scope="row"><?= $no; ?></th>
                             <td><?= $r['tagline_news']; ?></td>
+                            <td><?= $r['date_news']; ?></td>
                             <td><?= $r['judul_news']; ?></td>
                             <td><?= $r['link_news']; ?></td>
-                            <td><?= $r['date_news']; ?></td>
-                            <td><?= $r['created_at']; ?></td>
+                            <!-- <td><?= $r['created_at']; ?></td> -->
                             <td>
                               <a href="/news/detailNews/<?= $r['id_news']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/news/editNews/<?= $r['id_news']; ?>">Edit</a>
@@ -76,6 +76,10 @@
                           <input type="text" placeholder="Tagline" class="form-control" id="tagline_news" name="tagline_news" required>
                         </div>
                         <div class="form-group">
+                          <label>Tanggal Dibuat</label>
+                          <input type="date" class="form-control" id="date_news" name="date_news" required>
+                        </div>
+                        <div class="form-group">
                           <label>Judul</label>
                           <input type="text" placeholder="Judul" class="form-control" id="judul_news" name="judul_news" required>
                         </div>
@@ -88,15 +92,11 @@
                           <input type="text" placeholder="Link" class="form-control" id="link_news" name="link_news" required>
                         </div>
                         <div class="form-group">
-                          <label>Date</label>
-                          <input type="date" class="form-control" id="date_news" name="date_news" required>
-                        </div>
-                        <div class="form-group">
                           <label>Dokumentasi</label>
                           <input type="file" class="form-control-sm" id="dokumentasiNews" name="dokumentasiNews" required>
                         </div>
-                        <button type="submit" class="btn btn-success">Save</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
                       </form>
                     </div>
                     <div class="modal-footer">

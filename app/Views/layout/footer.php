@@ -20,6 +20,13 @@
 <script src="<?= base_url()?>/adminpages/dist/plugins/raphael/raphael-min.js"></script> 
 <script src="<?= base_url()?>/adminpages/dist/plugins/morris/morris.js"></script>
 <script src="<?= base_url()?>/adminpages/dist/plugins/functions/morris-init.js"></script>
-
+<script>
+$(document).ready( function () {
+    $('#newsTable').DataTable();
+    $('#pengumumanTable').DataTable();
+    $('#rfeedbackTable').DataTable();
+    $('#rlaporanTable').DataTable();
+} );
+</script>
 </body>
 </html>

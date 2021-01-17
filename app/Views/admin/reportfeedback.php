@@ -21,10 +21,10 @@
                <div class="block">
                  <div class="title"><strong>Tabel Feedback</strong></div>
                  <div class="table-responsive">
-                   <table class="table table-striped table-hover" id="tables">
+                   <table class="table table-striped table-hover" id="rfeedbackTable">
                      <thead>
                        <tr>
-                         <th>ID</th>
+                         <th>No</th>
                          <th>Nama</th>
                          <th>Alamat</th>
                          <th>No. HP</th>
@@ -39,9 +39,12 @@
                        </tr>
                      </thead>
                      <tbody>
-                       <?php foreach ($feedback as $r) : ?>
+                       <?php
+                       $no=1;  
+                       foreach ($feedback as $r) : ?>
                          <tr>
-                           <th scope="row"><?= $r['id_feedback']; ?></th>
+                           <!-- <th scope="row"><?= $r['id_feedback']; ?></th> -->
+                           <th scope="row"><?= $no; ?></th>
                            <td><?= $r['nama_feedback']; ?></td>
                            <td><?= $r['alamat_feedback']; ?></td>
                            <td><?= $r['noHp_feedback']; ?></td>
@@ -56,7 +59,10 @@
                              <a href="/feedback/delete/<?= $r['id_feedback']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                            </td>
                          </tr>
-                       <?php endforeach; ?>
+                         
+                       <?php 
+                      $no++; 
+                      endforeach; ?>
                      </tbody>
                    </table>
                  </div>

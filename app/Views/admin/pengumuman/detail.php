@@ -1,5 +1,5 @@
         <!-- Page Header-->
-<div class="content-wrapper">
+        <div class="content-wrapper">
        <div class="content-header sty-one">
           <h1>Detail Laporan 112 </h1>
           <ol class="breadcrumb">
@@ -14,7 +14,7 @@
               <!-- Page Content -->
               <div class="col-lg-12">
                       <div class="block">
-                        <div class="title"><strong>Detail Berita</strong></div>
+                        <div class="title"><strong>Detail Pengumuman</strong></div>
                         <div class="block-body">
                           <form class="form-horizontal">
                             <div class="form-group row">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
-                              <label class="col-sm-1 form-control-label">Dibuat Tanggal</label>
+                              <label class="col-sm-1 form-control-label">Tanggal Dibuat</label>
                               <div class="col-sm-9">
                                 <input type="text" placeholder="Dibuat Tanggal" class="form-control">
                               </div>
@@ -48,7 +48,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Dokumentasi</label>
                               <div class="col-sm-9">
-                                  <input type="file" class="form-control-sm" id="dokumentasi_news" name="dokumentasi_news">
+                                  <input type="file" class="form-control-sm" id="dokumentasi_pengumuman" name="dokumentasi_pengumuman">
                               </div>
                             </div>                      
                             <div class="line"></div>
