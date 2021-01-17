@@ -20,44 +20,43 @@
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Tagline</label>
                               <div class="col-sm-9">
-                                <input type="text" class="form-control">
-                              </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="form-group row">
-                              <label class="col-sm-1 form-control-label">Link</label>
-                              <div class="col-sm-9">
-                                <input type="text" class="form-control"><small class="help-block-none">Link sumber berita.</small>
-                              </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="form-group row">
-                              <label class="col-sm-1 form-control-label">Date</label>
-                              <div class="col-sm-9">
-                                <input type="text" name="text" class="form-control">
+                              <input type="text" class="form-control" value="<?= $pengumuman['tagline_pengumuman'] ?>" readonly>
                               </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Tanggal Dibuat</label>
                               <div class="col-sm-9">
-                                <input type="text" placeholder="Dibuat Tanggal" class="form-control">
+                              <input type="text" class="form-control" value="<?= $pengumuman['date_pengumuman'] ?>" readonly>
                               </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
-                              <label class="col-sm-1 form-control-label">Dokumentasi</label>
+                              <label class="col-sm-1 form-control-label">Judul</label>
                               <div class="col-sm-9">
-                                  <input type="file" class="form-control-sm" id="dokumentasi_pengumuman" name="dokumentasi_pengumuman">
+                              <input type="text" class="form-control" value="<?= $pengumuman['judul_pengumuman'] ?>" readonly>
                               </div>
-                            </div>                      
+                            </div>
+                            <div class="line"></div>
+                            <div class="form-group row">
+                              <label class="col-sm-1 form-control-label">Isi</label>
+                              <div class="col-sm-9">
+                              <input type="text" class="form-control" value="<?= $pengumuman['isi_pengumuman'] ?>" readonly>
+                              </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="form-group row">
+                              <label class="col-sm-1 form-control-label">Link</label>
+                              <div class="col-sm-9">
+                              <input type="text" class="form-control" value="<?= $pengumuman['link_pengumuman'] ?>" readonly>
+                                <small class="help-block-none">Link sumber berita.</small>
+                              </div>
+                            </div>
                             <div class="line"></div>
                             <div class="form-group row">
                               <div class="col-sm-11 ml-auto">
-                                <button type="submit" class="btn btn-secondary">Update</button>
-                                <button type="submit" class="btn btn-primary">Delete</button>
-                              </div>
-                            </div>
+                              <a href="<?= base_url('superAdmin/pengumuman') ?>" class="btn btn-primary">Kembali</a>
+                              </div
                           </form>
                         </div>
                       </div>

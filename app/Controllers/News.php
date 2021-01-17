@@ -43,17 +43,18 @@ class News extends BaseController
        
         
     }
-    public function detailNews(){
+    public function detailNews($id){
+        $news = $this->newsModel->where('id_news', $id)->first();
         echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/news/detail');
+		echo view('admin/news/detail', ['news' => $news]);
 		echo view('layout/footer');
     }
 
-    public function edit($id_news)
+    public function edit()
     {
         $file = $this->request->getFile('dokumentasiNews');
-
+        $id_news = $this->request->getVar('id');
         if(!empty($file)){
             // buat value id random di table uploads
             $imagename = $file->getRandomName();

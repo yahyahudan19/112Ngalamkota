@@ -19,7 +19,7 @@ class reportlaporanModel extends Model
         $query = $this->db->table("report")->delete(array('id_pelapor' => $id_pelapor));
         return $query;
     }
-    public function updateReport($data, $id)
+    public function update_data($data, $id)
     {
         $query = $this->db->table('report')->update($data, array('id_pelapor' => $id));
         return $query;

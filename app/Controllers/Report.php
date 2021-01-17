@@ -81,27 +81,68 @@ class Report extends BaseController
         echo view('layout/footer');
     }
 
-    public function update()
-    {
-        $model = new reportlaporanModel();
-        $id = $this->request->getPost('id_pelapor');
-        $data = [
+    // public function update()
+    // {
+    //     $model = new reportlaporanModel();
+    //     $id = $this->request->getPost('id_pelapor');
+    //     $data = [
 
-            'kejadian'          => $this->request->getPost('kejadian'),
-            'lokasi_kejadian'   => $this->request->getPost('lokasi_kejadian'),
-            'tanggal'           => $this->request->getPost('tanggal'),
-            'nama_pelapor'       => $this->request->getPost('nama_pelapor'),
-            'tindak_lanjut'     => $this->request->getPost('tindak_lanjut')
-        ];
+    //         'kejadian'          => $this->request->getPost('kejadian'),
+    //         'lokasi_kejadian'   => $this->request->getPost('lokasi_kejadian'),
+    //         'tanggal'           => $this->request->getPost('tanggal'),
+    //         'nama_pelapor'       => $this->request->getPost('nama_pelapor'),
+    //         'tindak_lanjut'     => $this->request->getPost('tindak_lanjut')
+    //     ];
 
-        $model->updateReport($data, $id);
-        return redirect()->to('/report');
-    }
+    //     $model->updateReport($data, $id);
+    //     return redirect()->to('/report');
+    // }
 
 
     public function delete($id_pelapor)
     {
         $this->reportlaporanModel->delete_data($id_pelapor);
         return redirect()->to(base_url('admin/reportlaporan'));
+    }
+    public function edit() {
+        // $file = $this->request->getFile('dokumentasiReport');
+        $id_pelapor = $this->request->getVar('id');
+        // if(!empty($file)){
+            // buat value id random di table uploads
+            // $imagename = $file->getRandomName();
+            // $data_uploads = [
+            //     'tanggal' => $this->request->getVar('tanggal'),
+            //     'kejadian' => $this->request->getVar('kejadian'),
+            //     'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
+            //     'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+            //     'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+            //     // 'dokumentasi_' => $imagename,
+            // ];
+            // $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
+
+            // ulangi insert gambar ke table galery menggunakan foreach
+            // $file->move(ROOTPATH . 'public/uploads', $imagename);
+            // return redirect()->to(base_url('superadmin/reportlaporan'));
+        // }else{
+            $data_uploads = [
+                'tanggal' => $this->request->getVar('tanggal_report'),
+                'kejadian' => $this->request->getVar('kejadian_report'),
+                'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
+                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+            ];
+            $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
+            return redirect()->to(base_url('superadmin/reportlaporan'));
+        // }
+    }
+    public function editReport($id){
+        $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
+        $data = [
+            'reportdata' => $ReportData
+        ];
+        echo view('layout/header');
+        echo view('layout/sidebar');
+        echo view('admin/laporan/edit', $data);
+        echo view('layout/footer');
     }
 }
