@@ -17,17 +17,18 @@
         <section class="no-padding-top">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-10">
+              <div class="col-lg-12">
                 <div class="block">
                   <div class="title"><strong>Tabel Pengumuman</strong></div>
                   <div class="table-responsive">
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
-                          <th>Isi Pengumuman</th>
-                          <th>Dokumentasi</th>
-                          <th>Dibuat Tanggal</th>
+                          <!-- <th>ID</th> -->
+                          <th>No</th>
+                          <th>Tanggal Dibuat</th>
+                          <th>Tagline</th>
+                          <th>Judul</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -54,33 +55,38 @@
               <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                 <div role="document" class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Berita</strong>
+                    <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Pengumuman</strong>
                       <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
                       <form action="/news/addNews" method="post">
                         <?= csrf_field(); ?>
                         <div class="form-group">
-                          <label>Isi Pengumuman</label>
-                          <input type="text" placeholder="Isi" class="form-control" id="isi_news" name="isi_news">
+                          <label>Tagline</label>
+                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_pengumuman" name="tagline_pengumuman">
+                        </div>
+                        <div class="form-group">
+                          <label>Judul</label>
+                          <input type="text" placeholder="Judul" class="form-control" id="judul_pengumuman" name="judul_pengumuman">
+                        </div>
+                        <div class="form-group">
+                          <label>Isi</label>
+                          <textarea class="form-control" placeholder="Isi" id="isi_pengumuman" name="isi_pengumuman"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label>Link</label>
+                          <input type="text" placeholder="Link" class="form-control" id="link_pengumuman" name="link_pengumuman">
                         </div>
                         <div class="form-group">
                           <label>Date</label>
-                          <input type="text" placeholder="Link" class="form-control" id="date_news" name="date_news">
+                          <input type="date" class="form-control" id="date_pengumuman" name="date_pengumuman">
                         </div>
                         <div class="form-group">
-                          <label>Dokumentasi</label>
-                          <!-- <input type="file" class="dropify" id="input-file-now" name="dokumentasi_news"> -->
-                          <div class="col-lg-6 col-md-15">
-                            <div class="card">
-                              <div class="card-body">
-                                <h4 class="text-black">Upload Files Here</h4>
-                                <input type="file" id="input-file-now" class="dropify" />
-                              </div>
-                            </div>
-                          </div>
+                        <label>Dokumentasi</label>
+                        <input type="file" name="dokumentasi[]" class="form-control-sm" id="dokumentasi_pengumuman" multiple>
                         </div>
-                        <button type="submit" class="btn btn-success">Save </button>
+                        <div class="line"></div>
+                        <button type="submit" class="btn btn-success">Save</button>
                         <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
                       </form>
                     </div>

@@ -9,7 +9,7 @@ class newsModel extends Model{
     protected $table = 'news';
     protected $id = 'id_news';
     protected $useTimestamps = true;
-    protected $allowedFields = ['tagline_news','isi_news','link_news','date_news','dokumentasi_news'];
+    protected $allowedFields = ['tagline_news', 'judul_news','isi_news','link_news','date_news','dokumentasi_news'];
 
     public function data_news ($id_news)
     {

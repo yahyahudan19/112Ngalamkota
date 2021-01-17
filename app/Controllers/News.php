@@ -21,16 +21,26 @@ class News extends BaseController
     }
     public function addNews(){
         // dd($this->request->getPost());
-        $this->newsModel->save([
-            'tagline_news' => $this->request->getVar('tagline_news'),
-            'isi_news' => $this->request->getVar('isi_news'),
-            'link_news' => $this->request->getVar('link_news'),
-            'date_news' => $this->request->getVar('date_news'),
-            'dokumentasi_news' => $this->request->getVar('dokumentasi_news'),
-        ]);
+        $file = $this->request->getFile('dokumentasiNews');
 
-        
-        return redirect()->to(base_url('superadmin/news'));
+        if($file){
+            // buat value id random di table uploads
+            $imagename = $file->getRandomName();
+            $data_uploads = [
+                'tagline_news' => $this->request->getVar('tagline_news'),
+                'judul_news' => $this->request->getVar('judul_news'),
+                'isi_news' => $this->request->getVar('isi_news'),
+                'link_news' => $this->request->getVar('link_news'),
+                'date_news' => $this->request->getVar('date_news'),
+                'dokumentasi_news' => $imagename,
+            ];
+            $this->newsModel->save($data_uploads);
+
+            // ulangi insert gambar ke table galery menggunakan foreach
+            $file->move(ROOTPATH . 'public/uploads', $imagename);
+            return redirect()->to(base_url('superadmin/news'));
+        }
+       
         
     }
     public function detailNews(){
@@ -54,10 +64,14 @@ class News extends BaseController
 
     //     return redirect()->to(base_url('superadmin/news'));
     // }
-    public function editNews(){
+    public function editNews($id){
+        $NewsData = $this->newsModel->where('id_news', $id)->findAll();
+        $data = [
+            'newsdata' => $NewsData
+        ];
         echo view('layout/header');
         echo view('layout/sidebar');
-        echo view('admin/news/edit');
+        echo view('admin/news/edit', $data);
         echo view('layout/footer');
     }
 //     public function update()

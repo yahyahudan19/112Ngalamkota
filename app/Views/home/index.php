@@ -165,44 +165,50 @@
                         doloremque laudantium totam rem ab illo inventore.</p>
                 </div>
             </div>
-            <?php foreach ($news as $r) : ?>
-                <div class="row align-items-center mb-5">
-                    <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
-                        <h2 class="mb-4"><?= $r['tagline_news']; ?></h2>
-                        <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
-                            veritatis..</p>
-                        <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                    </div>
-                    <div class="col-md-6 ms-md-auto order-1 order-md-2">
-                        <div class="position-relative">
-                            <div class="ms-5 features-img">
-                                <img src="<?= base_url() ?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
-                            </div>
-                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
             <!-- end row -->
-            <?php foreach ($news as $r) : ?>
-                <div class="row align-items-center section pb-0">
-                    <div class="col-md-6">
-                        <div class="position-relative mb-md-0 mb-5">
-                            <div class="me-5 features-img">
-                                <img src="<?= base_url() ?>/templatepage/images/news/kepo112.jpg" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+            <?php foreach ($news as $idx => $val) : ?>
+                <?php
+                    if($idx % 2 == 0){
+                        ?>
+                        <div class="row align-items-center section pb-5">
+                            <div class="col-md-6">
+                                <div class="position-relative mb-md-0 mb-5">
+                                    <div class="me-5 features-img">
+                                        <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+                                    </div>
+                                    <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
+                                </div>
                             </div>
-                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
+                            <div class="col-md-5 ms-md-auto">
+                                <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
+                                <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
+                                <p class="text-muted mb-5"><?= $val['isi_news'] ?></p>
+                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>        
+                        <?php
+                    }else{
+                        ?>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                                <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
+                                <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
+                                <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
+                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            </div>
+                            <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                                <div class="position-relative">
+                                    <div class="ms-5 features-img">
+                                        <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" />
+                                    </div>
+                                    <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-5 ms-md-auto">
-                        <h2 class="mb-4"><?= $r['tagline_news']; ?></h2>
-                        <p class="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
-                            veritatis..</p>
-                        <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                    </div>
-                </div>
+                        <?php
+                    }    
+                ?>
+                
             <?php endforeach; ?>
 
             <!-- end row -->
