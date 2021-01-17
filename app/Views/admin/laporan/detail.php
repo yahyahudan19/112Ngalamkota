@@ -37,33 +37,32 @@
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Tanggal Kejadian</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>" disabled>
+                      <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['kejadian'] ?>" disabled>
+                      <input type="text" class="form-control" value="<?= $reportL['kejadian'] ?>" readonly>
                     </div>
                     <label class="col-sm-1 form-control-label"><strong>Lokasi Kejadian</strong></label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" value="<?= $reportL['lokasi_kejadian'] ?>" disabled>
+                      <input type="text" class="form-control" value="<?= $reportL['lokasi_kejadian'] ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Nama Pelapor</strong></label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>" disabled>
+                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>" readonly>
                     </div>
                     <label class="col-sm-1 form-control-label"><strong>Tindak Lanjut</strong></label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>" disabled>
+                      <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>" readonly>
                     </div>
                   </div>
                   <div class="line"></div>
                   <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
-
                   </div>
                   <?php
                   foreach ($detail as $row) {

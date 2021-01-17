@@ -4,18 +4,21 @@ use App\Models\reportlaporanModel;
 use App\Models\authModel;
 use App\Models\newsModel;
 use App\Models\feedbackModel;
+use App\Models\pengumumanModel;
 
 class SuperAdmin extends BaseController
 {
 	protected $reportlaporanModel;
 	protected $authModel;
 	protected $feedbackModel;
+	protected $pengumumanModel;
 
 	public function __construct(){
 		$this->reportlaporanModel = new reportlaporanModel();
 		$this->authModel = new authModel();
 		$this->newsModel = new newsModel();
 		$this->feedbackModel = new feedbackModel();
+		$this->pengumumanModel = new pengumumanModel();
 	}
 	public function index()
 	{
@@ -83,9 +86,14 @@ class SuperAdmin extends BaseController
 		echo view('layout/footer');
 	}
 	public function pengumuman(){
+		$pengumuman = $this->pengumumanModel->findAll();
+		$data = [
+			'pengumuman' => $pengumuman 
+        ];
+        // dd($data);
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/pengumuman/index');
+		echo view('admin/pengumuman/index', $data);
 		echo view('layout/footer');
 	}
 	

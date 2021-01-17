@@ -57,10 +57,10 @@
                 <br>
                 <div class="title"><strong>Tabel Kejadian</strong></div>
                 <div class="table-responsive">
-                  <table class="table table-striped table-hover" id="report-list">
+                  <table class="table table-striped table-hover" id="rlaporanTable">
                     <thead>
                       <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Nama Pelapor</th>
                         <th>Lokasi Kejadian</th>
                         <th>Nama Pelapor</th>
@@ -70,9 +70,12 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach ($reportL as $r) : ?>
+                      <?php
+                      $no=1; 
+                      foreach ($reportL as $r) : ?>
                         <tr>
-                          <th scope="row"><?= $r['id_pelapor']; ?></th>
+                          <!-- <th scope="row"><?= $r['id_pelapor']; ?></th> -->
+                          <th scope="row"><?= $no; ?></th>
                           <td><?= $r['kejadian']; ?></td>
                           <td><?= $r['lokasi_kejadian']; ?></td>
                           <td><?= $r['nama_pelapor']; ?></td>
@@ -84,7 +87,10 @@
                             <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
                           </td>
                         </tr>
-                      <?php endforeach; ?>
+                       
+                      <?php 
+                     $no++; 
+                    endforeach; ?>
                     </tbody>
                   </table>
                   <section class="no-padding-top">
