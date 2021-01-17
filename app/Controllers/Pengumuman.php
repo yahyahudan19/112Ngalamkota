@@ -15,7 +15,7 @@ class Pengumuman extends BaseController
 		$data = [
 			'pengumuman' => $pengumuman 
         ];
-        dd($data);
+        // dd($data);
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/pengumuman', $data);
@@ -34,10 +34,11 @@ class Pengumuman extends BaseController
        
         
     }
-    public function detailPengumuman(){
+    public function detailPengumuman($id){
+        $pengumuman = $this->pengumumanModel->where('id_pengumuman', $id)->first();
         echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/pengumuman/detail');
+		echo view('admin/pengumuman/detail', ['pengumuman' => $pengumuman]);
 		echo view('layout/footer');
     }
 

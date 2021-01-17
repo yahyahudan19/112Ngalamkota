@@ -19,43 +19,51 @@
                           <form class="form-horizontal">
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Tagline</label>
-                              <div class="col-sm-9">
-                                <input type="text" class="form-control">
+                              <div class="col-sm-4">
+                              <input type="text" class="form-control" value="<?= $news['tagline_news'] ?>" readonly>
+                              </div>
+                              <label class="col-sm-1 form-control-label">Tanggal Dibuat</label>
+                              <div class="col-sm-4">
+                              <input type="text" class="form-control" value="<?= $news['date_news'] ?>" readonly>
                               </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Link</label>
                               <div class="col-sm-9">
-                                <input type="text" class="form-control"><small class="help-block-none">Link sumber berita.</small>
+                                <input type="text" class="form-control" value="<?= $news['link_news'] ?>" readonly>
+                                <small class="help-block-none">Link sumber berita.</small>
                               </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
-                              <label class="col-sm-1 form-control-label">Date</label>
+                              <label class="col-sm-1 form-control-label">Judul</label>
                               <div class="col-sm-9">
-                                <input type="text" name="text" class="form-control">
+                                <input type="text" class="form-control" value="<?= $news['judul_news'] ?>" readonly>
                               </div>
                             </div>
                             <div class="line"></div>
                             <div class="form-group row">
+                              <label class="col-sm-1 form-control-label">Isi</label>
+                              <div class="col-sm-9">
+                                <input type="text" class="form-control" value="<?= $news['isi_news'] ?>" readonly>
+                              </div>
+                            </div>
+                            <!-- <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Dibuat Tanggal</label>
                               <div class="col-sm-9">
                                 <input type="text" placeholder="Dibuat Tanggal" class="form-control">
                               </div>
-                            </div>
+                            </div> -->
                             <div class="line"></div>
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Dokumentasi</label>
-                              <div class="col-sm-9">
-                                  <input type="file" class="form-control-sm" id="dokumentasi_news" name="dokumentasi_news">
-                              </div>
+                                  <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" width="400" class="mt-4" />
                             </div>                      
                             <div class="line"></div>
                             <div class="form-group row">
                               <div class="col-sm-11 ml-auto">
-                                <button type="submit" class="btn btn-secondary">Update</button>
-                                <button type="submit" class="btn btn-primary">Delete</button>
+                              <a href="<?= base_url('news') ?>" class="btn btn-primary">Kembali</a>
                               </div>
                             </div>
                           </form>
