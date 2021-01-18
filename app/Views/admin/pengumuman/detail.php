@@ -1,10 +1,10 @@
         <!-- Page Header-->
         <div class="content-wrapper">
        <div class="content-header sty-one">
-          <h1>Detail Laporan 112 </h1>
+          <h1>Detail Pengumuman</h1>
           <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li><i class="fa fa-angle-right"></i> Laporan 112</li>
+            <li><i class="fa fa-angle-right"></i>Pengumuman</li>
           </ol>
         </div>
         <div class="content">
@@ -14,7 +14,7 @@
               <!-- Page Content -->
               <div class="col-lg-12">
                       <div class="block">
-                        <div class="title"><strong>Detail Pengumuman</strong></div>
+                        <!-- <div class="title"><strong>Detail Pengumuman</strong></div> -->
                         <div class="block-body">
                           <form class="form-horizontal">
                             <div class="form-group row">
@@ -41,7 +41,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Isi</label>
                               <div class="col-sm-9">
-                              <input type="text" class="form-control" value="<?= $pengumuman['isi_pengumuman'] ?>" readonly>
+                              <textarea class="form-control" readonly><?= $pengumuman['isi_pengumuman'] ?></textarea>
                               </div>
                             </div>
                             <div class="line"></div>
