@@ -20,6 +20,9 @@
               <div class="col-lg-12">
                 <div class="block">
                   <!-- <div class="title"><strong>Tabel Pengumuman</strong></div> -->
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Pengumuman</button>
+                  <br>
+                  <br>
                   <div class="table-responsive">
                     <table class="table table-bordered table-hover" id="pengumumanTable">
                       <thead>
@@ -57,7 +60,6 @@
                     </table>
                   </div>
                 </div>
-                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Pengumuman</button>
               </div>
               <!-- Modal-->
               <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">

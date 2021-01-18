@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2021 at 12:00 PM
+-- Generation Time: Jan 18, 2021 at 08:15 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -106,7 +106,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id_news`, `tagline_news`, `judul_news`, `isi_news`, `link_news`, `date_news`, `dokumentasi_news`, `created_at`, `updated_at`) VALUES
-(13, 'irfakganteng', '3rr3r', 'r32rr4r231312321321asfade', 'r4rf413123213123123213', '2021-01-11', '1610874297_f5ece9e50f71571a4c9e.jpg', '2021-01-17', '2021-01-17');
+(14, 'ini tagline', 'ini judulnya yaa', ' s cdsb cjkjkdc dv dv', 'https://github.com/yahyahudan19/112Ngalamkota', '2021-01-14', '1610952806_d7fbc0f8b0758843db6e.jpeg', '2021-01-18', '2021-01-18');
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,6 @@ CREATE TABLE `pengumuman` (
   `tagline_pengumuman` varchar(125) NOT NULL,
   `judul_pengumuman` varchar(125) NOT NULL,
   `isi_pengumuman` varchar(125) NOT NULL,
-  `link_pengumuman` varchar(125) NOT NULL,
   `date_pengumuman` varchar(125) NOT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL
@@ -129,9 +128,11 @@ CREATE TABLE `pengumuman` (
 -- Dumping data for table `pengumuman`
 --
 
-INSERT INTO `pengumuman` (`id_pengumuman`, `tagline_pengumuman`, `judul_pengumuman`, `isi_pengumuman`, `link_pengumuman`, `date_pengumuman`, `created_at`, `updated_at`) VALUES
-(2, 'kebakaran', 'irfak pandai', 'Dugaan sementara api berasal dari arus pendek yang menyebabkan percikan api, dan merambat ke material yang mudah terbakar, se', 'https://www.liputan6.com/tag/kebakaran', '2021-01-10', '2021-01-16', '2021-01-16'),
-(4, 'dwdw', 'Jam Kerja Layanan 112', 'wdefm               ', 'https://www.sindonews.com/topic/12528/aturan-jam-kerja', '2021-01-06', '2021-01-17', '2021-01-17');
+INSERT INTO `pengumuman` (`id_pengumuman`, `tagline_pengumuman`, `judul_pengumuman`, `isi_pengumuman`, `date_pengumuman`, `created_at`, `updated_at`) VALUES
+(2, 'kebakaran', 'irfak pandai', 'Dugaan sementara api berasal dari arus pendek yang menyebabkan percikan api, dan merambat ke material yang mudah terbakar, se', '2021-01-10', '2021-01-16', '2021-01-16'),
+(4, 'dwdw', 'Jam Kerja Layanan 112', 'wdefm               ', '2021-01-06', '2021-01-17', '2021-01-17'),
+(5, 'Jam Kerja', 'Layanana akan bekerja pada jam kerja', 'SIAP SEDIA', '2021-01-18', '2021-01-17', '2021-01-17'),
+(6, 'wddwdw', 'Jam Kerja Layanan 112', 'ntab', '2021-01-18', '2021-01-17', '2021-01-17');
 
 -- --------------------------------------------------------
 
@@ -262,7 +263,7 @@ ALTER TABLE `detail_report`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -274,7 +275,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pengumuman` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `report`
