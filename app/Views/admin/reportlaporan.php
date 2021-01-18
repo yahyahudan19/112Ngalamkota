@@ -57,7 +57,7 @@
                 <br>
                 <div class="title"><strong>Tabel Kejadian</strong></div>
                 <div class="table-responsive">
-                  <table class="table table-striped table-hover" id="rlaporanTable">
+                  <table class="table table-bordered table-hover dataTable" id="rlaporanTable">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -71,7 +71,7 @@
                     </thead>
                     <tbody>
                       <?php
-                      $no=1; 
+                      $no = 1;
                       foreach ($reportL as $r) : ?>
                         <tr>
                           <!-- <th scope="row"><?= $r['id_pelapor']; ?></th> -->
@@ -87,10 +87,10 @@
                             <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
                           </td>
                         </tr>
-                       
-                      <?php 
-                     $no++; 
-                    endforeach; ?>
+
+                      <?php
+                        $no++;
+                      endforeach; ?>
                     </tbody>
                   </table>
                   <section class="no-padding-top">
@@ -139,7 +139,7 @@
                           </div>
                           <div class="form-group">
                             <label>Dokumentasi</label>
-                            <input type="file" name="dokumentasi[]" class="form-control-sm" id="dokumentasi" multiple>
+                            <input type="file" name="dokumentasi[]" class="dropify" id="dokumentasi" multiple>
                           </div>
                       </div>
                       <div class="modal-footer">
