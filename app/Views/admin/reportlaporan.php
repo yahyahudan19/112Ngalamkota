@@ -55,12 +55,12 @@
                 <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
                 <br>
                 <br>
-                <div class="title"><strong>Tabel Kejadian</strong></div>
+                <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
                 <div class="table-responsive">
                   <table class="table table-bordered table-hover dataTable" id="rlaporanTable">
                     <thead>
                       <tr>
-                        <th>No</th>
+                        <th>#</th>
                         <th>Nama Pelapor</th>
                         <th>Lokasi Kejadian</th>
                         <th>Nama Pelapor</th>

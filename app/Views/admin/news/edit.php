@@ -4,8 +4,8 @@
    <div class="content-header sty-one">
      <h1>Detail News </h1>
      <ol class="breadcrumb">
-       <li><a href="/superAdmin/reportFeedback">Laporan News</a></li>
-       <li><i class="fa fa-angle-right"></i> Detail News</li>
+       <li><a href="/superAdmin/reportFeedback">Laporan Berita</a></li>
+       <li><i class="fa fa-angle-right"></i> Detail Berita</li>
      </ol>
    </div>
 
@@ -41,7 +41,8 @@
                    <textarea class="form-control" name="isi_news" id="isi_news" required><?= $newsdata[0]['isi_news'] ?></textarea>
                </div>
                <div class="form-group col-lg-6">
-                 <label class="col-sm-1 form-control-label"><strong>Tanggal</strong></label>
+                 <label class="col-sm-1 form-control-label"><strong>Tanggal Dibuat</strong></label>
+                 <small class="help-block-none">Link sumber berita.</small>
                    <input type="text" class="form-control" value="<?= $newsdata[0]['date_news'] ?>" name="date_news" id="date_news" required>
                </div>
                <div class="form-group col-lg-6">

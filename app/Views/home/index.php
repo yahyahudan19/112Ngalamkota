@@ -237,6 +237,7 @@
                             <div class="card mt-4 border-0 shadow">
                                 <div class="card-body p-4">
                                     <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
+                                    <h6 class="mb-4"><?= $data['date_pengumuman']; ?></h6>
                                     <h4 class="font-size-22 my-4"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
                                     <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
                                 </div>

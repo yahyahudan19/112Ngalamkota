@@ -19,9 +19,9 @@
          <div class="container-fluid">
            <div class="col-lg-9">
              <div class="block">
-               <div class="title"><strong>Tabel User</strong></div>
+               <!-- <div class="title"><strong>Tabel User</strong></div> -->
                <div class="table-responsive">
-                 <table class="table table-striped table-hover">
+                 <table class="table table-bordered table-hover">
                    <thead>
                      <tr>
                        <th>#</th>
@@ -84,8 +84,7 @@
                    </form>
                  </div>
                  <div class="modal-footer">
-                   <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                   <button type="button" class="btn btn-primary">Tambah</button>
+                   <button type="submit" class="btn btn-success">Simpan</button>
                  </div>
                </div>
              </div>
