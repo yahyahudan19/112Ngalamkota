@@ -178,30 +178,31 @@
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
-                        </div>
-                        <div class="col-md-5 ms-md-auto">
-                            <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
-                            <h6 class="mb-4"><?= $val['date_news']; ?></h6>
-                            <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
-                            <p class="text-muted mb-5"><?= $val['isi_news'] ?></p>
-                            <a href="javascript: void(0);" class="btn btn-primary">Selengkapnya <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                        </div>
-                    </div>
-                <?php
-                } else {
-                ?>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
-                            <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
-                            <h6 class="mb-4"><?= $val['date_news']; ?></h6>
-                            <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
-                            <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                            <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                        </div>
-                        <div class="col-md-6 ms-md-auto order-1 order-md-2">
-                            <div class="position-relative">
-                                <div class="ms-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450" />
+                            <div class="col-md-5 ms-md-auto">
+                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
+                                <p class="text-muted mb-5"><?= $val['isi_news'] ?></p>
+                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>        
+                        <?php
+                    }else{
+                        ?>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
+                                <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
+                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            </div>
+                            <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                                <div class="position-relative">
+                                    <div class="ms-5 features-img">
+                                        <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450"/>
+                                    </div>
+                                    <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>
@@ -230,16 +231,17 @@
                 </div>
             </div>
             <div class="row">
-                <?php
-                foreach ($pengumuman as $data) {
-                ?>
-                    <div class="col-lg-4">
-                        <div class="card mt-4 border-0 shadow">
-                            <div class="card-body p-4">
-                                <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
-                                <h4 class="font-size-22 my-4"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
-                                <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
-                                <h6 class="badge badge-soft-primary"><?= $data['date_pengumuman'] ?></a></h6>
+                    <?php
+                    foreach($pengumuman as $data){
+                        ?>
+                        <div class="col-lg-4">
+                            <div class="card mt-4 border-0 shadow">
+                                <div class="card-body p-4">
+                                    <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
+                                    <h6 class="font-size-15 my-2"><?= $data['date_pengumuman']; ?></h6>
+                                    <h4 class="font-size-20 my-2"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
+                                    <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -2,10 +2,10 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header sty-one">
-    <h1>Detail Laporan 112 </h1>
+    <h1>Detail Laporan Kejadian</h1>
     <ol class="breadcrumb">
       <li><a href="#">Home</a></li>
-      <li><i class="fa fa-angle-right"></i> Laporan 112</li>
+      <li><i class="fa fa-angle-right"></i> Laporan Kejadian</li>
     </ol>
   </div>
 
@@ -30,7 +30,7 @@
                 <!-- <div class="title"><strong>Detail Laporan</strong></div> -->
                 <form class="form-horizontal">
                   <div class="form-group row">
-                    <div class="col-sm-1 form-control-label">
+                    <div class="col-sm-11 form-control-label">
                       <a href="<?= base_url('report') ?>" class="btn btn-primary">Kembali</a>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ class pengumumanModel extends Model{
     protected $table = 'pengumuman';
     protected $id = 'id_pengumuman';
     protected $useTimestamps = true;
-    protected $allowedFields = ['tagline_pengumuman', 'date_pengumuman', 'judul_pengumuman','isi_pengumuman','link_pengumuman','dokumentasi_pengumuman'];
+    protected $allowedFields = ['tagline_pengumuman', 'date_pengumuman', 'judul_pengumuman','isi_pengumuman','dokumentasi_pengumuman'];
 
     public function data_pengumuman ($id_pengumuman)
     {

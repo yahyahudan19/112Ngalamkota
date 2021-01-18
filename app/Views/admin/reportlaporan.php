@@ -7,7 +7,6 @@
         <li><a href="#">Home</a></li>
         <li><i class="fa fa-angle-right"></i>Laporan Kejadian</li>
       </ol>
-
     </div>
     <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
@@ -58,11 +57,12 @@
                 <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
                 <br>
                 <br>
+                <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
                 <div class="table-responsive">
                   <table class="table table-bordered table-hover dataTable" id="rlaporanTable">
                     <thead>
                       <tr>
-                        <th>No</th>
+                        <th>#</th>
                         <th>Nama Pelapor</th>
                         <th>Lokasi Kejadian</th>
                         <th>Nama Pelapor</th>

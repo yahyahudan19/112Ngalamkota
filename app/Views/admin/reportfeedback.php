@@ -21,12 +21,12 @@
            <div class="row">
              <div class="col-lg-12">
                <div class="block">
-                 <div class="title"><strong>Tabel Feedback</strong></div>
+                 <!-- <div class="title"><strong>Tabel Feedback</strong></div> -->
                  <div class="table-responsive">
                    <table class="table table-striped table-hover" id="rfeedbackTable">
                      <thead>
                        <tr>
-                         <th>No</th>
+                         <th>#</th>
                          <th>Nama</th>
                          <th>Alamat</th>
                          <th>No. HP</th>

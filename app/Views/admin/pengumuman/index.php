@@ -19,13 +19,16 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Tabel Pengumuman</strong></div>
+                  <!-- <div class="title"><strong>Tabel Pengumuman</strong></div> -->
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Pengumuman</button>
+                  <br>
+                  <br>
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover" id="pengumumanTable">
+                    <table class="table table-bordered table-hover" id="pengumumanTable">
                       <thead>
                         <tr>
                           <!-- <th>ID</th> -->
-                          <th>No</th>
+                          <th>#</th>
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
@@ -57,7 +60,6 @@
                     </table>
                   </div>
                 </div>
-                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Pengumuman</button>
               </div>
               <!-- Modal-->
               <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
@@ -85,17 +87,17 @@
                           <label>Isi</label>
                           <textarea class="form-control" placeholder="Isi" id="isi_pengumuman" name="isi_pengumuman" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label>Link</label>
                           <input type="text" placeholder="Link" class="form-control" id="link_pengumuman" name="link_pengumuman" required>
-                        </div>
+                        </div> -->
                         <!-- <div class="form-group">
                         <label>Dokumentasi</label>
                         <input type="file" name="dokumentasiPengumuman" class="form-control-sm" id="dokumentasiPengumuman" multiple>
                         </div> -->
-                        <div class="line"></div>
-                        <button type="submit" class="btn btn-success">Simpan</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success">Simpan</button>
+                        </div>
                       </form>
                     </div>
                     <div class="modal-footer">
