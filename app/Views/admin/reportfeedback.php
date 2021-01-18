@@ -8,7 +8,9 @@
        <li><i class="fa fa-angle-right"></i> Laporan Feedback</li>
      </ol>
    </div>
-
+   <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+   </div>
    <!-- Main content -->
    <div class="content">
      <!-- Small boxes (Stat box) -->
@@ -40,8 +42,8 @@
                      </thead>
                      <tbody>
                        <?php
-                       $no=1;  
-                       foreach ($feedback as $r) : ?>
+                        $no = 1;
+                        foreach ($feedback as $r) : ?>
                          <tr>
                            <!-- <th scope="row"><?= $r['id_feedback']; ?></th> -->
                            <th scope="row"><?= $no; ?></th>
@@ -59,10 +61,10 @@
                              <a href="/feedback/delete/<?= $r['id_feedback']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                            </td>
                          </tr>
-                         
-                       <?php 
-                      $no++; 
-                      endforeach; ?>
+
+                       <?php
+                          $no++;
+                        endforeach; ?>
                      </tbody>
                    </table>
                  </div>

@@ -7,8 +7,11 @@
         <li><a href="#">Home</a></li>
         <li><i class="fa fa-angle-right"></i>Laporan Kejadian</li>
       </ol>
-    </div>
 
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+    </div>
     <!-- Main content -->
     <div class="content">
       <!-- Small boxes (Stat box) -->
@@ -55,7 +58,6 @@
                 <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
                 <br>
                 <br>
-                <div class="title"><strong>Tabel Kejadian</strong></div>
                 <div class="table-responsive">
                   <table class="table table-bordered table-hover dataTable" id="rlaporanTable">
                     <thead>
@@ -84,7 +86,7 @@
                           <td>
                             <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                             <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
+                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');"><i class="fa fa-trash"></i>Hapus</a>
                           </td>
                         </tr>
 

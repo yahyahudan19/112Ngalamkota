@@ -8,7 +8,9 @@
         <li><i class="fa fa-angle-right"></i>Berita</li>
       </ol>
     </div>
-
+    <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+    </div>
     <!-- Main content -->
     <div class="content">
       <!-- Small boxes (Stat box) -->
