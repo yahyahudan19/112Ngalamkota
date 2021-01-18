@@ -180,9 +180,9 @@
                                 </div>
                             </div>
                             <div class="col-md-5 ms-md-auto">
-                                <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
-                                <h6 class="mb-4"><?= $val['date_news']; ?></h6>
-                                <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
+                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                                 <p class="text-muted mb-5"><?= $val['isi_news'] ?></p>
                                 <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                             </div>
@@ -192,9 +192,9 @@
                         ?>
                         <div class="row align-items-center mb-5">
                             <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
-                                <span class="badge badge-soft-primary mb-4"><?= $val['tagline_news']; ?></span>
-                                <h6 class="mb-4"><?= $val['date_news']; ?></h6>
-                                <h2 class="mb-4"><?= $val['judul_news']; ?></h2>
+                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                                 <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
                                 <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                             </div>
@@ -237,8 +237,8 @@
                             <div class="card mt-4 border-0 shadow">
                                 <div class="card-body p-4">
                                     <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
-                                    <h6 class="mb-4"><?= $data['date_pengumuman']; ?></h6>
-                                    <h4 class="font-size-22 my-4"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
+                                    <h6 class="font-size-15 my-2"><?= $data['date_pengumuman']; ?></h6>
+                                    <h4 class="font-size-20 my-2"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
                                     <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
                                 </div>
                             </div>

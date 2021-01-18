@@ -3,8 +3,8 @@
           <div class="content-header sty-one">
             <h1>Detail Berita</h1>
             <ol class="breadcrumb">
-              <li><a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i>Berita</li>
+              <li><a href="#">Berita</a></li>
+              <li><i class="fa fa-angle-right"></i>Detail Berita</li>
             </ol>
           </div>
           <div class="content">
@@ -14,7 +14,7 @@
                   <!-- Page Content -->
                   <div class="form-group row">
                     <div class="col-lg-12 ml-auto">
-                      <a href="<?= base_url('superAdmin/pengumuman') ?>" class="btn btn-primary">Kembali</a>
+                      <a href="<?= base_url('news') ?>" class="btn btn-primary">Kembali</a>
                     </div>
                   </div>
                   <div class="col-lg-12">
