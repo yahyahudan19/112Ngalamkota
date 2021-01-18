@@ -27,7 +27,7 @@ class Pengumuman extends BaseController
                 'date_pengumuman' => $this->request->getVar('date_pengumuman'),
                 'judul_pengumuman' => $this->request->getVar('judul_pengumuman'),
                 'isi_pengumuman' => $this->request->getVar('isi_pengumuman'),
-                'link_pengumuman' => $this->request->getVar('link_pengumuman'),
+                // 'link_pengumuman' => $this->request->getVar('link_pengumuman'),
             ];
             $this->pengumumanModel->save($data_uploads);
             return redirect()->to(base_url('superadmin/pengumuman'));
