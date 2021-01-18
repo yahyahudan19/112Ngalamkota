@@ -19,12 +19,12 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Tabel Berita</strong></div>
+                  <!-- <div class="title"><strong>Tabel Berita</strong></div> -->
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover" id="newsTable">
+                    <table class="table table-bordered table-hover" id="newsTable">
                       <thead>
                         <tr>
-                          <th>No</th>
+                          <th>#</th>
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
@@ -90,16 +90,18 @@
                         <div class="form-group">
                           <label>Link</label>
                           <input type="text" placeholder="Link" class="form-control" id="link_news" name="link_news" required>
+                          <small class="help-block-none">Link sumber berita.</small>
                         </div>
                         <div class="form-group">
                           <label>Dokumentasi</label>
-                          <input type="file" class="form-control-sm" id="dokumentasiNews" name="dokumentasiNews" required>
+                          <input type="file" class="dropify" id="dokumentasiNews" name="dokumentasiNews" required>
                         </div>
-                        <button type="submit" class="btn btn-success">Simpan</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success">Simpan</button>
+                        </div>
+
+                        <!-- <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button> -->
                       </form>
-                    </div>
-                    <div class="modal-footer">
                     </div>
                   </div>
                 </div>

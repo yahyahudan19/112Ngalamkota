@@ -16,14 +16,12 @@
        <!-- Page Header-->
        <!-- Page Content -->
        <div class="form-group row">
-                 <div class="col-sm-11 ml-auto">
-                   <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
-                   <a href="<?= base_url('superAdmin/reportFeedback') ?>" class="btn btn-primary">Kembali</a>
-                 </div>
-               </div>
+         <div class="col-sm-11 ml-auto">
+           <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
+           <a href="<?= base_url('superAdmin/reportFeedback') ?>" class="btn btn-primary">Kembali</a>
+         </div>
+       </div>
        <div class="col-lg-12">
-       
-       
          <div class="block">
            <div class="block-body">
              <form class="form-horizontal">
@@ -112,7 +110,7 @@
                  </div>
                </div> -->
                <div class="line"></div>
-               
+
              </form>
            </div>
          </div>

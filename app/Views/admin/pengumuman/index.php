@@ -19,13 +19,13 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Tabel Pengumuman</strong></div>
+                  <!-- <div class="title"><strong>Tabel Pengumuman</strong></div> -->
                   <div class="table-responsive">
                     <table class="table table-bordered table-hover" id="pengumumanTable">
                       <thead>
                         <tr>
                           <!-- <th>ID</th> -->
-                          <th>No</th>
+                          <th>#</th>
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
@@ -93,9 +93,9 @@
                         <label>Dokumentasi</label>
                         <input type="file" name="dokumentasiPengumuman" class="form-control-sm" id="dokumentasiPengumuman" multiple>
                         </div> -->
-                        <div class="line"></div>
-                        <button type="submit" class="btn btn-success">Simpan</button>
-                        <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-success">Simpan</button>
+                        </div>
                       </form>
                     </div>
                     <div class="modal-footer">
