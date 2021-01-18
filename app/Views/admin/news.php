@@ -25,21 +25,21 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>Tagline</th>
                           <th>Tanggal Dibuat</th>
+                          <th>Tagline</th>
                           <th>Judul</th>
-                          <th>Link</th>                        
+                          <th>Link</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php
-                          $no = 1; 
-                          foreach ($news as $r) : ?>
+                        $no = 1;
+                        foreach ($news as $r) : ?>
                           <tr>
                             <th scope="row"><?= $no; ?></th>
-                            <td><?= $r['tagline_news']; ?></td>
                             <td><?= $r['date_news']; ?></td>
+                            <td><?= $r['tagline_news']; ?></td>
                             <td><?= $r['judul_news']; ?></td>
                             <td><?= $r['link_news']; ?></td>
                             <!-- <td><?= $r['created_at']; ?></td> -->
@@ -52,8 +52,8 @@
                             </td>
                           </tr>
                         <?php
-                          $no++; 
-                          endforeach; 
+                          $no++;
+                        endforeach;
                         ?>
                       </tbody>
                     </table>
@@ -72,12 +72,12 @@
                       <form action="/news/addNews" method="post" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="form-group">
-                          <label>Tagline</label>
-                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_news" name="tagline_news" required>
-                        </div>
-                        <div class="form-group">
                           <label>Tanggal Dibuat</label>
                           <input type="date" class="form-control" id="date_news" name="date_news" required>
+                        </div>
+                        <div class="form-group">
+                          <label>Tagline</label>
+                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_news" name="tagline_news" required>
                         </div>
                         <div class="form-group">
                           <label>Judul</label>

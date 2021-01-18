@@ -33,9 +33,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                      <?php
-                          $no = 1; 
-                          foreach ($pengumuman as $r) : ?>
+                        <?php
+                        $no = 1;
+                        foreach ($pengumuman as $r) : ?>
                           <tr>
                             <th scope="row"><?= $no; ?></th>
                             <td><?= $r['date_pengumuman']; ?></td>
@@ -50,8 +50,8 @@
                             </td>
                           </tr>
                         <?php
-                          $no++; 
-                          endforeach; 
+                          $no++;
+                        endforeach;
                         ?>
                       </tbody>
                     </table>
@@ -70,12 +70,12 @@
                       <form action="/pengumuman/addPengumuman" method="post">
                         <?= csrf_field(); ?>
                         <div class="form-group">
-                          <label>Tagline</label>
-                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_pengumuman" name="tagline_pengumuman" required>
-                        </div>
-                        <div class="form-group">
                           <label>Tanggal Dibuat</label>
                           <input type="date" class="form-control" id="date_pengumuman" name="date_pengumuman" required>
+                        </div>
+                        <div class="form-group">
+                          <label>Tagline</label>
+                          <input type="text" placeholder="Tagline" class="form-control" id="tagline_pengumuman" name="tagline_pengumuman" required>
                         </div>
                         <div class="form-group">
                           <label>Judul</label>
