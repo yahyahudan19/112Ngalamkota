@@ -45,13 +45,13 @@
                               </div>
                             </div>
                             <div class="line"></div>
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                               <label class="col-sm-1 form-control-label">Link</label>
                               <div class="col-sm-9">
                               <input type="text" class="form-control" value="<?= $pengumuman['link_pengumuman'] ?>" readonly>
                                 <small class="help-block-none">Link sumber berita.</small>
                               </div>
-                            </div>
+                            </div> -->
                             <div class="line"></div>
                             <div class="form-group row">
                               <div class="col-sm-11 ml-auto">

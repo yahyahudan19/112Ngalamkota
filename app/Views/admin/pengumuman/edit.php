@@ -44,10 +44,10 @@
                  <label class="col-sm-1 form-control-label"><strong>Tanggal</strong></label>
                    <input type="text" class="form-control" value="<?= $pengumumandata[0]['date_pengumuman'] ?>" name="date_pengumuman" id="date_pengumuman" required>
                </div>
-               <div class="form-group col-lg-6">
+               <!-- <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Link</strong></label>
                    <input type="text" class="form-control" value="<?= $pengumumandata[0]['link_pengumuman'] ?>" name="link_pengumuman" id="link_pengumuman" required>
-               </div>
+               </div> -->
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
                  <p>Abaikan jika tidak ingin mengubah dokumen</p>

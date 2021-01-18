@@ -21,7 +21,7 @@
                 <div class="block">
                   <div class="title"><strong>Tabel Pengumuman</strong></div>
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover" id="pengumumanTable">
+                    <table class="table table-bordered table-hover" id="pengumumanTable">
                       <thead>
                         <tr>
                           <!-- <th>ID</th> -->
@@ -85,10 +85,10 @@
                           <label>Isi</label>
                           <textarea class="form-control" placeholder="Isi" id="isi_pengumuman" name="isi_pengumuman" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label>Link</label>
                           <input type="text" placeholder="Link" class="form-control" id="link_pengumuman" name="link_pengumuman" required>
-                        </div>
+                        </div> -->
                         <!-- <div class="form-group">
                         <label>Dokumentasi</label>
                         <input type="file" name="dokumentasiPengumuman" class="form-control-sm" id="dokumentasiPengumuman" multiple>
