@@ -62,6 +62,8 @@ class Report extends BaseController
                 // upload dengan random name
                 $img->move(ROOTPATH . 'public/uploads', $imagename);
             }
+
+            session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
             return redirect()->to(base_url('/admin/reportLaporan'));
         }
         // return redirect()->to(base_url('/admin/reportLaporan')); 
@@ -102,6 +104,7 @@ class Report extends BaseController
     public function delete($id_pelapor)
     {
         $this->reportlaporanModel->delete_data($id_pelapor);
+        session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
     }
     public function edit() {

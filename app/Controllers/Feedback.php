@@ -38,7 +38,6 @@ class Feedback extends BaseController
             'q5_feedback' => $this->request->getVar('q5_feedback'),
         ]);
 
-
         return redirect()->to('/home');
     }
     public function detailFeedback($id)
@@ -57,6 +56,7 @@ class Feedback extends BaseController
     public function delete($id_feedback)
     {
         $this->feedbackModel->delete_data($id_feedback);
+        session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
         return redirect()->to(base_url('superadmin/reportfeedback'));
     }
 }

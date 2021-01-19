@@ -118,6 +118,7 @@ class News extends BaseController
     public function delete($id_news)
    {
       $this->newsModel->delete_data($id_news);
+        session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
       return redirect()->to(base_url('superadmin/news'));
    }
 }
