@@ -5,6 +5,7 @@ use App\Models\authModel;
 use App\Models\newsModel;
 use App\Models\feedbackModel;
 use App\Models\pengumumanModel;
+use App\Models\userModel;
 
 class SuperAdmin extends BaseController
 {
@@ -12,6 +13,7 @@ class SuperAdmin extends BaseController
 	protected $authModel;
 	protected $feedbackModel;
 	protected $pengumumanModel;
+	protected $userModel;
 
 	public function __construct(){
 		$this->reportlaporanModel = new reportlaporanModel();
@@ -19,6 +21,7 @@ class SuperAdmin extends BaseController
 		$this->newsModel = new newsModel();
 		$this->feedbackModel = new feedbackModel();
 		$this->pengumumanModel = new pengumumanModel();
+		$this->userModel = new userModel();
 	}
 	public function index()
 	{
@@ -28,16 +31,16 @@ class SuperAdmin extends BaseController
 		echo view('layout/footer');
 	}
 	public function user(){
-		$auth = $this->authModel->findAll();
+		$user = $this->userModel->findAll();
 		$data = [
-			'auth' => $auth 
+			'user' => $user
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/user',$data);
 		echo view('layout/footer');
 	}
-	
+
 	public function news(){
 		$news = $this->newsModel->findAll();
 		$data = [
