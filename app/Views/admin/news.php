@@ -8,9 +8,16 @@
         <li><i class="fa fa-angle-right"></i>Berita</li>
       </ol>
     </div>
+
+    <!-- FlashMessage -->
+    <?php if(session()->getFlashdata('pesan')) : ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+      <?= session()->getFlashdata('pesan'); ?>
     </div>
+    <?php endif; ?> 
+    <!-- End FlashMessage -->
+
     <!-- Main content -->
     <div class="content">
       <!-- Small boxes (Stat box) -->
@@ -66,8 +73,8 @@
                 </div>
               </div>
               <!-- Modal-->
-              <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
-                <div role="document" class="modal-dialog">
+              <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left " aria-hidden="true" style="display: none;">
+                <div role="document" class="modal-dialog modal-dialog-scrollable">
                   <div class="modal-content">
                     <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Berita</strong>
                       <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>

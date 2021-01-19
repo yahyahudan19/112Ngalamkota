@@ -38,6 +38,7 @@ class News extends BaseController
 
             // ulangi insert gambar ke table galery menggunakan foreach
             $file->move(ROOTPATH . 'public/uploads', $imagename);
+            session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
             return redirect()->to(base_url('superadmin/news'));
         }
        

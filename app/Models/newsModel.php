@@ -18,6 +18,7 @@ class newsModel extends Model{
     public function save_data($data){
         $query = $this->db->table('news')->insert($data);
         return $query;
+        
     }
 
     public function update_data($data, $id_news)

@@ -170,7 +170,7 @@
                 <?php
                 if ($idx % 2 == 0) {
                 ?>
-                    <div class="row align-items-center section pb-5">
+                    <div class="row align-items-center section pb-0">
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
@@ -178,45 +178,46 @@
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
-                            <div class="col-md-5 ms-md-auto">
-                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
-                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
-                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
-                                <p class="text-muted mb-5"><?= $val['isi_news'] ?></p>
-                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                            </div>
-                        </div>        
-                        <?php
-                    }else{
-                        ?>
-                        <div class="row align-items-center mb-5">
-                            <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
-                                <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
-                                <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
-                                <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
-                                <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                                <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
-                            </div>
-                            <div class="col-md-6 ms-md-auto order-1 order-md-2">
-                                <div class="position-relative">
-                                    <div class="ms-5 features-img">
-                                        <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450"/>
-                                    </div>
-                                    <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
-                                </div>
-                                <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
-                            </div>
+                        </div>
+                        <div class="col-md-5 ms-md-auto">
+                            <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                            <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                            <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
+                            <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
+                            <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                         </div>
                     </div>
                 <?php
-                }
+                } else {
                 ?>
-
-            <?php endforeach; ?>
-
-            <!-- end row -->
+                    <div class="row align-items-center mb-5">
+                        <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
+                            <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
+                            <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
+                            <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
+                            <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
+                            <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                        </div>
+                        <div class="col-md-6 ms-md-auto order-1 order-md-2">
+                            <div class="position-relative">
+                                <div class="ms-5 features-img">
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450" />
+                                </div>
+                                <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
+                            </div>
+                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
+                        </div>
+                    </div>
         </div>
-        <!-- end container -->
+    <?php
+                }
+    ?>
+
+<?php endforeach; ?>
+
+<!-- end row -->
+</div>
+<!-- end container -->
     </section>
     <!-- Features end -->
     <!-- Cta end -->
@@ -231,26 +232,43 @@
                 </div>
             </div>
             <div class="row">
-                    <?php
-                    foreach($pengumuman as $data){
-                        ?>
-                        <div class="col-lg-4">
-                            <div class="card mt-4 border-0 shadow">
-                                <div class="card-body p-4">
-                                    <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
-                                    <h6 class="font-size-15 my-2"><?= $data['date_pengumuman']; ?></h6>
-                                    <h4 class="font-size-20 my-2"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
-                                    <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
+                <div class="col-lg-4">
+                    <div class="card mt-4 border-0 shadow">
+                        <div class="card-body p-4">
+                            <span class="badge badge-soft-primary">UI & UX Design</span>
+                            <h4 class="font-size-22 my-4"><a href="javascript: void(0);">Step bt step to conduct
+                                    usability testing</a></h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit.</p>
+                            <div class="d-flex align-items-center mt-4 pt-2">
+                                <img src="images/user/img-2.jpg" class="rounded-circle avatar-sm me-3" alt="..." />
+                                <div class="flex-body">
+                                    <h5 class="font-size-17 mb-0">John Yeager</h5>
+                                    <p class="text-muted mb-0 font-size-14">Designer, New York</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php
-                }
-
-                ?>
-
+                </div>
                 <!-- end col -->
+                <div class="col-lg-4">
+                    <div class="card mt-4 border-0 shadow">
+                        <div class="card-body p-4">
+                            <span class="badge badge-soft-primary">CEO</span>
+                            <h4 class="font-size-22 my-4"><a href="javascript: void(0);">Increase conversion rate from
+                                    ad to landing page</a></h4>
+                            <p class="text-muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                                fugit.</p>
+                            <div class="d-flex align-items-center mt-4 pt-2">
+                                <img src="images/user/img-3.jpg" class="rounded-circle avatar-sm me-3" alt="..." />
+                                <div class="flex-body">
+                                    <h5 class="font-size-17 mb-0">Berneice Harris</h5>
+                                    <p class="text-muted mb-0 font-size-14">Designer, New York</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- end row -->
         </div>
