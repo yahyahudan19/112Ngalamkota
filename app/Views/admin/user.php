@@ -29,20 +29,22 @@
                        <th>#</th>
                        <th>Email</th>
                        <th>Username</th>
+                       <th>Password</th>
                        <th>Level</th>
                        <th>Action</th>
                      </tr>
                    </thead>
                    <tbody>
-                     <?php foreach ($auth as $r) : ?>
+                     <?php foreach ($user as $r) : ?>
                        <tr>
                          <th scope="row"><?= $r['id_user']; ?></th>
                          <td><?= $r['email']; ?></td>
                          <td><?= $r['username']; ?></td>
+                         <td><?= $r['password']; ?></td>
                          <td><?= $r['role_id']; ?></td>
                          <td>
                            <a href="/admin/editProfile" class="btn btn-warning btn-sm">Edit</a>
-                           <a href="/auth/delete/<?= $r['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
+                           <a href="/user/delete/<?= $r['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                          </td>
                        </tr>
                      <?php endforeach; ?>
@@ -60,18 +62,19 @@
                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                  </div>
                  <div class="modal-body">
+                 <form method="post" action="<?= site_url('/user/addUser') ?>" enctype="multipart/form-data">
                    <form>
                      <div class="form-group">
                        <label>Email</label>
-                       <input type="email" placeholder="Email Address" class="form-control">
+                       <input type="email"  name="email" id="email" placeholder="Email Address" class="form-control">
                      </div>
                      <div class="form-group">
                        <label>username</label>
-                       <input type="username" placeholder="Username" class="form-control">
+                       <input type="username" name="username" id="username" placeholder="Username" class="form-control">
                      </div>
                      <div class="form-group">
                        <label>password</label>
-                       <input type="password" placeholder="Password" class="form-control">
+                       <input type="password" name="password" id="password" placeholder="Password" class="form-control">
                      </div>
                      <div class="form-group">
                        <label>Level</label>
@@ -82,11 +85,10 @@
                          </select>
                        </div>
                      </div>
-
-                   </form>
-                 </div>
-                 <div class="modal-footer">
+                     <div class="modal-footer">
                    <button type="submit" class="btn btn-success">Simpan</button>
+                 </div>
+                   </form>
                  </div>
                </div>
              </div>

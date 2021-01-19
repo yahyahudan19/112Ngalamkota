@@ -15,21 +15,21 @@ class Auth extends BaseController
 		
 	}
 	
-	public function addUser()
-	{
-		// $this->userModel->save([
-        //     'email' => $this->request->getVar('tagline_news'),
-        //     'username' => $this->request->getVar('isi_news'),
-        //     'password' => $this->request->getVar('link_news'),
-        //     'image' => $this->request->getVar('date_news'),
-        //     'role_id' => $this->request->getVar('dokumentasi_news'),
-        //     'is_active' => $this->request->getVar('dokumentasi_news')
-        // ]);
+	// public function addUser()
+	// {
+	// 	// $this->userModel->save([
+    //     //     'email' => $this->request->getVar('tagline_news'),
+    //     //     'username' => $this->request->getVar('isi_news'),
+    //     //     'password' => $this->request->getVar('link_news'),
+    //     //     'image' => $this->request->getVar('date_news'),
+    //     //     'role_id' => $this->request->getVar('dokumentasi_news'),
+    //     //     'is_active' => $this->request->getVar('dokumentasi_news')
+    //     // ]);
 
         
-        // return redirect()->to('/admin/user');
+    //     // return redirect()->to('/admin/user');
 
-	}
+	// }
 
 	public function cekLogin(){
 		
@@ -52,11 +52,5 @@ class Auth extends BaseController
 		}else{
 			return view('auth/login');
 		}
-	
-	}
-	public function delete($id_user)
-		{
-			$this->authModel->delete_data($id_user);
-		   return redirect()->to(base_url('superadmin/user'));
 	}
 }
