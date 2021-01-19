@@ -2,7 +2,7 @@
  <div class="content-wrapper">
    <!-- Content Header (Page header) -->
    <div class="content-header sty-one">
-     <h1>Detail pengumuman </h1>
+     <h1>Edit Pengumuman </h1>
      <ol class="breadcrumb">
        <li><a href="/superAdmin/pengumuman">Pengumuman</a></li>
        <li><i class="fa fa-angle-right"></i>Edit Pengumuman</li>
@@ -18,7 +18,7 @@
        <div class="form-group row">
          <div class="col-sm-11 ml-auto">
            <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
-           <a href="<?= base_url('') ?>" class="btn btn-primary">Kembali</a>
+           <a href="<?= base_url('superAdmin/pengumuman') ?>" class="btn btn-primary">Kembali</a>
          </div>
        </div>
        <div class="col-lg-12">

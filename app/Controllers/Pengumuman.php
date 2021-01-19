@@ -32,7 +32,6 @@ class Pengumuman extends BaseController
             'date_pengumuman' => $this->request->getVar('date_pengumuman'),
             'judul_pengumuman' => $this->request->getVar('judul_pengumuman'),
             'isi_pengumuman' => $this->request->getVar('isi_pengumuman'),
-            // 'link_pengumuman' => $this->request->getVar('link_pengumuman'),
         ];
         $this->pengumumanModel->save($data_uploads);
         session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');

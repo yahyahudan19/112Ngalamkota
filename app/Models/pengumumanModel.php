@@ -9,7 +9,7 @@ class pengumumanModel extends Model{
     protected $table = 'pengumuman';
     protected $id = 'id_pengumuman';
     protected $useTimestamps = true;
-    protected $allowedFields = ['tagline_pengumuman', 'date_pengumuman', 'judul_pengumuman','isi_pengumuman','dokumentasi_pengumuman'];
+    protected $allowedFields = ['tagline_pengumuman', 'date_pengumuman', 'judul_pengumuman','isi_pengumuman'];
 
     public function data_pengumuman ($id_pengumuman)
     {
@@ -22,7 +22,7 @@ class pengumumanModel extends Model{
 
     public function update_data($data, $id_pengumuman)
     {
-        $query = $this->db->table("pengumuman")->update(array('id_pengumuman' => $id_pengumuman));
+        $query = $this->db->table("pengumuman")->update(array($data, 'id_pengumuman' => $id_pengumuman));
         return $query;
     }
 
