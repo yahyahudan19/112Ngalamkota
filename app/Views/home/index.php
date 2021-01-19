@@ -170,7 +170,8 @@
                 <?php
                 if ($idx % 2 == 0) {
                 ?>
-                    <div class="row align-items-center section pb-0">
+                    <!-- atas -->
+                    <div class="row align-items-center section pb-5">
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
@@ -179,7 +180,7 @@
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
                         </div>
-                        <div class="col-md-5 ms-md-auto">
+                        <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
                             <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
                             <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
@@ -205,19 +206,17 @@
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>
-                            <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                         </div>
                     </div>
-        </div>
-    <?php
+                <?php
                 }
-    ?>
+                ?>
 
-<?php endforeach; ?>
+            <?php endforeach; ?>
 
-<!-- end row -->
-</div>
-<!-- end container -->
+            <!-- end row -->
+        </div>
+        <!-- end container -->
     </section>
     <!-- Features end -->
     <!-- Cta end -->
