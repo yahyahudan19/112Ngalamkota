@@ -26,7 +26,7 @@ class User extends BaseController
                 'email' => $this->request->getVar('email'),
                 'username' => $this->request->getVar('username'),
                 'password' => $this->request->getVar('password'),
-                'role_id' => $this->request->getVar('role_id'),
+                'level' => $this->request->getVar('level'),
             ];
             $this->userModel->save_data($data_uploads);
             return redirect()->to(base_url('superadmin/user'));
