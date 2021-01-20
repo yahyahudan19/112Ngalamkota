@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\authModel;
 
@@ -6,35 +8,34 @@ class Auth extends BaseController
 {
 	protected $authModel;
 
-	public function __construct(){
+	public function __construct()
+	{
 		$this->authModel = new authModel();
 	}
 	public function index()
 	{
 		return view('auth/login');
-		
 	}
-	
-	public function cekLogin(){
-		
+
+	public function cekLogin()
+	{
+
 		$username = $this->request->getVar('username');
 		$password = $this->request->getVar('password');
 
-		$auth = $this->authModel->cekLogin($username,$password);
-		// dd($username);
+		$auth = $this->authModel->cekLogin($username, $password);
 
 		if (($auth['username'] == $username) && ($auth['password'] == $password)) {
-			session()->set('username',$auth['username']);
-			// session()->set('role', $auth['role_id']);
+			session()->set('username', $auth['username']);
 			session()->set('level', $auth['level']);
-			if($auth["level"] == "Super Admin"){
+			if ($auth["level"] == "Super Admin") {
 				return redirect()->to(base_url('/superadmin'));
-			}else if($auth["level"] == "Admin"){
+			} else if ($auth["level"] == "Admin") {
 				return redirect()->to(base_url('/admin'));
-			}else{
+			} else {
 				return view('auth/login');
 			}
-		}else{
+		} else {
 			return view('auth/login');
 		}
 	}
