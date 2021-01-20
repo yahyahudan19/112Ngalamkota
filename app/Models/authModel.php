@@ -8,7 +8,7 @@ class authModel extends Model{
 
     protected $table = 'user';
     protected $id = 'id_user';
-    protected $allowedFields = ['email','username','password', 'role_id', 'image', 'is_active'];
+    protected $allowedFields = ['email','username','password', "level", 'role_id', 'image', 'is_active'];
 
     public function cekLogin($username,$password){
         return $this->db->table('user')

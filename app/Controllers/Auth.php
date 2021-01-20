@@ -15,22 +15,6 @@ class Auth extends BaseController
 		
 	}
 	
-	// public function addUser()
-	// {
-	// 	// $this->userModel->save([
-    //     //     'email' => $this->request->getVar('tagline_news'),
-    //     //     'username' => $this->request->getVar('isi_news'),
-    //     //     'password' => $this->request->getVar('link_news'),
-    //     //     'image' => $this->request->getVar('date_news'),
-    //     //     'role_id' => $this->request->getVar('dokumentasi_news'),
-    //     //     'is_active' => $this->request->getVar('dokumentasi_news')
-    //     // ]);
-
-        
-    //     // return redirect()->to('/admin/user');
-
-	// }
-
 	public function cekLogin(){
 		
 		$username = $this->request->getVar('username');
@@ -41,10 +25,11 @@ class Auth extends BaseController
 
 		if (($auth['username'] == $username) && ($auth['password'] == $password)) {
 			session()->set('username',$auth['username']);
-			session()->set('role', $auth['role_id']);
-			if($auth["role_id"] == "1"){
+			// session()->set('role', $auth['role_id']);
+			session()->set('level', $auth['level']);
+			if($auth["level"] == "Super Admin"){
 				return redirect()->to(base_url('/superadmin'));
-			}else if($auth["role_id"] == "2"){
+			}else if($auth["level"] == "Admin"){
 				return redirect()->to(base_url('/admin'));
 			}else{
 				return view('auth/login');
