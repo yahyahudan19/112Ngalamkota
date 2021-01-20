@@ -1,4 +1,4 @@
-Anggota Tim Pembuat Proyek:
+Anggota Tim :
 
 1. Hendra Danang Pamungkas NIM. 1831710034
 2. Irfak Wahyudi NIM. 1831710077
