@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\reportlaporanModel;
 use App\Models\authModel;
@@ -11,7 +13,8 @@ class Admin extends BaseController
 	protected $authModel;
 	protected $feedbackModel;
 
-	public function __construct(){
+	public function __construct()
+	{
 		$this->reportlaporanModel = new reportlaporanModel();
 		$this->authModel = new authModel();
 		$this->newsModel = new newsModel();
@@ -24,27 +27,29 @@ class Admin extends BaseController
 		echo view('admin/dashboard');
 		echo view('layout/footer');
 	}
-	public function reportlaporan(){
+	public function reportlaporan()
+	{
 		$reportL = $this->reportlaporanModel->findAll();
 		$data = [
-			'reportL' => $reportL 
+			'reportL' => $reportL
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/reportlaporan', $data);
 		echo view('layout/footer');
 	}
-	public function editProfile(){
+	public function editProfile()
+	{
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/profile/editProfile');
 		echo view('layout/footer');
 	}
-	public function contact(){
+	public function contact()
+	{
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/contact');
 		echo view('layout/footer');
 	}
-
 }
