@@ -83,43 +83,27 @@ class Report extends BaseController
         echo view('layout/footer');
     }
 
-    // public function update()
-    // {
-    //     $model = new reportlaporanModel();
-    //     $id = $this->request->getPost('id_pelapor');
-    //     $data = [
-
-    //         'kejadian'          => $this->request->getPost('kejadian'),
-    //         'lokasi_kejadian'   => $this->request->getPost('lokasi_kejadian'),
-    //         'tanggal'           => $this->request->getPost('tanggal'),
-    //         'nama_pelapor'       => $this->request->getPost('nama_pelapor'),
-    //         'tindak_lanjut'     => $this->request->getPost('tindak_lanjut')
-    //     ];
-
-    //     $model->updateReport($data, $id);
-    //     return redirect()->to('/report');
-    // }
-
-
     public function delete($id_pelapor)
     {
         $this->reportlaporanModel->delete_data($id_pelapor);
         session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
     }
-    public function edit() {
+    public function edit()
+    {
         $id_pelapor = $this->request->getVar('id');
-            $data_uploads = [
-                'tanggal' => $this->request->getVar('tanggal_report'),
-                'kejadian' => $this->request->getVar('kejadian_report'),
-                'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
-                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-            ];
-            $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
-            return redirect()->to(base_url('superadmin/reportlaporan'));
+        $data_uploads = [
+            'tanggal' => $this->request->getVar('tanggal_report'),
+            'kejadian' => $this->request->getVar('kejadian_report'),
+            'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
+            'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+            'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+        ];
+        $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
+        return redirect()->to(base_url('superadmin/reportlaporan'));
     }
-    public function editReport($id){
+    public function editReport($id)
+    {
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $data = [
             'reportdata' => $ReportData

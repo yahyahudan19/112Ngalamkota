@@ -19,7 +19,6 @@ class Pengumuman extends BaseController
         $data = [
             'pengumuman' => $pengumuman
         ];
-        // dd($data);
         echo view('layout/header');
         echo view('layout/sidebar');
         echo view('admin/pengumuman', $data);
