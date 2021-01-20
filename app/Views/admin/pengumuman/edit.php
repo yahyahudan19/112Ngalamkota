@@ -22,11 +22,10 @@
          </div>
        </div>
        <div class="col-lg-12">
-
-
          <div class="block">
            <div class="block-body">
-             <form class="form-horizontal row" action="/pengumuman/edit/" method="post" enctype="multipart/form-data">
+             <!-- <form class="form-horizontal row" action="/pengumuman/edit/" method="post" enctype="multipart/form-data"> -->
+             <form class="form-horizontal row" action="/pengumuman/edit/" method="post">
                <input type="hidden" name="id" value="<?= $pengumumandata[0]['id_pengumuman']; ?>" />
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tanggal Dibuat</strong></label>
@@ -49,7 +48,6 @@
                  <p>Abaikan jika tidak ingin mengubah dokumen</p>
                  <input type="file" class="form-control" value="" name="dokumentasipengumuman" id="dokumentasipengumuman">
                </div> -->
-
                <div class="line"></div>
                <div class="col-lg-12">
                <button type="submit" class="btn btn-warning">Update</a>

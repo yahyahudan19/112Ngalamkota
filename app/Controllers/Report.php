@@ -108,25 +108,7 @@ class Report extends BaseController
         return redirect()->to(base_url('admin/reportlaporan'));
     }
     public function edit() {
-        // $file = $this->request->getFile('dokumentasiReport');
         $id_pelapor = $this->request->getVar('id');
-        // if(!empty($file)){
-            // buat value id random di table uploads
-            // $imagename = $file->getRandomName();
-            // $data_uploads = [
-            //     'tanggal' => $this->request->getVar('tanggal'),
-            //     'kejadian' => $this->request->getVar('kejadian'),
-            //     'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
-            //     'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-            //     'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-            //     // 'dokumentasi_' => $imagename,
-            // ];
-            // $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
-
-            // ulangi insert gambar ke table galery menggunakan foreach
-            // $file->move(ROOTPATH . 'public/uploads', $imagename);
-            // return redirect()->to(base_url('superadmin/reportlaporan'));
-        // }else{
             $data_uploads = [
                 'tanggal' => $this->request->getVar('tanggal_report'),
                 'kejadian' => $this->request->getVar('kejadian_report'),
@@ -136,7 +118,6 @@ class Report extends BaseController
             ];
             $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
             return redirect()->to(base_url('superadmin/reportlaporan'));
-        // }
     }
     public function editReport($id){
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
