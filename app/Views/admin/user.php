@@ -23,7 +23,7 @@
              <div class="block">
                <!-- <div class="title"><strong>Tabel User</strong></div> -->
                <div class="table-responsive">
-                 <table class="table table-bordered table-hover">
+                 <table class="table table-bordered table-hoverr" id="rfeedbackTable">
                    <thead>
                      <tr>
                        <th>#</th>
@@ -45,7 +45,7 @@
                          <td><?= $r['password']; ?></td>
                          <td><?= $r['level']; ?></td>
                          <td>
-                           <a href="/admin/editProfile" class="btn btn-warning btn-sm">Edit</a>
+                           <a href="/user/edit/" class="btn btn-warning btn-sm">Edit</a>
                            <a href="/user/delete/<?= $r['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                          </td>
                        </tr>

@@ -27,6 +27,7 @@
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
          $('#rlaporanTable').DataTable();
+         $('#userTable').DataTable();
      });
  </script>
 
