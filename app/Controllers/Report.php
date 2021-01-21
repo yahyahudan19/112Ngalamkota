@@ -96,6 +96,7 @@ class Report extends BaseController
             'nama_pelapor' => $this->request->getVar('nama_pelapor'),
             'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
         ];
+        dd($data_uploads);
         $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
         return redirect()->to(base_url('superadmin/reportlaporan'));
     }

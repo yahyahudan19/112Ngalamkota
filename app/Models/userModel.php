@@ -18,9 +18,9 @@ class userModel extends Model{
         return $this->db->table($this->table)->insert($data);
     }
 
-    public function update_data($data, $id_user)
+    public function update_data($data, $id)
     {
-        $query = $this->db->table("user")->update(array('id_user' => $id_user));
+        $query = $this->db->table('user')->update($data, array('id_user' => $id));
         return $query;
     }
 

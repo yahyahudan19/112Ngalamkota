@@ -66,11 +66,12 @@
                 <br>
                 <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
                 <div class="table-responsive">
-                  <table class="table table-bordered table-hover dataTable" id="rlaporanTable">
+                  <!-- <table class="table table-striped table-hover" id="rlaporanTable"> -->
+                  <table class="table table-bordered table-hover" id="rlaporanTable">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Nama Pelapor</th>
+                        <th>Kejadian</th>
                         <th>Lokasi Kejadian</th>
                         <th>Nama Pelapor</th>
                         <th>Tanggal Kejadian</th>
@@ -115,7 +116,7 @@
                         <form method="post" action="<?= site_url('/report/addReportL') ?>" enctype="multipart/form-data">
                           <div class="form-group row">
                             <div class="col-lg-6">
-                              <label class="form-control-label"><strong>Kejadian</strong></label>
+                              <label class="form-control-label">Kejadian</label>
                               <select name="kejadian" class="form-control" id="kejadian">
                                 <option value="">- Pilih -</option>
                                 <option value="Kebakaran">Kebakaran</option>
