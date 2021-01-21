@@ -2,10 +2,10 @@
  <div class="content-wrapper">
    <!-- Content Header (Page header) -->
    <div class="content-header sty-one">
-     <h1>Detail Berita </h1>
+     <h1>Edit Berita </h1>
      <ol class="breadcrumb">
-       <li><a href="/superAdmin/reportFeedback">Berita</a></li>
-       <li><i class="fa fa-angle-right"></i> Detail Berita</li>
+       <li><a href="/news">Berita</a></li>
+       <li><i class="fa fa-angle-right"></i>Edit Berita</li>
      </ol>
    </div>
 

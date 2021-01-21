@@ -13,7 +13,7 @@
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <?php
-      if (session()->get('role') == "1") {
+      if (session()->get('level') == "Super Admin") {
       ?>
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN MENU</li>
@@ -34,7 +34,7 @@
           <!-- <li class=""> <a href="/superAdmin/profile"> <i class="fa fa-user"></i> <span>Profile</span> <span class="pull-right-container"></i> </span> </a> -->
         </ul>
       <?php
-      } else if (session()->get('role') == "2") {
+      } else if (session()->get('level') == "Admin") {
       ?>
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN MENU</li>

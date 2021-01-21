@@ -1,10 +1,13 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\reportlaporanModel;
 use App\Models\authModel;
 use App\Models\newsModel;
 use App\Models\feedbackModel;
 use App\Models\pengumumanModel;
+use App\Models\userModel;
 
 class SuperAdmin extends BaseController
 {
@@ -12,13 +15,16 @@ class SuperAdmin extends BaseController
 	protected $authModel;
 	protected $feedbackModel;
 	protected $pengumumanModel;
+	protected $userModel;
 
-	public function __construct(){
+	public function __construct()
+	{
 		$this->reportlaporanModel = new reportlaporanModel();
 		$this->authModel = new authModel();
 		$this->newsModel = new newsModel();
 		$this->feedbackModel = new feedbackModel();
 		$this->pengumumanModel = new pengumumanModel();
+		$this->userModel = new userModel();
 	}
 	public function index()
 	{
@@ -27,75 +33,79 @@ class SuperAdmin extends BaseController
 		echo view('admin/dashboard');
 		echo view('layout/footer');
 	}
-	public function user(){
-		$auth = $this->authModel->findAll();
+	public function user()
+	{
+		$user = $this->userModel->findAll();
 		$data = [
-			'auth' => $auth 
+			'user' => $user
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/user',$data);
+		echo view('admin/user', $data);
 		echo view('layout/footer');
 	}
-	
-	public function news(){
+
+	public function news()
+	{
 		$news = $this->newsModel->findAll();
 		$data = [
-			'news' => $news 
+			'news' => $news
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/news',$data);
+		echo view('admin/news', $data);
 		echo view('layout/footer');
 	}
-	public function reportlaporan(){
+	public function reportlaporan()
+	{
 
 		$reportL = $this->reportlaporanModel->findAll();
 		$data = [
-			'reportL' => $reportL 
+			'reportL' => $reportL
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/reportlaporan',$data);
+		echo view('admin/reportlaporan', $data);
 		echo view('layout/footer');
 	}
-	public function reportfeedback(){
+	public function reportfeedback()
+	{
 
 		$feedback = $this->feedbackModel->findAll();
 		$data = [
-			'feedback' => $feedback 
+			'feedback' => $feedback
 		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/reportfeedback',$data);
+		echo view('admin/reportfeedback', $data);
 		echo view('layout/footer');
 	}
-	public function editData(){
-		
+	public function editData()
+	{
 	}
-	public function profile(){
+	public function profile()
+	{
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/profile/index');
 		echo view('layout/footer');
 	}
-	public function contact(){
+	public function contact()
+	{
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/contact');
 		echo view('layout/footer');
 	}
-	public function pengumuman(){
+	public function pengumuman()
+	{
 		$pengumuman = $this->pengumumanModel->findAll();
 		$data = [
-			'pengumuman' => $pengumuman 
-        ];
-        // dd($data);
+			'pengumuman' => $pengumuman
+		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/pengumuman/index', $data);
 		echo view('layout/footer');
 	}
-	
-
 }

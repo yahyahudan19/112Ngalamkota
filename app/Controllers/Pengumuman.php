@@ -19,7 +19,6 @@ class Pengumuman extends BaseController
         $data = [
             'pengumuman' => $pengumuman
         ];
-        // dd($data);
         echo view('layout/header');
         echo view('layout/sidebar');
         echo view('admin/pengumuman', $data);
@@ -32,7 +31,6 @@ class Pengumuman extends BaseController
             'date_pengumuman' => $this->request->getVar('date_pengumuman'),
             'judul_pengumuman' => $this->request->getVar('judul_pengumuman'),
             'isi_pengumuman' => $this->request->getVar('isi_pengumuman'),
-            // 'link_pengumuman' => $this->request->getVar('link_pengumuman'),
         ];
         $this->pengumumanModel->save($data_uploads);
         session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
@@ -47,20 +45,6 @@ class Pengumuman extends BaseController
         echo view('layout/footer');
     }
 
-    // public function edit($id_pengumuman)
-    // {
-    //     $pengumuman = $this->pengumumanModel->data_pengumuman($id_pengumuman);
-    //     $data = [
-    //      'title'    => 'Tambah Data pengumuman',
-    //      'tagline_pengumuman' => $tagline_pengumuman,
-    //      'isi_pengumuman' => $isi_pengumuman,
-    //      'link_pengumuman' => $link_pengumuman,
-    //      'date_pengumuman' => $date_pengumuman,
-    //      'dokumentasi_pengumuman' => $dokumentasi_pengumuman
-    //     ];
-
-    //     return redirect()->to(base_url('superadmin/pengumuman'));
-    // }
     public function editPengumuman($id)
     {
         $pengumumanData = $this->pengumumanModel->where('id_pengumuman', $id)->findAll();
@@ -85,26 +69,6 @@ class Pengumuman extends BaseController
         session()->setFlashdata('pesan', 'Data Berhasil diedit.');
         return redirect()->to(base_url('superadmin/pengumuman'));
     }
-
-    //     public function update()
-    //    {
-    //      $this->pengumumanModel->save([
-    //          'tagline_pengumuman'          => $this->request->getVar('tagline_pengumuman'),
-    //          'isi_pengumuman' => $this->request->getVar('isi_pengumuman'),
-    //          'link_pengumuman'       => $this->request->getVar('link_pengumuman'),
-    //          'date_pengumuman'       => $this->request->getVar('date_pengumuman'),
-    //          'dokumentasi_pengumuman'       => $this->request->getVar('dokumentasi_pengumuman')
-    //         ]);
-
-    //       $this->pengumumanModel->update_data($data, $id_pengumuman);
-    //       return redirect()->to(base_url('superadmin/pengumuman'));
-    //     }
-    //    public function updatepengumuman(){
-    //     echo view('layout/header');
-    //     echo view('layout/sidebar');
-    //     echo view('superadmin/pengumuman/update');
-    //     echo view('layout/footer');
-    //     }
 
     public function delete($id_pengumuman)
     {

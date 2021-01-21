@@ -43,15 +43,10 @@ class Feedback extends BaseController
     public function detailFeedback($id)
     {
         $feedback = $this->feedbackModel->where('id_feedback', $id)->first();
-        // $data = [
-        //     'feedback ' => $feedback[0]
-        // ];
         echo view('layout/header');
         echo view('layout/sidebar');
         echo view('admin/feedback/detail', ['feedback' => $feedback]);
         echo view('layout/footer');
-
-        // return redirect()->to(base_url('superadmin/reportfeedback'));
     }
     public function delete($id_feedback)
     {
