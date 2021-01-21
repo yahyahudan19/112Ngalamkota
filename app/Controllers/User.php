@@ -33,11 +33,13 @@ class User extends BaseController
             'level' => $this->request->getVar('level'),
         ];
         $this->userModel->save_data($data_uploads);
+        session()->setFlashdata('pesan', 'User Berhasil ditambahkan.');
         return redirect()->to(base_url('superadmin/user'));
     }
     public function delete($id_user)
     {
         $this->userModel->delete_data($id_user);
+        session()->setFlashdata('pesan', 'User Berhasil dihapus.');
         return redirect()->to(base_url('superadmin/user'));
     }
 }
