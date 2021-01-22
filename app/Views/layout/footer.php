@@ -10,7 +10,6 @@
  <script src="<?= base_url() ?>/adminpages/dist/js/jquery.min.js"></script>
  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
-
  <!-- v4.0.0-alpha.6 -->
  <script src="<?= base_url() ?>/adminpages/dist/bootstrap/js/bootstrap.min.js"></script>
 
@@ -21,6 +20,12 @@
  <script src="<?= base_url() ?>/adminpages/dist/plugins/raphael/raphael-min.js"></script>
  <script src="<?= base_url() ?>/adminpages/dist/plugins/morris/morris.js"></script>
  <script src="<?= base_url() ?>/adminpages/dist/plugins/functions/morris-init.js"></script>
+
+ <!-- Chartjs JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+ <!-- Data Table Script  -->
  <script>
      $(document).ready(function() {
          $('#newsTable').DataTable();
@@ -30,7 +35,6 @@
          $('#userTable').DataTable();
      });
  </script>
-
  <!-- dropify -->
  <script src="<?= base_url() ?>/adminpages/dist/plugins/dropify/dropify.min.js"></script>
  <script>
@@ -76,5 +80,74 @@
      });
  </script>
  </body>
+
+ <!-- Start Chart Function -->
+ <script>
+     $(function() {
+         //  Laporan Kejadian
+         var ctx = document.getElementById('bar-chart-laporan').getContext('2d');
+         var chart = new Chart(ctx, {
+             // The type of chart we want to create
+             type: 'bar',
+
+             // The data for our dataset
+             data: {
+                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 datasets: [{
+                     label: "Kecelakaan",
+                     backgroundColor: 'rgb(88, 103, 221)',
+                     borderColor: 'rgb(88, 103, 221)',
+                     data: [0, 10, 5, 2, 7, 9, 3],
+                     fill: false,
+                 }, {
+                     label: "Kebakaran",
+                     backgroundColor: 'rgb(0, 140, 211)',
+                     borderColor: 'rgb(0, 140, 211)',
+                     data: [0, 0, 1, 1, 0, 1, 0],
+                 }, {
+                     label: "Banjir",
+                     backgroundColor: 'rgb(239, 255, 0)',
+                     borderColor: 'rgb(239, 255, 0)',
+                     data: [4, 3, 1, 1, 5, 3, 2],
+                 }]
+             },
+             options: {
+                 responsive: true
+             }
+         });
+         //  Laporan Feedback
+         var ctx = document.getElementById('bar-chart-feedback').getContext('2d');
+         var chart = new Chart(ctx, {
+             // The type of chart we want to create
+             type: 'bar',
+
+             // The data for our dataset
+             data: {
+                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 datasets: [{
+                     label: "Kecelakaan",
+                     backgroundColor: 'rgb(88, 103, 221)',
+                     borderColor: 'rgb(88, 103, 221)',
+                     data: [0, 10, 5, 2, 7, 9, 3],
+                     fill: false,
+                 }, {
+                     label: "Kebakaran",
+                     backgroundColor: 'rgb(0, 140, 211)',
+                     borderColor: 'rgb(0, 140, 211)',
+                     data: [0, 0, 1, 1, 0, 1, 0],
+                 }, {
+                     label: "Banjir",
+                     backgroundColor: 'rgb(239, 255, 0)',
+                     borderColor: 'rgb(239, 255, 0)',
+                     data: [4, 3, 1, 1, 5, 3, 2],
+                 }]
+             },
+             options: {
+                 responsive: true
+             }
+         });
+     })(jQuery);
+ </script>
+ <!-- End Chart Function -->
 
  </html>

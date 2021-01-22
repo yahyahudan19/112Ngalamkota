@@ -38,7 +38,8 @@ class Feedback extends BaseController
             'q5_feedback' => $this->request->getVar('q5_feedback'),
         ]);
 
-        return redirect()->to('/home');
+        session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
+        return redirect()->to('/home/feedback');
     }
     public function detailFeedback($id)
     {

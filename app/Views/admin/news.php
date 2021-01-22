@@ -28,7 +28,8 @@
               <div class="col-lg-12">
                 <div class="block">
                   <!-- <div class="title"><strong>Tabel Berita</strong></div> -->
-                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Berita</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i> Tambah Berita</button>
+                  <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button>
                   <br>
                   <br>
                   <div class="table-responsive">
@@ -40,6 +41,7 @@
                           <th>Tagline</th>
                           <th>Judul</th>
                           <th>Link</th>
+                          <th>Tampil</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -53,13 +55,11 @@
                             <td><?= $r['tagline_news']; ?></td>
                             <td><?= $r['judul_news']; ?></td>
                             <td><?= $r['link_news']; ?></td>
-                            <!-- <td><?= $r['created_at']; ?></td> -->
+                            <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
                             <td>
                               <a href="/news/detailNews/<?= $r['id_news']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/news/editNews/<?= $r['id_news']; ?>">Edit</a>
-                              <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
                               <a href="/news/delete/<?= $r['id_news']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
-
                             </td>
                           </tr>
                         <?php
