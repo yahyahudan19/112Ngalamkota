@@ -52,10 +52,11 @@ class User extends BaseController
 
     public function editUser($id)
     {
-        $UserData = $this->userModel->where('id_user', $id)->findAll();
+        $userData = $this->userModel->where('id_user', $id)->findAll();
         $data = [
-            'userdata' => $UserData
+            'userdata' => $userData
         ];
+        // dd($data);
         echo view('layout/header');
         echo view('layout/sidebar');
         echo view('admin/user/edit', $data);
