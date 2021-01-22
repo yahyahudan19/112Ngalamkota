@@ -25,9 +25,12 @@
        <div class="page-content">
          <!-- Page Header-->
          <div class="container-fluid">
-           <div class="col-lg-9">
+           <div class="col-lg-12">
              <div class="block">
                <!-- <div class="title"><strong>Tabel User</strong></div> -->
+               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah User</button>
+               <br>
+               <br>
                <div class="table-responsive">
                  <table class="table table-bordered table-hoverr" id="rfeedbackTable">
                    <thead>
@@ -51,7 +54,7 @@
                          <td><?= $r['password']; ?></td>
                          <td><?= $r['level']; ?></td>
                          <td>
-                           <a href="/user/edit/" class="btn btn-warning btn-sm">Edit</a>
+                           <a href="/user/editUser/<?= $r['id_user']; ?>" class="btn btn-warning btn-sm">Edit</a>
                            <a href="/user/delete/<?= $r['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
                          </td>
                        </tr>
@@ -62,7 +65,6 @@
                  </table>
                </div>
              </div>
-             <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah User</button>
            </div>
            <!-- Modal-->
            <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">

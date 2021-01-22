@@ -28,19 +28,19 @@
                <input type="hidden" name="id" value="<?= $userdata[0]['id_user']; ?>" />
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Email</strong></label>
-                 <input type="text" class="form-control" value="<?= $userdata[0]['email'] ?>" name="email" id="email" required>
+                 <input type="text" class="form-control" value="<?= $userdata[0]['email']; ?>" name="email" id="email" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Username</strong></label>
-                 <input type="text" class="form-control" value="<?= $userdata[0]['username'] ?>" name="username" id="username" required>
+                 <input type="text" class="form-control" value="<?= $userdata[0]['username']; ?>" name="username" id="username" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Password</strong></label>
-                 <input type="text" class="form-control" value="<?= $userdata[0]['password'] ?>" name="password" id="password" required>
+                 <input type="text" class="form-control" value="<?= $userdata[0]['password']; ?>" name="password" id="password" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Level</strong></label>
-                 <input type="text" class="form-control" value="<?= $userdata[0]['level'] ?>" name="level" id="level" required>
+                 <input type="text" class="form-control" value="<?= $userdata[0]['level']; ?>" name="level" id="level" required>
                </div>
                <div class="line"></div>
                <div class="col-lg-12">
