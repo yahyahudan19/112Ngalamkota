@@ -6,8 +6,8 @@
       <div class="user-panel">
         <div class="image text-center"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-circle" alt="User Image"> </div>
         <div class="info">
-            <p>Yahya Hudan</p>
-            <a href="/auth"><i class="fa fa-power-off"></i></a>
+          <p>Yahya Hudan</p>
+          <a href="/auth"><i class="fa fa-power-off"></i></a>
         </div>
       </div>
 

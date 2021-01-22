@@ -46,7 +46,7 @@
                  <label class="col-sm-1 form-control-label"><strong>Link</strong></label>
                  <input type="text" class="form-control" value="<?= $newsdata[0]['link_news'] ?>" name="link_news" id="link_news" required>
                  <small class="help-block-none">Link sumber berita.</small>
-                </div>
+               </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
                  <input type="file" class="form-control" value="" name="dokumentasiNews" id="dokumentasiNews">

@@ -50,7 +50,7 @@
                </div> -->
                <div class="line"></div>
                <div class="col-lg-12">
-               <button type="submit" class="btn btn-warning">Update</a>
+                 <button type="submit" class="btn btn-warning">Update</a>
              </form>
            </div>
          </div>

@@ -50,7 +50,7 @@
                           <div class="form-group row">
                             <label class="col-sm-1 form-control-label">Isi</label>
                             <div class="col-sm-9">
-                            <textarea input type="text" class="form-control" readonly><?= $news['isi_news'] ?></textarea>
+                              <textarea input type="text" class="form-control" readonly><?= $news['isi_news'] ?></textarea>
                             </div>
                           </div>
                           <!-- <div class="form-group row">
