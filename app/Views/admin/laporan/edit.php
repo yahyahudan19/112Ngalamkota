@@ -35,7 +35,7 @@
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
-                 <select name="kejadian" class="form-control" id="kejadian">
+                 <!-- <select name="kejadian" class="form-control" id="kejadian">
                    <option value="Kebakaran" <?= $reportdata[0]['kejadian'] == "Kebakaran" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Kebakaran</option>
                    <option value="Pohon Tumbang" <?= $reportdata[0]['kejadian'] == "Pohon Tumbang" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Pohon Tumbang</option>
                    <option value="Kecelakaan" <?= $reportdata[0]['kejadian'] == "Kecelakaan" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Kecelakaan</option>
@@ -44,8 +44,8 @@
                    <option value="Angin Topan" <?= $reportdata[0]['kejadian'] == "Angin Topan" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Angin Topan</option>
                    <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Listrik Putus" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Listrik Putus</option>
                    <option value="Lainnya" <?= $reportdata[0]['kejadian'] == "Lainnya" ? "selected" : "" ;?> name="kejadian_report" id="kejadian_report">Lainnya</option>
-                 </select>
-                 <!-- <input type="text" class="form-control" value="<?= $reportdata[0]['kejadian'] ?>" name="kejadian_report" id="kejadian_report" required> -->
+                 </select> -->
+                 <input type="text" class="form-control" value="<?= $reportdata[0]['kejadian'] ?>" name="kejadian_report" id="kejadian_report" required>
                </div>
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Lokasi Kejadian</strong></label>
