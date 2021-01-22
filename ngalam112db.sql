@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2021 at 06:33 AM
+-- Generation Time: Jan 22, 2021 at 05:22 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -31,29 +31,32 @@ SET time_zone = "+00:00";
 CREATE TABLE `detail_report` (
   `id` int(11) NOT NULL,
   `report_id` int(11) NOT NULL,
-  `gambar` varchar(255) NOT NULL
+  `gambar` varchar(255) NOT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `detail_report`
 --
 
-INSERT INTO `detail_report` (`id`, `report_id`, `gambar`) VALUES
-(4, 50, '1610268234_bcc8c3c1dcfb21a2b5f2.jpg'),
-(5, 50, '1610268234_a3e1aad2eccc6ed9f455.png'),
-(6, 51, '1610270898_75ff4c0078a830f76987.png'),
-(7, 51, '1610270898_360a5de91cc3ff0f30b0.png'),
-(8, 52, '1610271979_8640cd92fe3bf807843e.jpg'),
-(9, 52, '1610271979_84b82b7a3b1d61949d57.png'),
-(10, 52, '1610271979_1e8d3b82c3baf8017a6b.jpeg'),
-(11, 52, '1610271979_0f29f82651e0dc632b62.png'),
-(12, 53, '1610601594_91277657aa444b719435.png'),
-(13, 53, '1610601594_d9dc1120f99b6db32a16.png'),
-(14, 53, '1610601594_ecf22ae61d036b01bc69.png'),
-(15, 54, '1610676219_d45e07761ad2465a6558.png'),
-(16, 54, '1610676219_8a6e9b3b765fe81b97c2.png'),
-(17, 54, '1610676219_773266b54c75fcebe48c.png'),
-(18, 55, '1610866380_51656a2170ae3bdab367.jpg');
+INSERT INTO `detail_report` (`id`, `report_id`, `gambar`, `created_at`, `updated_at`) VALUES
+(4, 50, '1610268234_bcc8c3c1dcfb21a2b5f2.jpg', NULL, NULL),
+(5, 50, '1610268234_a3e1aad2eccc6ed9f455.png', NULL, NULL),
+(6, 51, '1610270898_75ff4c0078a830f76987.png', NULL, NULL),
+(7, 51, '1610270898_360a5de91cc3ff0f30b0.png', NULL, NULL),
+(8, 52, '1610271979_8640cd92fe3bf807843e.jpg', NULL, NULL),
+(9, 52, '1610271979_84b82b7a3b1d61949d57.png', NULL, NULL),
+(10, 52, '1610271979_1e8d3b82c3baf8017a6b.jpeg', NULL, NULL),
+(11, 52, '1610271979_0f29f82651e0dc632b62.png', NULL, NULL),
+(12, 53, '1610601594_91277657aa444b719435.png', NULL, NULL),
+(13, 53, '1610601594_d9dc1120f99b6db32a16.png', NULL, NULL),
+(14, 53, '1610601594_ecf22ae61d036b01bc69.png', NULL, NULL),
+(15, 54, '1610676219_d45e07761ad2465a6558.png', NULL, NULL),
+(16, 54, '1610676219_8a6e9b3b765fe81b97c2.png', NULL, NULL),
+(17, 54, '1610676219_773266b54c75fcebe48c.png', NULL, NULL),
+(18, 55, '1610866380_51656a2170ae3bdab367.jpg', NULL, NULL),
+(19, 56, '1611199728_a47f62598c195c3c77fd.jpeg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -71,7 +74,7 @@ CREATE TABLE `feedback` (
   `q2_feedback` varchar(125) NOT NULL,
   `q3_feedback` varchar(125) NOT NULL,
   `q4_feedback` varchar(125) NOT NULL,
-  `q5_feedback` varchar(125) NOT NULL,
+  `q5_feedback` text NOT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -93,7 +96,7 @@ CREATE TABLE `news` (
   `id_news` int(125) NOT NULL,
   `tagline_news` varchar(125) NOT NULL,
   `judul_news` varchar(255) NOT NULL,
-  `isi_news` varchar(125) NOT NULL,
+  `isi_news` text NOT NULL,
   `link_news` varchar(125) NOT NULL,
   `date_news` varchar(125) NOT NULL,
   `dokumentasi_news` varchar(125) NOT NULL,
@@ -121,7 +124,7 @@ CREATE TABLE `pengumuman` (
   `id_pengumuman` int(125) NOT NULL,
   `tagline_pengumuman` varchar(125) NOT NULL,
   `judul_pengumuman` varchar(125) NOT NULL,
-  `isi_pengumuman` varchar(125) NOT NULL,
+  `isi_pengumuman` text NOT NULL,
   `date_pengumuman` varchar(125) NOT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL
@@ -132,7 +135,7 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `tagline_pengumuman`, `judul_pengumuman`, `isi_pengumuman`, `date_pengumuman`, `created_at`, `updated_at`) VALUES
-(4, 'dwdw', 'Jam Kerja Layanan 112 a', 'wdefm   hahaha            ', '2021-01-06', '2021-01-17', '2021-01-17'),
+(4, 'dwdw', 'Jam Kerja Layanan 112 aahahah', 'wdefm   hahaha            ', '2021-01-06', '2021-01-17', '2021-01-17'),
 (5, 'Jam Kerja', 'Layanana akan bekerja pada jam kerja', 'SIAP SEDIA', '2021-01-18', '2021-01-17', '2021-01-17');
 
 -- --------------------------------------------------------
@@ -155,11 +158,12 @@ CREATE TABLE `report` (
 --
 
 INSERT INTO `report` (`id_pelapor`, `kejadian`, `lokasi_kejadian`, `tanggal`, `nama_pelapor`, `tindak_lanjut`) VALUES
-(51, 'Pohon Tumbang Hara', 'Jakarta', '2021-01-12', 'Irfak', 'Sudah ditangani Pemadam'),
+(51, '', 'Jakarta', '2021-01-12', 'Irfak', 'Sudah ditangani Pemadam'),
 (52, 'Kebakaran', 'Jakarta', '2021-01-19', 'Irfak Wahyudi', 'SUDAH'),
 (53, 'Kebakaran', 'Malang', '2021-01-15', 'Irfak', 'Sudah ditangani Pemadam'),
-(54, 'Pohon Tumbang', 'Malang', '2021-01-15', 'Irfak Wahyudi', 'Sudah ditangani Pemadam'),
-(55, 'Kebakaran', 'Jakarta', '2021-01-11', 'Irfak Wahyudi', 'Sudah ditangani Pemadam');
+(54, 'Kebakaran', 'Malang', '2021-01-15', 'Irfak Wahyudi', 'Sudah ditangani Pemadam'),
+(55, 'Kebakaran', 'Jakarta', '2021-01-11', 'Irfak Wahyudi', 'Sudah ditangani Pemadam'),
+(56, 'Pohon Tumbang', 'SUhat', '2021-01-07', 'Irfak', 'Sudah ditangani Pemadam');
 
 -- --------------------------------------------------------
 
@@ -173,19 +177,18 @@ CREATE TABLE `user` (
   `username` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL,
   `level` varchar(20) NOT NULL,
-  `image` text NOT NULL
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `email`, `username`, `password`, `level`, `image`) VALUES
-(1, 'diskominfo_ngalamkota@gmail.go.id', 'superadmin', '123456', 'Super Admin', 'default.jpg'),
-(3, 'ngalam112@malangkota.go.id', 'admin', '123456', 'Admin', ''),
-(4, 'irfakwahyudi3@gmail.com', 'irfak', 'irfak', 'Super Admin', ''),
-(5, 'irfakwahyudi2@gmail.com', 'master irfak', '123456789', 'Admin', ''),
-(6, 'haha@gmail.com', 'Irfak Wahyudi', 'master', 'Super Admin', '');
+INSERT INTO `user` (`id_user`, `email`, `username`, `password`, `level`, `created_at`, `updated_at`) VALUES
+(0, 'diskominfo_ngalamkota@gmail.go.id', 'superadminnnnnn', '123456789101', 'Super Admin', NULL, NULL),
+(3, 'ngalam112@malangkota.go.id', 'admin', '123456', 'Admin', NULL, NULL),
+(6, 'haha@gmail.com', 'Irfak Wahyudi', 'master', 'Super Admin', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -235,7 +238,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_report`
 --
 ALTER TABLE `detail_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -253,13 +256,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pengumuman` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
-  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `user`
