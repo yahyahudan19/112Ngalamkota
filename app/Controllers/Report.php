@@ -89,7 +89,7 @@ class Report extends BaseController
     {
         $id_pelapor = $this->request->getVar('id');
         $data_uploads = [
-            'kejadian' => $this->request->getVar('kejadian_report'),
+            'kejadian' => $this->request->getVar('kejadian'),
             'tanggal' => $this->request->getVar('tanggal_report'),
             'nama_pelapor' => $this->request->getVar('nama_pelapor'),
             'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
