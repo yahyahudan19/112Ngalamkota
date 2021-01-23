@@ -9,75 +9,119 @@
      </ol>
    </div>
 
-   <!-- Main content Superadmin-->
-   <div class="content">
-     <!-- Small boxes (Stat box) -->
-     <div class="row">
-       <div class="col-lg-3 col-xs-6">
-         <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
-           <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Kejadian</span> </div>
-           <!-- /.info-box-content -->
+   <?php
+    if (session()->get('level') == "Super Admin") {
+    ?>
+     <!-- Main content Superadmin-->
+     <div class="content">
+       <!-- Small boxes (Stat box) -->
+       <div class="row">
+         <div class="col-lg-3 col-xs-6">
+           <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
+             <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Kejadian</span> </div>
+             <!-- /.info-box-content -->
+           </div>
+           <!-- /.info-box -->
          </div>
-         <!-- /.info-box -->
-       </div>
-       <!-- /.col -->
-       <div class="col-lg-3 col-xs-6">
-         <div class="info-box"> <span class="info-box-icon bg-green"><i class="fa  fa-refresh"></i></span>
-           <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Feedback</span></div>
-           <!-- /.info-box-content -->
+         <!-- /.col -->
+         <div class="col-lg-3 col-xs-6">
+           <div class="info-box"> <span class="info-box-icon bg-green"><i class="fa  fa-refresh"></i></span>
+             <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Feedback</span></div>
+             <!-- /.info-box-content -->
+           </div>
+           <!-- /.info-box -->
          </div>
-         <!-- /.info-box -->
-       </div>
-       <!-- /.col -->
-       <div class="col-lg-3 col-xs-6">
-         <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="icon-book-open"></i></span>
-           <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Total Berita</span></div>
-           <!-- /.info-box-content -->
+         <!-- /.col -->
+         <div class="col-lg-3 col-xs-6">
+           <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="icon-book-open"></i></span>
+             <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Total Berita</span></div>
+             <!-- /.info-box-content -->
+           </div>
+           <!-- /.info-box -->
          </div>
-         <!-- /.info-box -->
-       </div>
-       <!-- /.col -->
-       <div class="col-lg-3 col-xs-6">
-         <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-bullhorn"></i></span>
-           <div class="info-box-content"> <span class="info-box-number">2</span> <span class="info-box-text">Total Pengumuman</span></div>
-           <!-- /.info-box-content -->
+         <!-- /.col -->
+         <div class="col-lg-3 col-xs-6">
+           <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-bullhorn"></i></span>
+             <div class="info-box-content"> <span class="info-box-number">2</span> <span class="info-box-text">Total Pengumuman</span></div>
+             <!-- /.info-box-content -->
+           </div>
+           <!-- /.info-box -->
          </div>
-         <!-- /.info-box -->
-       </div>
-       <!-- /.col -->
-       <!-- chart -->
-       <div class="col-lg-6">
-         <div class="info-box">
-           <div class="col-12">
-             <div class="d-flex flex-wrap">
-               <div>
-                 <h4>Laporan Kejadian</h4>
+         <!-- /.col -->
+         <!-- chart -->
+         <div class="col-lg-6">
+           <div class="info-box">
+             <div class="col-12">
+               <div class="d-flex flex-wrap">
+                 <div>
+                   <h4>Laporan Kejadian</h4>
+                 </div>
                </div>
              </div>
-           </div>
-           <div>
-             <canvas id="bar-chart-laporan"></canvas>
-           </div>
-         </div>
-       </div>
-       <div class="col-lg-6">
-         <div class="info-box">
-           <div class="col-12">
-             <div class="d-flex flex-wrap">
-               <div>
-                 <h4>Laporan Feedback</h4>
-               </div>
+             <div>
+               <canvas id="bar-chart-laporan"></canvas>
              </div>
            </div>
-           <div>
-             <canvas id="bar-chart-feedback"></canvas>
+         </div>
+         <div class="col-lg-6">
+           <div class="info-box">
+             <div class="col-12">
+               <div class="d-flex flex-wrap">
+                 <div>
+                   <h4>Laporan Feedback</h4>
+                 </div>
+               </div>
+             </div>
+             <div>
+               <canvas id="bar-chart-feedback"></canvas>
+             </div>
            </div>
          </div>
        </div>
+       <!-- /.row -->
+       <!-- Main row -->
      </div>
-     <!-- /.row -->
-     <!-- Main row -->
-   </div>
-   <!-- /.content -->
-
+     <!-- /.content -->
+   <?php
+    } else if (session()->get('level') == "Admin") {
+    ?>
+     <!-- Main content Admin-->
+     <div class="content">
+       <!-- Small boxes (Stat box) -->
+       <div class="row">
+         <div class="col-lg-3 col-xs-6">
+           <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
+             <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Kejadian</span> </div>
+             <!-- /.info-box-content -->
+           </div>
+           <!-- /.info-box -->
+         </div>
+         <div class="col-lg-3 col-xs-6">
+         </div>
+         <div class="col-lg-3 col-xs-6">
+         </div>
+         <!-- /.col -->
+         <!-- chart -->
+         <div class="col-lg-6">
+           <div class="info-box">
+             <div class="col-12">
+               <div class="d-flex flex-wrap">
+                 <div>
+                   <h4>Laporan Kejadian</h4>
+                 </div>
+               </div>
+             </div>
+             <div>
+               <canvas id="bar-chart-laporan"></canvas>
+             </div>
+           </div>
+         </div>
+       </div>
+       <!-- /.row -->
+       <!-- Main row -->
+     </div>
+     <!-- /.content -->
+   <?php
+    }
+    ?>
  </div>

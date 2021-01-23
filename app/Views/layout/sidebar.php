@@ -45,9 +45,6 @@
               <li><a href="/report">Laporan Kejadian</a></li>
             </ul>
           </li>
-          </li>
-          <li class="header">Pengaturan</li>
-          <li class=""> <a href="/superAdmin/profile"> <i class="fa fa-user"></i> <span>Profile</span> <span class="pull-right-container"></i> </span> </a>
         </ul>
       <?php
       }
