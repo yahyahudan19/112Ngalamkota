@@ -41,7 +41,6 @@ class User extends BaseController
     {
         $id_user = $this->request->getVar('id');
         $data_uploads = [
-            'id_user' => $this->request->getVar('id_user'),
             'email' => $this->request->getVar('email'),
             'username' => $this->request->getVar('username'),
             'password' => $this->request->getVar('password'),
