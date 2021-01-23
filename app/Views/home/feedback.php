@@ -88,7 +88,7 @@
                         guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112
                         dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</p>
                     <div>
-                        <form method="post" name="myForm" onsubmit="return validateForm()">
+                        <form action="/feedback/addFeedback" method="post" name="myForm">
                             <p id="error-msg"></p>
                             <div id="simple-msg"></div>
                             <div class="row">

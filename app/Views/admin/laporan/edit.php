@@ -27,7 +27,7 @@
          <div class="block">
            <div class="block-body">
              <!-- <form class="form-horizontal row" action="/report/editReport/" method="post" enctype="multipart/form-data"> -->
-             <form class="form-horizontal row" action="/report/edit/" method="post">
+             <form class="form-horizontal row" action="/report/edit/" method="post"  enctype="multipart/form-data">
                <input type="hidden" name="id" value="<?= $reportdata[0]['id_pelapor']; ?>" />
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tanggal</strong></label>
@@ -64,7 +64,21 @@
                  <p>Abaikan jika tidak ingin mengubah dokumen</p>
                    <input type="file" class="form-control" value="" name="dokumentasiReport" id="dokumentasiReport">
                </div> -->
-
+               <!-- <div class="form-group col-lg-6">
+               </div> -->
+               <div class="form-group col-lg-12">
+                 <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
+               </div>
+               <?php
+                foreach ($detail as $row) {
+                ?>
+                 <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" width="400" class="m-2" />
+               <?php
+                }
+                ?>
+               <!-- <input type="file" nam/e="dokumentasi[]" class="dropify" id="dokumentasi" multiple> -->
+               <input type="file" class="form-control" value="" name="dokumentasiReport" id="dokumentasi" style="border:none" multiple>
+               <small class="help-block-none">Abaikan jika tidak ingin mengubah dokumen.</small>
                <div class="line"></div>
                <div class="col-lg-12">
                  <button type="submit" class="btn btn-warning">Update</button>
