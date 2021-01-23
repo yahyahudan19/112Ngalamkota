@@ -37,7 +37,6 @@ class Feedback extends BaseController
             'q4_feedback' => $this->request->getVar('q4_feedback'),
             'q5_feedback' => $this->request->getVar('q5_feedback'),
         ]);
-
         session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
         return redirect()->to('/home/feedback');
     }
