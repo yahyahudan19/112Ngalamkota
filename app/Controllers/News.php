@@ -59,7 +59,7 @@ class News extends BaseController
     {
         $file = $this->request->getFile('dokumentasiNews');
         $id_news = $this->request->getVar('id');
-        if (!empty($file)) {
+        if (filesize($file) > 0) {
             // buat value id random di table uploads
             $imagename = $file->getRandomName();
             $data_uploads = [

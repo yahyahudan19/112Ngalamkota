@@ -175,7 +175,7 @@
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
@@ -191,7 +191,7 @@
                 <?php
                 } else {
                 ?>
-                    <div class="row align-items-center section mb-5">
+                    <div class="row align-items-center section pb-5">
                         <div class="col-md-5 order-2 order-md-1 mt-md-0 mt-5">
                             <span class="badge badge-soft-primary"><?= $val['tagline_news']; ?></span>
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
@@ -202,7 +202,7 @@
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">
                                 <div class="ms-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" width="600" height="450" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>
