@@ -30,7 +30,6 @@ class Report extends BaseController
     {
         // dapatkan input file berupa array
         $files = $this->request->getFiles();
-
         if ($files) {
 
             // buat value id random di table uploads
@@ -49,16 +48,17 @@ class Report extends BaseController
             $builder = $db->insertID();
 
             foreach ($files['dokumentasi'] as $img) {
+                if ($img->isValid()) {
+                    $imagename = $img->getRandomName();
+                    $data_galery = [
+                        'report_id' => $builder,
+                        'gambar' => $imagename
+                    ];
 
-                $imagename = $img->getRandomName();
-                $data_galery = [
-                    'report_id' => $builder,
-                    'gambar' => $imagename
-                ];
-
-                $this->detailLaporanModel->insertDetail($data_galery);
-                // upload dengan random name
-                $img->move(ROOTPATH . 'public/uploads', $imagename);
+                    $this->detailLaporanModel->insertDetail($data_galery);
+                    // upload dengan random name
+                    $img->move(ROOTPATH . 'public/uploads', $imagename);
+                }
             }
 
             session()->setFlashdata('pesan', 'Laporan Berhasil ditambahkan.');
@@ -87,66 +87,41 @@ class Report extends BaseController
     }
     public function edit()
     {
-        // $id_pelapor = $this->request->getVar('id');
-        // $data_uploads = [
-        //     'tanggal' => $this->request->getVar('tanggal_report'),
-        //     'kejadian' => $this->request->getVar('kejadian_report'),
-        //     'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
-        //     'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-        //     'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-        // ];
-        // dd($data_uploads);
-        // $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
-        // return redirect()->to(base_url('superadmin/reportlaporan'));
-        // dapatkan input file berupa array
-        $files = $this->request->getFiles();
-        // dd($files);
         $id_pelapor = $this->request->getVar('id');
-        if ($files) {
-            $imagename = $files->getRandomName();
-            // buat value id random di table uploads
-            $data_uploads = [
-                'kejadian' => $this->request->getVar('kejadian'),
-                'tanggal' => $this->request->getVar('tanggal'),
-                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-                'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
-                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-            ];
-            $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
+        $data_uploads = [
+            'kejadian' => $this->request->getVar('kejadian_report'),
+            'tanggal' => $this->request->getVar('tanggal_report'),
+            'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+            'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
+            'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+        ];
+        $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
 
-            // ulangi insert gambar ke table galery menggunakan foreach
+        // ulangi insert gambar ke table galery menggunakan foreach
 
-            $db      = \Config\Database::connect();
-            $builder = $db->insertID();
+        $files = $this->request->getFiles();
+        if (!empty($files['dokumentasi'])) {
+
+            $this->detailLaporanModel->delete_data($id_pelapor);
 
             foreach ($files['dokumentasi'] as $img) {
-
-                $imagename = $img->getRandomName();
-                $data_galery = [
-                    'report_id' => $builder,
-                    'gambar' => $imagename
-                ];
-
-                $this->detailLaporanModel->insertDetail($data_galery);
-                // upload dengan random name
-                $img->move(ROOTPATH . 'public/uploads', $imagename);
+                if ($img->isValid()) {
+                    $imagename = $img->getRandomName();
+                    $data_galery = [
+                        'report_id' => $id_pelapor,
+                        'gambar' => $imagename
+                    ];
+                    $this->detailLaporanModel->insertDetail($data_galery);
+                    // upload dengan random name
+                    $img->move(ROOTPATH . 'public/uploads', $imagename);
+                }
             }
-            // dd($data_uploads);
-            session()->setFlashdata('pesan', 'Laporan Berhasil diupdate.');
-            return redirect()->to(base_url('/admin/reportLaporan'));
-        } else {
-            $id_pelapor = $this->request->getVar('id');
-            $data_uploads = [
-                'tanggal' => $this->request->getVar('tanggal_report'),
-                'kejadian' => $this->request->getVar('kejadian_report'),
-                'lokasi_kejadian' => $this->request->getVar('lokasi_report'),
-                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-            ];
-            $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
-            return redirect()->to(base_url('superadmin/reportlaporan'));
         }
+        session()->setFlashdata('pesan', 'Laporan Berhasil diupdate.');
+        return redirect()->to(base_url('/admin/reportLaporan'));
     }
+
+
     public function editReport($id)
     {
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();

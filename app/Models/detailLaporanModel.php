@@ -17,4 +17,10 @@ class detailLaporanModel extends Model
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         return $this->db->table($this->table)->get($detail);
     }
+    public function delete_data($id)
+    {
+        $this->db->table('detail_report')->delete(array('report_id' => $id));
+        session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
+        return redirect()->to(base_url('superadmin/report'));
+    }
 }
