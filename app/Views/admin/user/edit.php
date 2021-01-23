@@ -32,7 +32,10 @@
                </div>
                <div class="form-group col-lg-4">
                  <label class="col-sm-1 form-control-label"><strong>Level</strong></label>
-                 <input type="text" class="form-control" value="<?= $userdata[0]['level']; ?>" name="level" id="level" required>
+                 <select name="level" class="form-control" id="level">
+                   <option value="Super Admin" <?= $userdata[0]['level'] == "Super Admin" ? "selected" : ""; ?>>Super Admin</option>
+                   <option value="Admin" <?= $userdata[0]['level'] == "Admin" ? "selected" : ""; ?>>Admin</option>
+                 </select>
                </div>
                <div class="form-group col-lg-4">
                </div>
