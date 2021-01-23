@@ -116,30 +116,17 @@
              }
          });
          //  Laporan Feedback
-         var ctx = document.getElementById('bar-chart-feedback').getContext('2d');
-         var chart = new Chart(ctx, {
-             // The type of chart we want to create
-             type: 'bar',
-
-             // The data for our dataset
+         new Chart(document.getElementById("pie-chart-feedback"), {
+             type: 'pie',
              data: {
-                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 labels: ['Red', 'Blue', 'Yellow'],
                  datasets: [{
-                     label: "Kecelakaan",
-                     backgroundColor: 'rgb(88, 103, 221)',
-                     borderColor: 'rgb(88, 103, 221)',
-                     data: [0, 10, 5, 2, 7, 9, 3],
-                     fill: false,
-                 }, {
-                     label: "Kebakaran",
-                     backgroundColor: 'rgb(0, 140, 211)',
-                     borderColor: 'rgb(0, 140, 211)',
-                     data: [0, 0, 1, 1, 0, 1, 0],
-                 }, {
-                     label: "Banjir",
-                     backgroundColor: 'rgb(239, 255, 0)',
-                     borderColor: 'rgb(239, 255, 0)',
-                     data: [4, 3, 1, 1, 5, 3, 2],
+                     'label': 'My First Dataset',
+                     data: [300, 50, 100],
+                     backgroundColor: ['rgb(255, 99, 132)',
+                         'rgb(54, 162, 235)',
+                         'rgb(255, 205, 86)'
+                     ],
                  }]
              },
              options: {
