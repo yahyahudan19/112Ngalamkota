@@ -77,7 +77,7 @@
                 }
                 ?>
                <!-- <input type="file" nam/e="dokumentasi[]" class="dropify" id="dokumentasi" multiple> -->
-               <input type="file" class="form-control" value="" name="dokumentasiReport" id="dokumentasi" style="border:none" multiple>
+               <input type="file" class="form-control" value="" name="dokumentasi[]" id="dokumentasi" style="border:none" multiple>
                <small class="help-block-none">Abaikan jika tidak ingin mengubah dokumen.</small>
                <div class="line"></div>
                <div class="col-lg-12">
