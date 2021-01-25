@@ -55,7 +55,11 @@
                             <td><?= $r['tagline_news']; ?></td>
                             <td><?= $r['judul_news']; ?></td>
                             <td><?= $r['link_news']; ?></td>
-                            <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                            <td>
+                              <a class="btn btn-dark btn-sm" href="/news/change_visible/<?= $r['id_news']; ?>">
+                                <?= $r['visible_news'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
+                              </a>
+                            </td>
                             <td>
                               <a href="/news/detailNews/<?= $r['id_news']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/news/editNews/<?= $r['id_news']; ?>">Edit</a>

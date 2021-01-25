@@ -54,6 +54,11 @@
                             <td><?= $r['judul_pengumuman']; ?></td>
                             <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
                             <td>
+                              <a class="btn btn-dark btn-sm" href="/pengumuman/change_visible/<?= $r['id_pengumuman']; ?>">
+                                <?= $r['visible_pengumuman'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
+                              </a>
+                            </td>
+                            <td>
                               <a href="/pengumuman/detailPengumuman/<?= $r['id_pengumuman']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/pengumuman/editPengumuman/<?= $r['id_pengumuman']; ?>">Edit</a>
                               <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->

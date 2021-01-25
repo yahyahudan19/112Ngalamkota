@@ -22,6 +22,9 @@ class Admin extends BaseController
 	}
 	public function index()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/dashboard');
@@ -29,6 +32,9 @@ class Admin extends BaseController
 	}
 	public function reportlaporan()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$reportL = $this->reportlaporanModel->findAll();
 		$data = [
 			'reportL' => $reportL
@@ -36,20 +42,6 @@ class Admin extends BaseController
 		echo view('layout/header');
 		echo view('layout/sidebar');
 		echo view('admin/reportlaporan', $data);
-		echo view('layout/footer');
-	}
-	public function editProfile()
-	{
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/profile/editProfile');
-		echo view('layout/footer');
-	}
-	public function contact()
-	{
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/contact');
 		echo view('layout/footer');
 	}
 }
