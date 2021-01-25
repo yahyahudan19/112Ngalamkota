@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class detailLaporanModel extends Model
 {
     protected $table = "detail_report";
+    protected $useTimestamps = true;
 
     public function insertDetail($data)
     {

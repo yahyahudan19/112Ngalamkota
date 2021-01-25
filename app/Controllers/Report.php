@@ -17,6 +17,9 @@ class Report extends BaseController
     }
     public function index()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         $reportL = $this->reportlaporanModel->findAll();
         $data = [
             'reportL' => $reportL
@@ -26,8 +29,12 @@ class Report extends BaseController
         echo view('admin/reportlaporan', $data);
         echo view('layout/footer');
     }
+
     public function addReportL()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         // dapatkan input file berupa array
         $files = $this->request->getFiles();
         if ($files) {
@@ -65,8 +72,12 @@ class Report extends BaseController
             return redirect()->to(base_url('/admin/reportLaporan'));
         }
     }
+
     public function detailReport($id)
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [
@@ -81,12 +92,19 @@ class Report extends BaseController
 
     public function delete($id_pelapor)
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         $this->reportlaporanModel->delete_data($id_pelapor);
         session()->setFlashdata('pesan', 'Laporan Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
     }
+
     public function edit()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         $id_pelapor = $this->request->getVar('id');
         $data_uploads = [
             'kejadian' => $this->request->getVar('kejadian'),
@@ -96,8 +114,6 @@ class Report extends BaseController
             'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
         ];
         $this->reportlaporanModel->update_data($data_uploads, $id_pelapor);
-
-        // ulangi insert gambar ke table galery menggunakan foreach
 
         $files = $this->request->getFiles();
         if (!empty($files['dokumentasi'])) {
@@ -121,9 +137,11 @@ class Report extends BaseController
         return redirect()->to(base_url('/admin/reportLaporan'));
     }
 
-
     public function editReport($id)
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/auth'));
+        }
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [

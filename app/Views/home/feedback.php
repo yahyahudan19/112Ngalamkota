@@ -94,7 +94,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="mb-4">
-                                        <label for="nama_feedback" class="text-muted form-label">Nama</label>
+                                        <label for="nama_feedback" class="text-muted form-label">Nama Pelapor</label>
                                         <input name="nama_feedback" id="nama_feedback" type="text" class="form-control" placeholder="Nama*">
                                     </div>
                                 </div>
@@ -110,7 +110,8 @@
                                         <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback" placeholder="Alamat.." />
                                     </div>
                                     <div class="mb-4">
-                                        <label for="penyebab_feedback" class="text-muted form-label">Penyebab</label>
+                                        <!-- <label for="penyebab_feedback" class="text-muted form-label">Penyebab</label> -->
+                                        <label for="penyebab_feedback" class="text-muted form-label">Kejadian Yang Dilaporkan</label>
                                         <input type="text" class="form-control" id="penyebab_feedback" name="penyebab_feedback" placeholder="Penyebab" />
                                     </div>
                                     <div class="mb-4">

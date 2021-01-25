@@ -39,6 +39,7 @@
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
+                          <th>Tampil</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -51,6 +52,11 @@
                             <td><?= $r['date_pengumuman']; ?></td>
                             <td><?= $r['tagline_pengumuman']; ?></td>
                             <td><?= $r['judul_pengumuman']; ?></td>
+                            <td>
+                              <a class="btn btn-dark btn-sm" href="/pengumuman/change_visible/<?= $r['id_pengumuman']; ?>">
+                                <?= $r['visible_pengumuman'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
+                              </a>
+                            </td>
                             <td>
                               <a href="/pengumuman/detailPengumuman/<?= $r['id_pengumuman']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/pengumuman/editPengumuman/<?= $r['id_pengumuman']; ?>">Edit</a>

@@ -28,13 +28,22 @@ class SuperAdmin extends BaseController
 	}
 	public function index()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
+		$data = [
+			"total_kejadian" => $this->reportlaporanModel->get_report_count()
+		];
 		echo view('layout/header');
 		echo view('layout/sidebar');
-		echo view('admin/dashboard');
+		echo view('admin/dashboard', $data);
 		echo view('layout/footer');
 	}
 	public function user()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$user = $this->userModel->findAll();
 		$data = [
 			'user' => $user
@@ -47,6 +56,9 @@ class SuperAdmin extends BaseController
 
 	public function news()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$news = $this->newsModel->findAll();
 		$data = [
 			'news' => $news
@@ -56,9 +68,12 @@ class SuperAdmin extends BaseController
 		echo view('admin/news', $data);
 		echo view('layout/footer');
 	}
+
 	public function reportlaporan()
 	{
-
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$reportL = $this->reportlaporanModel->findAll();
 		$data = [
 			'reportL' => $reportL
@@ -68,9 +83,12 @@ class SuperAdmin extends BaseController
 		echo view('admin/reportlaporan', $data);
 		echo view('layout/footer');
 	}
+
 	public function reportfeedback()
 	{
-
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$feedback = $this->feedbackModel->findAll();
 		$data = [
 			'feedback' => $feedback
@@ -80,25 +98,12 @@ class SuperAdmin extends BaseController
 		echo view('admin/reportfeedback', $data);
 		echo view('layout/footer');
 	}
-	public function editData()
-	{
-	}
-	public function profile()
-	{
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/profile/index');
-		echo view('layout/footer');
-	}
-	public function contact()
-	{
-		echo view('layout/header');
-		echo view('layout/sidebar');
-		echo view('admin/contact');
-		echo view('layout/footer');
-	}
+
 	public function pengumuman()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/auth'));
+		}
 		$pengumuman = $this->pengumumanModel->findAll();
 		$data = [
 			'pengumuman' => $pengumuman
