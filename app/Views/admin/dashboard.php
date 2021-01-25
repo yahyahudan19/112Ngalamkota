@@ -73,7 +73,7 @@
                </div>
              </div>
              <div>
-               <canvas id="bar-chart-feedback"></canvas>
+               <canvas id="pie-chart-feedback" height="150"></canvas>
              </div>
            </div>
          </div>

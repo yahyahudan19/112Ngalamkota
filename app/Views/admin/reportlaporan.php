@@ -60,8 +60,8 @@
             <div class="col-lg-12">
               <div class="block">
                 <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
-                <!-- <button type="submit" class="btn btn-info center">Cari Data</button> -->
-                <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button>
+                <!-- <button type="submit" class="btn btn-info center">Cari Data</button>
+                <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button> -->
                 <br>
                 <br>
                 <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->

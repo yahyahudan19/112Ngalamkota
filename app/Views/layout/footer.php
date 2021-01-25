@@ -17,25 +17,51 @@
  <script src="<?= base_url() ?>/adminpages/dist/js/niche.js"></script>
 
  <!-- Morris JavaScript -->
- <script src="<?= base_url() ?>/adminpages/dist/plugins/raphael/raphael-min.js"></script>
- <script src="<?= base_url() ?>/adminpages/dist/plugins/morris/morris.js"></script>
  <script src="<?= base_url() ?>/adminpages/dist/plugins/functions/morris-init.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
  <!-- Chartjs JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+ <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+
 
  <!-- Data Table Script  -->
  <script>
      $(document).ready(function() {
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable();
-         $('#rlaporanTable').DataTable();
+         $('#rfeedbackTable').DataTable({
+             dom: 'Bfrtip',
+             buttons: [
+                 'csv', 'excel', 'pdf'
+             ]
+         });
+         $('#rlaporanTable').DataTable({
+             dom: 'Bfrtip',
+             buttons: [
+                 'csv', 'excel', 'pdf'
+             ]
+         });
          $('#userTable').DataTable();
      });
  </script>
+
+ <!-- Data Table Script Download -->
+ <script src="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"></script>
+ <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+ <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+ <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+ <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+
  <!-- dropify -->
  <script src="<?= base_url() ?>/adminpages/dist/plugins/dropify/dropify.min.js"></script>
+
+ <!-- Chart Script -->
  <script>
      $(document).ready(function() {
          // Basic
@@ -78,6 +104,7 @@
          })
      });
  </script>
+
  </body>
 
  <!-- Start Chart Function -->
@@ -115,30 +142,17 @@
              }
          });
          //  Laporan Feedback
-         var ctx = document.getElementById('bar-chart-feedback').getContext('2d');
-         var chart = new Chart(ctx, {
-             // The type of chart we want to create
-             type: 'bar',
-
-             // The data for our dataset
+         new Chart(document.getElementById("pie-chart-feedback"), {
+             type: 'pie',
              data: {
-                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 labels: ['Red', 'Blue', 'Yellow'],
                  datasets: [{
-                     label: "Kecelakaan",
-                     backgroundColor: 'rgb(88, 103, 221)',
-                     borderColor: 'rgb(88, 103, 221)',
-                     data: [0, 10, 5, 2, 7, 9, 3],
-                     fill: false,
-                 }, {
-                     label: "Kebakaran",
-                     backgroundColor: 'rgb(0, 140, 211)',
-                     borderColor: 'rgb(0, 140, 211)',
-                     data: [0, 0, 1, 1, 0, 1, 0],
-                 }, {
-                     label: "Banjir",
-                     backgroundColor: 'rgb(239, 255, 0)',
-                     borderColor: 'rgb(239, 255, 0)',
-                     data: [4, 3, 1, 1, 5, 3, 2],
+                     'label': 'My First Dataset',
+                     data: [300, 50, 100],
+                     backgroundColor: ['rgb(255, 99, 132)',
+                         'rgb(54, 162, 235)',
+                         'rgb(255, 205, 86)'
+                     ],
                  }]
              },
              options: {

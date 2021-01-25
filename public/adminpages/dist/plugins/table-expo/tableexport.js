@@ -248,6 +248,34 @@
                                 myContent = TableExport.prototype.txt.buttonContent,
                                 myClass = TableExport.prototype.txt.defaultClass;
                             createObjButton(dataObject, myContent, myClass);
+                        },
+                        pdf: function (rdel, name) {
+                            var colD = TableExport.prototype.txt.separator,
+                                dataURL = $rows.map(function (i, val) {
+                                    if (!!~ignoreRows.indexOf(i - thAdj) || $(val).is(ignoreCSS)) {
+                                        return;
+                                    }
+                                    var $cols = $(val).find('th, td');
+                                    return $cols.map(function (i, val) {
+                                        if (!!~ignoreCols.indexOf(i) || $(val).is(ignoreCSS)) {
+                                            return;
+                                        }
+                                        if ($(val).is(emptyCSS)) {
+                                            return " "
+                                        }
+                                        return formatValue($(val).text());
+                                    }).get().join(colD);
+                                }).get().join(rdel),
+                                dataObject = TableExport.prototype.escapeHtml(
+                                    JSON.stringify({
+                                        data: dataURL,
+                                        fileName: name,
+                                        mimeType: TableExport.prototype.pdf.mimeType,
+                                        fileExtension: TableExport.prototype.pdf.fileExtension
+                                    })),
+                                myContent = TableExport.prototype.pdf.buttonContent,
+                                myClass = TableExport.prototype.pdf.defaultClass;
+                            createObjButton(dataObject, myContent, myClass);
                         }
                     };
 
@@ -317,7 +345,7 @@
             defaults: {
                 headings: true,                             // (Boolean), display table headings (th or td elements) in the <thead>, (default: true)
                 footers: true,                              // (Boolean), display table footers (th or td elements) in the <tfoot>, (default: false)
-                formats: ["xls", "csv", "txt"],             // (String[]), filetype(s) for the export, (default: ["xls", "csv", "txt"])
+                formats: ["xls", "csv", "txt","pdf"],       // (String[]), filetype(s) for the export, (default: ["xls", "csv", "txt"])
                 fileName: "id",                             // (id, String), filename for the downloaded file, (default: "id")
                 bootstrap: true,                            // (Boolean), style buttons using bootstrap, (default: true)
                 position: "bottom",                         // (top, bottom), position of the caption element relative to table, (default: "bottom")
@@ -363,7 +391,7 @@
              */
             xlsx: {
                 defaultClass: "xlsx",
-                buttonContent: "Export to xlsx",
+                buttonContent: "Download Excel-X",
                 mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 fileExtension: ".xlsx"
             },
@@ -373,7 +401,7 @@
              */
             xls: {
                 defaultClass: "xls",
-                buttonContent: "Export to xls",
+                buttonContent: "Download Excel",
                 separator: "\t",
                 mimeType: "application/vnd.ms-excel",
                 fileExtension: ".xls"
@@ -399,6 +427,17 @@
                 separator: "  ",
                 mimeType: "text/plain",
                 fileExtension: ".txt"
+            },
+            /**
+             * PDF (Lali PDF iku opo) file extension configuration
+             * @memberof TableExport.prototype
+             */
+            txt: {
+                defaultClass: "pdf",
+                buttonContent: "Download PDF",
+                separator: "  ",
+                mimeType: "application/pdf",
+                fileExtension: ".pdf"
             },
             /**
              * Escapes special characters with HTML entities

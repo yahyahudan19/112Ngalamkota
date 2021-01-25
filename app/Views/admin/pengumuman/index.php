@@ -52,6 +52,7 @@
                             <td><?= $r['date_pengumuman']; ?></td>
                             <td><?= $r['tagline_pengumuman']; ?></td>
                             <td><?= $r['judul_pengumuman']; ?></td>
+                            <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
                             <td>
                               <a class="btn btn-dark btn-sm" href="/pengumuman/change_visible/<?= $r['id_pengumuman']; ?>">
                                 <?= $r['visible_pengumuman'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
@@ -62,7 +63,6 @@
                               <a class="btn btn-warning btn-sm" href="/pengumuman/editPengumuman/<?= $r['id_pengumuman']; ?>">Edit</a>
                               <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
                               <a href="/pengumuman/delete/<?= $r['id_pengumuman']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
-
                             </td>
                           </tr>
                         <?php
