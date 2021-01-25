@@ -39,6 +39,7 @@
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
+                          <th>Tampil</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -51,12 +52,12 @@
                             <td><?= $r['date_pengumuman']; ?></td>
                             <td><?= $r['tagline_pengumuman']; ?></td>
                             <td><?= $r['judul_pengumuman']; ?></td>
+                            <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
                             <td>
                               <a href="/pengumuman/detailPengumuman/<?= $r['id_pengumuman']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/pengumuman/editPengumuman/<?= $r['id_pengumuman']; ?>">Edit</a>
                               <!-- <button type="button" class="btn btn-primary btn-sm">Hapus</button> -->
                               <a href="/pengumuman/delete/<?= $r['id_pengumuman']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Delete</a>
-
                             </td>
                           </tr>
                         <?php

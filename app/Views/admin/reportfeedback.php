@@ -8,7 +8,6 @@
        <li><i class="fa fa-angle-right"></i> Laporan Feedback</li>
      </ol>
    </div>
-   <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button>
 
    <!-- FlashMessage -->
    <?php if (session()->getFlashdata('pesan')) : ?>
