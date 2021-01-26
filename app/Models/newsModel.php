@@ -32,4 +32,9 @@ class newsModel extends Model{
         $query= $this->db->table("news")->delete(array('id_news' => $id_news));
         return $query;
     }
+
+    public function get_news_count(){
+        $query = $this->db->table('news')->countAll();
+        return $query;
+    }
 }

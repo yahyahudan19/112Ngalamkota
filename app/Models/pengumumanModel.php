@@ -31,4 +31,9 @@ class pengumumanModel extends Model{
         $query= $this->db->table("pengumuman")->delete(array('id_pengumuman' => $id_pengumuman));
         return $query;
     }
+
+    public function get_pengumuman_count(){
+        $query = $this->db->table('pengumuman')->countAll();
+        return $query;
+    }
 }
