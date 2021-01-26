@@ -59,7 +59,7 @@
                </div>
              </div>
              <div>
-               <canvas id="bar-chart-laporan"></canvas>
+               <canvas id="pie-chart-laporan"></canvas>
              </div>
            </div>
          </div>

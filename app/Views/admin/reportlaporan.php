@@ -76,6 +76,7 @@
                         <th>Nama Pelapor</th>
                         <th>Tanggal Kejadian</th>
                         <th>Tindak Lanjut</th>
+                        <th>Dokumentasi</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -90,6 +91,7 @@
                           <td><?= $r['lokasi_kejadian']; ?></td>
                           <td><?= $r['nama_pelapor']; ?></td>
                           <td><?= $r['tanggal']; ?></td>
+                          <td><?= $r['tindak_lanjut']; ?></td>
                           <td><?= $r['tindak_lanjut']; ?></td>
                           <td>
                             <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
