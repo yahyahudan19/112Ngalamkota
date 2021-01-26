@@ -27,4 +27,9 @@ class feedbackModel extends Model
         $query = $this->db->table("feedback")->delete(array('id_feedback' => $id_feedback));
         return $query;
     }
+
+    public function get_feedback_count(){
+        $query = $this->db->table('feedback')->countAll();
+        return $query;
+    }
 }
