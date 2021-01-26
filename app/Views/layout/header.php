@@ -82,7 +82,7 @@
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="/auth" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
+                <li><a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
               </ul>
             </li>
           </ul>
