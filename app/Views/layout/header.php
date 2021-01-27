@@ -57,7 +57,7 @@
         <ul class="nav navbar-nav pull-left">
           <li><a class="sidebar-toggle" data-toggle="push-menu" href=""></a> </li>
         </ul>
-        <div class="pull-left search-box">
+        <!-- <div class="pull-left search-box">
           <form action="#" method="get" class="search-form">
             <div class="input-group">
               <input name="search" class="form-control" placeholder="Search..." type="text">
@@ -65,9 +65,9 @@
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i> </button>
               </span>
             </div>
-          </form>
+          </form> -->
           <!-- search form -->
-        </div>
+        <!-- </div> -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- User Account: style can be found in dropdown.less -->
@@ -76,12 +76,11 @@
                 <li class="user-header">
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
                   <p class="text-left">Yahya Hudan <small>yahyahudan19@gmail.com</small> </p>
-                  <div class="view-link text-left"><a href="#">View Profile</a> </div>
                 </li>
-                <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
+                <!-- <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
-                <li role="separator" class="divider"></li>
+                <li role="separator" class="divider"></li> -->
                 <li><a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
               </ul>
             </li>
