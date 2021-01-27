@@ -32,6 +32,7 @@ class SuperAdmin extends BaseController
 			return redirect()->to(base_url('/auth'));
 		}
 		$data = [
+			'title' => 'Dashboard',
 			"total_kejadian" => $this->reportlaporanModel->get_report_count(),
 			"total_feedback" => $this->feedbackModel->get_feedback_count(),
 			"total_news" => $this->newsModel->get_news_count(),

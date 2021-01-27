@@ -9,6 +9,14 @@
      </ol>
    </div>
 
+   <!-- FlashMessage -->
+   <?php if (session()->getFlashdata('pesan')) : ?>
+     <div class="alert alert-success alert-dismissible fade show" role="alert"><?= session()->getFlashdata('pesan'); ?>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+     </div>
+   <?php endif; ?>
+   <!-- End FlashMessage -->
+   
    <!-- Main content -->
    <div class="content">
      <!-- Small boxes (Stat box) -->
