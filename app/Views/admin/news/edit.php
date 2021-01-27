@@ -27,7 +27,7 @@
              <form class="form-horizontal row" action="/news/edit/" method="post" enctype="multipart/form-data">
                <input type="hidden" name="id" value="<?= $newsdata[0]['id_news']; ?>" />
                <div class="form-group col-lg-6">
-                 <label class="col-sm-1 form-control-label"><strong>Tanggal Dibuat</strong></label>
+                 <label class="col-sm-4 form-control-label"><strong>Tanggal Dibuat</strong></label>
                  <input type="text" class="form-control" value="<?= $newsdata[0]['date_news'] ?>" name="date_news" id="date_news" required>
                </div>
                <div class="form-group col-lg-6">

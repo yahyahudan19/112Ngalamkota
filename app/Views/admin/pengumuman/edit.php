@@ -28,7 +28,7 @@
              <form class="form-horizontal row" action="/pengumuman/edit/" method="post">
                <input type="hidden" name="id" value="<?= $pengumumandata[0]['id_pengumuman']; ?>" />
                <div class="form-group col-lg-6">
-                 <label class="col-sm-1 form-control-label"><strong>Tanggal Dibuat</strong></label>
+                 <label class="col-sm-4 form-control-label"><strong>Tanggal Dibuat</strong></label>
                  <input type="text" class="form-control" value="<?= $pengumumandata[0]['date_pengumuman'] ?>" name="date_pengumuman" id="date_pengumuman" required>
                </div>
                <div class="form-group col-lg-6">

@@ -19,9 +19,10 @@ class News extends BaseController
         }
         $news = $this->newsModel->findAll();
         $data = [
+            'title' => 'Berita',
             'news' => $news
         ];
-        echo view('layout/header');
+        echo view('layout/header', $data);
         echo view('layout/sidebar');
         echo view('admin/news', $data);
         echo view('layout/footer');
@@ -137,9 +138,10 @@ class News extends BaseController
         }
         $NewsData = $this->newsModel->where('id_news', $id)->findAll();
         $data = [
+            'title' => 'Edit News',
             'newsdata' => $NewsData
         ];
-        echo view('layout/header');
+        echo view('layout/header',$data);
         echo view('layout/sidebar');
         echo view('admin/news/edit', $data);
         echo view('layout/footer');

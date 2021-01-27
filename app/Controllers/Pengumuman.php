@@ -20,6 +20,7 @@ class Pengumuman extends BaseController
         }
         $pengumuman = $this->pengumumanModel->findAll();
         $data = [
+            'title' => 'Pengumuman',
             'pengumuman' => $pengumuman
         ];
         echo view('layout/header');

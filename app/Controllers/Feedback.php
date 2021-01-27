@@ -19,9 +19,10 @@ class Feedback extends BaseController
         }
         $feedback = $this->feedbackModel->findAll();
         $data = [
+            'title' =>'Feedback',
             'feedback' => $feedback
         ];
-        echo view('layout/header');
+        echo view('layout/header', $data);
         echo view('layout/sidebar');
         echo view('admin/feedback', $data);
         echo view('layout/footer');

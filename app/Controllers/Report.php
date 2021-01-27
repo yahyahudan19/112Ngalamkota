@@ -22,9 +22,10 @@ class Report extends BaseController
         }
         $reportL = $this->reportlaporanModel->findAll();
         $data = [
+            'title' => 'report',
             'reportL' => $reportL
         ];
-        echo view('layout/header');
+        echo view('layout/header', $data);
         echo view('layout/sidebar');
         echo view('admin/reportlaporan', $data);
         echo view('layout/footer');
