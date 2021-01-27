@@ -47,6 +47,7 @@ class User extends BaseController
             'level' => $this->request->getVar('level'),
         ];
         $this->userModel->update_data($data_uploads, $id_user);
+        session()->setFlashdata('pesan', 'User Berhasil diupdate.');
         return redirect()->to(base_url('superadmin/user'));
     }
 

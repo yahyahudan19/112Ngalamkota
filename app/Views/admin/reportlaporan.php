@@ -63,21 +63,42 @@
                   <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"> Tambah Laporan</button>
                   <!-- <button type="submit" class="btn btn-info center">Cari Data</button>
                 <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button> -->
-                  <br>
-                  <br>
-                  <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
-                  <div class="table-responsive">
-                    <!-- <table class="table table-striped table-hover" id="rlaporanTable"> -->
-                    <table class="table table-bordered table-hover" id="rlaporanTable">
-                      <thead>
+                <br>
+                <br>
+                <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
+                <div class="table-responsive">
+                  <!-- <table class="table table-striped table-hover" id="rlaporanTable"> -->
+                  <table class="table table-bordered table-hover" id="rlaporanTable">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Kejadian</th>
+                        <th>Lokasi Kejadian</th>
+                        <th>Nama Pelapor</th>
+                        <th>Tanggal Kejadian</th>
+                        <th>Tindak Lanjut</th>
+                        <th>Dokumentasi</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                      $no = 1;
+                      foreach ($reportL as $r) : ?>
                         <tr>
-                          <th>#</th>
-                          <th>Kejadian</th>
-                          <th>Lokasi Kejadian</th>
-                          <th>Nama Pelapor</th>
-                          <th>Tanggal Kejadian</th>
-                          <th>Tindak Lanjut</th>
-                          <th>Action</th>
+                          <!-- <th scope="row"><?= $r['id_pelapor']; ?></th> -->
+                          <th scope="row"><?= $no; ?></th>
+                          <td><?= $r['kejadian']; ?></td>
+                          <td><?= $r['lokasi_kejadian']; ?></td>
+                          <td><?= $r['nama_pelapor']; ?></td>
+                          <td><?= $r['tanggal']; ?></td>
+                          <td><?= $r['tindak_lanjut']; ?></td>
+                          <td><?= $r['tindak_lanjut']; ?></td>
+                          <td>
+                            <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
+                          </td>
                         </tr>
                       </thead>
                       <tbody>

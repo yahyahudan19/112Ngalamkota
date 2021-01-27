@@ -43,11 +43,15 @@
                  </select>
                </div>
                <div class="form-group col-lg-6">
-                 <label class="col-sm-5 form-control-label"><strong>Lokasi Kejadian</strong></label>
+                 <label class="col-sm-4 form-control-label"><strong>Lokasi Kejadian</strong></label>
                  <input type="text" class="form-control" value="<?= $reportdata[0]['lokasi_kejadian'] ?>" name="lokasi_report" id="lokasi_report" required>
                </div>
                <div class="form-group col-lg-6">
-                 <label class="col-sm-5 form-control-label"><strong>Tindak Lanjut</strong></label>
+                 <label class="col-sm-4 form-control-label"><strong>Nama Pelapor</strong></label>
+                 <input type="text" class="form-control" value="<?= $reportdata[0]['nama_pelapor'] ?>" name="nama_pelapor" id="nama_pelapor" required>
+               </div>
+               <div class="form-group col-lg-6">
+                 <label class="col-sm-4 form-control-label"><strong>Tindak Lanjut</strong></label>
                  <input type="text" class="form-control" value="<?= $reportdata[0]['tindak_lanjut'] ?>" name="tindak_lanjut" id="tindak_lanjut" required>
                </div>
                <!-- <div class="form-group col-lg-6">

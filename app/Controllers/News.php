@@ -19,9 +19,10 @@ class News extends BaseController
         }
         $news = $this->newsModel->findAll();
         $data = [
+            'title' => 'Berita',
             'news' => $news
         ];
-        echo view('layout/header');
+        echo view('layout/header', $data);
         echo view('layout/sidebar');
         echo view('admin/news', $data);
         echo view('layout/footer');
@@ -87,6 +88,7 @@ class News extends BaseController
 
             // ulangi insert gambar ke table galery menggunakan foreach
             $file->move(ROOTPATH . 'public/uploads', $imagename);
+            session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
             return redirect()->to(base_url('superadmin/news'));
         } else {
             $data_uploads = [
@@ -97,6 +99,7 @@ class News extends BaseController
                 'date_news' => $this->request->getVar('date_news'),
             ];
             $this->newsModel->update_data($data_uploads, $id_news);
+            session()->setFlashdata('pesan', 'Data Berhasil ditambahkan.');
             return redirect()->to(base_url('superadmin/news'));
         }
 
@@ -137,9 +140,10 @@ class News extends BaseController
         }
         $NewsData = $this->newsModel->where('id_news', $id)->findAll();
         $data = [
+            'title' => 'Edit News',
             'newsdata' => $NewsData
         ];
-        echo view('layout/header');
+        echo view('layout/header',$data);
         echo view('layout/sidebar');
         echo view('admin/news/edit', $data);
         echo view('layout/footer');

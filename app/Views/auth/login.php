@@ -29,59 +29,60 @@
 
 </head>
 
-<body class="hold-transition login-page">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="login-box">
-    <div class="login-box-body">
-      <h3 class="login-box-msg">Log In</h3>
-      <!-- <form action="/admin" method="post">
-      <div class="form-group has-feedback"> -->
+<body class="hold-transition login-page sty1">
+  <div class="login-box sty1">
+    <div class="login-box-body sty1">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="login-logo">
+        <a href="index.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" width="185px" height="38px"></a>
+        <a href="index.html"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" alt="" width="65" height="65px"></a>
+      </div>
+      <p class="login-box-msg">Silahkan Login Terlebih Dahulu</p>
+
+      <!-- FlashMessage -->
+      <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert"><?= session()->getFlashdata('pesan'); ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        </div>
+      <?php endif; ?>
+
       <form method="post" class="form-validate" action="<?= site_url('/auth/ceklogin') ?>">
         <div class="form-group has-feedback">
-          <!-- <input type="email" class="form-control sty1" placeholder="Username"> -->
-          <!-- <label for="login-username" class="form-control sty1">User Name</label> -->
           <input id="username" type="text" name="username" required data-msg="Please enter your username" class="form-control sty1" placeholder="Username">
         </div>
-        <!-- <div class="form-group has-feedback">
-          <input type="password" class="form-control sty1" placeholder="Password"> -->
         <div class="form-group has-feedback">
-          <!-- <label for="login-password" class="form-control sty1">Password</label> -->
           <input id="password" type="password" name="password" required data-msg="Please enter your password" class="form-control sty1" placeholder="Password">
         </div>
-        <!-- <div>
+        <div>
           <div class="col-xs-8">
             <div class="checkbox icheck">
               <label>
                 <input type="checkbox">
                 Remember Me </label>
-              <a href="#" class="pull-right"><i class="fa fa-lock"></i> Forgot password?</a>
             </div>
-          </div> -->
-        <!-- /.col -->
-        <div class="col-xs-4 m-t-1">
-          <button type="submit" class="btn btn-primary btn-block btn-flat" id="login" value="Login">Log In</button>
-          <!-- <input type="submit" id="login" class="btn btn-primary btn-block btn-flat value="Login"> -->
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-4 m-t-1">
+            <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-key"></i> Sign In</button>
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.col -->
+      </form>
+      <!-- /.login-box-body -->
     </div>
-    </form>
-  </div>
-  <!-- /.login-box-body -->
-  </div>
-  <!-- /.login-box -->
+    <!-- /.login-box -->
 
-  <!-- jQuery 3 -->
-  <script src="<?= base_url() ?>/adminpages/dist/js/jquery.min.js"></script>
+    <!-- jQuery 3 -->
+    <script src="<?= base_url() ?>/adminpages/dist/js/jquery.min.js"></script>
 
-  <!-- v4.0.0-alpha.6 -->
-  <script src="<?= base_url() ?>/adminpages/dist/bootstrap/js/bootstrap.min.js"></script>
+    <!-- v4.0.0-alpha.6 -->
+    <script src="<?= base_url() ?>/adminpages/dist/bootstrap/js/bootstrap.min.js"></script>
 
-  <!-- template -->
-  <script src="<?= base_url() ?>/adminpages/dist/js/niche.js"></script>
+    <!-- template -->
+    <script src="<?= base_url() ?>/adminpages/dist/js/niche.js"></script>
 </body>
 
 </html>
