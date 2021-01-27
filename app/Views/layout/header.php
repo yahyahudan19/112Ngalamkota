@@ -66,7 +66,7 @@
               </span>
             </div>
           </form> -->
-          <!-- search form -->
+        <!-- search form -->
         <!-- </div> -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
@@ -77,6 +77,8 @@
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
                   <p class="text-left">Yahya Hudan <small>yahyahudan19@gmail.com</small> </p>
                 </li>
+                <!-- Divider -->
+                <hr class=" sidebar-divider my-1">
                 <!-- <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
