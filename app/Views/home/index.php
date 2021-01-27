@@ -61,7 +61,7 @@
                         <a href="#pengumuman" class="nav-link">Pengumuman</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact Us</a>
+                        <a href="#contact" class="nav-link">Kontak Kami</a>
                     </li>
                 </ul>
                 <a href="/auth" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Log In</a>
@@ -80,8 +80,8 @@
                     <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112.
-                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
+                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
+                    Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
                     <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
@@ -100,8 +100,8 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Layanan 112</h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
+                    <p class="text-muted">Layanan 112 hanya khusus untuk kejadian darurat saja ya, 
+                    laporan palsu atau telepon iseng akan dikenakan sanksi sesuai peraturan yang berlaku.</p>
                 </div>
             </div>
 
@@ -113,8 +113,7 @@
                                 <i class="" data-feather="box"></i>
                             </div>
                             <h4 class="mb-3 font-size-22">Bebas Pulsa</h4>
-                            <p class="text-muted mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                blanditiis.</p>
+                            <p class="text-muted mb-0">Layanan 112 Dapat Diakses Dengan Bebas Pulsa Untuk Semua Operator.</p>
                         </div>
                     </div>
                 </div>
@@ -126,9 +125,8 @@
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
                                 <i class="" data-feather="layers"></i>
                             </div>
-                            <h4 class="mb-3 font-size-22">Fast Respond</h4>
-                            <p class="text-muted mb-0">Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                                corporis suscipit.</p>
+                            <h4 class="mb-3 font-size-22">Respon Cepat</h4>
+                            <p class="text-muted mb-0">Layanan 112 Merespon Dengan Cepat Dalam Meminta Bantuan Saat Terjadi Keadaan Darurat.</p>
                         </div>
                     </div>
                 </div>
@@ -140,9 +138,8 @@
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
                                 <i class="" data-feather="server"></i>
                             </div>
-                            <h4 class="mb-3 font-size-22">Layanan 24/7</h4>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                doloremque.</p>
+                            <h4 class="mb-3 font-size-22">Layanan 24 Jam</h4>
+                            <p class="text-muted mb-0">Layanan 112 Dapat Digunakan Kapan Saja Dan Dimana Saja Selama 24 Jam.</p>
                         </div>
                     </div>
                 </div>
@@ -158,11 +155,10 @@
     <!-- Features start -->
     <section class="section bg-light" id="features">
         <div class="container">
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-0">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Berita - Seputar Ngalam 112 </h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
+                    <p class="text-muted">Berita Update Terkini</p>
                 </div>
             </div>
             <!-- end row -->

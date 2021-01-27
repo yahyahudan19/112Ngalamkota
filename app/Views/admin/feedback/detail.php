@@ -15,12 +15,6 @@
      <div class="page-content row">
        <!-- Page Header-->
        <!-- Page Content -->
-       <div class="form-group row">
-         <div class="col-sm-11 ml-auto">
-           <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
-           <a href="<?= base_url('superAdmin/reportFeedback') ?>" class="btn btn-primary">Kembali</a>
-         </div>
-       </div>
        <div class="col-lg-12">
          <div class="block">
            <div class="block-body">
@@ -77,7 +71,7 @@
                  <div class="col-sm-4">
                    <div class="form-group">
                      <label class="form-control-label"><strong>Apakah ada saran untuk layanan 112 ?</strong></label>
-                     <input type="textarea" class="form-control" value="<?= $feedback['q5_feedback'] ?>" readonly>
+                     <textarea input type="text" class="form-control" readonly><?= $feedback['q5_feedback'] ?></textarea>
                    </div>
                  </div>
                </div>
@@ -91,26 +85,13 @@
                  </div>
 
                </div>
-               <!-- <div class="form-group row">
-                 <label class="col-sm-1 form-control-label"><strong>Q4</strong></label>
-                 <div class="col-sm-4">
-                   <div class="form-group">
-                     <label class="form-control-label"><strong>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ? Berikan Penilaian !</strong></label>
-                     <input type="text" placeholder="" class="form-control">
-                   </div>
-                 </div>
-               </div> -->
-               <!-- <div class="form-group row">
-                 <label class="col-sm-1 form-control-label"><strong>Q5</strong></label>
-                 <div class="col-sm-4">
-                   <div class="form-group">
-                     <label class="form-control-label"><strong>Apakah ada saran untuk layanan 112 ?</strong></label>
-                     <input type="textarea" placeholder="" class="form-control">
-                   </div>
-                 </div>
-               </div> -->
                <div class="line"></div>
-
+               <div class="form-group row">
+                 <div class="col-lg-12 ml-auto">
+                   <!-- <button type="submit" data-dismiss="modal" class="btn btn-primary">Kembali</button> -->
+                   <a href="<?= base_url('superAdmin/reportFeedback') ?>" class="btn btn-primary">Kembali</a>
+                 </div>
+               </div>
              </form>
            </div>
          </div>
