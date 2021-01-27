@@ -52,7 +52,6 @@
                             <td><?= $r['date_pengumuman']; ?></td>
                             <td><?= $r['tagline_pengumuman']; ?></td>
                             <td><?= $r['judul_pengumuman']; ?></td>
-                            <td><a class="btn btn-dark btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
                             <td>
                               <a class="btn btn-dark btn-sm" href="/pengumuman/change_visible/<?= $r['id_pengumuman']; ?>">
                                 <?= $r['visible_pengumuman'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>

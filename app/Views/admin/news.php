@@ -28,7 +28,7 @@
               <div class="col-lg-12">
                 <div class="block">
                   <!-- <div class="title"><strong>Tabel Berita</strong></div> -->
-                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i> Tambah Berita</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"> Tambah Berita</button>
                   <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button>
                   <br>
                   <br>
