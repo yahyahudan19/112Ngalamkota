@@ -42,9 +42,11 @@ class Auth extends BaseController
 			} else if ($auth["level"] == "Admin") {
 				return redirect()->to(base_url('/admin'));
 			} else {
+				session()->setFlashdata('pesan', 'Username atau Password Salah!.');
 				return view('auth/login');
 			}
 		} else {
+			session()->setFlashdata('pesan', 'Username atau Password Salah!');
 			return view('auth/login');
 		}
 	}

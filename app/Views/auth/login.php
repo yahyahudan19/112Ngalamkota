@@ -37,10 +37,18 @@
       <br>
       <br>
       <div class="login-logo">
-        <a href="index.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" width="185px" height="35px"></a>
+        <a href="index.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" width="185px" height="38px"></a>
         <a href="index.html"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" alt="" width="65" height="65px"></a>
       </div>
       <p class="login-box-msg">Silahkan Login Terlebih Dahulu</p>
+
+      <!-- FlashMessage -->
+      <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert"><?= session()->getFlashdata('pesan'); ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        </div>
+      <?php endif; ?>
+
       <form method="post" class="form-validate" action="<?= site_url('/auth/ceklogin') ?>">
         <div class="form-group has-feedback">
           <input id="username" type="text" name="username" required data-msg="Please enter your username" class="form-control sty1" placeholder="Username">
@@ -58,7 +66,7 @@
           </div>
           <!-- /.col -->
           <div class="col-xs-4 m-t-1">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-key"></i> Sign In</button>
           </div>
           <!-- /.col -->
         </div>
