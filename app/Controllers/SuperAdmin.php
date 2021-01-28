@@ -38,11 +38,32 @@ class SuperAdmin extends BaseController
 			"total_news" => $this->newsModel->get_news_count(),
 			"total_pengumuman" => $this->pengumumanModel->get_pengumuman_count()
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/dashboard', $data);
 		echo view('layout/footer');
 	}
+
+	public function bar_chart()
+	{
+		$query =  $this->db->query("SELECT COUNT(id_pelapor) as count,MONTHNAME(created_at) as month_name FROM report WHERE YEAR(created_at) = '" . date('Y') . "'
+  
+		GROUP BY YEAR(created_at),MONTH(created_at)");
+
+		$record = $query->result();
+		$data = [];
+		foreach ($record as $row) {
+
+			$data['label'][] = $row->month_name;
+			$data['data'][] = (int) $row->count;
+		}
+
+		$data['chart_data'] = json_encode($data);
+
+		$this->load->view('pie-chart-laporan', $data);
+	}
+
+
 	public function user()
 	{
 		if (!(session()->username)) {
@@ -53,7 +74,7 @@ class SuperAdmin extends BaseController
 			'title' => 'User',
 			'user' => $user
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/user', $data);
 		echo view('layout/footer');
@@ -68,7 +89,7 @@ class SuperAdmin extends BaseController
 		$data = [
 			'news' => $news
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/news', $data);
 		echo view('layout/footer');
@@ -84,7 +105,7 @@ class SuperAdmin extends BaseController
 			'title' => 'Laporan',
 			'reportL' => $reportL
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/reportlaporan', $data);
 		echo view('layout/footer');
@@ -100,7 +121,7 @@ class SuperAdmin extends BaseController
 			'title' => 'Feedback',
 			'feedback' => $feedback
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/reportfeedback', $data);
 		echo view('layout/footer');
@@ -116,7 +137,7 @@ class SuperAdmin extends BaseController
 			'title' => 'Pengumuman',
 			'pengumuman' => $pengumuman
 		];
-		echo view('layout/header',$data);
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/pengumuman/index', $data);
 		echo view('layout/footer');

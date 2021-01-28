@@ -27,7 +27,7 @@
          <div class="block">
            <div class="block-body">
              <!-- <form class="form-horizontal row" action="/report/editReport/" method="post" enctype="multipart/form-data"> -->
-             <form class="form-horizontal row" action="/report/edit/" method="post"  enctype="multipart/form-data">
+             <form class="form-horizontal row" action="/report/edit/" method="post" enctype="multipart/form-data">
                <input type="hidden" name="id" value="<?= $reportdata[0]['id_pelapor']; ?>" />
                <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tanggal</strong></label>
@@ -43,6 +43,7 @@
                    <option value="Gempa Bumi" <?= $reportdata[0]['kejadian'] == "Gempa Bumi" ? "selected" : ""; ?>>Gempa Bumi</option>
                    <option value="Angin Topan" <?= $reportdata[0]['kejadian'] == "Angin Topan" ? "selected" : ""; ?>>Angin Topan</option>
                    <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Listrik Putus" ? "selected" : ""; ?>>Listrik Putus</option>
+                   <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Tanah Longsor" ? "selected" : ""; ?>>Tanah Longsor</option>
                    <option value="Lainnya" <?= $reportdata[0]['kejadian'] == "Lainnya" ? "selected" : ""; ?>>Lainnya</option>
                  </select>
                </div>

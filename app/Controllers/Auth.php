@@ -14,13 +14,14 @@ class Auth extends BaseController
 	}
 	public function index()
 	{
-	if(session()->username){
-		return redirect()->to(base_url('/superadmin'));
-	}
+		if (session()->username) {
+			return redirect()->to(base_url('/superadmin'));
+		}
 		return view('auth/login');
 	}
 
-	public function logout(){
+	public function logout()
+	{
 		session()->set('username', null);
 		session()->set('level', null);
 		return redirect()->to(base_url('/auth'));
