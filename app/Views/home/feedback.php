@@ -64,8 +64,8 @@
                     <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112.
-                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
+                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
+                    Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
                     <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
@@ -210,9 +210,7 @@
                             <div class="mt-4 mt-lg-0">
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Instagram</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Facebook</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Twitter</a></li>
+                                    <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>
                             </div>
                         </div>

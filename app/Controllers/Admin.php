@@ -25,9 +25,13 @@ class Admin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/auth'));
 		}
-		echo view('layout/header');
+		$data = [
+			'title' => 'Dashboard',
+			"total_kejadian" => $this->reportlaporanModel->get_report_count()
+		];
+		echo view('layout/header', $data);
 		echo view('layout/sidebar');
-		echo view('admin/dashboard');
+		echo view('admin/dashboard', $data);
 		echo view('layout/footer');
 	}
 	public function reportlaporan()
