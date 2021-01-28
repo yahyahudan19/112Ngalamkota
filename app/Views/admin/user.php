@@ -28,7 +28,7 @@
            <div class="col-lg-12">
              <div class="block">
                <!-- <div class="title"><strong>Tabel User</strong></div> -->
-               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah User</button>
+               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i>Tambah User</button>
                <br>
                <br>
                <div class="table-responsive">

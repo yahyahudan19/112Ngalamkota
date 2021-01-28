@@ -5,7 +5,7 @@
     <h1>Detail Laporan Kejadian</h1>
     <ol class="breadcrumb">
       <li><a href="#">Home</a></li>
-      <li><i class="fa fa-angle-right"></i> Laporan Kejadian</li>
+      <li><i class="fa fa-angle-right"></i> Detail Laporan Kejadian</li>
     </ol>
   </div>
 
@@ -30,14 +30,13 @@
                 <!-- <div class="title"><strong>Detail Laporan</strong></div> -->
                 <form class="form-horizontal">
                   <div class="form-group row">
-                    <div class="col-sm-11 form-control-label">
-                      <a href="<?= base_url('report') ?>" class="btn btn-primary">Kembali</a>
-                    </div>
-                  </div>
-                  <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Tanggal Kejadian</strong></label>
                     <div class="col-sm-3">
                       <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>" readonly>
+                    </div>
+                    <label class="col-sm-1 form-control-label"><strong>Nama Pelapor</strong></label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group row">
@@ -51,12 +50,8 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-1 form-control-label"><strong>Nama Pelapor</strong></label>
-                    <div class="col-sm-3">
-                      <input type="text" class="form-control" value="<?= $reportL['nama_pelapor'] ?>" readonly>
-                    </div>
                     <label class="col-sm-1 form-control-label"><strong>Tindak Lanjut</strong></label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-3">
                       <input type="text" class="form-control" value="<?= $reportL['tindak_lanjut'] ?>" readonly>
                     </div>
                   </div>
@@ -67,11 +62,16 @@
                   <?php
                   foreach ($detail as $row) {
                   ?>
-                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" width="400" class="m-2" />
+                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" height="300" width="500" class="m-2" />
                   <?php
                   }
                   ?>
                   <div class="line"></div>
+                  <div class="form-group row">
+                    <div class="col-sm-11 form-control-label">
+                      <a href="<?= base_url('report') ?>" class="btn btn-primary">Kembali</a>
+                    </div>
+                  </div>
               </div>
               </form>
             </div>

@@ -29,4 +29,8 @@ class userModel extends Model{
         $query= $this->db->table("user")->delete(array('id_user' => $id_user));
         return $query; 
     }
+    // public function profil_data() {
+    //     $query = $this->db->query("SELECT * FROM user where username='".$this->session->username."'")->row_array();
+    //     return $query;
+    // }
 }
