@@ -4,15 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class authModel extends Model{
+class authModel extends Model
+{
 
     protected $table = 'user';
     protected $id = 'id_user';
-    protected $allowedFields = ['email','username','password', "level", 'role_id', 'image', 'is_active'];
+    protected $allowedFields = ['email', 'username', 'password', "level", 'role_id', 'image', 'is_active'];
 
-    public function cekLogin($username,$password){
+    public function cekLogin($username, $password)
+    {
         return $this->db->table('user')
-        ->where(array('username' => $username, 'password' => $password))
-        ->get()->getRowArray();
+            ->where(array('username' => $username, 'password' => $password))
+            ->get()->getRowArray();
     }
 }

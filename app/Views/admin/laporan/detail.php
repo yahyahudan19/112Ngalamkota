@@ -100,6 +100,7 @@
                   <option value="Gempa Bumi">Gempa Bumi</option>
                   <option value="Angin Topan">Angin Topan</option>
                   <option value="Listrik Putus">Listrik Putus</option>
+                  <option value="Tanah Longsor">Tanah Longsor</option>
                   <option value="Lainnya">Lainnya</option>
                 </select>
               </div>

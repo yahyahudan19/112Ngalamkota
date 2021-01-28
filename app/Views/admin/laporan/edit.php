@@ -39,6 +39,7 @@
                    <option value="Gempa Bumi" <?= $reportdata[0]['kejadian'] == "Gempa Bumi" ? "selected" : ""; ?>>Gempa Bumi</option>
                    <option value="Angin Topan" <?= $reportdata[0]['kejadian'] == "Angin Topan" ? "selected" : ""; ?>>Angin Topan</option>
                    <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Listrik Putus" ? "selected" : ""; ?>>Listrik Putus</option>
+                   <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Tanah Longsor" ? "selected" : ""; ?>>Tanah Longsor</option>
                    <option value="Lainnya" <?= $reportdata[0]['kejadian'] == "Lainnya" ? "selected" : ""; ?>>Lainnya</option>
                  </select>
                </div>
