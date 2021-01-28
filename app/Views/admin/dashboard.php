@@ -98,7 +98,7 @@
       <div class="row">
         <div class="col-lg-3 col-xs-6">
           <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
-            <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Kejadian</span> </div>
+            <div class="info-box-content"> <span class="info-box-number"><?= $total_kejadian ?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
