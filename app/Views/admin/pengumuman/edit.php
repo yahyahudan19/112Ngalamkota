@@ -28,10 +28,6 @@
              <form class="form-horizontal row" action="/pengumuman/edit/" method="post">
                <input type="hidden" name="id" value="<?= $pengumumandata[0]['id_pengumuman']; ?>" />
                <div class="form-group col-lg-6">
-                 <label class="col-sm-4 form-control-label"><strong>Tanggal Dibuat</strong></label>
-                 <input type="text" class="form-control" value="<?= $pengumumandata[0]['date_pengumuman'] ?>" name="date_pengumuman" id="date_pengumuman" required>
-               </div>
-               <div class="form-group col-lg-6">
                  <label class="col-sm-1 form-control-label"><strong>Tagline</strong></label>
                  <input type="text" class="form-control" value="<?= $pengumumandata[0]['tagline_pengumuman'] ?>" name="tagline_pengumuman" id="tagline_pengumuman" required>
                </div>
@@ -54,8 +50,6 @@
                  <input type="file" class="form-control" value="" name="dokumentasipengumuman" id="dokumentasipengumuman">
                </div> -->
                <div class="line"></div>
-               <div class="form-group col-lg-6">
-               </div>
                <div class="form-group col-lg-1">
                  <button type="submit" class="btn btn-warning">Update</a>
                </div>

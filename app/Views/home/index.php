@@ -222,8 +222,7 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Pengumuman</h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
+                    <p class="text-muted">Pengumuman Update Terkini</p>
                 </div>
             </div>
             <div class="row">

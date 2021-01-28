@@ -37,6 +37,7 @@ class SuperAdmin extends BaseController
 			"total_feedback" => $this->feedbackModel->get_feedback_count(),
 			"total_news" => $this->newsModel->get_news_count(),
 			"total_pengumuman" => $this->pengumumanModel->get_pengumuman_count()
+			// "profil_data" => $this->userModel->profil_data()
 		];
 		echo view('layout/header',$data);
 		echo view('layout/sidebar');
