@@ -18,7 +18,7 @@
        <div class="row">
          <div class="col-lg-3 col-xs-6">
            <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
-             <div class="info-box-content"> <span class="info-box-number"><?=$total_kejadian?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
+             <div class="info-box-content"> <span class="info-box-number"><?= $total_kejadian ?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
              <!-- /.info-box-content -->
            </div>
            <!-- /.info-box -->
@@ -26,7 +26,7 @@
          <!-- /.col -->
          <div class="col-lg-3 col-xs-6">
            <div class="info-box"> <span class="info-box-icon bg-green"><i class="fa  fa-refresh"></i></span>
-             <div class="info-box-content"> <span class="info-box-number"><?=$total_feedback?></span> <span class="info-box-text">Laporan Feedback</span></div>
+             <div class="info-box-content"> <span class="info-box-number"><?= $total_feedback ?></span> <span class="info-box-text">Laporan Feedback</span></div>
              <!-- /.info-box-content -->
            </div>
            <!-- /.info-box -->
@@ -34,7 +34,7 @@
          <!-- /.col -->
          <div class="col-lg-3 col-xs-6">
            <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="icon-book-open"></i></span>
-             <div class="info-box-content"> <span class="info-box-number"><?=$total_news?></span> <span class="info-box-text">Total Berita</span></div>
+             <div class="info-box-content"> <span class="info-box-number"><?= $total_news ?></span> <span class="info-box-text">Total Berita</span></div>
              <!-- /.info-box-content -->
            </div>
            <!-- /.info-box -->
@@ -42,7 +42,7 @@
          <!-- /.col -->
          <div class="col-lg-3 col-xs-6">
            <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-bullhorn"></i></span>
-             <div class="info-box-content"> <span class="info-box-number"><?=$total_pengumuman?></span> <span class="info-box-text">Total Pengumuman</span></div>
+             <div class="info-box-content"> <span class="info-box-number"><?= $total_pengumuman ?></span> <span class="info-box-text">Total Pengumuman</span></div>
              <!-- /.info-box-content -->
            </div>
            <!-- /.info-box -->
@@ -91,7 +91,7 @@
        <div class="row">
          <div class="col-lg-3 col-xs-6">
            <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
-             <div class="info-box-content"> <span class="info-box-number">12</span> <span class="info-box-text">Laporan Kejadian</span> </div>
+             <div class="info-box-content"> <span class="info-box-number"><?= $total_kejadian ?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
              <!-- /.info-box-content -->
            </div>
            <!-- /.info-box -->
@@ -112,7 +112,7 @@
                </div>
              </div>
              <div>
-               <canvas id="bar-chart-laporan"></canvas>
+               <canvas id="pie-chart-laporan"></canvas>
              </div>
            </div>
          </div>

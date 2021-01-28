@@ -62,7 +62,7 @@
                   <?php
                   foreach ($detail as $row) {
                   ?>
-                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" width="400" class="m-2" />
+                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" height="300" width="500" class="m-2" />
                   <?php
                   }
                   ?>

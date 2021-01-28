@@ -171,7 +171,7 @@
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
@@ -198,7 +198,7 @@
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">
                                 <div class="ms-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>
@@ -298,8 +298,8 @@
                 <div class="col-lg-4">
                     <div class="mb-4">
                         <a href="index-1.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
-                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kota yang telah memiliki layanan panggilan darurat 112.
-                            Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
+                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
+                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
                     </div>
                 </div>
                 <!-- end col -->
@@ -310,7 +310,7 @@
                             <div class="mt-4 mt-lg-0">
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="footer-link">Instagram</a></li>
+                                    <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>
                             </div>
                         </div>

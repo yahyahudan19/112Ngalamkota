@@ -34,13 +34,7 @@
            <div class="block-body">
              <form class="form-horizontal row" action="/news/edit/" method="post" enctype="multipart/form-data">
                <input type="hidden" name="id" value="<?= $newsdata[0]['id_news']; ?>" />
-               <div class="form-group col-lg-6">
-                 <label class="col-sm-4 form-control-label"><strong>Tanggal Dibuat</strong></label>
-                 <input type="text" class="form-control" value="<?= $newsdata[0]['date_news'] ?>" name="date_news" id="date_news" required>
-               </div>
-               <div class="form-group col-lg-6">
-               </div>
-               <div class="form-group col-lg-6">
+               <div class="form-group col-lg-7">
                  <label class="col-sm-1 form-control-label"><strong>Tagline</strong></label>
                  <input type="text" class="form-control" value="<?= $newsdata[0]['tagline_news'] ?>" name="tagline_news" id="tagline_news" required>
                </div>

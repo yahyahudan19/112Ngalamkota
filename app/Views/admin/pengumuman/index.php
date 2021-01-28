@@ -27,7 +27,7 @@
               <div class="col-lg-12">
                 <div class="block">
                   <!-- <div class="title"><strong>Tabel Pengumuman</strong></div> -->
-                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah Pengumuman</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i>Tambah Pengumuman</button>
                   <br>
                   <br>
                   <div class="table-responsive">

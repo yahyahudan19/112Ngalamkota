@@ -54,6 +54,8 @@
                  <input type="file" class="form-control" value="" name="dokumentasipengumuman" id="dokumentasipengumuman">
                </div> -->
                <div class="line"></div>
+               <div class="form-group col-lg-6">
+               </div>
                <div class="form-group col-lg-1">
                  <button type="submit" class="btn btn-warning">Update</a>
                </div>
