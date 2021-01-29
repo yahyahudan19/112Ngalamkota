@@ -149,7 +149,7 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
-                     labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor'],
+                     labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor', 'Pohon Tumbang'],
                      datasets: [{
                          'label': 'My First Dataset',
                          data: [
@@ -180,6 +180,10 @@
                              <?php
                                 $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
                                 echo mysqli_num_rows($jumlah_tanahlongsor);
+                                ?>,
+                            <?php
+                                $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
+                                echo mysqli_num_rows($jumlah_pohontumbang);
                                 ?>
                          ],
                          backgroundColor: ['rgb(255, 99, 132)',
@@ -188,7 +192,8 @@
                              'rgba(255, 99, 70)',
                              'rgba(54, 162, 235)',
                              'rgba(255, 206, 86)',
-                             'rgba(75, 192, 192)'
+                             'rgba(75, 192, 192)',
+                             'rgba(90, 90, 90)'
                          ],
                      }]
                  },
