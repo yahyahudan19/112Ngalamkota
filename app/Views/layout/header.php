@@ -1,3 +1,9 @@
+<?php
+
+use App\Controllers\Auth;
+use App\Controllers\User;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +81,7 @@
               <ul class="dropdown-menu">
                 <li class="user-header">
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
-                  <p class="text-left">Yahya Hudan <small>yahyahudan19@gmail.com</small> </p>
+                  <p class="text-left"><small>yahyahudan19@gmail.com</small> </p>
                 </li>
                 <!-- Divider -->
                 <hr class=" sidebar-divider my-1">

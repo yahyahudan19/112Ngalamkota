@@ -73,39 +73,6 @@
                 <section class="no-padding-top">
               </div>
 
-                <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
-                  <div role="document" class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Data</strong>
-                        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                      </div>
-                      <div class="modal-body">
-                        <form method="post" action="<?= site_url('/report/addReportL') ?>" enctype="multipart/form-data">
-                          <div class="form-group row">
-                            <div class="col-lg-6">
-                              <label class="form-control-label">Kejadian</label>
-                              <select name="kejadian" class="form-control" id="kejadian">
-                                <option value="">- Pilih -</option>
-                                <option value="Kebakaran">Kebakaran</option>
-                                <option value="Pohon Tumbang">Pohon Tumbang</option>
-                                <option value="Kecelakaan">Kecelakaan</option>
-                                <option value="Banjir">Banjir</option>
-                                <option value="Gempa Bumi">Gempa Bumi</option>
-                                <option value="Angin Topan">Angin Topan</option>
-                                <option value="Listrik Putus">Listrik Putus</option>
-                                <option value="Tanah Longsor">Tanah Longsor</option>
-                                <option value="Lainnya">Lainnya</option>
-                              </select>
-                            </div>
-                            <div class="col-lg-6">
-                              <label>Tanggal Kejadian</label>
-                              <input type="date" name="tanggal" placeholder="Tanggal" class="form-control">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label>Nama Pelapor</label>
-                            <input type="text" name="nama_pelapor" placeholder="Nama Pelapor" class="form-control">
-
               <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                 <div role="document" class="modal-dialog">
                   <div class="modal-content">
@@ -126,6 +93,7 @@
                               <option value="Gempa Bumi">Gempa Bumi</option>
                               <option value="Angin Topan">Angin Topan</option>
                               <option value="Listrik Putus">Listrik Putus</option>
+                              <option value="Tanah Longsor">Tanah Longsor</option>
                               <option value="Lainnya">Lainnya</option>
                             </select>
                           </div>
