@@ -42,7 +42,7 @@
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
           <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-bullhorn"></i></span>
-            <div class="info-box-content"> <span class="info-box-number"><?= $total_pengumuman ?></span> <span class="info-box-text">Total Pengumuman</span></div>
+            <div class="info-box-content"> <span class="info-box-number"><?= $total_user ?></span> <span class="info-box-text">Total User</span></div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
@@ -61,7 +61,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="250"></canvas>
+              <canvas id="pie-chart-laporan" height="200"></canvas>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-feedback" height="250"></canvas>
+              <canvas id="pie-chart-feedback" height="200"></canvas>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="250"></canvas>
+              <canvas id="pie-chart-laporan" height="200"></canvas>
             </div>
           </div>
         </div>

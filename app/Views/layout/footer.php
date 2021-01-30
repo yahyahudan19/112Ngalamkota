@@ -24,18 +24,20 @@
      $(document).ready(function() {
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable({
-             dom: 'Bfrtip',
-             buttons: [
-                 'csv', 'excel', 'pdf'
-             ]
-         });
-         $('#rlaporanTable').DataTable({
-             dom: 'Bfrtip',
-             buttons: [
-                 'csv', 'excel', 'pdf'
-             ]
-         });
+         $('#rfeedbackTable').DataTable();
+        //  $('#rfeedbackTable').DataTable({
+        //      dom: 'Bfrtip',
+        //      buttons: [
+        //          'csv', 'excel', 'pdf'
+        //      ]
+        //  });
+        //  $('#rlaporanTable').DataTable({
+        //      dom: 'Bfrtip',
+        //      buttons: [
+        //          'csv', 'excel', 'pdf'
+        //      ]
+        //  });
+        $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
  </script>
@@ -231,50 +233,6 @@
          })(jQuery);
      </script>
  </body>
-
- <!-- Start Chart Function -->
- <!-- <script>
-     $(function() {
-
-         //  Laporan Laporan
-         new Chart(document.getElementById("pie-chart-laporan"), {
-             type: 'pie',
-             data: {
-                 labels: ['Red', 'Blue', 'Yellow'],
-                 datasets: [{
-                     'label': 'My First Dataset',
-                     data: [300, 50, 100],
-                     backgroundColor: ['rgb(255, 99, 132)',
-                         'rgb(54, 162, 235)',
-                         'rgb(255, 205, 86)'
-                     ],
-                 }]
-             },
-             options: {
-                 responsive: true
-             }
-         });
-         //  Laporan Feedback
-         new Chart(document.getElementById("pie-chart-feedback"), {
-             type: 'pie',
-             data: {
-                 labels: ['Red', 'Blue', 'Yellow'],
-                 datasets: [{
-                     'label': 'My First Dataset',
-                     data: [300, 50, 100],
-                     backgroundColor: ['rgb(255, 99, 132)',
-                         'rgb(54, 162, 235)',
-                         'rgb(255, 205, 86)'
-                     ],
-                 }]
-             },
-             options: {
-                 responsive: true
-             }
-         });
-     })(jQuery);
- </script> -->
- <!-- End Chart Function -->
 
  </html>
 

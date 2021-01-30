@@ -77,11 +77,12 @@ use App\Controllers\User;
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- User Account: style can be found in dropdown.less -->
-            <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="user-image" alt="User Image"> <span class="hidden-xs">Irfak Wahyudi</span> </a>
+            <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="user-image" alt="User Image"> <span class="hidden-xs">Nama Petugas</span> </a>
               <ul class="dropdown-menu">
                 <li class="user-header">
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
-                  <p class="text-left"><small>yahyahudan19@gmail.com</small> </p>
+                  <p class="text-left">Selamat Datang</p>
+                  <p class="text-left"><small>Nama Petugas</small></p>
                 </li>
                 <!-- Divider -->
                 <hr class=" sidebar-divider my-1">

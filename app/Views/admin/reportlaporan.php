@@ -25,6 +25,8 @@
           <div class="col-lg-12">
             <div class="block">
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
+                <!-- <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download Excel</button> -->
+                <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-cloud-download"></i>Download</a>
               <!-- <button type="submit" class="btn btn-info center">Cari Data</button>
                 <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button> -->
               <br>
@@ -36,12 +38,12 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Kejadian</th>
-                      <th>Lokasi Kejadian</th>
-                      <th>Nama Pelapor</th>
+                      <th>No. Tiket</th>
                       <th>Tanggal Kejadian</th>
-                      <th>Tindak Lanjut</th>
-                      <th>Dokumentasi</th>
+                      <th>Nama Petugas</th>
+                      <th>Kejadian</th>
+                      <th>Nama Pelapor</th>
+                      <th>Lokasi Kejadian</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -52,12 +54,12 @@
                       <tr>
                         <!-- <th scope="row"><?= $r['id_pelapor']; ?></th> -->
                         <th scope="row"><?= $no; ?></th>
-                        <td><?= $r['kejadian']; ?></td>
-                        <td><?= $r['lokasi_kejadian']; ?></td>
-                        <td><?= $r['nama_pelapor']; ?></td>
+                        <td><?= $r['no_tiket']; ?></td>
                         <td><?= $r['tanggal']; ?></td>
-                        <td><?= $r['tindak_lanjut']; ?></td>
-                        <td><?= $r['tindak_lanjut']; ?></td>
+                        <td><?= $r['nama_petugas']; ?></td>
+                        <td><?= $r['kejadian']; ?></td>
+                        <td><?= $r['nama_pelapor']; ?></td>
+                        <td><?= $r['lokasi_kejadian']; ?></td>
                         <td>
                           <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                           <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
