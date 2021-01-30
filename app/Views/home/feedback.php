@@ -43,10 +43,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
                     <li class="nav-item">
-                        <a href="/home" class="nav-link">Home</a>
+                        <a href="/home" class="nav-link">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/home/feedback" class="nav-link active">Feedback</a>
+                        <a href="/home/feedback" class="nav-link active">Kritik & Saran</a>
                     </li>
                 </ul>
             </div>

@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active">Home</a>
+                        <a href="#home" class="nav-link active">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a href="#services" class="nav-link">Layanan</a>
@@ -58,13 +58,10 @@
                         <a href="#team" class="nav-link">Team</a>
                     </li> -->
                     <li class="nav-item">
-                        <a href="#pengumuman" class="nav-link">Pengumuman</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#contact" class="nav-link">Kontak Kami</a>
                     </li>
                 </ul>
-                <a href="/auth" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Log In</a>
+                <!-- <a href="/auth" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Log In</a> -->
             </div>
         </div>
         <!-- end container -->
@@ -217,38 +214,6 @@
     <!-- Features end -->
     <!-- Cta end -->
     <!-- Blog start -->
-    <section class="section" id="pengumuman">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-7 text-center">
-                    <h2 class="fw-bold">Pengumuman</h2>
-                    <p class="text-muted">Pengumuman Update Terkini</p>
-                </div>
-            </div>
-            <div class="row">
-                <?php
-                foreach ($pengumuman as $data) {
-                ?>
-                    <div class="col-lg-4">
-                        <div class="card mt-4 border-0 shadow">
-                            <div class="card-body p-4">
-                                <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
-                                <h6 class="font-size-15 my-2"><a href="javascript: void(0);"><?= $data['date_pengumuman'] ?></a></h6>
-                                <h4 class="font-size-20 my-2"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
-                                <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- Blog end -->
 
     <!-- Contact us start -->
     <section class="section" id="contact">

@@ -23,7 +23,6 @@ class SuperAdmin extends BaseController
 		$this->authModel = new authModel();
 		$this->newsModel = new newsModel();
 		$this->feedbackModel = new feedbackModel();
-		$this->pengumumanModel = new pengumumanModel();
 		$this->userModel = new userModel();
 	}
 	public function index()
@@ -36,7 +35,7 @@ class SuperAdmin extends BaseController
 			"total_kejadian" => $this->reportlaporanModel->get_report_count(),
 			"total_feedback" => $this->feedbackModel->get_feedback_count(),
 			"total_news" => $this->newsModel->get_news_count(),
-			"total_pengumuman" => $this->pengumumanModel->get_pengumuman_count()
+			"total_user" => $this->userModel->get_user_count()
 			// "profil_data" => $this->userModel->profil_data()
 		];
 		echo view('layout/header', $data);

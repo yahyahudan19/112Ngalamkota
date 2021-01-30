@@ -19,7 +19,6 @@
           <li class="header">MAIN MENU</li>
           <li class="active" focus> <a href="/superadmin"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> <span class="pull-right-container"></span> </a></li>
           <li class="active"> <a href="/news"> <i class="fa fa-newspaper-o"></i> <span>Berita</span> <span class="pull-right-container"></span> </a>
-          <li class="active"> <a href="/superAdmin/pengumuman"> <i class="fa fa-podcast"></i> <span>Pengumuman</span> <span class="pull-right-container"></span> </a>
           </li>
           <li class="treeview"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
             <ul class="treeview-menu">
