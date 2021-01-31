@@ -6,7 +6,8 @@
       <div class="user-panel">
         <div class="image text-center"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-circle" alt="User Image"> </div>
         <div class="info">
-          <p>Yahya Hudan</p>
+          <p><?php echo $_SESSION["username"]; ?></p>
+          <p>online</p>
           <a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i></a>
         </div>
       </div>
