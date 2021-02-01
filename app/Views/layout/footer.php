@@ -104,7 +104,7 @@
  <body>
 
      <?php
-        include 'C:/xampp/htdocs/112Ngalamkota/app/Config/koneksi.php';
+        include 'E:/KULIAH/PKL/112Ngalamkota/app/Config/koneksi.php';
         ?>
 
      <!-- <div style="width: 800px;margin: 0px auto;">

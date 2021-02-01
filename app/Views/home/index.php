@@ -77,8 +77,8 @@
                     <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
-                    Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
+                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan
+                        Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
                     <a href="#services" class="btn btn-primary me-2">Selengkapnya<i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
@@ -97,8 +97,8 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Layanan 112</h2>
-                    <p class="text-muted">Layanan 112 hanya khusus untuk kejadian darurat saja ya, 
-                    laporan palsu atau telepon iseng akan dikenakan sanksi sesuai peraturan yang berlaku.</p>
+                    <p class="text-muted">Layanan 112 hanya khusus untuk kejadian darurat saja ya,
+                        laporan palsu atau telepon iseng akan dikenakan sanksi sesuai peraturan yang berlaku.</p>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@
                     <div class="service-box text-center px-4 py-5 position-relative mb-4">
                         <div class="service-box-content p-4">
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
-                                <i class="" data-feather="box"></i>
+                                <i class="" data-feather="phone"></i>
                             </div>
                             <h4 class="mb-3 font-size-22">Bebas Pulsa</h4>
                             <p class="text-muted mb-0">Layanan 112 Dapat Diakses Dengan Bebas Pulsa Untuk Semua Operator.</p>
@@ -120,7 +120,7 @@
                     <div class="service-box text-center px-4 py-5 position-relative mb-4 active">
                         <div class="service-box-content p-4">
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
-                                <i class="" data-feather="layers"></i>
+                                <i class="" data-feather="fast-forward"></i>
                             </div>
                             <h4 class="mb-3 font-size-22">Respon Cepat</h4>
                             <p class="text-muted mb-0">Layanan 112 Merespon Dengan Cepat Dalam Meminta Bantuan Saat Terjadi Keadaan Darurat.</p>
@@ -133,7 +133,7 @@
                     <div class="service-box text-center px-4 py-5 position-relative mb-4">
                         <div class="service-box-content p-4">
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
-                                <i class="" data-feather="server"></i>
+                                <i class="" data-feather="clock"></i>
                             </div>
                             <h4 class="mb-3 font-size-22">Layanan 24 Jam</h4>
                             <p class="text-muted mb-0">Layanan 112 Dapat Digunakan Kapan Saja Dan Dimana Saja Selama 24 Jam.</p>
@@ -255,8 +255,8 @@
                 <div class="col-lg-4">
                     <div class="mb-4">
                         <a href="index-1.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
-                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
-                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
+                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112.
+                            Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
                     </div>
                 </div>
                 <!-- end col -->
@@ -271,9 +271,16 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Kerja Sama</h4>
+                                <img src="<?= base_url() ?>/templatepage/images/logo/KerjaSama.png" alt="" class="" height="120" /></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- end col -->
+
             </div>
             <!-- end row -->
 
@@ -283,7 +290,7 @@
                         <p class="text-white-50 f-15 mb-0">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Copyright . DINAS KOMUNIKASI DAN INFORMATIKA KOTA MALANG
+                            </script> DINAS KOMUNIKASI DAN INFORMATIKA KOTA MALANG
                         </p>
                     </div>
                 </div>
