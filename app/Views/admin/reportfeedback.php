@@ -11,7 +11,7 @@
 
    <!-- FlashMessage -->
    <?php if (session()->getFlashdata('pesan')) : ?>
-     <div class="alert alert-success alert-dismissible fade show" role="alert"> Data Berhasil ditambahkan !
+     <div class="alert alert-success alert-dismissible fade show" role="alert">
        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
        <?= session()->getFlashdata('pesan'); ?>
      </div>
@@ -28,6 +28,9 @@
            <div class="row">
              <div class="col-lg-12">
                <div class="block">
+                 <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button>
+                 <br>
+                 <br>
                  <!-- <div class="title"><strong>Tabel Feedback</strong></div> -->
                  <div class="table-responsive">
                    <table class="table table-bordered table-hover" id="rfeedbackTable">

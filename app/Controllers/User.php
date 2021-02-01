@@ -27,7 +27,7 @@ class User extends BaseController
     public function addUser()
     {
         $data_uploads = [
-            'email' => $this->request->getVar('email'),
+            'nama_petugas' => $this->request->getVar('nama_petugas'),
             'username' => $this->request->getVar('username'),
             'password' => $this->request->getVar('password'),
             'level' => $this->request->getVar('level'),
@@ -41,7 +41,7 @@ class User extends BaseController
     {
         $id_user = $this->request->getVar('id');
         $data_uploads = [
-            'email' => $this->request->getVar('email'),
+            'nama_petugas' => $this->request->getVar('nama_petugas'),
             'username' => $this->request->getVar('username'),
             'password' => $this->request->getVar('password'),
             'level' => $this->request->getVar('level'),

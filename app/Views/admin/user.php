@@ -28,7 +28,7 @@
            <div class="col-lg-12">
              <div class="block">
                <!-- <div class="title"><strong>Tabel User</strong></div> -->
-               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success">Tambah User</button>
+               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i>Tambah User</button>
                <br>
                <br>
                <div class="table-responsive">
@@ -36,7 +36,7 @@
                    <thead>
                      <tr>
                        <th>#</th>
-                       <th>Email</th>
+                       <th>Nama Petugas</th>
                        <th>Username</th>
                        <th>Password</th>
                        <th>Level</th>
@@ -49,7 +49,7 @@
                       foreach ($user as $r) : ?>
                        <tr>
                          <th scope="row"><?= $no; ?></th>
-                         <td><?= $r['email']; ?></td>
+                         <td><?= $r['nama_petugas']; ?></td>
                          <td><?= $r['username']; ?></td>
                          <td><?= $r['password']; ?></td>
                          <td><?= $r['level']; ?></td>
@@ -77,15 +77,15 @@
                    <form method="post" action="<?= site_url('/user/addUser') ?>" enctype="multipart/form-data">
                      <form>
                        <div class="form-group">
-                         <label>Email</label>
-                         <input type="email" name="email" id="email" placeholder="Email Address" class="form-control">
+                         <label>Nama Petugas</label>
+                         <input type="text" name="nama_petugas" id="nama_petugas" placeholder="Nama Petugas" class="form-control">
                        </div>
                        <div class="form-group">
-                         <label>username</label>
+                         <label>Username</label>
                          <input type="username" name="username" id="username" placeholder="Username" class="form-control">
                        </div>
                        <div class="form-group">
-                         <label>password</label>
+                         <label>Password</label>
                          <input type="password" name="password" id="password" placeholder="Password" class="form-control">
                        </div>
                        <div class="form-group">

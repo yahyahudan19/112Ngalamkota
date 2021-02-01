@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active">Home</a>
+                        <a href="#home" class="nav-link active">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a href="#services" class="nav-link">Layanan</a>
@@ -58,13 +58,10 @@
                         <a href="#team" class="nav-link">Team</a>
                     </li> -->
                     <li class="nav-item">
-                        <a href="#pengumuman" class="nav-link">Pengumuman</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact Us</a>
+                        <a href="#contact" class="nav-link">Kontak Kami</a>
                     </li>
                 </ul>
-                <a href="/auth" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Log In</a>
+                <!-- <a href="/auth" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Log In</a> -->
             </div>
         </div>
         <!-- end container -->
@@ -80,8 +77,8 @@
                     <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112.
-                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa. Khususnya di Kota Malang.</p>
+                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
+                    Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
                     <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
@@ -100,8 +97,8 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Layanan 112</h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
+                    <p class="text-muted">Layanan 112 hanya khusus untuk kejadian darurat saja ya, 
+                    laporan palsu atau telepon iseng akan dikenakan sanksi sesuai peraturan yang berlaku.</p>
                 </div>
             </div>
 
@@ -113,8 +110,7 @@
                                 <i class="" data-feather="box"></i>
                             </div>
                             <h4 class="mb-3 font-size-22">Bebas Pulsa</h4>
-                            <p class="text-muted mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                blanditiis.</p>
+                            <p class="text-muted mb-0">Layanan 112 Dapat Diakses Dengan Bebas Pulsa Untuk Semua Operator.</p>
                         </div>
                     </div>
                 </div>
@@ -126,9 +122,8 @@
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
                                 <i class="" data-feather="layers"></i>
                             </div>
-                            <h4 class="mb-3 font-size-22">Fast Respond</h4>
-                            <p class="text-muted mb-0">Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                                corporis suscipit.</p>
+                            <h4 class="mb-3 font-size-22">Respon Cepat</h4>
+                            <p class="text-muted mb-0">Layanan 112 Merespon Dengan Cepat Dalam Meminta Bantuan Saat Terjadi Keadaan Darurat.</p>
                         </div>
                     </div>
                 </div>
@@ -140,9 +135,8 @@
                             <div class="icon-mono service-icon avatar-md mx-auto mb-4">
                                 <i class="" data-feather="server"></i>
                             </div>
-                            <h4 class="mb-3 font-size-22">Layanan 24/7</h4>
-                            <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                doloremque.</p>
+                            <h4 class="mb-3 font-size-22">Layanan 24 Jam</h4>
+                            <p class="text-muted mb-0">Layanan 112 Dapat Digunakan Kapan Saja Dan Dimana Saja Selama 24 Jam.</p>
                         </div>
                     </div>
                 </div>
@@ -158,11 +152,10 @@
     <!-- Features start -->
     <section class="section bg-light" id="features">
         <div class="container">
-            <div class="row justify-content-center mb-5">
+            <div class="row justify-content-center mb-0">
                 <div class="col-lg-7 text-center">
                     <h2 class="fw-bold">Berita - Seputar Ngalam 112 </h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
+                    <p class="text-muted">Berita Update Terkini</p>
                 </div>
             </div>
             <!-- end row -->
@@ -175,7 +168,7 @@
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
@@ -202,7 +195,7 @@
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">
                                 <div class="ms-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 330px;width: 600px;;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>
@@ -221,39 +214,6 @@
     <!-- Features end -->
     <!-- Cta end -->
     <!-- Blog start -->
-    <section class="section" id="pengumuman">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-7 text-center">
-                    <h2 class="fw-bold">Pengumuman</h2>
-                    <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque laudantium totam rem ab illo inventore.</p>
-                </div>
-            </div>
-            <div class="row">
-                <?php
-                foreach ($pengumuman as $data) {
-                ?>
-                    <div class="col-lg-4">
-                        <div class="card mt-4 border-0 shadow">
-                            <div class="card-body p-4">
-                                <span class="badge badge-soft-primary"><?= $data['tagline_pengumuman'] ?></span>
-                                <h6 class="font-size-15 my-2"><a href="javascript: void(0);"><?= $data['date_pengumuman'] ?></a></h6>
-                                <h4 class="font-size-20 my-2"><a href="javascript: void(0);"><?= $data['judul_pengumuman'] ?></a></h4>
-                                <p class="text-muted"><?= $data['isi_pengumuman'] ?></p>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- Blog end -->
 
     <!-- Contact us start -->
     <section class="section" id="contact">
@@ -302,8 +262,8 @@
                 <div class="col-lg-4">
                     <div class="mb-4">
                         <a href="index-1.html"><img src="<?= base_url() ?>/templatepage/images/diskominfo.png" alt="" class="" height="30" /></a>
-                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kota yang telah memiliki layanan panggilan darurat 112.
-                            Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
+                        <p class="text-white-50 my-4">Layanan ini untuk melayani warga dalam situasi darurat pada kabupaten/kota yang telah memiliki layanan panggilan darurat 112. 
+                        Program ini merupakan inisiatif Kemenkominfo untuk menyediakan panggilan darurat yang bebas pulsa.</p>
                     </div>
                 </div>
                 <!-- end col -->
@@ -314,7 +274,7 @@
                             <div class="mt-4 mt-lg-0">
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="footer-link">Instagram</a></li>
+                                    <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>
                             </div>
                         </div>

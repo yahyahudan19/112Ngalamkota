@@ -1,11 +1,3 @@
- <!-- /.content-wrapper -->
- <footer class="main-footer">
-     <div class="pull-right hidden-xs">Version 1.0 Beta</div>
-     Copyright © 2021 Dinas Komunikasi dan Informatika Kota Malang. All rights reserved.
- </footer>
- </div>
- <!-- ./wrapper -->
-
  <!-- jQuery 3 -->
  <script src="<?= base_url() ?>/adminpages/dist/js/jquery.min.js"></script>
  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
@@ -32,18 +24,20 @@
      $(document).ready(function() {
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable({
-             dom: 'Bfrtip',
-             buttons: [
-                 'csv', 'excel', 'pdf'
-             ]
-         });
-         $('#rlaporanTable').DataTable({
-             dom: 'Bfrtip',
-             buttons: [
-                 'csv', 'excel', 'pdf'
-             ]
-         });
+         $('#rfeedbackTable').DataTable();
+        //  $('#rfeedbackTable').DataTable({
+        //      dom: 'Bfrtip',
+        //      buttons: [
+        //          'csv', 'excel', 'pdf'
+        //      ]
+        //  });
+        //  $('#rlaporanTable').DataTable({
+        //      dom: 'Bfrtip',
+        //      buttons: [
+        //          'csv', 'excel', 'pdf'
+        //      ]
+        //  });
+        $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
  </script>
@@ -107,48 +101,145 @@
 
  </body>
 
- <!-- Start Chart Function -->
- <script>
-     $(function() {
+ <body>
 
-         //  Laporan Laporan
-         new Chart(document.getElementById("pie-chart-laporan"), {
-             type: 'pie',
-             data: {
-                 labels: ['Red', 'Blue', 'Yellow'],
-                 datasets: [{
-                     'label': 'My First Dataset',
-                     data: [300, 50, 100],
-                     backgroundColor: ['rgb(255, 99, 132)',
-                         'rgb(54, 162, 235)',
-                         'rgb(255, 205, 86)'
-                     ],
-                 }]
-             },
-             options: {
-                 responsive: true
-             }
-         });
-         //  Laporan Feedback
-         new Chart(document.getElementById("pie-chart-feedback"), {
-             type: 'pie',
-             data: {
-                 labels: ['Red', 'Blue', 'Yellow'],
-                 datasets: [{
-                     'label': 'My First Dataset',
-                     data: [300, 50, 100],
-                     backgroundColor: ['rgb(255, 99, 132)',
-                         'rgb(54, 162, 235)',
-                         'rgb(255, 205, 86)'
-                     ],
-                 }]
-             },
-             options: {
-                 responsive: true
-             }
-         });
-     })(jQuery);
- </script>
- <!-- End Chart Function -->
+     <?php
+        include 'C:/xampp/htdocs/112Ngalamkota/app/Config/koneksi.php';
+        ?>
+
+     <!-- <div style="width: 800px;margin: 0px auto;">
+         <canvas id="pie-chart-laporan"></canvas>
+     </div>
+
+     <br />
+     <br /> -->
+
+     <!-- <table border="1">
+         <thead>
+             <tr>
+                 <th>No</th>
+                 <th>Kejadian</th>
+                 <th>Lokasi Kejadian</th>
+                 <th>tanggal</th>
+                 <th>nama pelapor</th>
+             </tr>
+         </thead>
+         <tbody>
+             <?php
+                $no = 1;
+                $data = mysqli_query($koneksi, "select * from report");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
+                 <tr>
+                     <td><?php echo $no++; ?></td>
+                     <td><?php echo $d['kejadian']; ?></td>
+                     <td><?php echo $d['lokasi_kejadian']; ?></td>
+                     <td><?php echo $d['tanggal']; ?></td>
+                     <td><?php echo $d['nama_pelapor']; ?></td>
+                 </tr>
+             <?php
+                }
+                ?>
+         </tbody>
+     </table> -->
+
+     <script>
+         $(function() {
+
+             //  Laporan Laporan
+             var ctx = document.getElementById("pie-chart-laporan").getContext('2d');
+             var myChart = new Chart(ctx, {
+                 type: 'pie',
+                 data: {
+                     labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor', 'Pohon Tumbang'],
+                     datasets: [{
+                         'label': 'My First Dataset',
+                         data: [
+                             <?php
+                                $jumlah_angintopan = mysqli_query($koneksi, "select * from report where kejadian='angin topan'");
+                                echo mysqli_num_rows($jumlah_angintopan);
+                                ?>,
+                             <?php
+                                $jumlah_banjir = mysqli_query($koneksi, "select * from report where kejadian='banjir'");
+                                echo mysqli_num_rows($jumlah_banjir);
+                                ?>,
+                             <?php
+                                $jumlah_gempabumi = mysqli_query($koneksi, "select * from report where kejadian='gempa bumi'");
+                                echo mysqli_num_rows($jumlah_gempabumi);
+                                ?>,
+                             <?php
+                                $jumlah_listrikputus = mysqli_query($koneksi, "select * from report where kejadian='listrik putus'");
+                                echo mysqli_num_rows($jumlah_listrikputus);
+                                ?>,
+                             <?php
+                                $jumlah_kebakaran = mysqli_query($koneksi, "select * from report where kejadian='kebakaran'");
+                                echo mysqli_num_rows($jumlah_kebakaran);
+                                ?>,
+                             <?php
+                                $jumlah_kecelakaan = mysqli_query($koneksi, "select * from report where kejadian='kecelakaan'");
+                                echo mysqli_num_rows($jumlah_kecelakaan);
+                                ?>,
+                             <?php
+                                $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
+                                echo mysqli_num_rows($jumlah_tanahlongsor);
+                                ?>,
+                            <?php
+                                $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
+                                echo mysqli_num_rows($jumlah_pohontumbang);
+                                ?>
+                         ],
+                         backgroundColor: ['rgb(255, 99, 132)',
+                             'rgb(54, 162, 40)',
+                             'rgb(254, 205, 50)',
+                             'rgba(255, 99, 70)',
+                             'rgba(54, 162, 235)',
+                             'rgba(255, 206, 86)',
+                             'rgba(75, 192, 192)',
+                             'rgba(90, 90, 90)'
+                         ],
+                     }]
+                 },
+                 options: {
+                     responsive: true,
+                 }
+             });
+
+
+             //Laporan Feedback
+             var ctx = document.getElementById("pie-chart-feedback").getContext('2d');
+             var myChart = new Chart(ctx, {
+                 type: 'pie',
+                 data: {
+                     labels: ['', ],
+                     datasets: [{
+                         'label': 'My First Dataset',
+                         data: [
+
+                         ],
+                         backgroundColor: ['rgb(255, 99, 132)',
+                             'rgb(54, 162, 40)',
+                             'rgb(254, 205, 50)',
+                             //  'rgba(255, 99, 70)',
+                             //  'rgba(54, 162, 235)',
+                             //  'rgba(255, 206, 86)',
+                             //  'rgba(75, 192, 192)'
+                         ],
+                     }]
+                 },
+                 options: {
+                     responsive: true,
+                 }
+             });
+         })(jQuery);
+     </script>
+ </body>
 
  </html>
+
+ <!-- /.content-wrapper -->
+ <footer class="main-footer fix-bottom">
+     <div class="pull-right hidden-xs">Version 1.0 Beta</div>
+     Copyright © 2021 Dinas Komunikasi dan Informatika Kota Malang. All rights reserved.
+ </footer>
+ </div>
+ <!-- ./wrapper -->
