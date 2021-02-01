@@ -79,7 +79,7 @@
                     </h1>
                     <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
                     Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
-                    <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
+                    <a href="#services" class="btn btn-primary me-2">Selengkapnya<i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
@@ -229,13 +229,6 @@
                     <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
                         Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
                     <ul class="list-inline pt-4">
-                        <!-- <li class="list-inline-item me-3">
-                                <a href="javascript: void(0);" class="social-icon icon-mono avatar-xs rounded-circle"><i
-                                        class="icon-xs" data-feather="facebook"></i></a>
-                            </li> -->
-                        <li class="list-inline-item me-3">
-                            <a href="https://layanan112.kominfo.go.id" class="social-icon icon-mono avatar-xs rounded-circle"><i class="icon-xs" data-feather="globe"></i></a>
-                        </li>
                         <li class="list-inline-item">
                             <a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="social-icon icon-mono avatar-xs rounded-circle"><i class="icon-xs" data-feather="instagram"></i></a>
                         </li>
@@ -275,39 +268,6 @@
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Berita Ngalam 112</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Trending</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Popular</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Customers</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Features</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Information</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Developers</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Support</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Customer Service</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Get Started</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Guide</a></li>
-                                </ul>
-                            </div>
-                        </div> -->
-                        <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Support</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">FAQ</a></li>
-                                    <li><a href="#contact" class="footer-link">Contact</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Disscusion</a></li>
                                 </ul>
                             </div>
                         </div>

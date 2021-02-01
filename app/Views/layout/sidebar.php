@@ -6,7 +6,8 @@
       <div class="user-panel">
         <div class="image text-center"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-circle" alt="User Image"> </div>
         <div class="info">
-          <p><?php echo $_SESSION["username"]; ?><br> online</p>
+          <p><?php echo $_SESSION["username"]; ?></p>
+          <p>ONLINE</p>
           <a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i></a>
         </div>
       </div>
@@ -37,9 +38,9 @@
       ?>
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN MENU</li>
-          <li class=""> <a href="/admin"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> <span class="pull-right-container"></span> </a></li>
+          <li class="active"> <a href="/admin"> <i class="fa fa-dashboard"></i> <span>Dashboard</span> <span class="pull-right-container"></span> </a></li>
           </li>
-          <li class="treeview"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <li class="active treeview menu-open"> <a href="#"> <i class="fa fa-edit"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
             <ul class="treeview-menu">
               <li><a href="/report">Laporan Kejadian</a></li>
             </ul>
