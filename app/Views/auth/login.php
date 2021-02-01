@@ -1,3 +1,26 @@
+<?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+$msg = '';
+if (isset($_POST['submit'])) {
+  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $password = mysqli_real_escape_string($con, $_POST['password']);
+  $sql = "Select * from user where username='$username' and password='$password'";
+  $res = mysqli_query($con, $sql);
+  $count = mysqli_num_rows($res);
+  if ($count > 0) {
+    $row = mysqli_fetch_assoc($res);
+    $_SESSION['UID'] = $row['$id'];
+    header('location:dashboard.php');
+  } else {
+    $msg = "Please enter correct login details";
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
