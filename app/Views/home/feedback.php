@@ -46,7 +46,7 @@
                         <a href="/home" class="nav-link">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/home/feedback" class="nav-link active">Kritik & Saran</a>
+                        <a href="/home/feedback" class="nav-link active">Feedback</a>
                     </li>
                 </ul>
             </div>
@@ -64,9 +64,9 @@
                     <h1 class="font-weight-semibold mb-4 hero-6-title">Layanan Panggilan Darurat
                         <b>Ngalam 112 - Kota Malang</b>
                     </h1>
-                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan 
-                    Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
-                    <a href="#services" class="btn btn-primary me-2">Get Started <i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
+                    <p class="mb-5 text-muted">Ngalam 112 merupakan layanan panggilan darurat yang didukung oleh Perangkat Daerah dan Instansi terkait di lingkungan
+                        Pemkot Malang yang siap merespon masyarakat Kota Malang dalam meminta bantuan saat terjadi keadaan darurat.</p>
+                    <a href="/home" class="btn btn-primary me-2">Kembali Ke Beranda<i class="icon-sm ms-1" data-feather="arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
@@ -173,8 +173,7 @@
                                         <label for="q5_feedback" class="text-muted form-label"><strong>Apakah ada saran untuk layanan 112 ?</strong></label>
                                         <textarea name="q5_feedback" id="q5_feedback" rows="4" class="form-control" placeholder="Saran layanan 112"></textarea>
                                     </div>
-                                    <button type="submit" id="submit" name="send" class="btn btn-primary">Send
-                                        Feedback</button>
+                                    <button type="submit" id="submit" name="send" class="btn btn-primary">Kirim</button>
 
                                 </div>
                             </div>
@@ -211,39 +210,6 @@
                                 <h4 class="text-white font-size-18 mb-3">Social Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Berita 112</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Trending</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Popular</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Customers</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Features</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Information</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">Developers</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Support</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Customer Service</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Get Started</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Guide</a></li>
-                                </ul>
-                            </div>
-                        </div> -->
-                        <div class="col-lg-3 col-6">
-                            <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Support</h4>
-                                <ul class="list-unstyled footer-sub-menu">
-                                    <li><a href="javascript: void(0);" class="footer-link">FAQ</a></li>
-                                    <li><a href="#contact" class="footer-link">Contact</a></li>
-                                    <li><a href="javascript: void(0);" class="footer-link">Disscusion</a></li>
                                 </ul>
                             </div>
                         </div>

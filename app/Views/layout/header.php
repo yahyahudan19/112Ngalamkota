@@ -89,8 +89,8 @@ if (!isset($_SESSION)) {
               <ul class="dropdown-menu">
                 <li class="user-header">
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
-                  <p class="text-left">Selamat Datang</p>
-                  <p class="text-left"><small><?php echo $_SESSION["username"]; ?></small></p>
+                  <p class="text-left">Selamat Datang <small><?php echo $_SESSION["username"]; ?></small></p>
+                  <p class="text-left"><small>ONLINE</small></p>
                 </li>
                 <!-- Divider -->
                 <hr class=" sidebar-divider my-1">
