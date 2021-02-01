@@ -25,19 +25,19 @@
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
-        //  $('#rfeedbackTable').DataTable({
-        //      dom: 'Bfrtip',
-        //      buttons: [
-        //          'csv', 'excel', 'pdf'
-        //      ]
-        //  });
-        //  $('#rlaporanTable').DataTable({
-        //      dom: 'Bfrtip',
-        //      buttons: [
-        //          'csv', 'excel', 'pdf'
-        //      ]
-        //  });
-        $('#rlaporanTable').DataTable();
+         //  $('#rfeedbackTable').DataTable({
+         //      dom: 'Bfrtip',
+         //      buttons: [
+         //          'csv', 'excel', 'pdf'
+         //      ]
+         //  });
+         //  $('#rlaporanTable').DataTable({
+         //      dom: 'Bfrtip',
+         //      buttons: [
+         //          'csv', 'excel', 'pdf'
+         //      ]
+         //  });
+         $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
  </script>
@@ -105,43 +105,18 @@
 
      <?php
         include 'E:/KULIAH/PKL/112Ngalamkota/app/Config/koneksi.php';
+
+        //push ke dalam array isi label dan isi
+        // var isi_labels = [];
+        // var isi_data=[]; 
+        // var TotalJml = 0;
+        // var JmlItem = 0;  
+
+        //     isi_labels.push(data[i].kejadian); 
+        //     //jml item dalam persentase
+        //     isi_data.push(((data[i].JmlItem/TotalJml) * 100).toFixed(2));
+
         ?>
-
-     <!-- <div style="width: 800px;margin: 0px auto;">
-         <canvas id="pie-chart-laporan"></canvas>
-     </div>
-
-     <br />
-     <br /> -->
-
-     <!-- <table border="1">
-         <thead>
-             <tr>
-                 <th>No</th>
-                 <th>Kejadian</th>
-                 <th>Lokasi Kejadian</th>
-                 <th>tanggal</th>
-                 <th>nama pelapor</th>
-             </tr>
-         </thead>
-         <tbody>
-             <?php
-                $no = 1;
-                $data = mysqli_query($koneksi, "select * from report");
-                while ($d = mysqli_fetch_array($data)) {
-                ?>
-                 <tr>
-                     <td><?php echo $no++; ?></td>
-                     <td><?php echo $d['kejadian']; ?></td>
-                     <td><?php echo $d['lokasi_kejadian']; ?></td>
-                     <td><?php echo $d['tanggal']; ?></td>
-                     <td><?php echo $d['nama_pelapor']; ?></td>
-                 </tr>
-             <?php
-                }
-                ?>
-         </tbody>
-     </table> -->
 
      <script>
          $(function() {
@@ -183,24 +158,34 @@
                                 $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
                                 echo mysqli_num_rows($jumlah_tanahlongsor);
                                 ?>,
-                            <?php
+                             <?php
                                 $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
                                 echo mysqli_num_rows($jumlah_pohontumbang);
                                 ?>
                          ],
-                         backgroundColor: ['rgb(255, 99, 132)',
-                             'rgb(54, 162, 40)',
-                             'rgb(254, 205, 50)',
-                             'rgba(255, 99, 70)',
-                             'rgba(54, 162, 235)',
-                             'rgba(255, 206, 86)',
-                             'rgba(75, 192, 192)',
-                             'rgba(90, 90, 90)'
+                         backgroundColor: ['rgb(242, 28, 17)',
+                             'rgb(250, 238, 12)',
+                             'rgb(99, 250, 12)',
+                             'rgb(16, 40, 222)',
+                             'rgb(227, 5, 123)',
+                             'rgb(19, 203, 209)',
+                             'rgb(129, 132, 133)',
+                             'rgb(247, 146, 5)'
                          ],
                      }]
                  },
                  options: {
                      responsive: true,
+                     //  tooltips: {
+                     //      callbacks: {
+                     //          label: function(tooltipItem, data) {
+                     //              var dataset = data.datasets[tooltipItem.datasetIndex];
+                     //              var labels = data.labels[tooltipItem.index];
+                     //              var currentValue = dataset.data[tooltipItem.index];
+                     //              return labels + ": " + currentValue + " %";
+                     //          }
+                     //      }
+                     //  }
                  }
              });
 
@@ -210,24 +195,51 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
-                     labels: ['', ],
+                     labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang'],
                      datasets: [{
                          'label': 'My First Dataset',
                          data: [
-
+                             <?php
+                                $jumlah_sangatbagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Bagus'");
+                                echo mysqli_num_rows($jumlah_sangatbagus);
+                                ?>,
+                             <?php
+                                $jumlah_bagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Bagus'");
+                                echo mysqli_num_rows($jumlah_bagus);
+                                ?>,
+                             <?php
+                                $jumlah_cukup = mysqli_query($koneksi, "select * from feedback where q4_feedback='Cukup'");
+                                echo mysqli_num_rows($jumlah_cukup);
+                                ?>,
+                             <?php
+                                $jumlah_kurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Kurang'");
+                                echo mysqli_num_rows($jumlah_kurang);
+                                ?>,
+                             <?php
+                                $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
+                                echo mysqli_num_rows($jumlah_sangatkurang);
+                                ?>,
                          ],
-                         backgroundColor: ['rgb(255, 99, 132)',
-                             'rgb(54, 162, 40)',
-                             'rgb(254, 205, 50)',
-                             //  'rgba(255, 99, 70)',
-                             //  'rgba(54, 162, 235)',
-                             //  'rgba(255, 206, 86)',
-                             //  'rgba(75, 192, 192)'
+                         backgroundColor: ['rgb(242, 28, 17)',
+                             'rgb(250, 238, 12)',
+                             'rgb(99, 250, 12)',
+                             'rgb(16, 40, 222)',
+                             'rgb(227, 5, 123)'
                          ],
                      }]
                  },
                  options: {
                      responsive: true,
+                     //  tooltips: {
+                     //      callbacks: {
+                     //          label: function(tooltipItem, data) {
+                     //              var dataset = data.datasets[tooltipItem.datasetIndex];
+                     //              var labels = data.labels[tooltipItem.index];
+                     //              var currentValue = dataset.data[tooltipItem.index];
+                     //              return labels + ": " + currentValue + " %";
+                     //          }
+                     //      }
+                     //  }
                  }
              });
          })(jQuery);
