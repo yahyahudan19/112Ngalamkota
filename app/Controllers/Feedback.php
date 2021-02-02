@@ -15,11 +15,11 @@ class Feedback extends BaseController
     public function index()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $feedback = $this->feedbackModel->findAll();
         $data = [
-            'title' =>'Feedback',
+            'title' => 'Feedback',
             'feedback' => $feedback
         ];
         echo view('layout/header', $data);
@@ -30,7 +30,7 @@ class Feedback extends BaseController
     public function addFeedback()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $this->feedbackModel->save([
             'id_feedback' => $this->request->getVar('id_feedback'),
@@ -50,7 +50,7 @@ class Feedback extends BaseController
     public function detailFeedback($id)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $feedback = $this->feedbackModel->where('id_feedback', $id)->first();
         echo view('layout/header');
@@ -61,7 +61,7 @@ class Feedback extends BaseController
     public function delete($id_feedback)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $this->feedbackModel->delete_data($id_feedback);
         session()->setFlashdata('pesan', 'Data Berhasil dihapus.');

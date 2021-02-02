@@ -25,8 +25,8 @@
           <div class="col-lg-12">
             <div class="block">
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
-                <!-- <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download Excel</button> -->
-                <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-cloud-download"></i>Download</a>
+              <!-- <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download Excel</button> -->
+              <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-cloud-download"></i>Download</a>
               <!-- <button type="submit" class="btn btn-info center">Cari Data</button>
                 <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button> -->
               <br>
@@ -102,6 +102,25 @@
                           <div class="col-lg-6">
                             <label>Tanggal Kejadian</label>
                             <input type="date" name="tanggal" placeholder="Tanggal" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6">
+                            <label class="form-control-label">Petugas</label>
+                            <select name="petugas" class="form-control" id="petugas">
+                              <option value="">- Pilih -</option>
+                              <?php
+                              foreach ($dtPetugas as $data) {
+                              ?>
+                                <option value="<?= $data['nama_petugas'] ?>"><?= $data['nama_petugas'] ?></option>
+                              <?php
+                              }
+                              ?>
+                            </select <div class="col-lg-6">
+                          </div>
+                          <div class="col-lg-6">
+                            <label>No Tiket</label>
+                            <input type="text" name="no_tiket" placeholder="No Tiket" class="form-control">
                           </div>
                         </div>
                         <div class="form-group">

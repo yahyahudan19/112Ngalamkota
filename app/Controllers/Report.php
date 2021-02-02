@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\detailLaporanModel;
 use App\Models\reportlaporanModel;
-use App\Models\editLaporanModel;
+use App\Models\userModel;
 
 class Report extends BaseController
 {
@@ -14,16 +14,19 @@ class Report extends BaseController
     {
         $this->reportlaporanModel = new reportlaporanModel();
         $this->detailLaporanModel = new detailLaporanModel();
+        $this->userModel = new userModel();
     }
     public function index()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         $reportL = $this->reportlaporanModel->findAll();
+        $dtPetugas = $this->userModel->findAll();
         $data = [
             'title' => 'report',
-            'reportL' => $reportL
+            'reportL' => $reportL,
+            'dtPetugas' => $dtPetugas,
         ];
         echo view('layout/header', $data);
         echo view('layout/sidebar');
@@ -34,14 +37,16 @@ class Report extends BaseController
     public function addReportL()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         // dapatkan input file berupa array
         $files = $this->request->getFiles();
         if ($files) {
 
             // buat value id random di table uploads
             $data_uploads = [
+                'nama_petugas' => $this->request->getVar('petugas'),
+                'no_tiket' => $this->request->getVar('no_tiket'),
                 'kejadian' => $this->request->getVar('kejadian'),
                 'tanggal' => $this->request->getVar('tanggal'),
                 'nama_pelapor' => $this->request->getVar('nama_pelapor'),
@@ -77,8 +82,8 @@ class Report extends BaseController
     public function detailReport($id)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [
@@ -94,8 +99,8 @@ class Report extends BaseController
     public function delete($id_pelapor)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         $this->reportlaporanModel->delete_data($id_pelapor);
         session()->setFlashdata('pesan', 'Laporan Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
@@ -104,8 +109,8 @@ class Report extends BaseController
     public function edit()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         $id_pelapor = $this->request->getVar('id');
         $data_uploads = [
             'kejadian' => $this->request->getVar('kejadian'),
@@ -141,8 +146,8 @@ class Report extends BaseController
     public function editReport($id)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
-        }
+			return redirect()->to(base_url('/login'));
+		}
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [

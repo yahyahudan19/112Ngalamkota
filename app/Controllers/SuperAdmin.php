@@ -28,7 +28,7 @@ class SuperAdmin extends BaseController
 	public function index()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$data = [
 			'title' => 'Dashboard',
@@ -46,6 +46,9 @@ class SuperAdmin extends BaseController
 
 	public function bar_chart()
 	{
+		if (!(session()->username)) {
+			return redirect()->to(base_url('/login'));
+		}
 		$query =  $this->db->query("SELECT COUNT(id_pelapor) as count,MONTHNAME(created_at) as month_name FROM report WHERE YEAR(created_at) = '" . date('Y') . "'
   
 		GROUP BY YEAR(created_at),MONTH(created_at)");
@@ -67,7 +70,7 @@ class SuperAdmin extends BaseController
 	public function user()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$user = $this->userModel->findAll();
 		$data = [
@@ -83,7 +86,7 @@ class SuperAdmin extends BaseController
 	public function news()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$news = $this->newsModel->findAll();
 		$data = [
@@ -98,12 +101,14 @@ class SuperAdmin extends BaseController
 	public function reportlaporan()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$reportL = $this->reportlaporanModel->findAll();
+		$dtPetugas = $this->userModel->findAll();
 		$data = [
 			'title' => 'Laporan',
-			'reportL' => $reportL
+			'reportL' => $reportL,
+			'dtPetugas' => $dtPetugas
 		];
 		echo view('layout/header', $data);
 		echo view('layout/sidebar');
@@ -114,7 +119,7 @@ class SuperAdmin extends BaseController
 	public function reportfeedback()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$feedback = $this->feedbackModel->findAll();
 		$data = [
@@ -130,7 +135,7 @@ class SuperAdmin extends BaseController
 	public function pengumuman()
 	{
 		if (!(session()->username)) {
-			return redirect()->to(base_url('/auth'));
+			return redirect()->to(base_url('/login'));
 		}
 		$pengumuman = $this->pengumumanModel->findAll();
 		$data = [

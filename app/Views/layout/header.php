@@ -84,13 +84,12 @@ if (!isset($_SESSION)) {
             <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="user-image" alt="User Image">
                 <span class="hidden-xs">
                   <?php if ($_SESSION['username'] == true) {
-                    echo $_SESSION["username"];
+                    echo $_SESSION["nama_petugas"];
                   } ?></span> </a>
               <ul class="dropdown-menu">
                 <li class="user-header">
                   <div class="pull-left user-img"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-responsive" alt="User"></div>
-                  <p class="text-left">Selamat Datang <small><?php echo $_SESSION["username"]; ?></small></p>
-                  <p class="text-left"><small>ONLINE</small></p>
+                  <p class="text-left"><strong><?php echo $_SESSION["nama_petugas"]; ?></strong><small><?php echo $_SESSION["level"]; ?></small></p>
                 </li>
                 <!-- Divider -->
                 <hr class=" sidebar-divider my-1">
@@ -98,7 +97,7 @@ if (!isset($_SESSION)) {
                 <li role="separator" class="divider"></li>
                 <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                 <li role="separator" class="divider"></li> -->
-                <li><a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
+                <li><a href="/login/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i> Logout</a></li>
               </ul>
             </li>
           </ul>

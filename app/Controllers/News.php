@@ -15,7 +15,7 @@ class News extends BaseController
     public function index()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $news = $this->newsModel->findAll();
         $data = [
@@ -31,7 +31,7 @@ class News extends BaseController
     public function addNews()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $file = $this->request->getFile('dokumentasiNews');
 
@@ -57,7 +57,7 @@ class News extends BaseController
     public function detailNews($id)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $news = $this->newsModel->where('id_news', $id)->first();
         echo view('layout/header');
@@ -69,7 +69,7 @@ class News extends BaseController
     public function edit()
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $file = $this->request->getFile('dokumentasiNews');
         $id_news = $this->request->getVar('id');
@@ -136,14 +136,14 @@ class News extends BaseController
     public function editNews($id)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $NewsData = $this->newsModel->where('id_news', $id)->findAll();
         $data = [
             'title' => 'Edit News',
             'newsdata' => $NewsData
         ];
-        echo view('layout/header',$data);
+        echo view('layout/header', $data);
         echo view('layout/sidebar');
         echo view('admin/news/edit', $data);
         echo view('layout/footer');
@@ -152,7 +152,7 @@ class News extends BaseController
     public function delete($id_news)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $this->newsModel->delete_data($id_news);
         session()->setFlashdata('pesan', 'Data Berhasil dihapus.');
@@ -162,7 +162,7 @@ class News extends BaseController
     public function change_visible($id_news)
     {
         if (!(session()->username)) {
-            return redirect()->to(base_url('/auth'));
+            return redirect()->to(base_url('/login'));
         }
         $NewsData = $this->newsModel->where('id_news', $id_news)->first();
         $visible = $NewsData['visible_news'];
