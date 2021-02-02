@@ -14,7 +14,9 @@
  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
  <!-- Chartjs JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 
  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 
@@ -104,146 +106,156 @@
  <body>
 
      <?php
-        include 'C:/xampp/htdocs/112Ngalamkota/app/Config/koneksi.php';
-
-        //push ke dalam array isi label dan isi
-        // var isi_labels = [];
-        // var isi_data=[]; 
-        // var TotalJml = 0;
-        // var JmlItem = 0;  
-
-        //     isi_labels.push(data[i].kejadian); 
-        //     //jml item dalam persentase
-        //     isi_data.push(((data[i].JmlItem/TotalJml) * 100).toFixed(2));
+        $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
 
         ?>
 
-     <script>
+<script>
          $(function() {
 
              //  Laporan Laporan
+             var data = [{
+                 data: [
+                     <?php
+                        $jumlah_angintopan = mysqli_query($koneksi, "select * from report where kejadian='angin topan'");
+                        echo mysqli_num_rows($jumlah_angintopan);
+                        ?>,
+                     <?php
+                        $jumlah_banjir = mysqli_query($koneksi, "select * from report where kejadian='banjir'");
+                        echo mysqli_num_rows($jumlah_banjir);
+                        ?>,
+                     <?php
+                        $jumlah_gempabumi = mysqli_query($koneksi, "select * from report where kejadian='gempa bumi'");
+                        echo mysqli_num_rows($jumlah_gempabumi);
+                        ?>,
+                     <?php
+                        $jumlah_listrikputus = mysqli_query($koneksi, "select * from report where kejadian='listrik putus'");
+                        echo mysqli_num_rows($jumlah_listrikputus);
+                        ?>,
+                     <?php
+                        $jumlah_kebakaran = mysqli_query($koneksi, "select * from report where kejadian='kebakaran'");
+                        echo mysqli_num_rows($jumlah_kebakaran);
+                        ?>,
+                     <?php
+                        $jumlah_kecelakaan = mysqli_query($koneksi, "select * from report where kejadian='kecelakaan'");
+                        echo mysqli_num_rows($jumlah_kecelakaan);
+                        ?>,
+                     <?php
+                        $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
+                        echo mysqli_num_rows($jumlah_tanahlongsor);
+                        ?>,
+                     <?php
+                        $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
+                        echo mysqli_num_rows($jumlah_pohontumbang);
+                        ?>
+                 ],
+                 backgroundColor: [
+                     'rgb(242, 28, 17)',
+                     'rgb(250, 238, 12)',
+                     'rgb(99, 250, 12)',
+                     'rgb(16, 40, 222)',
+                     'rgb(227, 5, 123)',
+                     'rgb(19, 203, 209)',
+                     'rgb(129, 132, 133)',
+                     'rgb(247, 146, 5)'
+                 ],
+                 borderColor: "#fff"
+             }];
+
+             var options = {
+                 tooltips: {
+                     enabled: true
+                 },
+                 plugins: {
+                     datalabels: {
+                         formatter: (value, ctx) => {
+                             let sum = ctx.dataset._meta[0].total;
+                             let percentage = (value * 100 / sum).toFixed(2) + "%";
+                             return percentage;
+                         },
+                         color: '#fff',
+                     }
+                 }
+             };
+
              var ctx = document.getElementById("pie-chart-laporan").getContext('2d');
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
                      labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor', 'Pohon Tumbang'],
-                     datasets: [{
-                         'label': 'My First Dataset',
-                         data: [
-                             <?php
-                                $jumlah_angintopan = mysqli_query($koneksi, "select * from report where kejadian='angin topan'");
-                                echo mysqli_num_rows($jumlah_angintopan);
-                                ?>,
-                             <?php
-                                $jumlah_banjir = mysqli_query($koneksi, "select * from report where kejadian='banjir'");
-                                echo mysqli_num_rows($jumlah_banjir);
-                                ?>,
-                             <?php
-                                $jumlah_gempabumi = mysqli_query($koneksi, "select * from report where kejadian='gempa bumi'");
-                                echo mysqli_num_rows($jumlah_gempabumi);
-                                ?>,
-                             <?php
-                                $jumlah_listrikputus = mysqli_query($koneksi, "select * from report where kejadian='listrik putus'");
-                                echo mysqli_num_rows($jumlah_listrikputus);
-                                ?>,
-                             <?php
-                                $jumlah_kebakaran = mysqli_query($koneksi, "select * from report where kejadian='kebakaran'");
-                                echo mysqli_num_rows($jumlah_kebakaran);
-                                ?>,
-                             <?php
-                                $jumlah_kecelakaan = mysqli_query($koneksi, "select * from report where kejadian='kecelakaan'");
-                                echo mysqli_num_rows($jumlah_kecelakaan);
-                                ?>,
-                             <?php
-                                $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
-                                echo mysqli_num_rows($jumlah_tanahlongsor);
-                                ?>,
-                             <?php
-                                $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
-                                echo mysqli_num_rows($jumlah_pohontumbang);
-                                ?>
-                         ],
-                         backgroundColor: ['rgb(242, 28, 17)',
-                             'rgb(250, 238, 12)',
-                             'rgb(99, 250, 12)',
-                             'rgb(16, 40, 222)',
-                             'rgb(227, 5, 123)',
-                             'rgb(19, 203, 209)',
-                             'rgb(129, 132, 133)',
-                             'rgb(247, 146, 5)'
-                         ],
-                     }]
+                     datasets: data
                  },
-                 options: {
-                     responsive: true,
-                     //  tooltips: {
-                     //      callbacks: {
-                     //          label: function(tooltipItem, data) {
-                     //              var dataset = data.datasets[tooltipItem.datasetIndex];
-                     //              var labels = data.labels[tooltipItem.index];
-                     //              var currentValue = dataset.data[tooltipItem.index];
-                     //              return labels + ": " + currentValue + " %";
-                     //          }
-                     //      }
-                     //  }
-                 }
+                 options: options
              });
 
+         })(jQuery);
+     </script>
 
+     <script>
+         $(function() {
              //Laporan Feedback
+             var data = [{
+                 data: [
+                     <?php
+                        $jumlah_sangatbagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Bagus'");
+                        echo mysqli_num_rows($jumlah_sangatbagus);
+                        ?>,
+                     <?php
+                        $jumlah_bagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Bagus'");
+                        echo mysqli_num_rows($jumlah_bagus);
+                        ?>,
+                     <?php
+                        $jumlah_cukup = mysqli_query($koneksi, "select * from feedback where q4_feedback='Cukup'");
+                        echo mysqli_num_rows($jumlah_cukup);
+                        ?>,
+                     <?php
+                        $jumlah_kurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Kurang'");
+                        echo mysqli_num_rows($jumlah_kurang);
+                        ?>,
+                     <?php
+                        $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
+                        echo mysqli_num_rows($jumlah_sangatkurang);
+                        ?>,
+                 ],
+                 backgroundColor: [
+                     'rgb(242, 28, 17)',
+                     'rgb(250, 238, 12)',
+                     'rgb(99, 250, 12)',
+                     'rgb(16, 40, 222)',
+                     'rgb(227, 5, 123)'
+                 ],
+                 borderColor: "#fff"
+             }];
+
+             var options = {
+                 tooltips: {
+                     enabled: true
+                 },
+                 plugins: {
+                     datalabels: {
+                         formatter: (value, ctx) => {
+                             let sum = ctx.dataset._meta[0].total;
+                             let percentage = (value * 100 / sum).toFixed(2) + "%";
+                             return percentage;
+                         },
+                         color: '#fff',
+                     }
+                 }
+             };
+
              var ctx = document.getElementById("pie-chart-feedback").getContext('2d');
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
                      labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang'],
-                     datasets: [{
-                         'label': 'My First Dataset',
-                         data: [
-                             <?php
-                                $jumlah_sangatbagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Bagus'");
-                                echo mysqli_num_rows($jumlah_sangatbagus);
-                                ?>,
-                             <?php
-                                $jumlah_bagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Bagus'");
-                                echo mysqli_num_rows($jumlah_bagus);
-                                ?>,
-                             <?php
-                                $jumlah_cukup = mysqli_query($koneksi, "select * from feedback where q4_feedback='Cukup'");
-                                echo mysqli_num_rows($jumlah_cukup);
-                                ?>,
-                             <?php
-                                $jumlah_kurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Kurang'");
-                                echo mysqli_num_rows($jumlah_kurang);
-                                ?>,
-                             <?php
-                                $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
-                                echo mysqli_num_rows($jumlah_sangatkurang);
-                                ?>,
-                         ],
-                         backgroundColor: ['rgb(242, 28, 17)',
-                             'rgb(250, 238, 12)',
-                             'rgb(99, 250, 12)',
-                             'rgb(16, 40, 222)',
-                             'rgb(227, 5, 123)'
-                         ],
-                     }]
+                     datasets: data
                  },
-                 options: {
-                     responsive: true,
-                     //  tooltips: {
-                     //      callbacks: {
-                     //          label: function(tooltipItem, data) {
-                     //              var dataset = data.datasets[tooltipItem.datasetIndex];
-                     //              var labels = data.labels[tooltipItem.index];
-                     //              var currentValue = dataset.data[tooltipItem.index];
-                     //              return labels + ": " + currentValue + " %";
-                     //          }
-                     //      }
-                     //  }
-                 }
+                 options: options
              });
          })(jQuery);
      </script>
+
+     
  </body>
 
  </html>
