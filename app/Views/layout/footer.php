@@ -1,6 +1,5 @@
  <!-- jQuery 3 -->
  <script src="<?= base_url() ?>/adminpages/dist/js/jquery.min.js"></script>
- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
 
  <!-- v4.0.0-alpha.6 -->
  <script src="<?= base_url() ?>/adminpages/dist/bootstrap/js/bootstrap.min.js"></script>
@@ -18,7 +17,9 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 
- <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+ <!-- Data Table Link  -->
+ <script src="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"></script>
+ <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 
 
  <!-- Data Table Script  -->
@@ -27,32 +28,24 @@
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
-         //  $('#rfeedbackTable').DataTable({
-         //      dom: 'Bfrtip',
-         //      buttons: [
-         //          'csv', 'excel', 'pdf'
-         //      ]
-         //  });
-         //  $('#rlaporanTable').DataTable({
-         //      dom: 'Bfrtip',
-         //      buttons: [
-         //          'csv', 'excel', 'pdf'
-         //      ]
-         //  });
+        //  $('#rfeedbackTable').DataTable({
+        //      dom: 'Bfrtip',
+        //      buttons: [
+        //          'csv', 'excel', 'pdf'
+        //      ]
+        //  });
+         //   $('#rlaporanTable').DataTable({
+         //       dom: 'Bfrtip',
+         //       buttons: [
+         //           'csv', 'excel', 'pdf'
+         //       ]
+         //   });
          $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
  </script>
 
  <!-- Data Table Script Download -->
- <script src="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"></script>
- <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
- <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
- <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
- <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
 
  <!-- dropify -->
  <script src="<?= base_url() ?>/adminpages/dist/plugins/dropify/dropify.min.js"></script>
@@ -110,7 +103,7 @@
 
         ?>
 
-<script>
+     <script>
          $(function() {
 
              //  Laporan Laporan
@@ -255,7 +248,7 @@
          })(jQuery);
      </script>
 
-     
+
  </body>
 
  </html>
