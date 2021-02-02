@@ -9,7 +9,7 @@ class authModel extends Model
 
     protected $table = 'user';
     protected $id = 'id_user';
-    protected $allowedFields = ['email', 'username', 'password', "level", 'role_id', 'image', 'is_active'];
+    protected $allowedFields = ['email', 'username', 'password', "level", 'role_id', 'image', 'is_active', 'nama_petugas'];
 
     public function cekLogin($username, $password)
     {

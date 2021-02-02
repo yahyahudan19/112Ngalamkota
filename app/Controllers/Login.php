@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\authModel;
 
-class Auth extends BaseController
+class Login extends BaseController
 {
 	protected $authModel;
 
@@ -24,7 +24,7 @@ class Auth extends BaseController
 	{
 		session()->set('username', null);
 		session()->set('level', null);
-		return redirect()->to(base_url('/auth'));
+		return redirect()->to(base_url('/login'));
 	}
 
 	public function cekLogin()
@@ -37,6 +37,7 @@ class Auth extends BaseController
 
 		if (($auth['username'] == $username) && ($auth['password'] == $password)) {
 			session()->set('username', $auth['username']);
+			session()->set('nama_petugas', $auth['nama_petugas']);
 			session()->set('level', $auth['level']);
 			if ($auth["level"] == "Super Admin") {
 				return redirect()->to(base_url('/superadmin'));

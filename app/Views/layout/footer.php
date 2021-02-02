@@ -104,7 +104,7 @@
  <body>
 
      <?php
-        include 'E:/KULIAH/PKL/112Ngalamkota/app/Config/koneksi.php';
+        include 'C:/xampp/htdocs/112Ngalamkota/app/Config/koneksi.php';
 
         //push ke dalam array isi label dan isi
         // var isi_labels = [];

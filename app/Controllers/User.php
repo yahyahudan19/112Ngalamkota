@@ -15,6 +15,9 @@ class User extends BaseController
 
     public function index()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/login'));
+        }
         $user = $this->userModel->findAll();
         $data = [
             'user' => $user
@@ -26,6 +29,9 @@ class User extends BaseController
     }
     public function addUser()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/login'));
+        }
         $data_uploads = [
             'nama_petugas' => $this->request->getVar('nama_petugas'),
             'username' => $this->request->getVar('username'),
@@ -39,6 +45,9 @@ class User extends BaseController
 
     public function edit()
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/login'));
+        }
         $id_user = $this->request->getVar('id');
         $data_uploads = [
             'nama_petugas' => $this->request->getVar('nama_petugas'),
@@ -53,6 +62,9 @@ class User extends BaseController
 
     public function editUser($id)
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/login'));
+        }
         $userData = $this->userModel->where('id_user', $id)->findAll();
         $data = [
             'userdata' => $userData
@@ -66,6 +78,9 @@ class User extends BaseController
 
     public function delete($id_user)
     {
+        if (!(session()->username)) {
+            return redirect()->to(base_url('/login'));
+        }
         $this->userModel->delete_data($id_user);
         session()->setFlashdata('pesan', 'User Berhasil dihapus.');
         return redirect()->to(base_url('superadmin/user'));

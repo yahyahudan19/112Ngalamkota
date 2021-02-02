@@ -104,6 +104,25 @@
                             <input type="date" name="tanggal" placeholder="Tanggal" class="form-control">
                           </div>
                         </div>
+                        <div class="form-group row">
+                          <div class="col-lg-6">
+                            <label class="form-control-label">Petugas</label>
+                            <select name="petugas" class="form-control" id="petugas">
+                              <option value="">- Pilih -</option>
+                              <?php
+                              foreach ($dtPetugas as $data) {
+                              ?>
+                                <option value="<?= $data['nama_petugas'] ?>"><?= $data['nama_petugas'] ?></option>
+                              <?php
+                              }
+                              ?>
+                            </select <div class="col-lg-6">
+                          </div>
+                          <div class="col-lg-6">
+                            <label>No Tiket</label>
+                            <input type="text" name="no_tiket" placeholder="No Tiket" class="form-control">
+                          </div>
+                        </div>
                         <div class="form-group">
                           <label>Nama Pelapor</label>
                           <input type="text" name="nama_pelapor" placeholder="Nama Pelapor" class="form-control">

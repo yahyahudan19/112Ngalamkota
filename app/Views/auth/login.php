@@ -72,7 +72,7 @@ if (isset($_POST['submit'])) {
         </div>
       <?php endif; ?>
 
-      <form method="post" class="form-validate" action="<?= site_url('/auth/ceklogin') ?>">
+      <form method="post" class="form-validate" action="<?= site_url('/login/ceklogin') ?>">
         <div class="form-group has-feedback">
           <input id="username" type="text" name="username" required data-msg="Please enter your username" class="form-control sty1" placeholder="Username">
         </div>
