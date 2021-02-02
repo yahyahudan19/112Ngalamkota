@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\newsModel;
-use App\Models\pengumumanModel;
 
 class Home extends BaseController
 {
@@ -13,9 +12,6 @@ class Home extends BaseController
 	}
 	public function index()
 	{
-		if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
 		// $news = $this->newsModel->findAll();
 		// $pengumuman = $this->pengumumanModel->findAll();
 		$news = $this->newsModel->where('visible_news', "1")->orderBy('date_news', 'desc')->findAll();
