@@ -22,11 +22,11 @@
                <input type="hidden" name="id" value="<?= $userdata[0]['id_user']; ?>" />
                <!-- <div class="form-group col-lg-5">
                  <label class="col-sm-5 form-control-label"> -->
-               <div class="form-group col-lg-5">
+               <div class="form-group col-lg-4">
                  <label class="col-sm-5 form-control-label"><strong>Nama Petugas</strong></label>
                  <input type="text" class="form-control" value="<?= $userdata[0]['nama_petugas']; ?>" name="nama_petugas" id="nama_petugas" required>
                </div>
-               <div class="form-group col-lg-3">
+               <div class="form-group col-lg-4">
                  <label class="col-sm-1 form-control-label"><strong>Level</strong></label>
                  <select name="level" class="form-control" id="level">
                    <option value="Super Admin" <?= $userdata[0]['level'] == "Super Admin" ? "selected" : ""; ?>>Super Admin</option>
