@@ -104,18 +104,7 @@
  <body>
 
      <?php
-        include 'E:/KULIAH/PKL/112Ngalamkota/app/Config/koneksi.php';
-
-        //push ke dalam array isi label dan isi
-        // var isi_labels = [];
-        // var isi_data=[]; 
-        // var TotalJml = 0;
-        // var JmlItem = 0;  
-
-        //     isi_labels.push(data[i].kejadian); 
-        //     //jml item dalam persentase
-        //     isi_data.push(((data[i].JmlItem/TotalJml) * 100).toFixed(2));
-
+        $Koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
         ?>
 
      <script>
@@ -131,35 +120,35 @@
                          'label': 'My First Dataset',
                          data: [
                              <?php
-                                $jumlah_angintopan = mysqli_query($koneksi, "select * from report where kejadian='angin topan'");
+                                $jumlah_angintopan = mysqli_query($Koneksi, "select * from report where kejadian='angin topan'");
                                 echo mysqli_num_rows($jumlah_angintopan);
                                 ?>,
                              <?php
-                                $jumlah_banjir = mysqli_query($koneksi, "select * from report where kejadian='banjir'");
+                                $jumlah_banjir = mysqli_query($Koneksi, "select * from report where kejadian='banjir'");
                                 echo mysqli_num_rows($jumlah_banjir);
                                 ?>,
                              <?php
-                                $jumlah_gempabumi = mysqli_query($koneksi, "select * from report where kejadian='gempa bumi'");
+                                $jumlah_gempabumi = mysqli_query($Koneksi, "select * from report where kejadian='gempa bumi'");
                                 echo mysqli_num_rows($jumlah_gempabumi);
                                 ?>,
                              <?php
-                                $jumlah_listrikputus = mysqli_query($koneksi, "select * from report where kejadian='listrik putus'");
+                                $jumlah_listrikputus = mysqli_query($Koneksi, "select * from report where kejadian='listrik putus'");
                                 echo mysqli_num_rows($jumlah_listrikputus);
                                 ?>,
                              <?php
-                                $jumlah_kebakaran = mysqli_query($koneksi, "select * from report where kejadian='kebakaran'");
+                                $jumlah_kebakaran = mysqli_query($Koneksi, "select * from report where kejadian='kebakaran'");
                                 echo mysqli_num_rows($jumlah_kebakaran);
                                 ?>,
                              <?php
-                                $jumlah_kecelakaan = mysqli_query($koneksi, "select * from report where kejadian='kecelakaan'");
+                                $jumlah_kecelakaan = mysqli_query($Koneksi, "select * from report where kejadian='kecelakaan'");
                                 echo mysqli_num_rows($jumlah_kecelakaan);
                                 ?>,
                              <?php
-                                $jumlah_tanahlongsor = mysqli_query($koneksi, "select * from report where kejadian='tanah longsor'");
+                                $jumlah_tanahlongsor = mysqli_query($Koneksi, "select * from report where kejadian='tanah longsor'");
                                 echo mysqli_num_rows($jumlah_tanahlongsor);
                                 ?>,
                              <?php
-                                $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
+                                $jumlah_pohontumbang = mysqli_query($Koneksi, "select * from report where kejadian='pohon tumbang'");
                                 echo mysqli_num_rows($jumlah_pohontumbang);
                                 ?>
                          ],
@@ -190,7 +179,7 @@
              });
 
 
-             //Laporan Feedback
+             //Laporan feedback
              var ctx = document.getElementById("pie-chart-feedback").getContext('2d');
              var myChart = new Chart(ctx, {
                  type: 'pie',
@@ -200,23 +189,23 @@
                          'label': 'My First Dataset',
                          data: [
                              <?php
-                                $jumlah_sangatbagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Bagus'");
+                                $jumlah_sangatbagus = mysqli_query($Koneksi, "select * from feedback where q4_feedback='Sangat Bagus'");
                                 echo mysqli_num_rows($jumlah_sangatbagus);
                                 ?>,
                              <?php
-                                $jumlah_bagus = mysqli_query($koneksi, "select * from feedback where q4_feedback='Bagus'");
+                                $jumlah_bagus = mysqli_query($Koneksi, "select * from feedback where q4_feedback='Bagus'");
                                 echo mysqli_num_rows($jumlah_bagus);
                                 ?>,
                              <?php
-                                $jumlah_cukup = mysqli_query($koneksi, "select * from feedback where q4_feedback='Cukup'");
+                                $jumlah_cukup = mysqli_query($Koneksi, "select * from feedback where q4_feedback='Cukup'");
                                 echo mysqli_num_rows($jumlah_cukup);
                                 ?>,
                              <?php
-                                $jumlah_kurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Kurang'");
+                                $jumlah_kurang = mysqli_query($Koneksi, "select * from feedback where q4_feedback='Kurang'");
                                 echo mysqli_num_rows($jumlah_kurang);
                                 ?>,
                              <?php
-                                $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
+                                $jumlah_sangatkurang = mysqli_query($Koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
                                 echo mysqli_num_rows($jumlah_sangatkurang);
                                 ?>,
                          ],
