@@ -30,6 +30,8 @@ if (!isset($_SESSION)) {
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/style.css">
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/et-line-font/et-line-font.css">
   <link rel="stylesheet" href="<?= base_url() ?>/adminpages/dist/css/themify-icons/themify-icons.css">
 
