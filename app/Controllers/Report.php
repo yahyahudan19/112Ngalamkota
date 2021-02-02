@@ -20,8 +20,12 @@ class Report extends BaseController
     {
         if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
-		}
-        $reportL = $this->reportlaporanModel->findAll();
+        }
+        if(session()->get('level') == "Super Admin"){
+            $reportL = $this->reportlaporanModel->orderBy('id_pelapor', 'desc')->findAll();
+        }else{
+            $reportL = $this->reportlaporanModel->where('id_admin', session()->get('id_user'))->orderBy('id_pelapor', 'desc')->findAll();
+        }
         $dtPetugas = $this->userModel->findAll();
         $data = [
             'title' => 'report',
@@ -45,6 +49,7 @@ class Report extends BaseController
 
             // buat value id random di table uploads
             $data_uploads = [
+                'id_admin' => session()->get('id_user'),
                 'nama_petugas' => $this->request->getVar('petugas'),
                 'no_tiket' => $this->request->getVar('no_tiket'),
                 'kejadian' => $this->request->getVar('kejadian'),

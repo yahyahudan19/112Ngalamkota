@@ -72,7 +72,7 @@ class SuperAdmin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
 		}
-		$user = $this->userModel->findAll();
+		$user = $this->userModel->orderBy('id_user', 'desc')->findAll();
 		$data = [
 			'title' => 'User',
 			'user' => $user
@@ -88,7 +88,7 @@ class SuperAdmin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
 		}
-		$news = $this->newsModel->findAll();
+		$news = $this->newsModel->orderBy('id_news', 'desc')->findAll();
 		$data = [
 			'news' => $news
 		];
@@ -103,7 +103,7 @@ class SuperAdmin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
 		}
-		$reportL = $this->reportlaporanModel->findAll();
+		$reportL = $this->reportlaporanModel->orderBy('id_pelapor', 'desc')->findAll();
 		$dtPetugas = $this->userModel->findAll();
 		$data = [
 			'title' => 'Laporan',
@@ -121,7 +121,7 @@ class SuperAdmin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
 		}
-		$feedback = $this->feedbackModel->findAll();
+		$feedback = $this->feedbackModel->orderBy('id_feedback', 'desc')->findAll();
 		$data = [
 			'title' => 'Feedback',
 			'feedback' => $feedback
@@ -129,22 +129,6 @@ class SuperAdmin extends BaseController
 		echo view('layout/header', $data);
 		echo view('layout/sidebar');
 		echo view('admin/reportfeedback', $data);
-		echo view('layout/footer');
-	}
-
-	public function pengumuman()
-	{
-		if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
-		$pengumuman = $this->pengumumanModel->findAll();
-		$data = [
-			'title' => 'Pengumuman',
-			'pengumuman' => $pengumuman
-		];
-		echo view('layout/header', $data);
-		echo view('layout/sidebar');
-		echo view('admin/pengumuman/index', $data);
 		echo view('layout/footer');
 	}
 }

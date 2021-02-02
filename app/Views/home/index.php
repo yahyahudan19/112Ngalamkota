@@ -178,7 +178,7 @@
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
                             <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                             <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                            <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            <a href="<?= $val['link_news'] ?>" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                         </div>
                     </div>
                 <?php
@@ -190,7 +190,7 @@
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
                             <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                             <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                            <a href="javascript: void(0);" class="btn btn-primary">Find out more <i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            <a href="javascript: void(0);" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                         </div>
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">
@@ -220,7 +220,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2 class="fw-bold mb-3">Contact Us</h2>
+                    <h2 class="fw-bold mb-3">Kontak Kami</h2>
                     <p class="text-muted mb-5">Ada masalah dengan Layanan Ngalam 112 ? langsung saja hubungi kami :).</p>
                     <p class="text-muted mt-5 mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="mail"></i>
                         nccngalam112@gmail.com</p>
@@ -228,11 +228,9 @@
                         0341-3013186</p>
                     <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
                         Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
-                    <ul class="list-inline pt-4">
-                        <li class="list-inline-item">
-                            <a href="https://instagram.com/ngalam112?igshid=lzg9efkue24i" class="social-icon icon-mono avatar-xs rounded-circle"><i class="icon-xs" data-feather="instagram"></i></a>
-                        </li>
-                    </ul>
+                    <a href="https://instagram.com/ngalam112" class="text-muted mb-3">
+                        <i class="icon-xs" data-feather="instagram"></i>
+                        &nbsp @ngalam112</a>
                 </div>
                 <!-- end col -->
                 <div class="col-lg-5 ms-lg-auto">

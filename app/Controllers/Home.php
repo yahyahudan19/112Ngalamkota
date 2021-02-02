@@ -18,7 +18,7 @@ class Home extends BaseController
 		}
 		// $news = $this->newsModel->findAll();
 		// $pengumuman = $this->pengumumanModel->findAll();
-		$news = $this->newsModel->where('visible_news', "1")->findAll();
+		$news = $this->newsModel->where('visible_news', "1")->orderBy('date_news', 'desc')->findAll();
 		$data = [
 			'news' => $news
 		];

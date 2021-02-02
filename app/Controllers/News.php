@@ -17,7 +17,7 @@ class News extends BaseController
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
-        $news = $this->newsModel->findAll();
+        $news = $this->newsModel->orderBy('id_news', 'desc')->findAll();
         $data = [
             'title' => 'Berita',
             'news' => $news
