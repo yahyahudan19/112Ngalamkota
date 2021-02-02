@@ -75,6 +75,7 @@ class Report extends BaseController
 
             // buat value id random di table uploads
             $data_uploads = [
+                'id_admin' => session()->get('id_user'),
                 'nama_petugas' => $this->request->getVar('petugas'),
                 'no_tiket' => $this->request->getVar('no_tiket'),
                 'kejadian' => $this->request->getVar('kejadian'),
