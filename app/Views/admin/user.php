@@ -90,12 +90,10 @@
                        </div>
                        <div class="form-group">
                          <label>Level</label>
-                         <div class="col-sm">
                            <select name="level" class="form-control">
                              <option>Admin</option>
                              <option>Super Admin</option>
                            </select>
-                         </div>
                        </div>
                        <div class="modal-footer">
                          <button type="submit" class="btn btn-success">Simpan</button>

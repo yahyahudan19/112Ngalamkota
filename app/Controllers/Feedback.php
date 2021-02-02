@@ -17,7 +17,7 @@ class Feedback extends BaseController
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
-        $feedback = $this->feedbackModel->findAll();
+        $feedback = $this->feedbackModel->orderBy('id_feedback', 'desc')->findAll();
         $data = [
             'title' => 'Feedback',
             'feedback' => $feedback

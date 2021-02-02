@@ -18,7 +18,7 @@ class User extends BaseController
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
-        $user = $this->userModel->findAll();
+        $user = $this->userModel->orderBy('id_user', 'desc')->findAll();
         $data = [
             'user' => $user
         ];

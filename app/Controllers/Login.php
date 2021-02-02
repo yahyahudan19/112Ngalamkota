@@ -39,6 +39,7 @@ class Login extends BaseController
 			session()->set('username', $auth['username']);
 			session()->set('nama_petugas', $auth['nama_petugas']);
 			session()->set('level', $auth['level']);
+			session()->set('id_user', $auth['id_user']);
 			if ($auth["level"] == "Super Admin") {
 				return redirect()->to(base_url('/superadmin'));
 			} else if ($auth["level"] == "Admin") {
