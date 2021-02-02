@@ -25,10 +25,8 @@
           <div class="col-lg-12">
             <div class="block">
               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
-              <!-- <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download Excel</button> -->
-              <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-cloud-download"></i>Download</a>
-              <!-- <button type="submit" class="btn btn-info center">Cari Data</button>
-                <button type="button" class="btn btn-primary"><i class="fa  fa-cloud-download"></i> Download</button> -->
+              <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-file-excel-o"></i>Excel</a>
+              <a href="/report/excel/" class="btn btn-warning" type="button"><i class="fa  fa-file-pdf-o"></i>Pdf</a>
               <br>
               <br>
               <!-- <div class="title"><strong>Tabel Kejadian</strong></div> -->
@@ -44,6 +42,7 @@
                       <th>Kejadian</th>
                       <th>Nama Pelapor</th>
                       <th>Lokasi Kejadian</th>
+                      <th>Dokumentasi</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -60,6 +59,7 @@
                         <td><?= $r['kejadian']; ?></td>
                         <td><?= $r['nama_pelapor']; ?></td>
                         <td><?= $r['lokasi_kejadian']; ?></td>
+                        <td><a href="#" class="btn btn-success btn-sm">Download</a></td>
                         <td>
                           <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                           <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
