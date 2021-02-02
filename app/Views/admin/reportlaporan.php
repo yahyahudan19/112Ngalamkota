@@ -36,7 +36,7 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>No. Tiket</th>
+                      <th>Nomor Tiket</th>
                       <th>Tanggal Kejadian</th>
                       <th>Nama Petugas</th>
                       <th>Kejadian</th>
@@ -59,7 +59,7 @@
                         <td><?= $r['kejadian']; ?></td>
                         <td><?= $r['nama_pelapor']; ?></td>
                         <td><?= $r['lokasi_kejadian']; ?></td>
-                        <td><a href="#" class="btn btn-success btn-sm">Download</a></td>
+                        <td><a href="/report/download/<?= $r['id_pelapor']; ?>" class="btn btn-success btn-sm">Download</a></td>
                         <td>
                           <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                           <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
@@ -106,7 +106,7 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-lg-6">
-                            <label class="form-control-label">Petugas</label>
+                            <label class="form-control-label">Nama Petugas</label>
                             <select name="petugas" class="form-control" id="petugas">
                               <option value="">- Pilih -</option>
                               <?php

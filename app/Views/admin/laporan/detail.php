@@ -30,6 +30,16 @@
                 <!-- <div class="title"><strong>Detail Laporan</strong></div> -->
                 <form class="form-horizontal">
                   <div class="form-group row">
+                    <label class="col-sm-1 form-control-label"><strong>Nomor Tiket</strong></label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" value="<?= $reportL['no_tiket'] ?>" readonly>
+                    </div>
+                    <label class="col-sm-1 form-control-label"><strong>Nama Petugas</strong></label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" value="<?= $reportL['nama_petugas'] ?>" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group row">
                     <label class="col-sm-1 form-control-label"><strong>Tanggal Kejadian</strong></label>
                     <div class="col-sm-3">
                       <input type="text" class="form-control" value="<?= $reportL['tanggal'] ?>" readonly>
@@ -62,7 +72,7 @@
                   <?php
                   foreach ($detail as $row) {
                   ?>
-                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" height="300" width="500" class="m-2" />
+                    <img src="<?= base_url() ?>/uploads/<?= $row['gambar'] ?>" height="300" width="500" class="ml-1 mb-4" />
                   <?php
                   }
                   ?>

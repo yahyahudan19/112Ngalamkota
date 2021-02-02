@@ -57,8 +57,8 @@
                           <div class="line"></div>
                           <div class="form-group row">
                             <label class="col-sm-1 form-control-label">Dokumentasi</label>
-                            <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" height="300" width="500" class="mt-4" />
                           </div>
+                            <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" height="300" width="500"  class="ml-0 mb-4" />
                           <div class="form-group row">
                             <div class="col-lg-12 ml-auto">
                               <a href="<?= base_url('news') ?>" class="btn btn-primary">Kembali</a>
