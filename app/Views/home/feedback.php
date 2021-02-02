@@ -95,24 +95,24 @@
                                 <div class="col-lg-6">
                                     <div class="mb-4">
                                         <label for="nama_feedback" class="text-muted form-label"><strong>Nama Pelapor</strong></label>
-                                        <input name="nama_feedback" id="nama_feedback" type="text" class="form-control" placeholder="Nama">
+                                        <input name="nama_feedback" id="nama_feedback" type="text" class="form-control" placeholder="Nama" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="mb-4">
                                         <label for="noHp_feedback" class="text-muted form-label"><strong>No.Telp Pelapor</strong></label>
-                                        <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control" placeholder="No.Telp">
+                                        <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control" placeholder="NomorTelepon" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-4">
                                         <label for="alamat_feedback" class="text-muted form-label"><strong>Alamat Pelapor</strong></label>
-                                        <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback" placeholder="Alamat" />
+                                        <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback" placeholder="Alamat" required/>
                                     </div>
                                     <div class="mb-4">
                                         <!-- <label for="penyebab_feedback" class="text-muted form-label">Penyebab</label> -->
                                         <label for="penyebab_feedback" class="text-muted form-label"><strong>Kejadian Yang Dilaporkan</strong></label>
-                                        <select name="penyebab_feedback" class="form-control" id="penyebab_feedback">
+                                        <select name="penyebab_feedback" class="form-control" id="penyebab_feedback" required>
                                             <option value="">- Pilih -</option>
                                             <option value="Kebakaran">Kebakaran</option>
                                             <option value="Pohon Tumbang">Pohon Tumbang</option>
@@ -127,51 +127,51 @@
                                     <div class="mb-4">
                                         <label for="subject" class="text-muted form-label"><strong>Apa Benar Bapak/Ibu pernah Menghubungi Ngalam 112 ?</strong></label>
                                         <div class="form-group">
-                                            <input type="radio" name="q1_feedback" id="q1_feedback" value="iya"> Iya
+                                            <input type="radio" name="q1_feedback" id="q1_feedback" value="iya" required> Iya
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q1_feedback" id="q1_feedback" value="tidak"> Tidak
+                                            <input type="radio" name="q1_feedback" id="q1_feedback" value="tidak" required> Tidak
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <label for="subject" class="text-muted form-label"><strong>Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</strong></label>
                                         <div class="form-group">
-                                            <input type="radio" name="q2_feedback" id="q2_feedback" value="iya"> Iya
+                                            <input type="radio" name="q2_feedback" id="q2_feedback" value="iya" required> Iya
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q2_feedback" id="q2_feedback" value="tidak"> Tidak
+                                            <input type="radio" name="q2_feedback" id="q2_feedback" value="tidak" required> Tidak
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <label for="subject" class="text-muted form-label"><strong>Menurut Bapak/Ibu, Apakah Pelayanan Ngalam 112 dibutuhkan atau Tidak ?</strong></label>
                                         <div class="form-group">
-                                            <input type="radio" name="q3_feedback" id="q3_feedback" value="iya"> Dibutuhkan
+                                            <input type="radio" name="q3_feedback" id="q3_feedback" value="iya" required> Dibutuhkan
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q3_feedback" id="q3_feedback" value="tidak"> Tidak
+                                            <input type="radio" name="q3_feedback" id="q3_feedback" value="tidak" required> Tidak
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <label for="subject" class="text-muted form-label"><strong>Bagaimana Pendapat Bapak/Ibu tentang Pelayanan Ngalam 112 ? Berikan Penilaian !</strong></label>
                                         <div class="form-group">
-                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Bagus"> Sangat Bagus
+                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Bagus" required> Sangat Bagus
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Bagus"> Bagus
+                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Bagus" required> Bagus
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Cukup"> Cukup
+                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Cukup" required> Cukup
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Kurang"> Kurang
+                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Kurang" required> Kurang
                                         </div>
                                         <div class="form-group">
-                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Kurang"> Sangat Kurang
+                                            <input type="radio" name="q4_feedback" id="q4_feedback" value="Sangat Kurang" required> Sangat Kurang
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <label for="q5_feedback" class="text-muted form-label"><strong>Apakah ada saran untuk layanan 112 ?</strong></label>
-                                        <textarea name="q5_feedback" id="q5_feedback" rows="4" class="form-control" placeholder="Saran layanan 112"></textarea>
+                                        <textarea name="q5_feedback" id="q5_feedback" rows="4" class="form-control" placeholder="Saran layanan 112" required></textarea>
                                     </div>
                                     <button type="submit" id="submit" name="send" class="btn btn-primary">Kirim</button>
 

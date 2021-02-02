@@ -19,11 +19,11 @@ class Report extends BaseController
     public function index()
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
+            return redirect()->to(base_url('/login'));
         }
-        if(session()->get('level') == "Super Admin"){
+        if (session()->get('level') == "Super Admin") {
             $reportL = $this->reportlaporanModel->orderBy('id_pelapor', 'desc')->findAll();
-        }else{
+        } else {
             $reportL = $this->reportlaporanModel->where('id_admin', session()->get('id_user'))->orderBy('id_pelapor', 'desc')->findAll();
         }
         $dtPetugas = $this->userModel->findAll();
@@ -38,11 +38,37 @@ class Report extends BaseController
         echo view('layout/footer');
     }
 
+    public function download($id_pelapor)
+    {
+        $query = $this->reportlaporanModel->where('id_pelapor', $id_pelapor)->findAll();
+        $id = 0;
+        $noTiket = 0;
+        foreach ($query as $key) {
+            $id = $key['id_pelapor'];
+            $noTiket = $key['no_tiket'];
+        }
+
+        $query2 = $this->detailLaporanModel->where('report_id', $id)->findAll();
+
+
+        foreach ($query2 as $key) {
+            # code...
+            // $url = ROOTPATH . "public/uploads/" . $key['gambar'];
+            $url = ROOTPATH . "public/uploads/" . $key['gambar'];
+            return $this->response->download($key['gambar'], $url);
+            // file_get_contents($url);
+            // print_r($url);
+        }
+
+        session()->setFlashdata('pesan', 'Gambar berhasil diunduh.');
+        return redirect()->to(base_url('/admin/reportLaporan'));
+    }
+
     public function addReportL()
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
+            return redirect()->to(base_url('/login'));
+        }
         // dapatkan input file berupa array
         $files = $this->request->getFiles();
         if ($files) {
@@ -87,8 +113,8 @@ class Report extends BaseController
     public function detailReport($id)
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
+            return redirect()->to(base_url('/login'));
+        }
         $reportL = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
         $data = [
@@ -104,8 +130,8 @@ class Report extends BaseController
     public function delete($id_pelapor)
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
+            return redirect()->to(base_url('/login'));
+        }
         $this->reportlaporanModel->delete_data($id_pelapor);
         session()->setFlashdata('pesan', 'Laporan Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
@@ -114,10 +140,14 @@ class Report extends BaseController
     public function edit()
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
+            return redirect()->to(base_url('/login'));
+        }
+        
         $id_pelapor = $this->request->getVar('id');
         $data_uploads = [
+            'id_admin' => session()->get('id_user'),
+            'nama_petugas' => $this->request->getVar('petugas'),
+            'no_tiket' => $this->request->getVar('no_tiket'),
             'kejadian' => $this->request->getVar('kejadian'),
             'tanggal' => $this->request->getVar('tanggal_report'),
             'nama_pelapor' => $this->request->getVar('nama_pelapor'),
@@ -151,18 +181,25 @@ class Report extends BaseController
     public function editReport($id)
     {
         if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
+            return redirect()->to(base_url('/login'));
+        }
         $ReportData = $this->reportlaporanModel->where('id_pelapor', $id)->findAll();
         $detail = $this->detailLaporanModel->where('report_id', $id)->findAll();
+        $dtPetugas = $this->userModel->findAll();
         $data = [
             'reportdata' => $ReportData,
-            'detail' => $detail
+            'detail' => $detail,
+            'dtPetugas' => $dtPetugas,
+
         ];
         // dd($data);
         echo view('layout/header');
         echo view('layout/sidebar');
         echo view('admin/laporan/edit', $data);
         echo view('layout/footer');
+    }
+
+    public function exportReportKejadian(){
+        $dataReportKejadian = $this->reportlaporanModel->findAll();
     }
 }

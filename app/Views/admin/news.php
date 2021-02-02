@@ -62,7 +62,7 @@
                                 <?= $r['visible_news'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
                               </a>
                             </td>
-                            <td><a href="#" class="btn btn-success btn-sm">Download</a></td>
+                            <td><a href="<?= base_url() ?>/uploads/<?= $r['dokumentasi_news'] ?>" class="btn btn-success btn-sm" download="<?= $r['judul_news'] ?>">Download</a></td>
                             <td>
                               <a href="/news/detailNews/<?= $r['id_news']; ?>" class="btn btn-info btn-sm">Detail</a>
                               <a class="btn btn-warning btn-sm" href="/news/editNews/<?= $r['id_news']; ?>">Edit</a>

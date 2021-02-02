@@ -16,7 +16,7 @@
      </div>
    <?php endif; ?>
    <!-- End FlashMessage -->
-   
+
    <!-- Main content -->
    <div class="content">
      <!-- Small boxes (Stat box) -->
@@ -55,16 +55,21 @@
                  <label class="col-sm-10 form-control-label"><strong>Isi</strong></label>
                  <textarea class="form-control" name="isi_news" id="isi_news" required><?= $newsdata[0]['isi_news'] ?></textarea>
                </div>
-               <div class="form-group col-lg-5">
+               <div class="form-group col-lg-4">
+               </div>
+               <div class="form-group col-lg-8">
                  <label class="col-sm-1 form-control-label"><strong>Dokumentasi</strong></label>
-                 <input type="file" class="dropify" value="" name="dokumentasiNews" id="dokumentasiNews">
-                 <small class="help-block-none">Abaikan jika tidak ingin mengubah dokumen.</small>
+               </div>
+               <img src="<?= base_url() ?>/uploads/<?= $newsdata[0]['dokumentasi_news'] ?>" height="300" width="500" class="ml-3 mb-4" />
+               <input type="file" class="dropify" value="" name="dokumentasiNews" id="dokumentasiNews">
+               <small class="help-block-none">Abaikan jika tidak ingin mengubah dokumen.</small>
+               <div class="form-group col-lg-12">
                </div>
                <div class="form-group col-lg-1">
                  <button type="submit" class="btn btn-warning">Update</a>
                </div>
                <div class="form-group col-lg-1">
-                    <a href="<?= base_url('news') ?>" class="btn btn-primary">Kembali</a>
+                 <a href="<?= base_url('news') ?>" class="btn btn-primary">Kembali</a>
                </div>
              </form>
            </div>
