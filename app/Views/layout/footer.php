@@ -185,7 +185,7 @@
          })(jQuery);
      </script>
 
-     <script>
+     <!-- <script>
          $(function() {
              //Laporan Feedback
              var data = [{
@@ -248,7 +248,7 @@
              });
 
          })(jQuery);
-     </script>
+     </script> -->
 
 
  </body>
