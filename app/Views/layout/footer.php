@@ -29,27 +29,20 @@
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
-         //  $('#rfeedbackTable').DataTable({
-         //      dom: 'Bfrtip',
-         //      buttons: [
-         //          'csv', 'excel', 'pdf'
-         //      ]
-         //  });
-<<<<<<< HEAD
-         $('#rlaporanTable').DataTable({
+         $('#rfeedbackTable').DataTable({
              dom: 'Bfrtip',
              buttons: [
                  'csv', 'excel', 'pdf'
              ]
          });
-=======
-         //   $('#rlaporanTable').DataTable({
-         //       dom: 'Bfrtip',
-         //       buttons: [
-         //           'csv', 'excel', 'pdf'
-         //       ]
-         //   });
->>>>>>> 6276fe9cb50872f87ef019dd05c525c8b4455055
+
+         //  $('#rlaporanTable').DataTable({
+         //      dom: 'Bfrtip',
+         //      buttons: [
+         //          'csv', 'excel', 'pdf'
+         //      ]
+         //  });
+
          $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
@@ -264,7 +257,6 @@
 
          })(jQuery);
      </script>
-
 
  </body>
 
