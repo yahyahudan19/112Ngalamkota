@@ -46,14 +46,25 @@
                  <label class="col-sm-1 form-control-label"><strong>Judul</strong></label>
                  <input type="text" class="form-control" value="<?= $newsdata[0]['judul_news'] ?>" name="judul_news" id="judul_news" required>
                </div>
-               <div class="form-group col-lg-5">
-                 <label class="col-sm-1 form-control-label"><strong>Link</strong></label>
-                 <input type="text" class="form-control" value="<?= $newsdata[0]['link_news'] ?>" name="link_news" id="link_news" required>
-                 <small class="help-block-none">Link sumber berita.</small>
+               <div class="form-group col-lg-7">
+                 <label class="col-sm-10 form-control-label"><strong>Isi 1 </strong></label>
+                 <textarea class="form-control" name="isi_news" id="isi_news" placeholder="Paragraf 1" required><?= $newsdata[0]['isi_news'] ?></textarea>
+                 <small class="help-block-none">Paragraf 1</small>
                </div>
                <div class="form-group col-lg-7">
-                 <label class="col-sm-10 form-control-label"><strong>Isi</strong></label>
-                 <textarea class="form-control" name="isi_news" id="isi_news" required><?= $newsdata[0]['isi_news'] ?></textarea>
+                 <label class="col-sm-10 form-control-label"><strong>Isi 2</strong></label>
+                 <textarea class="form-control" name="isi2_news" id="isi2_news" placeholder="Paragraf 2"><?= $newsdata[0]['isi2_news'] ?></textarea>
+                 <small class="help-block-none">Paragraf 2</small>
+               </div>
+               <div class="form-group col-lg-7">
+                 <label class="col-sm-10 form-control-label"><strong>Isi 3</strong></label>
+                 <textarea class="form-control" name="isi3_news" id="isi3_news" placeholder="Paragraf 3"><?= $newsdata[0]['isi3_news'] ?></textarea>
+                 <small class="help-block-none">Paragraf 3</small>
+               </div>
+               <div class="form-group col-lg-7">
+                 <label class="col-sm-10 form-control-label"><strong>Isi 4</strong></label>
+                 <textarea class="form-control" name="isi4_news" id="isi4_news" placeholder="Paragraf 4"><?= $newsdata[0]['isi4_news'] ?></textarea>
+                 <small class="help-block-none">Paragraf 4</small>
                </div>
                <div class="form-group col-lg-4">
                </div>
