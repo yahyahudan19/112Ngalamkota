@@ -105,23 +105,23 @@
         </div>
         <div class="col-lg-6  col-xs-6">
           <div class=" info-box">
-          <div class="col-12">
-            <div class="d-flex flex-wrap">
-              <div>
-                <h4>Laporan Kejadian</h4>
+            <div class="col-12">
+              <div class="d-flex flex-wrap">
+                <div>
+                  <h4>Laporan Kejadian</h4>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <canvas id="pie-chart-laporan" height="200"></canvas>
+            <div>
+              <canvas id="pie-chart-laporan" height="250"></canvas>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-xs-6">
-      </div>
-      <!-- /.col -->
-      <!-- chart -->
-      <!-- <div class="col-lg-6">
+        <div class="col-lg-3 col-xs-6">
+        </div>
+        <!-- /.col -->
+        <!-- chart -->
+        <!-- <div class="col-lg-6">
           <div class="info-box">
             <div class="col-12">
               <div class="d-flex flex-wrap">
@@ -135,9 +135,9 @@
             </div>
           </div>
         </div> -->
-    </div>
-    <!-- /.content -->
-  <?php
+      </div>
+      <!-- /.content -->
+    <?php
   }
-  ?>
-</div>
+    ?>
+    </div>
