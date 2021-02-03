@@ -29,19 +29,19 @@
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
-//          $('#rfeedbackTable').DataTable({
-//              dom: 'Bfrtip',
-//              buttons: [
-//                  'csv', 'excel', 'pdf'
-//              ]
-//          });
-       
-           $('#rlaporanTable').DataTable({
-               dom: 'Bfrtip',
-               buttons: [
-                   'csv', 'excel', 'pdf'
-               ]
-           });
+         //          $('#rfeedbackTable').DataTable({
+         //              dom: 'Bfrtip',
+         //              buttons: [
+         //                  'csv', 'excel', 'pdf'
+         //              ]
+         //          });
+
+         $('#rlaporanTable').DataTable({
+             dom: 'Bfrtip',
+             buttons: [
+                 'csv', 'excel', 'pdf'
+             ]
+         });
          $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
@@ -112,6 +112,7 @@
         ?>
 
      <script>
+         (jQuery);
          $(function() {
 
              //  Laporan Laporan
@@ -189,10 +190,11 @@
                  options: options
              });
 
-         })(jQuery);
+         })
      </script>
 
      <script>
+         (jQuery);
          $(function() {
              //Laporan Feedback
              var data = [{
@@ -254,7 +256,7 @@
                  options: options
              });
 
-         })(jQuery);
+         })
      </script>
 
  </body>

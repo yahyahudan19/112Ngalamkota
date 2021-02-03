@@ -64,7 +64,10 @@
                     <span class="badge badge-soft-primary"><?= $news['tagline_news']; ?></span>
                     <h6 class="font-size-15 my-2"><?= $news['date_news']; ?></h6>
                     <h2 class="font-size-20 my-2"><?= $news['judul_news']; ?></h2>
-                    <p class="mb-5 text-muted5"><?= $news['isi_news'] ?>.</p>
+                    <p class="mb-3 text-muted5"><?= $news['isi_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi2_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi3_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi4_news'] ?></p>
                     <!-- <a href="/home" class="btn btn-primary me-2">Kembali Ke Beranda<i class="icon-sm ms-1" data-feather="arrow-right"></i></a> -->
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">

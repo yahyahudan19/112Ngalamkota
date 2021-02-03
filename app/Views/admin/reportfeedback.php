@@ -46,8 +46,8 @@
                          <th>Q1</th>
                          <th>Q2</th>
                          <th>Q3</th>
-                         <th>Q4</th>
-                         <th>Q5</th>
+                         <th>Penilaian</th>
+                         <th>Saran</th>
                          <th>Action</th>
                        </tr>
                      </thead>
