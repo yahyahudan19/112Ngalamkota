@@ -46,7 +46,7 @@
                         <a href="/home" class="nav-link">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/home/feedback" class="nav-link active">Feedback</a>
+                        <a href="#" class="nav-link active">News</a>
                     </li>
                 </ul>
             </div>
