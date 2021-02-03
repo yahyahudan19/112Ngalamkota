@@ -28,20 +28,19 @@
      $(document).ready(function() {
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable();
          $('#rfeedbackTable').DataTable({
+             //  dom: 'Bfrtip',
+             //  buttons: [
+             //      'csv', 'excel', 'pdf'
+             //  ]
+         });
+
+         $('#rlaporanTable').DataTable({
              dom: 'Bfrtip',
              buttons: [
                  'csv', 'excel', 'pdf'
              ]
          });
-
-         //  $('#rlaporanTable').DataTable({
-         //      dom: 'Bfrtip',
-         //      buttons: [
-         //          'csv', 'excel', 'pdf'
-         //      ]
-         //  });
 
          $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
@@ -262,6 +261,7 @@
 
  </html>
 
+ <br><br><br>
 
  <!-- /.content-wrapper -->
  <footer class="main-footer fix-bottom">
