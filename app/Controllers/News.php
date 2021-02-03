@@ -172,4 +172,10 @@ class News extends BaseController
         ], $id_news);
         return redirect()->to(base_url('superadmin/news'));
     }
+    
+    public function detailInfoNews($id)
+    {
+        $news = $this->newsModel->where('id_news', $id)->first();
+        echo view('home/news', ['news' => $news]);
+    }
 }

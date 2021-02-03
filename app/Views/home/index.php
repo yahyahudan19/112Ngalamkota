@@ -178,7 +178,7 @@
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
                             <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                             <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                            <a href="<?= $val['link_news'] ?>" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            <a href="/news/detailInfoNews/<?= $val['id_news']; ?>" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                         </div>
                     </div>
                 <?php
@@ -190,7 +190,7 @@
                             <h6 class="font-size-15 my-2"><?= $val['date_news']; ?></h6>
                             <h2 class="font-size-20 my-2"><?= $val['judul_news']; ?></h2>
                             <p class="text-muted mb-5"><?= $val['isi_news'] ?>.</p>
-                            <a href="javascript: void(0);" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
+                            <a href="/news/detailInfoNews/<?= $val['id_news']; ?>" class="btn btn-primary">Info Selanjutnya<i class="icon-xs ms-2" data-feather="arrow-right"></i></a>
                         </div>
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">

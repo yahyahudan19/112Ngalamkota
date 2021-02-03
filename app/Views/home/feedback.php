@@ -107,7 +107,7 @@
                                 <div class="col-md-12">
                                     <div class="mb-4">
                                         <label for="alamat_feedback" class="text-muted form-label"><strong>Alamat Pelapor</strong></label>
-                                        <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback" placeholder="Alamat" required/>
+                                        <input type="text" class="form-control" id="alamat_feedback" name="alamat_feedback" placeholder="Alamat" required />
                                     </div>
                                     <div class="mb-4">
                                         <!-- <label for="penyebab_feedback" class="text-muted form-label">Penyebab</label> -->
@@ -211,6 +211,12 @@
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Kerja Sama</h4>
+                                <img src="<?= base_url() ?>/templatepage/images/logo/KerjaSama.png" alt="" class="" height="220" /></a>
                             </div>
                         </div>
                     </div>
