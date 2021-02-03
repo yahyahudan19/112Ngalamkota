@@ -40,28 +40,28 @@ class Report extends BaseController
 
     public function download($id_pelapor)
     {
-        $query = $this->reportlaporanModel->where('id_pelapor', $id_pelapor)->findAll();
-        $id = 0;
-        $noTiket = 0;
-        foreach ($query as $key) {
-            $id = $key['id_pelapor'];
-            $noTiket = $key['no_tiket'];
-        }
+        // $query = $this->reportlaporanModel->where('id_pelapor', $id_pelapor)->findAll();
+        // $id = 0;
+        // $noTiket = 0;
+        // foreach ($query as $key) {
+        //     $id = $key['id_pelapor'];
+        //     $noTiket = $key['no_tiket'];
+        // }
 
-        $query2 = $this->detailLaporanModel->where('report_id', $id)->findAll();
+        // $query2 = $this->detailLaporanModel->where('report_id', $id)->findAll();
 
 
-        foreach ($query2 as $key) {
-            # code...
-            // $url = ROOTPATH . "public/uploads/" . $key['gambar'];
-            $url = ROOTPATH . "public/uploads/" . $key['gambar'];
-            return $this->response->download($key['gambar'], $url);
-            // file_get_contents($url);
-            // print_r($url);
-        }
-
-        session()->setFlashdata('pesan', 'Gambar berhasil diunduh.');
-        return redirect()->to(base_url('/admin/reportLaporan'));
+        // foreach ($query2 as $key) {
+        //     # code...
+        //     // $url = ROOTPATH . "public/uploads/" . $key['gambar'];
+        //     $url = ROOTPATH . "public/uploads/" . $key['gambar'];
+        //     // file_get_contents($url);
+        //     // print_r($url);
+        // }
+        // return $this->response->download($key['gambar'], $url);
+        // session()->setFlashdata('pesan', 'Gambar berhasil diunduh.');
+        // return redirect()->to(base_url('/admin/reportLaporan'));
+        $query = $this->load->library('zip');
     }
 
     public function addReportL()
