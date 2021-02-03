@@ -61,7 +61,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="200"></canvas>
+              <canvas id="pie-chart-laporan" height="250"></canvas>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-feedback" height="200"></canvas>
+              <canvas id="pie-chart-feedback" height="250"></canvas>
             </div>
           </div>
         </div>
@@ -131,16 +131,13 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="200"></canvas>
+              <canvas id="pie-chart-laporan" height="250"></canvas>
             </div>
           </div>
         </div> -->
     </div>
-    <!-- /.row -->
-    <!-- Main row -->
-</div>
-<!-- /.content -->
-<?php
+    <!-- /.content -->
+  <?php
   }
-?>
+  ?>
 </div>

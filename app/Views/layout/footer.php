@@ -15,7 +15,8 @@
  <!-- Chartjs JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 
  <!-- Data Table Link  -->
  <script src="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css"></script>
@@ -34,12 +35,21 @@
          //          'csv', 'excel', 'pdf'
          //      ]
          //  });
+<<<<<<< HEAD
          $('#rlaporanTable').DataTable({
              dom: 'Bfrtip',
              buttons: [
                  'csv', 'excel', 'pdf'
              ]
          });
+=======
+         //   $('#rlaporanTable').DataTable({
+         //       dom: 'Bfrtip',
+         //       buttons: [
+         //           'csv', 'excel', 'pdf'
+         //       ]
+         //   });
+>>>>>>> 6276fe9cb50872f87ef019dd05c525c8b4455055
          $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
@@ -230,15 +240,15 @@
                  tooltips: {
                      enabled: true
                  },
-                 plugins: {
-                     datalabels: {
-                         formatter: (value, ctx) => {
-                             let sum = ctx.dataset._meta[0].total;
-                             let percentage = (value * 100 / sum).toFixed(2) + "%";
-                             return percentage;
-                         },
-                         color: '#fff',
-                     }
+                 options: {
+                     responsive: true,
+                     maintainAspectRatio: true,
+                     plugins: {
+                         labels: {
+                             render: 'percentage',
+                             precision: 2
+                         }
+                     },
                  }
              };
 
@@ -251,6 +261,7 @@
                  },
                  options: options
              });
+
          })(jQuery);
      </script>
 
@@ -259,10 +270,12 @@
 
  </html>
 
+
  <!-- /.content-wrapper -->
  <footer class="main-footer fix-bottom">
      <div class="pull-right hidden-xs">Version 1.0 Beta</div>
      Copyright © 2021 Dinas Komunikasi dan Informatika Kota Malang. All rights reserved.
  </footer>
  </div>
+
  <!-- ./wrapper -->
