@@ -44,29 +44,6 @@ class SuperAdmin extends BaseController
 		echo view('layout/footer');
 	}
 
-	public function bar_chart()
-	{
-		if (!(session()->username)) {
-			return redirect()->to(base_url('/login'));
-		}
-		$query =  $this->db->query("SELECT COUNT(id_pelapor) as count,MONTHNAME(created_at) as month_name FROM report WHERE YEAR(created_at) = '" . date('Y') . "'
-  
-		GROUP BY YEAR(created_at),MONTH(created_at)");
-
-		$record = $query->result();
-		$data = [];
-		foreach ($record as $row) {
-
-			$data['label'][] = $row->month_name;
-			$data['data'][] = (int) $row->count;
-		}
-
-		$data['chart_data'] = json_encode($data);
-
-		$this->load->view('pie-chart-laporan', $data);
-	}
-
-
 	public function user()
 	{
 		if (!(session()->username)) {

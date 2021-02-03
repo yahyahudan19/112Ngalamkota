@@ -29,12 +29,13 @@
          $('#newsTable').DataTable();
          $('#pengumumanTable').DataTable();
          $('#rfeedbackTable').DataTable();
-        //   $('#rfeedbackTable').DataTable({
-        //       dom: 'Bfrtip',
-        //       buttons: [
-        //           'csv', 'excel', 'pdf'
-        //       ]
-        //   });
+//          $('#rfeedbackTable').DataTable({
+//              dom: 'Bfrtip',
+//              buttons: [
+//                  'csv', 'excel', 'pdf'
+//              ]
+//          });
+       
            $('#rlaporanTable').DataTable({
                dom: 'Bfrtip',
                buttons: [
@@ -255,7 +256,6 @@
 
          })(jQuery);
      </script>
-
 
  </body>
 

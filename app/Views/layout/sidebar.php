@@ -7,7 +7,7 @@
         <div class="image text-center"><img src="<?= base_url() ?>/templatepage/images/ngalam.png" class="img-circle" alt="User Image"> </div>
         <div class="info">
           <p><?php echo $_SESSION["nama_petugas"]; ?></p>
-          <p>ONLINE</p>
+          <p>Online</p>
           <a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i></a>
         </div>
       </div>
