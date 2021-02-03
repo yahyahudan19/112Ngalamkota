@@ -42,7 +42,9 @@ class News extends BaseController
                 'tagline_news' => $this->request->getVar('tagline_news'),
                 'judul_news' => $this->request->getVar('judul_news'),
                 'isi_news' => $this->request->getVar('isi_news'),
-                'link_news' => $this->request->getVar('link_news'),
+                'isi2_news' => $this->request->getVar('isi2_news'),
+                'isi3_news' => $this->request->getVar('isi3_news'),
+                'isi4_news' => $this->request->getVar('isi4_news'),
                 'date_news' => $this->request->getVar('date_news'),
                 'dokumentasi_news' => $imagename,
             ];
@@ -80,7 +82,9 @@ class News extends BaseController
                 'tagline_news' => $this->request->getVar('tagline_news'),
                 'judul_news' => $this->request->getVar('judul_news'),
                 'isi_news' => $this->request->getVar('isi_news'),
-                'link_news' => $this->request->getVar('link_news'),
+                'isi2_news' => $this->request->getVar('isi2_news'),
+                'isi3_news' => $this->request->getVar('isi3_news'),
+                'isi4_news' => $this->request->getVar('isi4_news'),
                 'date_news' => $this->request->getVar('date_news'),
                 'dokumentasi_news' => $imagename,
             ];
@@ -95,7 +99,9 @@ class News extends BaseController
                 'tagline_news' => $this->request->getVar('tagline_news'),
                 'judul_news' => $this->request->getVar('judul_news'),
                 'isi_news' => $this->request->getVar('isi_news'),
-                'link_news' => $this->request->getVar('link_news'),
+                'isi2_news' => $this->request->getVar('isi2_news'),
+                'isi3_news' => $this->request->getVar('isi3_news'),
+                'isi4_news' => $this->request->getVar('isi4_news'),
                 'date_news' => $this->request->getVar('date_news'),
             ];
             $this->newsModel->update_data($data_uploads, $id_news);
@@ -171,5 +177,11 @@ class News extends BaseController
             'visible_news' => $newVisible
         ], $id_news);
         return redirect()->to(base_url('superadmin/news'));
+    }
+
+    public function detailInfoNews($id)
+    {
+        $news = $this->newsModel->where('id_news', $id)->first();
+        echo view('home/news', ['news' => $news]);
     }
 }

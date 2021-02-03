@@ -41,7 +41,7 @@
         </div>
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
-          <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-bullhorn"></i></span>
+          <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-user"></i></span>
             <div class="info-box-content"> <span class="info-box-number"><?= $total_user ?></span> <span class="info-box-text">Total User</span></div>
             <!-- /.info-box-content -->
           </div>

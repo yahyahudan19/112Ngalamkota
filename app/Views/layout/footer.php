@@ -27,13 +27,20 @@
  <script>
      $(document).ready(function() {
          $('#newsTable').DataTable();
-         $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable({
-             //  dom: 'Bfrtip',
-             //  buttons: [
-             //      'csv', 'excel', 'pdf'
-             //  ]
+         $('#newsTable').DataTable({
+             dom: 'Bfrtip',
+             buttons: [
+                 'csv', 'excel', 'pdf'
+             ]
          });
+         $('#pengumumanTable').DataTable();
+         $('#rfeedbackTable').DataTable();
+         //          $('#rfeedbackTable').DataTable({
+         //              dom: 'Bfrtip',
+         //              buttons: [
+         //                  'csv', 'excel', 'pdf'
+         //              ]
+         //          });
 
          $('#rlaporanTable').DataTable({
              dom: 'Bfrtip',
@@ -112,6 +119,7 @@
         ?>
 
      <script>
+         (jQuery);
          $(function() {
 
              //  Laporan Laporan
@@ -148,6 +156,10 @@
                      <?php
                         $jumlah_pohontumbang = mysqli_query($koneksi, "select * from report where kejadian='pohon tumbang'");
                         echo mysqli_num_rows($jumlah_pohontumbang);
+                        ?>,
+                     <?php
+                        $jumlah_lainnya = mysqli_query($koneksi, "select * from report where kejadian='lainnya'");
+                        echo mysqli_num_rows($jumlah_lainnya);
                         ?>
                  ],
                  backgroundColor: [
@@ -158,7 +170,8 @@
                      'rgb(227, 5, 123)',
                      'rgb(19, 203, 209)',
                      'rgb(129, 132, 133)',
-                     'rgb(247, 146, 5)'
+                     'rgb(247, 146, 5)',
+                     'rgb(23, 16, 16)'
                  ],
                  borderColor: "#fff"
              }];
@@ -183,16 +196,17 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
-                     labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor', 'Pohon Tumbang'],
+                     labels: ['Angin Topan', 'Banjir', 'Gempa Bumi', 'Listrik Putus', 'Kebakaran', 'Kecelakaan', 'Tanah Longsor', 'Pohon Tumbang', 'Lainnya'],
                      datasets: data
                  },
                  options: options
              });
 
-         })(jQuery);
+         })
      </script>
 
      <script>
+         (jQuery);
          $(function() {
              //Laporan Feedback
              var data = [{
@@ -217,13 +231,18 @@
                         $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
                         echo mysqli_num_rows($jumlah_sangatkurang);
                         ?>,
+                     <?php
+                        $jumlah_lainnya = mysqli_query($koneksi, "select * from feedback where q4_feedback='lainnya'");
+                        echo mysqli_num_rows($jumlah_lainnya);
+                        ?>,
                  ],
                  backgroundColor: [
                      'rgb(242, 28, 17)',
                      'rgb(250, 238, 12)',
                      'rgb(99, 250, 12)',
                      'rgb(16, 40, 222)',
-                     'rgb(227, 5, 123)'
+                     'rgb(227, 5, 123)',
+                     'rgb(23, 16, 16)'
                  ],
                  borderColor: "#fff"
              }];
@@ -248,13 +267,13 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
-                     labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang'],
+                     labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang', 'Lainnya'],
                      datasets: data
                  },
                  options: options
              });
 
-         })(jQuery);
+         })
      </script>
 
  </body>

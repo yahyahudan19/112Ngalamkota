@@ -42,7 +42,8 @@
                       <th>Kejadian</th>
                       <th>Nama Pelapor</th>
                       <th>Lokasi Kejadian</th>
-                      <th>Dokumentasi</th>
+                      <th>Tindak Lanjut</th>
+                      <!-- <th>Dokumentasi</th> -->
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -59,7 +60,8 @@
                         <td><?= $r['kejadian']; ?></td>
                         <td><?= $r['nama_pelapor']; ?></td>
                         <td><?= $r['lokasi_kejadian']; ?></td>
-                        <td><a href="/report/download/<?= $r['id_pelapor']; ?>" class="btn btn-success btn-sm">Download</a></td>
+                        <td><?= $r['tindak_lanjut']; ?></td>
+                        <!-- <td><a href="/report/download/<?= $r['id_pelapor']; ?>" class="btn btn-success btn-sm">Download</a></td> -->
                         <td>
                           <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
                           <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>

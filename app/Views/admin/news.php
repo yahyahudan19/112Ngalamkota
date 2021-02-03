@@ -41,7 +41,6 @@
                           <th>Tanggal Dibuat</th>
                           <th>Tagline</th>
                           <th>Judul</th>
-                          <th>Link</th>
                           <th>Tampil</th>
                           <th>Dokumentasi</th>
                           <th>Action</th>
@@ -56,7 +55,6 @@
                             <td><?= $r['date_news']; ?></td>
                             <td><?= $r['tagline_news']; ?></td>
                             <td><?= $r['judul_news']; ?></td>
-                            <td><?= $r['link_news']; ?></td>
                             <td>
                               <a class="btn btn-dark btn-sm" href="/news/change_visible/<?= $r['id_news']; ?>">
                                 <?= $r['visible_news'] == "1" ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>' ?>
@@ -101,13 +99,20 @@
                           <input type="text" placeholder="Judul" class="form-control" id="judul_news" name="judul_news" required>
                         </div>
                         <div class="form-group">
-                          <label>Isi</label>
-                          <textarea class="form-control" id="isi_news" name="isi_news" required></textarea>
+                          <label>Isi 1</label>
+                          <textarea class="form-control" id="isi_news" name="isi_news" placeholder="Paragraf 1" required></textarea>
                         </div>
                         <div class="form-group">
-                          <label>Link</label>
-                          <input type="text" placeholder="Link" class="form-control" id="link_news" name="link_news" required>
-                          <small class="help-block-none">Link sumber berita.</small>
+                          <label>Isi 2</label>
+                          <textarea class="form-control" id="isi2_news" name="isi2_news" placeholder="Paragraf 2"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label>Isi 3</label>
+                          <textarea class="form-control" id="isi3_news" name="isi3_news" placeholder="Paragraf 3"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label>Isi 4</label>
+                          <textarea class="form-control" id="isi4_news" name="isi4_news" placeholder="Paragraf 4"></textarea>
                         </div>
                         <div class="form-group">
                           <label>Dokumentasi</label>
@@ -132,3 +137,22 @@
     </div>
     <!-- /.content -->
   </div>
+  
+  <!-- <?= $this->section('script') ?>
+  <script src="<?= base_url('ckeditor5-build-classic/ckeditor.js') ?>" type="text/javascript"></script>
+  <style>
+    .ck-editor__editable_inline {
+      min-height: 200px;
+    }
+  </style>
+  <script>
+    ClassicEditor
+      .create(document.querySelector('#isi_news'))
+      .then(editor => {
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+  <?= $this->endSection() ?> -->
