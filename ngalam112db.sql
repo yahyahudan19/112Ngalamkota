@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2021 at 02:01 PM
+-- Generation Time: Feb 03, 2021 at 02:27 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -70,9 +70,9 @@ INSERT INTO `detail_report` (`id`, `report_id`, `gambar`, `created_at`, `updated
 (68, 73, '1612258771_53fe1f41c11d92a7520b.jpg', '2021-02-02 09:39:31', '2021-02-02 09:39:31'),
 (69, 74, '1612258818_abea990dd8e78ab1dd3e.jpg', '2021-02-02 09:40:18', '2021-02-02 09:40:18'),
 (70, 75, '1612259058_e61601ea2d87291c48a8.jpg', '2021-02-02 09:44:18', '2021-02-02 09:44:18'),
-(71, 76, '1612259089_def240407dcdc2c001b8.png', '2021-02-02 09:44:49', '2021-02-02 09:44:49'),
-(72, 76, '1612259089_9ff8a99a728991ca68af.png', '2021-02-02 09:44:49', '2021-02-02 09:44:49'),
-(73, 76, '1612259089_b289535e33429b717d7c.png', '2021-02-02 09:44:49', '2021-02-02 09:44:49');
+(74, 76, '1612319679_dec85da4dfc67185f16c.jpg', '2021-02-03 02:34:39', '2021-02-03 02:34:39'),
+(75, 76, '1612319679_a6e695b52face7b36d64.jpg', '2021-02-03 02:34:39', '2021-02-03 02:34:39'),
+(76, 76, '1612319679_e7a9401ef8f94c8c35e3.jpeg', '2021-02-03 02:34:39', '2021-02-03 02:34:39');
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,9 @@ CREATE TABLE `news` (
   `tagline_news` varchar(125) NOT NULL,
   `judul_news` varchar(255) NOT NULL,
   `isi_news` text NOT NULL,
-  `link_news` varchar(125) NOT NULL,
+  `isi2_news` text NOT NULL,
+  `isi3_news` text NOT NULL,
+  `isi4_news` text NOT NULL,
   `date_news` varchar(125) NOT NULL,
   `dokumentasi_news` varchar(125) NOT NULL,
   `visible_news` tinyint(1) NOT NULL DEFAULT '1',
@@ -126,11 +128,8 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id_news`, `tagline_news`, `judul_news`, `isi_news`, `link_news`, `date_news`, `dokumentasi_news`, `visible_news`, `created_at`, `updated_at`) VALUES
-(34, 'Kebakaran', 'Kebakaran hutan', 'Hari ini terjadi kebakaran yang dahsyat yang melahap semua bangunan dan rumah warga setempat. Tidak ada korban jiwa saat terjadinya kebakaran ini.', 'https://www.liputan6.com/tag/kebakaran', '2021-02-25', '1612236525_a1441dbbd68e3a3ee04d.jpg', 1, '2021-02-02 03:51:35', '2021-02-02 03:51:35'),
-(36, 'aaaaaaaaaaaaa', 'kebakaran hutan', 'j', 'h', '2021-02-11', '1612237549_0b50725fc5d832ab3c29.png', 0, '2021-02-02 04:06:53', '2021-02-02 04:06:53'),
-(39, 'halo', 'q', 'a', 'ini link', '2021-02-02', '1612237845_0fec608094469679d990.png', 0, '2021-02-02 04:06:48', '2021-02-02 04:06:48'),
-(40, 'Kebakaran', 'ini judulnya yaa h', 'm', 'http://www.test.com', '2021-03-03', '1612253447_e336f8cc4cc3506aee8d.png', 1, '2021-02-02 08:10:47', '2021-02-02 08:10:47');
+INSERT INTO `news` (`id_news`, `tagline_news`, `judul_news`, `isi_news`, `isi2_news`, `isi3_news`, `isi4_news`, `date_news`, `dokumentasi_news`, `visible_news`, `created_at`, `updated_at`) VALUES
+(42, 'Kebakaran', 'Toko Bangunan di Ciledug Tangerang Kebakaran, Tak Ada Korban Jiwa', 'Jakarta - Sebuah toko bangunan berlokasi di Jalan Tanah Seratus, Sudimara Jaya, Ciledug, Kota Tangerang, mengalami kebakaran. Api membakar habis material yang ada di toko bangunan tersebut.\r\n\r\n\"Iya benar, sekarang prosesnya dalam pendinginan. Kita upayakan jangan sampai keluar api lagi,\" kata Darmawan, Kabid Kedaruratan dan Logistik BPBD Kota Tangerang, saat dihubungi, Rabu (3/2/2021).', 'Kebakaran itu terjadi pada pukul 13.00 WIB. Darmawan menyebut api hanya membakar satu bangunan di lokasi.\r\n\r\nSelain itu, Darmawan menyebut pihaknya masih mengumpulkan keterangan saksi untuk memperkirakan kerugian materi dari kebakaran tersebut.', 'Sementara itu, Kapolsek Ciledug Kompol Wisnu Wardhana menambahkan pihaknya memastikan tidak ada korban jiwa dari kebakaran tersebut. Penyebab kebakaran pun masih dalam penyelidikan.\r\n\r\n', '\"Api sudah padam, tidak ada korban jiwa. Kerugian materi belum bisa diperkirakan. (Penyebab) masih lidik (penyelidikan),\" pungkasnya.', '2021-02-03', '1612356426_af98f6f0167252865afc.jpeg', 1, '2021-02-03 12:47:06', '2021-02-03 12:47:06');
 
 -- --------------------------------------------------------
 
@@ -166,7 +165,7 @@ INSERT INTO `report` (`id_pelapor`, `id_admin`, `no_tiket`, `nama_petugas`, `kej
 (73, 0, '213', 'Intan Pariwara', 'Pohon Tumbang', 'Malang', '2021-02-09', 'Wahyu', 'Sudah ditangani Pemadammmmmmmmmmmmmmmmmmm', '2021-02-02 09:39:31', '2021-02-02 09:39:31'),
 (74, 0, '190', 'Intan Pariwara', 'Banjir', 'Malang', '2021-02-10', 'Wahyu', 'Sudah ditangani Pemadammmmmmmmmmmmmmmmmmmo', '2021-02-02 09:40:18', '2021-02-02 09:40:18'),
 (75, 12, '190', 'Intan Pariwara', 'Pohon Tumbang', 'Malang', '2021-02-02', 'Wahyu', 'Sudah ditangani PLN', '2021-02-02 09:44:18', '2021-02-02 09:44:18'),
-(76, 12, '190', 'Wahyuning', 'Pohon Tumbang', 'asdzxc', '2021-02-02', 'Irfak', 'Sudah ditangani PLN', '2021-02-02 09:44:49', '2021-02-02 09:44:49');
+(76, 6, '190', 'Wahyuning', 'Pohon Tumbang', 'asdzxc', '2021-02-02', 'Irfak', 'Sudah ditangani PLN', '2021-02-02 09:44:49', '2021-02-03 02:34:39');
 
 -- --------------------------------------------------------
 
@@ -239,7 +238,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_report`
 --
 ALTER TABLE `detail_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -251,7 +250,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id_news` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_news` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `report`
