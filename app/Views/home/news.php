@@ -46,7 +46,7 @@
                         <a href="/home" class="nav-link">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">News</a>
+                        <a href="/home/feedback" class="nav-link active">Detail Berita</a>
                     </li>
                 </ul>
             </div>
@@ -61,15 +61,18 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <i class="mb-4 icon-lg sw-1_5 text-primary" data-feather="sunrise"></i>
-                    <h1 class="font-weight-semibold mb-4 hero-6-title">$Judul</h1>
-                    <h3 class="font-weight-semibold mb-3 hero-3-title">$Tagline</h3>
-                    <p class="mb-5 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quasi obcaecati harum, optio excepturi fuga adipisci quaerat laudantium omnis, sequi odio aperiam vel et similique tenetur esse atque aspernatur illo!.</p>
-                    <p class="mb-5 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quasi obcaecati harum, optio excepturi fuga adipisci quaerat laudantium omnis, sequi odio aperiam vel et similique tenetur esse atque aspernatur illo!.</p>
+                    <span class="badge badge-soft-primary"><?= $news['tagline_news']; ?></span>
+                    <h6 class="font-size-15 my-2"><?= $news['date_news']; ?></h6>
+                    <h2 class="font-size-20 my-2"><?= $news['judul_news']; ?></h2>
+                    <p class="mb-3 text-muted5"><?= $news['isi_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi2_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi3_news'] ?></p>
+                    <p class="mb-3 text-muted5"><?= $news['isi4_news'] ?></p>
                     <!-- <a href="/home" class="btn btn-primary me-2">Kembali Ke Beranda<i class="icon-sm ms-1" data-feather="arrow-right"></i></a> -->
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
-                        <img src="<?= base_url() ?>/uploads/1610857573_3f365b2fd3e296f54f70.jpg" alt="" class="img-xl-responsive" height="400px" width="570px" />
+                        <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="400px" width="570px" />
                     </div>
                 </div>
             </div>
@@ -98,6 +101,12 @@
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="mt-4 mt-lg-0">
+                                <h4 class="text-white font-size-18 mb-3">Kerja Sama</h4>
+                                <img src="<?= base_url() ?>/templatepage/images/logo/KerjaSama.png" alt="" class="" height="220" /></a>
                             </div>
                         </div>
                     </div>

@@ -31,8 +31,12 @@ class Home extends BaseController
 		return view('home/feedback');
 	}
 
-	public function news(){
-		return view('home/news');
+	public function news()
+	{
+		$news = $this->newsModel->findAll();
+		$data = [
+			'news' => $news
+		];
+		return view('home/news', $data);
 	}
-
 }
