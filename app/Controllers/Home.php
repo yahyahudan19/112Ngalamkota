@@ -34,6 +34,9 @@ class Home extends BaseController
 	{
 		return view('home/feedback');
 	}
-	//--------------------------------------------------------------------
+
+	public function news(){
+		return view('home/news');
+	}
 
 }

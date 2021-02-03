@@ -272,7 +272,7 @@
                         <div class="col-lg-3 col-6">
                             <div class="mt-4 mt-lg-0">
                                 <h4 class="text-white font-size-18 mb-3">Kerja Sama</h4>
-                                <img src="<?= base_url() ?>/templatepage/images/logo/KerjaSama.png" alt="" class="" height="120" /></a>
+                                <img src="<?= base_url() ?>/templatepage/images/logo/KerjaSama.png" alt="" class="" height="220" /></a>
                             </div>
                         </div>
                     </div>

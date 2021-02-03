@@ -96,20 +96,32 @@
     <div class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-3 col-xs-12">
           <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
             <div class="info-box-content"> <span class="info-box-number"><?= $total_kejadian ?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
-        <div class="col-lg-3 col-xs-6">
+        <div class="col-lg-6  col-xs-6">
+          <div class=" info-box">
+          <div class="col-12">
+            <div class="d-flex flex-wrap">
+              <div>
+                <h4>Laporan Kejadian</h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <canvas id="pie-chart-laporan" height="200"></canvas>
+          </div>
         </div>
-        <div class="col-lg-3 col-xs-6">
-        </div>
-        <!-- /.col -->
-        <!-- chart -->
-        <div class="col-lg-6">
+      </div>
+      <div class="col-lg-3 col-xs-6">
+      </div>
+      <!-- /.col -->
+      <!-- chart -->
+      <!-- <div class="col-lg-6">
           <div class="info-box">
             <div class="col-12">
               <div class="d-flex flex-wrap">
@@ -122,13 +134,13 @@
               <canvas id="pie-chart-laporan" height="200"></canvas>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- /.row -->
-      <!-- Main row -->
+        </div> -->
     </div>
-    <!-- /.content -->
-  <?php
+    <!-- /.row -->
+    <!-- Main row -->
+</div>
+<!-- /.content -->
+<?php
   }
-  ?>
+?>
 </div>
