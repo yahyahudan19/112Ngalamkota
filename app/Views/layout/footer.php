@@ -26,7 +26,6 @@
  <!-- Data Table Script  -->
  <script>
      $(document).ready(function() {
-         $('#newsTable').DataTable();
          $('#newsTable').DataTable({
              dom: 'Bfrtip',
              buttons: [
@@ -34,22 +33,18 @@
              ]
          });
          $('#pengumumanTable').DataTable();
-         $('#rfeedbackTable').DataTable();
-         //          $('#rfeedbackTable').DataTable({
-         //              dom: 'Bfrtip',
-         //              buttons: [
-         //                  'csv', 'excel', 'pdf'
-         //              ]
-         //          });
-
+         $('#rfeedbackTable').DataTable({
+             dom: 'Bfrtip',
+             buttons: [
+                 'csv', 'excel', 'pdf'
+             ]
+         });
          $('#rlaporanTable').DataTable({
              dom: 'Bfrtip',
              buttons: [
                  'csv', 'excel', 'pdf'
              ]
          });
-
-         $('#rlaporanTable').DataTable();
          $('#userTable').DataTable();
      });
  </script>
