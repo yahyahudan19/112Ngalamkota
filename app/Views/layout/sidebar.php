@@ -8,7 +8,7 @@
         <div class="info">
           <p><?php echo $_SESSION["nama_petugas"]; ?></p>
           <p>Online</p>
-          <a href="/auth/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i></a>
+          <a href="/login/logout" onclick="return confirm('Apakah anda yakin ingin keluar ');"><i class="fa fa-power-off"></i></a>
         </div>
       </div>
 
