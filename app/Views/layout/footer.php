@@ -110,7 +110,6 @@
 
      <?php
         $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
-
         ?>
 
      <script>
