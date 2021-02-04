@@ -63,6 +63,35 @@
             <div>
               <canvas id="pie-chart-laporan" height="200"></canvas>
             </div>
+            <?php
+            $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
+            ?>
+            <br><br>
+            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="text-center">No</th>
+                  <th class="text-center">Kejadian</th>
+                  <th class="text-center">Jumlah Kejadian</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $no = 1;
+                $jumlah = null;
+                $data = mysqli_query($koneksi, "select kejadian, COUNT(*) as jumlah_kejadian from report GROUP BY kejadian DESC");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
+                  <tr>
+                    <td class="text-center"><?php echo $no++; ?></td>
+                    <td><?php echo $d['kejadian']; ?></td>
+                    <td class="text-center"><?php echo $d['jumlah_kejadian']; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -82,6 +111,35 @@
             <div>
               <canvas id="pie-chart-feedback" height="200"></canvas>
             </div>
+            <?php
+            $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
+            ?>
+            <br><br>
+            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="text-center">No</th>
+                  <th class="text-center">Feedback</th>
+                  <th class="text-center">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $no = 1;
+                $jumlah = null;
+                $data = mysqli_query($koneksi, "select q4_feedback, COUNT(*) as Total from feedback GROUP BY q4_feedback DESC");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
+                  <tr>
+                    <td class="text-center"><?php echo $no++; ?></td>
+                    <td><?php echo $d['q4_feedback']; ?></td>
+                    <td class="text-center"><?php echo $d['Total']; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -115,6 +173,35 @@
             <div>
               <canvas id="pie-chart-laporan" height="250"></canvas>
             </div>
+            <?php
+            $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
+            ?>
+            <br><br>
+            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+              <thead>
+                <tr>
+                  <th class="text-center">No</th>
+                  <th class="text-center">Kejadian</th>
+                  <th class="text-center">Jumlah Kejadian</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $no = 1;
+                $jumlah = null;
+                $data = mysqli_query($koneksi, "select kejadian, COUNT(*) as jumlah_kejadian from report GROUP BY kejadian DESC");
+                while ($d = mysqli_fetch_array($data)) {
+                ?>
+                  <tr>
+                    <td class="text-center"><?php echo $no++; ?></td>
+                    <td><?php echo $d['kejadian']; ?></td>
+                    <td class="text-center"><?php echo $d['jumlah_kejadian']; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="col-lg-3 col-xs-6">
