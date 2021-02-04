@@ -227,7 +227,7 @@
                     <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i>
                         0341-3013186</p>
                     <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
-                        Balaikota Malang, Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                        Ngalam Command Center , Balaikota Malang Jl. Tugu No. 1 Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
                     <a href="https://instagram.com/ngalam112" class="text-muted mb-3">
                         <i class="icon-xs" data-feather="instagram"></i>
                         &nbsp @ngalam112</a>

@@ -23,6 +23,10 @@
                <input type="hidden" name="id" value="<?= $reportdata[0]['id_pelapor']; ?>" />
                <div class="form-group row">
                  <div class="form-group col-lg-6">
+                   <label class="col-sm-5 form-control-label"><strong>Tanggal Kejadian</strong></label>
+                   <input type="date" class="form-control" value="<?= $reportdata[0]['tanggal'] ?>" name="tanggal_report" id="tanggal_report" required>
+                 </div>
+                 <div class="form-group col-lg-6">
                    <label class="col-sm-5 form-control-label"><strong>Nomor Tiket</strong></label>
                    <input type="text" class="form-control" value="<?= $reportdata[0]['no_tiket'] ?>" name="no_tiket" id="no_tiket" required>
                  </div>
@@ -38,10 +42,6 @@
                       }
                       ?>
                    </select>
-                 </div>
-                 <div class="form-group col-lg-6">
-                   <label class="col-sm-5 form-control-label"><strong>Tanggal Kejadian</strong></label>
-                   <input type="date" class="form-control" value="<?= $reportdata[0]['tanggal'] ?>" name="tanggal_report" id="tanggal_report" required>
                  </div>
                  <div class="form-group col-lg-6">
                    <label class="col-sm-5 form-control-label"><strong>Nama Pelapor</strong></label>
@@ -66,10 +66,6 @@
                    <input type="text" class="form-control" value="<?= $reportdata[0]['lokasi_kejadian'] ?>" name="lokasi_report" id="lokasi_report" required>
                  </div>
                  <div class="form-group col-lg-6">
-                   <label class="col-sm-4 form-control-label"><strong>Nama Pelapor</strong></label>
-                   <input type="text" class="form-control" value="<?= $reportdata[0]['nama_pelapor'] ?>" name="nama_pelapor" id="nama_pelapor" required>
-                 </div>
-                 <div class="form-group col-lg-6">
                    <label class="col-sm-4 form-control-label"><strong>Tindak Lanjut</strong></label>
                    <input type="text" class="form-control" value="<?= $reportdata[0]['tindak_lanjut'] ?>" name="tindak_lanjut" id="tindak_lanjut" required>
                  </div>
@@ -91,7 +87,7 @@
                   }
                   ?>
                  <!-- <input type="file" class="dropify" value="" name="dokumentasi[]" id="dokumentasi" style="border:none" multiple> -->
-                 <input type="file" class="dropify" value="" name="dokumentasi[]" id="dokumentasi" class="m-4" multiple >
+                 <input type="file" class="dropify" value="" name="dokumentasi[]" id="dokumentasi" class="m-4" multiple>
                  <small class="help-block-none">Abaikan jika tidak ingin mengubah dokumen.</small>
                  <div class="line"></div>
                  <div class="form-group col-lg-12">

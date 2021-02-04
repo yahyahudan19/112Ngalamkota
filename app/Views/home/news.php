@@ -82,20 +82,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <span class="badge badge-soft-primary"><?= $news['tagline_news']; ?></span>
-                    <h4><b><?= $news['date_news']; ?></b></h4>
-                    <h1 class="font-weight-semibold mb-3 hero-3-title"><?= $news['judul_news']; ?></h1>
-                    <p class="mb-5 text-muted"><?= $news['isi_news'] ?>.</p>
+                    <h4 class="font-size-18 my-2"><b><?= $news['date_news']; ?></b></h4>
+                    <h2 class="font-weight-semibold mb-3 hero-3-title"><?= $news['judul_news']; ?></h2>
+                    <p class="mb-3 text-muted"><?= $news['isi_news'] ?></p>
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
                         <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="300px" width="470px" />
                     </div>
                 </div>
-                <p class="mb-5 text-muted"><?= $news['isi2_news'] ?>.</p>
-                <p class="mb-5 text-muted"><?= $news['isi3_news'] ?>.</p>
+                <p class="mb-3 text-muted"><?= $news['isi2_news'] ?></p>
+                <p class="mb-3 text-muted"><?= $news['isi3_news'] ?></p>
+                <p class="mb-3 text-muted"><?= $news['isi4_news'] ?></p>
             </div>
-            <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="300px" width="470px" />
-            <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="300px" width="470px" />
         </div>
     </section>
     <!-- Hero End -->

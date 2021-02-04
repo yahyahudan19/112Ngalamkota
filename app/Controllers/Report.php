@@ -142,7 +142,7 @@ class Report extends BaseController
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
-        
+
         $id_pelapor = $this->request->getVar('id');
         $data_uploads = [
             'id_admin' => session()->get('id_user'),
@@ -199,7 +199,8 @@ class Report extends BaseController
         echo view('layout/footer');
     }
 
-    public function exportReportKejadian(){
+    public function exportReportKejadian()
+    {
         $dataReportKejadian = $this->reportlaporanModel->findAll();
     }
 }
