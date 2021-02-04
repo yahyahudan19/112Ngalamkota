@@ -29,8 +29,6 @@
                 <div class="block">
                   <!-- <div class="title"><strong>Tabel Berita</strong></div> -->
                   <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i> Tambah Berita</button>
-                  <button type="button" class="btn btn-primary"><i class="fa fa-file-pdf-o"></i> Excel</button>
-                  <button type="button" class="btn btn-warning" type="button"><i class="fa  fa-file-pdf-o"></i> Pdf</button>
                   <br>
                   <br>
                   <div class="table-responsive">

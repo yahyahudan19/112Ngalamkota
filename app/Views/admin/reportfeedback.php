@@ -28,8 +28,6 @@
            <div class="row">
              <div class="col-lg-12">
                <div class="block">
-                 <button type="button" class="btn btn-primary"><i class="fa fa-file-pdf-o"></i> Excel</button>
-                 <button type="button" class="btn btn-secondary"><i class="fa fa-file-excel-o"></i> Pdf</button>
                  <br>
                  <br>
                  <!-- <div class="title"><strong>Tabel Feedback</strong></div> -->
