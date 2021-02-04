@@ -226,10 +226,6 @@
                         $jumlah_sangatkurang = mysqli_query($koneksi, "select * from feedback where q4_feedback='Sangat Kurang'");
                         echo mysqli_num_rows($jumlah_sangatkurang);
                         ?>,
-                     <?php
-                        $jumlah_lainnya = mysqli_query($koneksi, "select * from feedback where q4_feedback='lainnya'");
-                        echo mysqli_num_rows($jumlah_lainnya);
-                        ?>,
                  ],
                  backgroundColor: [
                      'rgb(242, 28, 17)',
@@ -262,7 +258,7 @@
              var myChart = new Chart(ctx, {
                  type: 'pie',
                  data: {
-                     labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang', 'Lainnya'],
+                     labels: ['Sangat Bagus', 'Bagus', 'Cukup', 'Kurang', 'Sangat Kurang'],
                      datasets: data
                  },
                  options: options
