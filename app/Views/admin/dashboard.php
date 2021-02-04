@@ -72,7 +72,7 @@
                 <tr>
                   <th class="text-center">No</th>
                   <th class="text-center">Kejadian</th>
-                  <th class="text-center">Jumlah Kejadian</th>
+                  <th class="text-center">Total</th>
                 </tr>
               </thead>
               <tbody>
@@ -171,7 +171,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="250"></canvas>
+              <canvas id="pie-chart-laporan" height="200"></canvas>
             </div>
             <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
@@ -182,7 +182,7 @@
                 <tr>
                   <th class="text-center">No</th>
                   <th class="text-center">Kejadian</th>
-                  <th class="text-center">Jumlah Kejadian</th>
+                  <th class="text-center">Total</th>
                 </tr>
               </thead>
               <tbody>

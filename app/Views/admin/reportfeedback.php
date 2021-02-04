@@ -28,8 +28,6 @@
            <div class="row">
              <div class="col-lg-12">
                <div class="block">
-                 <br>
-                 <br>
                  <!-- <div class="title"><strong>Tabel Feedback</strong></div> -->
                  <div class="table-responsive">
                    <table class="table table-bordered table-hover" id="rfeedbackTable">
@@ -40,7 +38,7 @@
                          <th>Alamat</th>
                          <th>No. HP</th>
                          <!-- <th>Tanggal</th> -->
-                         <th>Penyebab</th>
+                         <th>Kejadian</th>
                          <th>Q1</th>
                          <th>Q2</th>
                          <th>Q3</th>
