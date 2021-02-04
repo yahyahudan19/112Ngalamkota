@@ -221,13 +221,16 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="fw-bold mb-3">Kontak Kami</h2>
-                    <p class="text-muted mb-5">Ada masalah dengan Layanan Ngalam 112 ? langsung saja hubungi kami :).</p>
+                    <p class="text-muted mb-5">Ada masalah dengan Layanan Panggilan Darurat Ngalam 112 ? langsung saja hubungi kami :).</p>
                     <p class="text-muted mt-5 mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="mail"></i>
                         nccngalam112@gmail.com</p>
                     <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="phone"></i>
                         0341-3013186</p>
-                    <p class="text-muted mb-3"><i class="me-2 text-muted icon icon-xs" data-feather="map-pin"></i>
-                        Ngalam Command Center , Balaikota Malang Jl. Tugu No. 1 Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                    <a href="https://maps.app.goo.gl/qwfxdqmuf1TDXicx9" class="text-muted mb-3">
+                        <i class="icon-xs" data-feather="map-pin"></i>
+                        &nbsp Ngalam Command Center , Balaikota Malang Jl. Tugu No. 1 Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</a>
+                    <br>
+                    <p></p>
                     <a href="https://instagram.com/ngalam112" class="text-muted mb-3">
                         <i class="icon-xs" data-feather="instagram"></i>
                         &nbsp @ngalam112</a>
