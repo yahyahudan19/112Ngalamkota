@@ -34,7 +34,7 @@
         <div class="container">
             <!-- LOGO -->
             <a class="navbar-brand logo" href="<?= base_url() ?>/home">
-                <img src="<?= base_url() ?>/templatepage/images/ngalam.png" alt="" class="logo-dark" height="80" />
+                <img src="<?= base_url() ?>/templatepage/images/112.png" alt="" class="logo-dark" height="80" />
                 <img src="<?= base_url() ?>/templatepage/images/logo-light.png" alt="" class="logo-light" height="28" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,6 +121,7 @@
                                             <option value="Gempa Bumi">Gempa Bumi</option>
                                             <option value="Angin Topan">Angin Topan</option>
                                             <option value="Listrik Putus">Listrik Putus</option>
+                                            <option value="Tanah Longsor">Tanah Longsor</option>
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
                                     </div>
@@ -170,7 +171,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="q5_feedback" class="text-muted form-label"><strong>Apakah ada saran untuk layanan 112 ?</strong></label>
+                                        <label for="q5_feedback" class="text-muted form-label"><strong>Apakah ada saran untuk layanan Ngalam 112 ?</strong></label>
                                         <textarea name="q5_feedback" id="q5_feedback" rows="4" class="form-control" placeholder="Saran layanan 112" required></textarea>
                                     </div>
                                     <button type="submit" id="submit" name="send" class="btn btn-primary">Kirim</button>

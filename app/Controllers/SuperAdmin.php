@@ -80,7 +80,11 @@ class SuperAdmin extends BaseController
 		if (!(session()->username)) {
 			return redirect()->to(base_url('/login'));
 		}
-		$reportL = $this->reportlaporanModel->orderBy('id_pelapor', 'desc')->findAll();
+		if (session()->get('level') == "Super Admin") {
+			$reportL = $this->reportlaporanModel->orderBy('id_pelapor', 'desc')->findAll();
+		} else {
+			$reportL = $this->reportlaporanModel->where('id_admin', session()->get('id_user'))->orderBy('id_pelapor', 'desc')->findAll();
+		}
 		$dtPetugas = $this->userModel->findAll();
 		$data = [
 			'title' => 'Laporan',

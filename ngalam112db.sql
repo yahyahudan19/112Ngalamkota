@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2021 at 04:11 PM
+-- Generation Time: Feb 04, 2021 at 04:29 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -41,14 +41,18 @@ CREATE TABLE `detail_report` (
 --
 
 INSERT INTO `detail_report` (`id`, `report_id`, `gambar`, `created_at`, `updated_at`) VALUES
-(77, 77, '1612364279_97f93b4e2fc10cd975ba.jpg', '2021-02-03 14:57:59', '2021-02-03 14:57:59'),
-(78, 77, '1612364279_8d9da0c4f29b24dacd48.jpg', '2021-02-03 14:57:59', '2021-02-03 14:57:59'),
-(79, 78, '1612364739_6e1153ee07ebe1677633.jpeg', '2021-02-03 15:05:39', '2021-02-03 15:05:39'),
-(80, 78, '1612364739_0652ee3fc94721180c45.jpeg', '2021-02-03 15:05:39', '2021-02-03 15:05:39'),
-(81, 79, '1612365036_b243e952d51cbee2a95b.jpg', '2021-02-03 15:10:36', '2021-02-03 15:10:36'),
-(82, 79, '1612365036_a7675b3819d44f96315c.jpg', '2021-02-03 15:10:36', '2021-02-03 15:10:36'),
-(83, 79, '1612365036_574c1d1af2cb331fbb65.jpg', '2021-02-03 15:10:36', '2021-02-03 15:10:36'),
-(84, 79, '1612365036_d3040ebe56c3387b509d.jpg', '2021-02-03 15:10:36', '2021-02-03 15:10:36');
+(5, 3, '1612451346_11cbd00650c0026a5b96.jpg', '2021-02-04 15:09:06', '2021-02-04 15:09:06'),
+(6, 3, '1612451346_3ff44c2c66ff0f68dfb1.jpg', '2021-02-04 15:09:06', '2021-02-04 15:09:06'),
+(7, 4, '1612451623_d653a2e63a7416200c86.jpg', '2021-02-04 15:13:43', '2021-02-04 15:13:43'),
+(8, 4, '1612451623_5cc21a1eadcaaf2439a9.jpg', '2021-02-04 15:13:43', '2021-02-04 15:13:43'),
+(9, 4, '1612451623_91b8bd5a6c0b63f176f8.jpg', '2021-02-04 15:13:43', '2021-02-04 15:13:43'),
+(14, 6, '1612451950_fdeb08172b8c50a4a5c7.jpg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
+(15, 6, '1612451950_a0e88767924e4465639a.jpeg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
+(16, 6, '1612451950_822c1bf15ae07f6af7c7.jpeg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
+(17, 7, '1612452252_bf9d94f5f85b44ddda69.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
+(18, 7, '1612452252_92259d0cdec9f2dd13d4.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
+(19, 7, '1612452252_80d99924f06748db295e.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
+(20, 7, '1612452252_950b8a3cbf1697d033e5.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12');
 
 -- --------------------------------------------------------
 
@@ -76,8 +80,17 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id_feedback`, `nama_feedback`, `alamat_feedback`, `noHp_feedback`, `penyebab_feedback`, `q1_feedback`, `q2_feedback`, `q3_feedback`, `q4_feedback`, `q5_feedback`, `created_at`, `updated_at`) VALUES
-(6, 'irfaakk', 'lawang', '081936933474', 'Pohon Tumbang', 'iya', 'iya', 'iya', 'Sangat Bagus', 'a', '2021-02-01 15:03:26', '2021-02-01 15:03:26'),
-(7, 'n', 'n', 'y', 'Kebakaran', 'iya', 'iya', 'tidak', 'Bagus', 'y', '2021-02-01 19:08:44', '2021-02-01 19:08:44');
+(8, 'Muhammad Maulana Ibrahim', 'Jl. Pattimura Timur Klojen, Kota Malang', '081936933474', 'Tanah Longsor', 'iya', 'iya', 'iya', 'Sangat Bagus', 'Informasi lebih update lagi', '2021-02-03 22:30:04', '2021-02-03 22:30:04'),
+(9, 'Dimas Setiawan', 'Jl. Indrokilo Selatan Lawang, Kab.Malang', '085125677454', 'Banjir', 'iya', 'iya', 'iya', 'Sangat Bagus', 'Fitur-fitur website 112 ditambah lagi', '2021-02-04 00:06:36', '2021-02-04 00:06:36'),
+(10, 'Wahyu Indah Permata Sari', 'Jl. Untung Suropati Lowokwaru, Kota Malang', '081989322454', 'Kebakaran', 'iya', 'tidak', 'iya', 'Bagus', 'Desainnya diperbaiki lebih bagus', '2021-02-04 00:08:38', '2021-02-04 00:08:38'),
+(11, 'Mutiara Zaskiya', 'Jl. Jendral Sudirman Ketindan, Kab. Malang', '085747455676', 'Pohon Tumbang', 'tidak', 'iya', 'tidak', 'Cukup', 'Layanan lebih responsif', '2021-02-04 00:13:15', '2021-02-04 00:13:15'),
+(12, 'Adam Alan Putra', 'Jl. Sumbersari Lowokwaru, Kota Malang', '089343122121', 'Kecelakaan', 'tidak', 'tidak', 'tidak', 'Sangat Kurang', 'Media sosialnya diaktifkan lagi', '2021-02-04 00:21:22', '2021-02-04 00:21:22'),
+(13, 'Luna Siska Saputri', 'Jl. Hasuddin Sanan, Kota Malang', '081232211234', 'Angin Topan', 'iya', 'tidak', 'iya', 'Kurang', 'Media sosial diperluas lagi', '2021-02-04 00:23:33', '2021-02-04 00:23:33'),
+(14, 'Intan Pariwara', 'Jl. Bedali Indah Lawang, Kab. Malang', '083765766243', 'Banjir', 'iya', 'iya', 'iya', 'Sangat Kurang', 'Layanan lebih cepat dalam menangani keadaaan darurat', '2021-02-04 00:26:14', '2021-02-04 00:26:14'),
+(15, 'James Bond', 'Jl. Telaga Biru Kepanjen, Kota Malang', '081936933475', 'Listrik Putus', 'iya', 'tidak', 'iya', 'Kurang', 'Media sosial diperluas lagi agar bisa dikenal masyarakat luas', '2021-02-04 00:29:41', '2021-02-04 00:29:41'),
+(16, 'Yuni Wahyuningsih', 'Jl. Sejahtera Jaya Dau, Kota Malang', '089765766565', 'Gempa Bumi', 'iya', 'iya', 'tidak', 'Sangat Bagus', 'Diperbaiki tampilannya agar mudah dipahami', '2021-02-04 00:31:48', '2021-02-04 00:31:48'),
+(17, 'Angger Wisnutama', 'Jl. Sultan Muria Singosari, Kab. Malang', '081936933476', 'Banjir', 'iya', 'tidak', 'tidak', 'Sangat Bagus', 'Media sosial diperbanyak agar bisa dihubungi dalam keadaan darurat', '2021-02-04 00:37:26', '2021-02-04 00:37:26'),
+(18, 'Nurlaili Dewi Candra', 'Jl. Buntu Bunulrejo, Kota Malang', '085432311321', 'Gempa Bumi', 'tidak', 'iya', 'tidak', 'Kurang', 'Penanganan dipercepat dan responsif', '2021-02-04 00:42:46', '2021-02-04 00:42:46');
 
 -- --------------------------------------------------------
 
@@ -135,9 +148,10 @@ CREATE TABLE `report` (
 --
 
 INSERT INTO `report` (`id_pelapor`, `id_admin`, `no_tiket`, `nama_petugas`, `kejadian`, `lokasi_kejadian`, `tanggal`, `nama_pelapor`, `tindak_lanjut`, `created_at`, `updated_at`) VALUES
-(77, 6, 'A112B', 'Irfak Wahyudi', 'Kebakaran', 'Jl. Bunga Indah No.12 Kec. Klojen, Kab. Malang', '2021-02-10', 'Rudi Wahyudi', 'Sudah ditangani Pemadam Kebakaran', '2021-02-03 14:57:59', '2021-02-03 14:57:59'),
-(78, 6, 'B112C', 'Irfak Wahyudi', 'Banjir', 'Sumbermanjing Wetan', '2021-02-04', 'James Bon', 'Sudah dilakukan evakuasi oleh tim SAR', '2021-02-03 15:05:39', '2021-02-03 15:05:39'),
-(79, 6, 'C112G', 'A. Yahya Hudan', 'Listrik Putus', 'Daerah Pasar Blimbing', '2021-02-06', 'Marsya Claudia', 'Sudah ditangani PLN', '2021-02-03 15:10:36', '2021-02-03 15:10:36');
+(3, 8, 'A112B', 'Irfak Wahyudi', 'Kebakaran', 'Jl. Sukabumi, Kota Malang', '2021-02-04', 'Wahyu Indah Sari', 'Sudah ditangani oleh pihak pemadam kebakaran', '2021-02-04 15:09:06', '2021-02-04 15:09:06'),
+(4, 8, 'B112C', 'Irfak Wahyudi', 'Pohon Tumbang', 'Kedungkandang', '2021-02-05', 'Gigih Anjar', 'Sudah ditangani oleh Dinas Lingkungan Hidup', '2021-02-04 15:13:43', '2021-02-04 15:13:43'),
+(6, 9, 'D112G', 'A. Yahya Hudan', 'Banjir', 'Turen', '2021-02-25', 'Bunga Citra', 'Sudah ditangani oleh Dinas Lingkungan Hidup dan Tim Sar', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
+(7, 8, 'C112G', 'Irfak Wahyudi', 'Listrik Putus', 'Ketindan', '2021-02-26', 'Ardana Putra Pribadiansyah', 'Sudah ditangani oleh PLN', '2021-02-04 15:24:12', '2021-02-04 15:24:12');
 
 -- --------------------------------------------------------
 
@@ -210,13 +224,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_report`
 --
 ALTER TABLE `detail_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -228,7 +242,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
-  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
