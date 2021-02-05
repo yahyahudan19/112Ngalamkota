@@ -172,14 +172,11 @@
     <div class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-3 col-xs-12">
+        <div class="col-lg-6 col-xs-6">
           <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
             <div class="info-box-content"> <span class="info-box-number"><?= $total_kejadian ?></span> <span class="info-box-text">Laporan Kejadian</span> </div>
             <!-- /.info-box-content -->
           </div>
-          <!-- /.info-box -->
-        </div>
-        <div class="col-lg-6  col-xs-6">
           <div class=" info-box">
             <div class="col-12">
               <div class="d-flex flex-wrap">
@@ -190,17 +187,21 @@
             </div>
             <div>
               <canvas id="pie-chart-laporan" height="200"></canvas>
-            </div>
-            <?php
+            </div>           
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <div class="col-lg-6 col-xs-6">
+          <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
             ?>
-            <br><br>
-            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+            <div class="table-responsive">
+            <table class="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <th class="text-center">No</th>
-                  <th class="text-center">Kejadian</th>
-                  <th class="text-center">Total</th>
+                  <th class="text-center"><b>No</b></th>
+                  <th class="text-center"><b>Kejadian</b></th>
+                  <th class="text-center"><b>Total</b></th>
                 </tr>
               </thead>
               <tbody>
@@ -220,14 +221,10 @@
                 ?>
               </tbody>
             </table>
-          </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-xs-6">
-        </div>
-        <!-- /.col -->
-        <!-- chart -->
-        <!-- <div class="col-lg-6">
-          <div class="info-box">
+        <!-- <div class="col-lg-6 col-xs-6">
+          <div class=" info-box">
             <div class="col-12">
               <div class="d-flex flex-wrap">
                 <div>
@@ -236,11 +233,13 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="250"></canvas>
-            </div>
+              <canvas id="pie-chart-laporan" height="200"></canvas>
+            </div>           
           </div>
         </div> -->
-      </div>
+        <!-- /.col -->
+    </div>
+    </div>
       <!-- /.content -->
     <?php
   }
