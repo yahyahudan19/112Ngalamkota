@@ -12,8 +12,26 @@
   <?php
   if (session()->get('level') == "Super Admin") {
   ?>
+    <div class="col-md-1">
+      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Print <i class="fa fa-print"></i></button>
+    </div>
+
+    <style>
+      @media print {
+        /* @page {
+          margin-top: 60px;
+          margin-bottom: 20px;
+        } */
+
+        .btn,
+        footer {
+          display: none;
+        }
+      }
+    </style>
     <!-- Main content Superadmin-->
     <div class="content">
+
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -66,7 +84,7 @@
             <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
             ?>
-            <br><br>
+            <br><br><br><br><br><br>
             <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
               <thead>
                 <tr>
@@ -114,7 +132,7 @@
             <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
             ?>
-            <br><br>
+            <br><br><br><br><br><br>
             <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
               <thead>
                 <tr>
