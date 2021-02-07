@@ -84,8 +84,8 @@
             <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
             ?>
-            <br><br><br><br><br><br>
-            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+            <br><br><br><br><br>
+            <table width="100%" border="2" align="center" cellpadding="3" cellspacing="0">
               <thead>
                 <tr>
                   <th class="text-center">No</th>
@@ -127,13 +127,13 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-feedback" height="200"></canvas>
+              <canvas id="pie-chart-feedback" height="180"></canvas>
             </div>
             <?php
             $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
             ?>
-            <br><br><br><br><br><br>
-            <table width="100%" border="3" align="center" cellpadding="3" cellspacing="0">
+            <br><br><br><br><br>
+            <table width="100%" border="2" align="center" cellpadding="3" cellspacing="0">
               <thead>
                 <tr>
                   <th class="text-center">No</th>
@@ -168,6 +168,23 @@
   <?php
   } else if (session()->get('level') == "Admin") {
   ?>
+    <div class="col-md-1">
+      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Print <i class="fa fa-print"></i></button>
+    </div>
+
+    <style>
+      @media print {
+        /* @page {
+          margin-top: 60px;
+          margin-bottom: 20px;
+        } */
+
+        .btn,
+        footer {
+          display: none;
+        }
+      }
+    </style>
     <!-- Main content Admin-->
     <div class="content">
       <!-- Small boxes (Stat box) -->
@@ -187,16 +204,17 @@
             </div>
             <div>
               <canvas id="pie-chart-laporan" height="200"></canvas>
-            </div>           
-          </div>
+            </div>            
+          </div>          
           <!-- /.info-box -->
         </div>
         <div class="col-lg-6 col-xs-6">
           <?php
-            $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
-            ?>
-            <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+          $koneksi = mysqli_connect("localhost", "root", "", "ngalam112db");
+          ?>
+          <br><br><br><br><br>
+          <div class="table-responsive">
+            <table width="100%" border="2" align="center" cellpadding="3" cellspacing="0">
               <thead>
                 <tr>
                   <th class="text-center"><b>No</b></th>
@@ -221,27 +239,14 @@
                 ?>
               </tbody>
             </table>
-            </div>
-        </div>
-        <!-- <div class="col-lg-6 col-xs-6">
-          <div class=" info-box">
-            <div class="col-12">
-              <div class="d-flex flex-wrap">
-                <div>
-                  <h4>Laporan Kejadian</h4>
-                </div>
-              </div>
-            </div>
-            <div>
-              <canvas id="pie-chart-laporan" height="200"></canvas>
-            </div>           
           </div>
-        </div> -->
+        </div>
+        
         <!-- /.col -->
+      </div>
     </div>
-    </div>
-      <!-- /.content -->
-    <?php
+    <!-- /.content -->
+  <?php
   }
-    ?>
-    </div>
+  ?>
+</div>

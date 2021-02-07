@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2021 at 04:29 PM
+-- Generation Time: Feb 07, 2021 at 11:30 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -49,10 +49,11 @@ INSERT INTO `detail_report` (`id`, `report_id`, `gambar`, `created_at`, `updated
 (14, 6, '1612451950_fdeb08172b8c50a4a5c7.jpg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
 (15, 6, '1612451950_a0e88767924e4465639a.jpeg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
 (16, 6, '1612451950_822c1bf15ae07f6af7c7.jpeg', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
-(17, 7, '1612452252_bf9d94f5f85b44ddda69.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
-(18, 7, '1612452252_92259d0cdec9f2dd13d4.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
-(19, 7, '1612452252_80d99924f06748db295e.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
-(20, 7, '1612452252_950b8a3cbf1697d033e5.jpg', '2021-02-04 15:24:12', '2021-02-04 15:24:12');
+(21, 8, '1612490992_f3736a0f487db2c395ef.jpeg', '2021-02-05 02:09:52', '2021-02-05 02:09:52'),
+(22, 9, '1612491207_a3ac1df25f91083a0059.jpg', '2021-02-05 02:13:27', '2021-02-05 02:13:27'),
+(27, 15, '1612495231_0b81f3f1203e1351ef9e.jpg', '2021-02-05 03:20:31', '2021-02-05 03:20:31'),
+(28, 16, '1612495357_ce895ec4bf1aaaa1be66.jpeg', '2021-02-05 03:22:37', '2021-02-05 03:22:37'),
+(33, 17, '1612498064_0b632a2a5d1d1c976aaa.jpg', '2021-02-05 04:07:44', '2021-02-05 04:07:44');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,11 @@ INSERT INTO `feedback` (`id_feedback`, `nama_feedback`, `alamat_feedback`, `noHp
 (15, 'James Bond', 'Jl. Telaga Biru Kepanjen, Kota Malang', '081936933475', 'Listrik Putus', 'iya', 'tidak', 'iya', 'Kurang', 'Media sosial diperluas lagi agar bisa dikenal masyarakat luas', '2021-02-04 00:29:41', '2021-02-04 00:29:41'),
 (16, 'Yuni Wahyuningsih', 'Jl. Sejahtera Jaya Dau, Kota Malang', '089765766565', 'Gempa Bumi', 'iya', 'iya', 'tidak', 'Sangat Bagus', 'Diperbaiki tampilannya agar mudah dipahami', '2021-02-04 00:31:48', '2021-02-04 00:31:48'),
 (17, 'Angger Wisnutama', 'Jl. Sultan Muria Singosari, Kab. Malang', '081936933476', 'Banjir', 'iya', 'tidak', 'tidak', 'Sangat Bagus', 'Media sosial diperbanyak agar bisa dihubungi dalam keadaan darurat', '2021-02-04 00:37:26', '2021-02-04 00:37:26'),
-(18, 'Nurlaili Dewi Candra', 'Jl. Buntu Bunulrejo, Kota Malang', '085432311321', 'Gempa Bumi', 'tidak', 'iya', 'tidak', 'Kurang', 'Penanganan dipercepat dan responsif', '2021-02-04 00:42:46', '2021-02-04 00:42:46');
+(18, 'Nurlaili Dewi Candra', 'Jl. Buntu Bunulrejo, Kota Malang', '085432311321', 'Gempa Bumi', 'tidak', 'iya', 'tidak', 'Kurang', 'Penanganan dipercepat dan responsif', '2021-02-04 00:42:46', '2021-02-04 00:42:46'),
+(19, 'Ananda Bagus Budi Saputra', 'Jl. Mayjen Sungkono, Batu', '087675766564', 'Tanah Longsor', 'iya', 'iya', 'iya', 'Cukup', 'Diperbaiki desain websitenya', '2021-02-04 13:47:32', '2021-02-04 13:47:32'),
+(20, 'Nadila Cindi Wantariq', 'Jl.Sigura-sigura No.16', '085453838', 'Banjir', 'iya', 'iya', 'iya', 'Sangat Bagus', 'Untuk Customer Service diperbaiki lagi', '2021-02-04 13:49:20', '2021-02-04 13:49:20'),
+(21, 'Shania Gracia Harlan', 'Jl.SoekarnoHatta No.19b', '0876512321', 'Kebakaran', 'tidak', 'tidak', 'tidak', 'Sangat Kurang', 'Tolong Perbaiki lagi untuk customer Servicenya', '2021-02-04 13:50:38', '2021-02-04 13:50:38'),
+(22, 'Shani Indira', 'Jl.Tombro No.145', '056973636', 'Kecelakaan', 'iya', 'iya', 'iya', 'Cukup', 'Terima Kasih Untuk Ngalam112 Untuk penangananya', '2021-02-04 13:54:42', '2021-02-04 13:54:42');
 
 -- --------------------------------------------------------
 
@@ -119,9 +124,8 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id_news`, `tagline_news`, `judul_news`, `isi_news`, `isi2_news`, `isi3_news`, `isi4_news`, `date_news`, `dokumentasi_news`, `visible_news`, `created_at`, `updated_at`) VALUES
 (42, 'Kebakaran', 'Toko Bangunan di Ciledug Tangerang Kebakaran, Tak Ada Korban Jiwa', 'Jakarta - Sebuah toko bangunan berlokasi di Jalan Tanah Seratus, Sudimara Jaya, Ciledug, Kota Tangerang, mengalami kebakaran. Api membakar habis material yang ada di toko bangunan tersebut.\r\n\r\n\"Iya benar, sekarang prosesnya dalam pendinginan. Kita upayakan jangan sampai keluar api lagi,\" kata Darmawan, Kabid Kedaruratan dan Logistik BPBD Kota Tangerang, saat dihubungi, Rabu (3/2/2021).', 'Kebakaran itu terjadi pada pukul 13.00 WIB. Darmawan menyebut api hanya membakar satu bangunan di lokasi.\r\n\r\nSelain itu, Darmawan menyebut pihaknya masih mengumpulkan keterangan saksi untuk memperkirakan kerugian materi dari kebakaran tersebut.', 'Sementara itu, Kapolsek Ciledug Kompol Wisnu Wardhana menambahkan pihaknya memastikan tidak ada korban jiwa dari kebakaran tersebut. Penyebab kebakaran pun masih dalam penyelidikan.\r\n\r\n', '\"Api sudah padam, tidak ada korban jiwa. Kerugian materi belum bisa diperkirakan. (Penyebab) masih lidik (penyelidikan),\" pungkasnya.', '2021-02-03', '1612356426_af98f6f0167252865afc.jpeg', 1, '2021-02-03 12:47:06', '2021-02-03 12:47:06'),
-(43, 'Bencana Alam', 'Jembatan Penghubung Desa di Blitar Ambrol Diterjang Banjir', 'Blitar - Hujan deras mengguyur Blitar selama sekitar dua jam. Akibatnya, terjadi banjir bandang yang membuat sebuah jembatan ambrol.\r\n\r\nJembatan tersebut terletak di Dusun Jambangan RT 01 RW 07, yang merupakan akses penghubung antara Dusun Midodaren dengan Desa Dawuhan di Kecamatan Kademangan. Kondisi jembatan sepanjang 17 meter dengan lebar 5 meter itu putus di bagian tengah, akibat terjangan air sungai yang meluap.', '\"Petugas sedang menuju lokasi putusnya jembatan. Jembatan merupakan jalur sirip, ada lagi jalur yang lain tetapi harus memutar sekitar 7 km dengan akses yang susah,\" kata Petugas BPBD Kabupaten Blitar, Lukman saat dihubungi detikcom, Rabu (3/2/2021).\r\n\r\n', 'Informasi yang dihimpun, Dusun Midodaren dihuni sekitar 3.000 jiwa. Atau sekitar 1.500 kepala keluarga. Jembatan yang roboh menghubungkan Desa Dawuhan dengan Dusun Midodaren, Kaliandong dan Klangkapan.', 'Selain putusnya sebuah jembatan, hujan deras juga menimbulkan genangan air di ruas jalan utama Kecamatan Sutojayan. Bahkan akibat ketinggian air di atas 30 cm, warga setempat sempat menutup jalan dari simpang empat Jalan Raya Utara Lodoyo menuju selatan.\r\n\r\nKecamatan Sutojayan merupakan wilayah langganan banjir tahunan akibat meluapnya Sungai Unut. Sungai ini sedang dalam proses normalisasi. Sehingga ketika intensitas hujan mereda, genangan air di beberapa ruas jalan perlahan surut dalam hitungan jam.', '2021-02-04', '1612361586_4d1a79caa06ae4bccc49.jpeg', 1, '2021-02-03 14:20:39', '2021-02-03 14:20:39'),
-(44, 'Bencana Alam', 'Banjir Sempat Tutup Akses Utama Antar Kecamatan di Tulungagung', 'Tulungagung - Sejumlah akses jalan utama di Kecamatan Campurdarat Tulungagung diterjang banjir. Dampaknya arus lalu lintas harus dialihkan melalui jalur alternatif.\r\nWakapolsek Campurdarat Iptu Anwari mengatakan beberapa ruas jalan yang sempat diterjang banjir berada di Desa Pelem, Desa Gamping, Desa Pojok serta Desq Ngentrong.', '\"Tadi air mulai meluap sekitar jam setengah tiga sore, tapi untuk sekarang sudah surut dan arus lalu lintas kembali lancar,\" kata Anwari, Rabu (3/2/2021).\r\n\r\nSaat terjadi banjir, arus lalu lintas dari Kecamatan Boyolangu menuju Campurdarat maupun Bandung terpaksa harus ditutup dan dialihkan melalui jalur alternatif. Sebab akses utama tersebut kondisinya diterjang banjir dengan arus yang cukup deras.', '\"Tadi dari perempatan Boyolangu yang menuju Bandung kami alihkan ke kanan, karena genangannya lumayan tinggi dan deras,\" ujarnya.\r\n\r\nAnwari menjelaskan banjir tersebut diakibatkan oleh kondisi curah hujan yang tinggi, sehingga sungai yang ada di kawasan Campurdarat tidak mampu menampung limpahan air dari pegunungan.', '\"Itu airnya dari gunung, orang sini bilangnya ancar. Untuk banjir ini yang terganggu adalah jalan utama, sedangkan yang masuk ke perumahan warga ya ada tapi sedikit,\" jelasnya.\r\n\r\nAnwari menambahkan saat ini kondisi banjir di jalur utama di Kecamatan Campurdarat telah surut. Akses lalu lintas dari wilayah kota menuju kawasan selatan Tulungagung kembali normal.\r\n\r\n\"Sekarang sudah berangsur-angsur normal,\" tandas Anwari.', '2021-02-05', '1612362230_f6b650afb3420d88c843.jpeg', 1, '2021-02-03 14:25:36', '2021-02-03 14:25:36'),
-(45, 'Bencana Alam', 'Gerindra Jateng Bantu Korban Bencana Erupsi Merapi hingga Banjir', 'Jakarta - Erupsi Gunung Merapi dan banjir di sejumlah wilayah Jawa Tengah memberi dampak terhadap warga sekitar. Melihat hal ini, Dewan Pimpinan Daerah (DPD) Gerindra Jawa Tengah turut menyalurkan bantuannya untuk para korban.\r\n', '\"Sebelumnya, DPD mengirim relawan Satria Rescue Team Jateng yang bertugas membantu pengungsi dan memantau perkembangan erupsi Merapi di Magelang, Klaten dan Boyolali. Selanjutnya DPD memberi bantuan sembako dan kebutuhan dasar lainnya untuk korban erupsi Merapi,\" ujar Ketua Fraksi Gerindra DPRD Jateng, Rohmat Marzuki dalam keterangan tertulis, Rabu (3/2/2021).\r\n\r\nRohmat menjelaskan bersama pengurus Dewan Pimpinan Cabang (DPC) Gerindra Magelang, pihaknya telah menyalurkan bantuan untuk korban erupsi Merapi di Kecamatan Mertoyudan dan Kecamatan Dukun. Adapun bantuan tersebut merupakan sumbangan dari Fraksi Gerindra DPRD Jateng dan Anggota DPR RI, Prasetyo Hadi.', '\"Bantuan berupa sembako, susu bayi, masker dan keperluan lainnya untuk disalurkan kepada masyarakat yang terdampak erupsi Merapi melalui dua posko yaitu posko pengungsi Merapi di Desa Banyurejo, Kecamatan Mertoyudan dan posko siaga Merapi di Dusun Babadan, Desa Paten, Kecamatan Dukun,\" paparnya.\r\n', 'Selain itu, Ketua DPD Gerindra Jateng, Abdul Wachid juga memberikan bantuan untuk korban banjir di Kudus dan Jepara bersama jajaran pengurus DPC dan Fraksi Gerindra DPRD Kudus dan Jepara. Anggota DPR RI dari Dapil Jateng II ini berharap bantuan tersebut dapat meringankan beban para korban.\r\n', '2021-02-06', '1612362807_f185d9b9a0de698e2692.png', 1, '2021-02-03 14:36:52', '2021-02-03 14:36:52');
+(43, 'Bencana Alam', 'Jembatan Penghubung Desa di Blitar Ambrol Diterjang Banjir', 'Blitar - Hujan deras mengguyur Blitar selama sekitar dua jam. Akibatnya, terjadi banjir bandang yang membuat sebuah jembatan ambrol.\r\n\r\nJembatan tersebut terletak di Dusun Jambangan RT 01 RW 07, yang merupakan akses penghubung antara Dusun Midodaren dengan Desa Dawuhan di Kecamatan Kademangan. Kondisi jembatan sepanjang 17 meter dengan lebar 5 meter itu putus di bagian tengah, akibat terjangan air sungai yang meluap.', '\"Petugas sedang menuju lokasi putusnya jembatan. Jembatan merupakan jalur sirip, ada lagi jalur yang lain tetapi harus memutar sekitar 7 km dengan akses yang susah,\" kata Petugas BPBD Kabupaten Blitar, Lukman saat dihubungi detikcom, Rabu (3/2/2021).\r\n\r\n', 'Informasi yang dihimpun, Dusun Midodaren dihuni sekitar 3.000 jiwa. Atau sekitar 1.500 kepala keluarga. Jembatan yang roboh menghubungkan Desa Dawuhan dengan Dusun Midodaren, Kaliandong dan Klangkapan.', 'Selain putusnya sebuah jembatan, hujan deras juga menimbulkan genangan air di ruas jalan utama Kecamatan Sutojayan. Bahkan akibat ketinggian air di atas 30 cm, warga setempat sempat menutup jalan dari simpang empat Jalan Raya Utara Lodoyo menuju selatan.\r\n\r\nKecamatan Sutojayan merupakan wilayah langganan banjir tahunan akibat meluapnya Sungai Unut. Sungai ini sedang dalam proses normalisasi. Sehingga ketika intensitas hujan mereda, genangan air di beberapa ruas jalan perlahan surut dalam hitungan jam.', '2021-02-04', '1612361586_4d1a79caa06ae4bccc49.jpeg', 0, '2021-02-05 04:11:28', '2021-02-05 04:11:28'),
+(44, 'Bencana Alam', 'Banjir Sempat Tutup Akses Utama Antar Kecamatan di Tulungagung', 'Tulungagung - Sejumlah akses jalan utama di Kecamatan Campurdarat Tulungagung diterjang banjir. Dampaknya arus lalu lintas harus dialihkan melalui jalur alternatif.\r\nWakapolsek Campurdarat Iptu Anwari mengatakan beberapa ruas jalan yang sempat diterjang banjir berada di Desa Pelem, Desa Gamping, Desa Pojok serta Desq Ngentrong.', '\"Tadi air mulai meluap sekitar jam setengah tiga sore, tapi untuk sekarang sudah surut dan arus lalu lintas kembali lancar,\" kata Anwari, Rabu (3/2/2021).\r\n\r\nSaat terjadi banjir, arus lalu lintas dari Kecamatan Boyolangu menuju Campurdarat maupun Bandung terpaksa harus ditutup dan dialihkan melalui jalur alternatif. Sebab akses utama tersebut kondisinya diterjang banjir dengan arus yang cukup deras.', '\"Tadi dari perempatan Boyolangu yang menuju Bandung kami alihkan ke kanan, karena genangannya lumayan tinggi dan deras,\" ujarnya.\r\n\r\nAnwari menjelaskan banjir tersebut diakibatkan oleh kondisi curah hujan yang tinggi, sehingga sungai yang ada di kawasan Campurdarat tidak mampu menampung limpahan air dari pegunungan.', '\"Itu airnya dari gunung, orang sini bilangnya ancar. Untuk banjir ini yang terganggu adalah jalan utama, sedangkan yang masuk ke perumahan warga ya ada tapi sedikit,\" jelasnya.\r\n\r\nAnwari menambahkan saat ini kondisi banjir di jalur utama di Kecamatan Campurdarat telah surut. Akses lalu lintas dari wilayah kota menuju kawasan selatan Tulungagung kembali normal.\r\n\r\n\"Sekarang sudah berangsur-angsur normal,\" tandas Anwari.', '2021-02-05', '1612362230_f6b650afb3420d88c843.jpeg', 0, '2021-02-05 04:11:23', '2021-02-05 04:11:23');
 
 -- --------------------------------------------------------
 
@@ -151,7 +155,15 @@ INSERT INTO `report` (`id_pelapor`, `id_admin`, `no_tiket`, `nama_petugas`, `kej
 (3, 8, 'A112B', 'Irfak Wahyudi', 'Kebakaran', 'Jl. Sukabumi, Kota Malang', '2021-02-04', 'Wahyu Indah Sari', 'Sudah ditangani oleh pihak pemadam kebakaran', '2021-02-04 15:09:06', '2021-02-04 15:09:06'),
 (4, 8, 'B112C', 'Irfak Wahyudi', 'Pohon Tumbang', 'Kedungkandang', '2021-02-05', 'Gigih Anjar', 'Sudah ditangani oleh Dinas Lingkungan Hidup', '2021-02-04 15:13:43', '2021-02-04 15:13:43'),
 (6, 9, 'D112G', 'A. Yahya Hudan', 'Banjir', 'Turen', '2021-02-25', 'Bunga Citra', 'Sudah ditangani oleh Dinas Lingkungan Hidup dan Tim Sar', '2021-02-04 15:19:10', '2021-02-04 15:19:10'),
-(7, 8, 'C112G', 'Irfak Wahyudi', 'Listrik Putus', 'Ketindan', '2021-02-26', 'Ardana Putra Pribadiansyah', 'Sudah ditangani oleh PLN', '2021-02-04 15:24:12', '2021-02-04 15:24:12');
+(7, 8, 'C112G', 'Irfak Wahyudi', 'Listrik Putus', 'Ketindan', '2021-02-26', 'Ardana Putra Pribadiansyah', 'Sudah ditangani oleh PLN', '2021-02-04 15:24:12', '2021-02-04 15:24:12'),
+(9, 11, 'D112G', 'Abdullah Winasis', 'Angin Topan', 'Klojen, Malang', '2021-02-03', 'Awin', 'Sudah ditangani Pemadam', '2021-02-05 02:13:27', '2021-02-05 02:13:27'),
+(10, 11, 'F112G', 'Abdullah Winasis', 'Lainnya', 'Tidak Diketahui', '2021-02-04', 'Tidak Diketahui', 'Iseng', '2021-02-05 02:16:06', '2021-02-05 02:16:06'),
+(11, 10, 'W101B', 'Muhammad Andy', 'Kebakaran', 'Talangagung', '2021-02-05', 'Jayus', 'SUDAH', '2021-02-05 02:18:30', '2021-02-05 03:19:15'),
+(12, 10, 'B102T', 'Muhammad Andy', 'Pohon Tumbang', 'Sumberpucung', '2021-02-05', 'Jhon', 'SUDAH', '2021-02-05 02:19:40', '2021-02-05 03:18:57'),
+(13, 10, 'A035A', 'Muhammad Andy', 'Kecelakaan', 'Kepanjen', '2021-02-05', 'Dian', 'SUDAH', '2021-02-05 02:20:54', '2021-02-05 03:18:42'),
+(14, 10, 'F014R', 'Muhammad Andy', 'Banjir', 'Suhat', '2021-02-05', 'Eko', 'SUDAH', '2021-02-05 02:22:13', '2021-02-05 03:18:28'),
+(15, 10, 'D112H', 'Muhammad Andy', 'Gempa Bumi', 'Bedali Indah', '2021-02-11', 'Prayoga Rahmat', 'Sudah ditangani oleh pihak terkait', '2021-02-05 03:20:31', '2021-02-05 03:20:31'),
+(16, 10, 'D112O', 'Muhammad Andy', 'Tanah Longsor', 'Lawang', '2021-02-18', 'Wahyu Setia Budi', 'Sudah ditangani', '2021-02-05 03:22:37', '2021-02-05 03:22:37');
 
 -- --------------------------------------------------------
 
@@ -174,8 +186,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_petugas`, `username`, `password`, `level`, `created_at`, `updated_at`) VALUES
-(6, 'Kominfo Kota Malang', 'kominfo', 'ngalam112', 'Super Admin', NULL, '2021-02-03 14:01:40'),
-(8, 'Irfak Wahyudi', 'irfak', 'irfak123456', 'Admin', NULL, '2021-02-03 14:01:07'),
+(6, 'Kominfo Kota Malang', 'kominfo', 'ngalam112', 'Super Admin', '2021-02-03 14:01:40', '2021-02-04 22:48:47'),
+(8, 'Irfak Wahyudi', 'irfak', 'irfak123456', 'Admin', '2021-02-03 14:01:07', '2021-02-04 22:49:01'),
 (9, 'A. Yahya Hudan', 'hudan', 'hudan123456', 'Admin', '2021-02-02 03:59:29', '2021-02-03 14:00:55'),
 (10, 'Muhammad Andy', 'andy', 'andy12345', 'Admin', '2021-02-02 04:18:22', '2021-02-03 14:00:12'),
 (11, 'Abdullah Winasis', 'awin', 'awin1234', 'Admin', '2021-02-02 08:55:52', '2021-02-03 14:00:02'),
@@ -224,25 +236,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `detail_report`
 --
 ALTER TABLE `detail_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id_news` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_news` int(125) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
-  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pelapor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user`
