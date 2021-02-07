@@ -47,6 +47,7 @@
          });
          $('#userTable').DataTable();
      });
+
  </script>
 
  <!-- Data Table Script Download -->

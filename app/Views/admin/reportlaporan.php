@@ -88,7 +88,7 @@
                         <div class="form-group row">
                           <div class="col-lg-6">
                             <label class="form-control-label">Kejadian</label>
-                            <select name="kejadian" class="form-control" id="kejadian">
+                            <select name="kejadian" class="form-control" id="kejadian" required>
                               <option value="">- Pilih -</option>
                               <option value="Kebakaran">Kebakaran</option>
                               <option value="Pohon Tumbang">Pohon Tumbang</option>
@@ -103,13 +103,13 @@
                           </div>
                           <div class="col-lg-6">
                             <label>Tanggal Kejadian</label>
-                            <input type="date" name="tanggal" placeholder="Tanggal" class="form-control">
+                            <input type="date" name="tanggal" placeholder="Tanggal" class="form-control" required>
                           </div>
                         </div>
                         <div class="form-group row">
                           <div class="col-lg-6">
                             <label class="form-control-label">Nama Petugas</label>
-                            <select name="petugas" class="form-control" id="petugas">
+                            <select name="petugas" class="form-control" id="petugas" required>
                               <option value="">- Pilih -</option>
                               <?php
                               foreach ($dtPetugas as $data) {
@@ -122,21 +122,21 @@
                           </div>
                           <div class="col-lg-6">
                             <label>No Tiket</label>
-                            <input type="text" name="no_tiket" placeholder="No Tiket" class="form-control">
+                            <input type="text" name="no_tiket" placeholder="No Tiket" class="form-control" required>
                           </div>
                         </div>
                         <div class="form-group">
                           <label>Nama Pelapor</label>
-                          <input type="text" name="nama_pelapor" placeholder="Nama Pelapor" class="form-control">
+                          <input type="text" name="nama_pelapor" placeholder="Nama Pelapor" class="form-control" required>
                         </div>
                         <div class="form-group">
                           <label>Lokasi Kejadian</label>
-                          <input type="text" name="lokasi_kejadian" placeholder="Lokasi" class="form-control">
+                          <input type="text" name="lokasi_kejadian" placeholder="Lokasi" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                           <label>Tindak Lanjut</label>
-                          <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control">
+                          <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" class="form-control" required>
                         </div>
                         <div class="form-group">
                           <label>Dokumentasi</label>

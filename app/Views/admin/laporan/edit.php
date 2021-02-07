@@ -32,7 +32,7 @@
                  </div>
                  <div class="form-group col-lg-6">
                    <label class="col-sm-5 form-control-label"><strong>Nama Petugas</strong></label>
-                   <select name="petugas" class="form-control" id="petugas">
+                   <select name="petugas" class="form-control" id="petugas" required>
                      <option value="">- Pilih -</option>
                      <?php
                       foreach ($dtPetugas as $data) {
@@ -49,7 +49,7 @@
                  </div>
                  <div class="form-group col-lg-6">
                    <label class="col-sm-1 form-control-label"><strong>Kejadian</strong></label>
-                   <select name="kejadian" class="form-control" id="kejadian">
+                   <select name="kejadian" class="form-control" id="kejadian" required>
                      <option value="Kebakaran" <?= $reportdata[0]['kejadian'] == "Kebakaran" ? "selected" : ""; ?>>Kebakaran</option>
                      <option value="Pohon Tumbang" <?= $reportdata[0]['kejadian'] == "Pohon Tumbang" ? "selected" : ""; ?>>Pohon Tumbang</option>
                      <option value="Kecelakaan" <?= $reportdata[0]['kejadian'] == "Kecelakaan" ? "selected" : ""; ?>>Kecelakaan</option>
@@ -57,7 +57,7 @@
                      <option value="Gempa Bumi" <?= $reportdata[0]['kejadian'] == "Gempa Bumi" ? "selected" : ""; ?>>Gempa Bumi</option>
                      <option value="Angin Topan" <?= $reportdata[0]['kejadian'] == "Angin Topan" ? "selected" : ""; ?>>Angin Topan</option>
                      <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Listrik Putus" ? "selected" : ""; ?>>Listrik Putus</option>
-                     <option value="Listrik Putus" <?= $reportdata[0]['kejadian'] == "Tanah Longsor" ? "selected" : ""; ?>>Tanah Longsor</option>
+                     <option value="Tanah Lomgsor" <?= $reportdata[0]['kejadian'] == "Tanah Longsor" ? "selected" : ""; ?>>Tanah Longsor</option>
                      <option value="Lainnya" <?= $reportdata[0]['kejadian'] == "Lainnya" ? "selected" : ""; ?>>Lainnya</option>
                    </select>
                  </div>

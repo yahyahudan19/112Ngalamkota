@@ -101,7 +101,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-4">
                                         <label for="noHp_feedback" class="text-muted form-label"><strong>No.Telp Pelapor</strong></label>
-                                        <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control" placeholder="NomorTelepon" required>
+                                        <input name="noHp_feedback" id="noHp_feedback" type="text" class="form-control" placeholder="Nomor Telepon" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -135,7 +135,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="subject" class="text-muted form-label"><strong>Apakah Bapak merasa terbantu dengan adanya layanan Ngalam 112 ?</strong></label>
+                                        <label for="subject" class="text-muted form-label"><strong>Apakah Bapak/Ibu merasa terbantu dengan adanya layanan Ngalam 112 ?</strong></label>
                                         <div class="form-group">
                                             <input type="radio" name="q2_feedback" id="q2_feedback" value="iya" required> Iya
                                         </div>
