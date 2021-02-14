@@ -28,7 +28,7 @@
            <div class="col-lg-12">
              <div class="block">
                <!-- <div class="title"><strong>Tabel User</strong></div> -->
-               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i>Tambah User</button>
+               <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa  fa-plus-square"></i>Tambah Pengguna</button>
                <br>
                <br>
                <div class="table-responsive">
@@ -70,7 +70,7 @@
            <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
              <div role="document" class="modal-dialog">
                <div class="modal-content">
-                 <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah User</strong>
+                 <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Pengguna</strong>
                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                  </div>
                  <div class="modal-body">
@@ -78,19 +78,19 @@
                      <form>
                        <div class="form-group">
                          <label>Nama Petugas</label>
-                         <input type="text" name="nama_petugas" id="nama_petugas" placeholder="Nama Petugas" class="form-control">
+                         <input type="text" name="nama_petugas" id="nama_petugas" placeholder="Nama Petugas" class="form-control" required>
                        </div>
                        <div class="form-group">
                          <label>Username</label>
-                         <input type="username" name="username" id="username" placeholder="Username" class="form-control">
+                         <input type="username" name="username" id="username" placeholder="Username" class="form-control" required>
                        </div>
                        <div class="form-group">
                          <label>Password</label>
-                         <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                         <input type="password" name="password" id="password" placeholder="Password" class="form-control" required>
                        </div>
                        <div class="form-group">
                          <label>Level</label>
-                           <select name="level" class="form-control">
+                           <select name="level" class="form-control" required>
                              <option>Admin</option>
                              <option>Super Admin</option>
                            </select>

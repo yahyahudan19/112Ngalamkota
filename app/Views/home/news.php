@@ -116,7 +116,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-6">
                             <div class="mt-4 mt-lg-0">
-                                <h4 class="text-white font-size-18 mb-3">Social Media</h4>
+                                <h4 class="text-white font-size-18 mb-3">Sosial Media</h4>
                                 <ul class="list-unstyled footer-sub-menu">
                                     <li><a href="https://www.instagram.com/ngalam112/" class="footer-link">Instagram</a></li>
                                 </ul>

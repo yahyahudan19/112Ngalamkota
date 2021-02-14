@@ -92,7 +92,7 @@ class News extends BaseController
 
             // ulangi insert gambar ke table galery menggunakan foreach
             $file->move(ROOTPATH . 'public/uploads', $imagename);
-            session()->setFlashdata('pesan', 'Data Berhasil diedit.');
+            session()->setFlashdata('pesan', 'Data Berhasil diupdate.');
             return redirect()->to(base_url('superadmin/news'));
         } else {
             $data_uploads = [
@@ -105,7 +105,7 @@ class News extends BaseController
                 'date_news' => $this->request->getVar('date_news'),
             ];
             $this->newsModel->update_data($data_uploads, $id_news);
-            session()->setFlashdata('pesan', 'Data Berhasil diedit.');
+            session()->setFlashdata('pesan', 'Data Berhasil diupdate.');
             return redirect()->to(base_url('superadmin/news'));
         }
 
