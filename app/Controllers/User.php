@@ -39,7 +39,7 @@ class User extends BaseController
             'level' => $this->request->getVar('level'),
         ];
         $this->userModel->save_data($data_uploads);
-        session()->setFlashdata('pesan', 'User Berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Pengguna Berhasil ditambahkan.');
         return redirect()->to(base_url('superadmin/user'));
     }
 
@@ -56,7 +56,7 @@ class User extends BaseController
             'level' => $this->request->getVar('level'),
         ];
         $this->userModel->update_data($data_uploads, $id_user);
-        session()->setFlashdata('pesan', 'User Berhasil diupdate.');
+        session()->setFlashdata('pesan', 'Pengguna Berhasil diupdate.');
         return redirect()->to(base_url('superadmin/user'));
     }
 
@@ -82,7 +82,7 @@ class User extends BaseController
             return redirect()->to(base_url('/login'));
         }
         $this->userModel->delete_data($id_user);
-        session()->setFlashdata('pesan', 'User Berhasil dihapus.');
+        session()->setFlashdata('pesan', 'Pengguna Berhasil dihapus.');
         return redirect()->to(base_url('superadmin/user'));
     }
 }

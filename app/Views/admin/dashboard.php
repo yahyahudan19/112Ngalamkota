@@ -203,7 +203,7 @@
               </div>
             </div>
             <div>
-              <canvas id="pie-chart-laporan" height="200"></canvas>
+              <canvas id="pie-chart-laporan" height="180"></canvas>
             </div>            
           </div>          
           <!-- /.info-box -->
