@@ -2,10 +2,10 @@
  <div class="content-wrapper">
    <!-- Content Header (Page header) -->
    <div class="content-header sty-one">
-     <h1>User Management</h1>
+     <h1>Pengguna</h1>
      <ol class="breadcrumb">
        <li><a href="#">Home</a></li>
-       <li><i class="fa fa-angle-right"></i>User Management</li>
+       <li><i class="fa fa-angle-right"></i>Pengguna</li>
      </ol>
    </div>
 

@@ -56,7 +56,7 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="hero-6 bg-center position-relative overflow-hidden" style="background-image: url(<?= base_url() ?>/templatepage/images/hero-6-bg.png);" id="home">
+    <!-- <section class="hero-6 bg-center position-relative overflow-hidden" style="background-image: url(<?= base_url() ?>/templatepage/images/hero-6-bg.png);" id="home">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Hero End -->
 
     <!-- Contact us start -->
@@ -85,7 +85,7 @@
                 <div class="col-lg-12">
                     <h2 class="fw-bold mb-4">Feedback</h2>
                     <p class="text-muted mb-5">Feedback yang anda berikan akan sangat berguna bagi kami,
-                        guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan eveluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112
+                        guna dalam memaksimalkan layanan Ngalam 112 serta menjadi bahan evaluasi bagi kami untuk terus meningkatkan kinerja layanan Ngalam 112
                         dan dapat banyak membantu masyarakat yang membutuhkan layanan ini.</p>
                     <div>
                         <form action="/feedback/addFeedback" method="post" name="myForm">

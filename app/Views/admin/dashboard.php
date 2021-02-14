@@ -13,7 +13,7 @@
   if (session()->get('level') == "Super Admin") {
   ?>
     <div class="col-md-1">
-      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Print <i class="fa fa-print"></i></button>
+      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Cetak <i class="fa fa-print"></i></button>
     </div>
 
     <style>
@@ -60,7 +60,7 @@
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
           <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-user"></i></span>
-            <div class="info-box-content"> <span class="info-box-number"><?= $total_user ?></span> <span class="info-box-text">Total User</span></div>
+            <div class="info-box-content"> <span class="info-box-number"><?= $total_user ?></span> <span class="info-box-text">Total Pengguna</span></div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
@@ -169,7 +169,7 @@
   } else if (session()->get('level') == "Admin") {
   ?>
     <div class="col-md-1">
-      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Print <i class="fa fa-print"></i></button>
+      <button onclick="window.print()" class="btn btn-outline-secondary shadow">Cetak <i class="fa fa-print"></i></button>
     </div>
 
     <style>
