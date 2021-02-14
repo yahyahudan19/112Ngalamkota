@@ -2,10 +2,10 @@
  <div class="content-wrapper">
    <!-- Content Header (Page header) -->
    <div class="content-header sty-one">
-     <h1>Edit User </h1>
+     <h1>Edit Pengguna</h1>
      <ol class="breadcrumb">
-       <li><a href="/superAdmin/pengumuman">User</a></li>
-       <li><i class="fa fa-angle-right"></i>Edit User</li>
+       <li><a href="/superAdmin/pengumuman">Pengguna</a></li>
+       <li><i class="fa fa-angle-right"></i>Edit Pengguna</li>
      </ol>
    </div>
 
@@ -23,7 +23,7 @@
                <!-- <div class="form-group col-lg-5">
                  <label class="col-sm-5 form-control-label"> -->
                <div class="form-group col-lg-4">
-                 <label class="col-sm-5 form-control-label"><strong>Nama Petugas</strong></label>
+                 <label class="col-sm-6 form-control-label"><strong>Nama Petugas</strong></label>
                  <input type="text" class="form-control" value="<?= $userdata[0]['nama_petugas']; ?>" name="nama_petugas" id="nama_petugas" required>
                </div>
                <div class="form-group col-lg-4">

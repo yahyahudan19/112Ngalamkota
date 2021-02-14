@@ -168,7 +168,7 @@
                         <div class="col-md-6">
                             <div class="position-relative mb-md-0 mb-5">
                                 <div class="me-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 310px;width: 600px;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-right" />
                             </div>
@@ -195,7 +195,7 @@
                         <div class="col-md-6 ms-md-auto order-1 order-md-2">
                             <div class="position-relative">
                                 <div class="ms-5 features-img">
-                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 320px;width: 600px;;" />
+                                    <img src="<?= base_url() ?>/uploads/<?= $val['dokumentasi_news'] ?>" alt="" class="img-fluid d-block mx-auto rounded shadow" style="object-fit:cover;height: 310px;width: 600px;;" />
                                 </div>
                                 <img src="<?= base_url() ?>/templatepage/images/dot-img.png" alt="" class="dot-img-left" />
                             </div>

@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
                     <div class="mt-lg-0 mt-5">
-                        <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="300px" width="470px" />
+                        <img src="<?= base_url() ?>/uploads/<?= $news['dokumentasi_news'] ?>" alt="" class="img-xl-responsive" height="300px" width="500px" />
                     </div>
                 </div>
                 <p class="mb-3 text-muted"><?= $news['isi2_news'] ?></p>
