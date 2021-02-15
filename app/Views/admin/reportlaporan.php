@@ -66,11 +66,22 @@
                         <td><?= $r['lokasi_kejadian']; ?></td>
                         <td><?= $r['tindak_lanjut']; ?></td>
                         <!-- <td><a href="/report/download/<?= $r['id_pelapor']; ?>" class="btn btn-success btn-sm">Download</a></td> -->
-                        <td>
-                          <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
-                          <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                          <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
-                        </td>
+                        <?php
+                        if (session()->get('level') == "Super Admin") {
+                        ?>
+                          <td>
+                            <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
+                          </td>
+                        <?php
+                        } else if (session()->get('level') == "Admin") {
+                        ?>
+                          <td>
+                            <a href="/report/detailReport/<?= $r['id_pelapor']; ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="/report/editReport/<?= $r['id_pelapor']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="/report/delete/<?= $r['id_pelapor']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin data ini akan dihapus');">Hapus</a>
+                          </td>
+                        <?php } ?>
                       </tr>
 
                     <?php
@@ -84,7 +95,7 @@
               <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" class="modal fade text-left" aria-hidden="true" style="display: none;">
                 <div role="document" class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Data</strong>
+                    <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Tambah Laporan</strong>
                       <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
@@ -144,7 +155,7 @@
                         </div>
                         <div class="form-group">
                           <label>Dokumentasi</label>
-                          <input type="file" name="dokumentasi" class="dropify" id="dokumentasi">
+                          <input type="file" name="dokumentasi[]" class="dropify" id="dokumentasi" multiple>
                         </div>
                     </div>
                     <div class="modal-footer">
