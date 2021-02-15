@@ -65,54 +65,49 @@ class Report extends BaseController
     }
 
     public function addReportL()
-
     {
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
         // dapatkan input file berupa array
-        $files = $this->request->getFile('dokumentasi');
+        $files = $this->request->getFiles();
+        if ($files) {
 
+            // buat value id random di table uploads
+            $data_uploads = [
+                'id_admin' => session()->get('id_user'),
+                'nama_petugas' => $this->request->getVar('petugas'),
+                'no_tiket' => $this->request->getVar('no_tiket'),
+                'kejadian' => $this->request->getVar('kejadian'),
+                'tanggal' => $this->request->getVar('tanggal'),
+                'nama_pelapor' => $this->request->getVar('nama_pelapor'),
+                'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
+                'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
+            ];
+            $this->reportlaporanModel->insertLaporan($data_uploads);
 
-        // buat value id random di table uploads
-        $data_uploads = [
-            'id_admin' => session()->get('id_user'),
-            'nama_petugas' => $this->request->getVar('petugas'),
-            'no_tiket' => $this->request->getVar('no_tiket'),
-            'kejadian' => $this->request->getVar('kejadian'),
-            'tanggal' => $this->request->getVar('tanggal'),
-            'nama_pelapor' => $this->request->getVar('nama_pelapor'),
-            'lokasi_kejadian' => $this->request->getVar('lokasi_kejadian'),
-            'tindak_lanjut' => $this->request->getVar('tindak_lanjut'),
-        ];
-        $this->reportlaporanModel->insertLaporan($data_uploads);
+            // ulangi insert gambar ke table galery menggunakan foreach
 
-        // ulangi insert gambar ke table galery menggunakan foreach
+            $db      = \Config\Database::connect();
+            $builder = $db->insertID();
 
-        $db      = \Config\Database::connect();
-        $builder = $db->insertID();
+            foreach ($files['dokumentasi'] as $img) {
+                if ($img->isValid()) {
+                    $imagename = $img->getRandomName();
+                    $data_galery = [
+                        'report_id' => $builder,
+                        'gambar' => $imagename
+                    ];
 
+                    $this->detailLaporanModel->insertDetail($data_galery);
+                    // upload dengan random name
+                    $img->move(ROOTPATH . 'public/uploads', $imagename);
+                }
+            }
 
-        $imagename = $files->getRandomName();
-        $data_galery = [
-            'report_id' => $builder,
-            'gambar' => $imagename
-        ];
-
-        $this->detailLaporanModel->insertDetail($data_galery);
-        // upload dengan random name
-        // $img->move(ROOTPATH . 'public/uploads', $imagename);
-
-
-        $image = \Config\Services::image()
-            ->withFile($this->request->getFile('dokumentasi'))
-            ->resize(600, 600, true, 'height')
-            // ->fit(300, 300, 'center')
-            ->save(ROOTPATH . 'public/uploads/' . $imagename);
-        // dd($image);
-
-        session()->setFlashdata('pesan', 'Laporan Berhasil ditambahkan.');
-        return redirect()->to(base_url('/admin/reportLaporan'));
+            session()->setFlashdata('pesan', 'Laporan Berhasil ditambahkan.');
+            return redirect()->to(base_url('/admin/reportLaporan'));
+        }
     }
 
     public function detailReport($id)
@@ -137,16 +132,7 @@ class Report extends BaseController
         if (!(session()->username)) {
             return redirect()->to(base_url('/login'));
         }
-
-        $bukti = $this->detailLaporanModel->where('report_id', $id_pelapor)->findAll();;
-
-        // dd($bukti[0]['gambar']);
         $this->reportlaporanModel->delete_data($id_pelapor);
-
-        //hapus file
-        unlink(ROOTPATH . 'public/uploads/' . $bukti[0]['gambar']);
-        $this->detailLaporanModel->delete_data($id_pelapor);
-
         session()->setFlashdata('pesan', 'Laporan Berhasil dihapus.');
         return redirect()->to(base_url('admin/reportlaporan'));
     }
