@@ -22,13 +22,9 @@
     <section class="no-padding-top">
       <div class="container-fluid">
         <div class="row">
-          <?php
-          if (session()->get('level') == "Admin") {
-          ?>
-            <div class="col-lg-12">
-              <div class="block">
-                <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
-              <?php } ?>
+          <div class="col-lg-12">
+            <div class="block">
+              <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success center"><i class="fa  fa-plus-square"></i> Tambah Laporan</button>
               <!-- <a href="/report/excel/" class="btn btn-primary" type="button"><i class="fa  fa-file-excel-o"></i>Excel</a>
               <a href="/report/excel/" class="btn btn-warning" type="button"><i class="fa  fa-file-pdf-o"></i>Pdf</a> -->
               <br>
